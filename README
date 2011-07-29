@@ -1,0 +1,5 @@
+To try it out on ubuntu:
+
+sudo apt-get install libboost-system-dev
+./build.sh
+./test API_USERNAME API_KEY
