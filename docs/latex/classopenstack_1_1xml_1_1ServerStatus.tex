@@ -1,0 +1,342 @@
+\hypertarget{classopenstack_1_1xml_1_1ServerStatus}{
+\section{openstack::xml::ServerStatus Class Reference}
+\label{classopenstack_1_1xml_1_1ServerStatus}\index{openstack::xml::ServerStatus@{openstack::xml::ServerStatus}}
+}
+
+
+Enumeration class corresponding to the ServerStatus schema type.  
+
+
+
+
+{\ttfamily \#include $<$server.hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classopenstack_1_1xml_1_1ServerStatus_a086acdc13b219f6cb6547ec0d7783cb2}{Value} \{ \par
+{\bfseries ACTIVE}, 
+{\bfseries SUSPENDED}, 
+{\bfseries DELETED}, 
+{\bfseries QUEUE\_\-RESIZE}, 
+\par
+{\bfseries PREP\_\-RESIZE}, 
+{\bfseries RESIZE}, 
+{\bfseries VERIFY\_\-RESIZE}, 
+{\bfseries RESCUE}, 
+\par
+{\bfseries ERROR}, 
+{\bfseries BUILD}, 
+{\bfseries RESTORING}, 
+{\bfseries PASSWORD}, 
+\par
+{\bfseries REBUILD}, 
+{\bfseries DELETE\_\-IP}, 
+{\bfseries SHARE\_\-IP\_\-NO\_\-CONFIG}, 
+{\bfseries SHARE\_\-IP}, 
+\par
+{\bfseries REBOOT}, 
+{\bfseries HARD\_\-REBOOT}, 
+{\bfseries UNKNOWN}, 
+{\bfseries QUEUE\_\-MOVE}, 
+\par
+{\bfseries PREP\_\-MOVE}, 
+{\bfseries MOVE}, 
+{\bfseries VERIFY\_\-MOVE}, 
+{\bfseries PENDING}
+ \}
+\begin{DoxyCompactList}\small\item\em Underlying enum type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classopenstack_1_1xml_1_1ServerStatus_a6b201996d2f2adf9e1db4d5841fd1726}{ServerStatus} (\hyperlink{classopenstack_1_1xml_1_1ServerStatus_a086acdc13b219f6cb6547ec0d7783cb2}{Value} v)
+\begin{DoxyCompactList}\small\item\em Create an instance from the underlying enum value. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1ServerStatus_a4d375a204d63a8e865f36c8989fa1ae0}{ServerStatus} (const char $\ast$v)
+\begin{DoxyCompactList}\small\item\em Create an instance from a C string. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1ServerStatus_ac4e816ad4701d02804669da9e472c1c0}{ServerStatus} (const ::std::string \&v)
+\begin{DoxyCompactList}\small\item\em Create an instance from a string. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1ServerStatus_a1d5c533c9ce1d3f34afeb0a363f2ddef}{ServerStatus} (const ::\hyperlink{namespacexml__schema_af6757b5701ccc893f3b551bd70e0c94d}{xml\_\-schema::String} \&v)
+\begin{DoxyCompactList}\small\item\em Create an instance from the base value. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1ServerStatus_aeb0940224756bc6fae0b1dd42aaff930}{ServerStatus} (const ::xercesc::DOMElement \&e,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0)
+\begin{DoxyCompactList}\small\item\em Create an instance from a DOM element. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1ServerStatus_a18de8828142096479b1a0a79980ad557}{ServerStatus} (const ::xercesc::DOMAttr \&a,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0)
+\begin{DoxyCompactList}\small\item\em Create an instance from a DOM attribute. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1ServerStatus_a1a147728fb68d1f9d61eee5f32bae836}{ServerStatus} (const ::std::string \&s, const ::xercesc::DOMElement $\ast$e,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0)
+\begin{DoxyCompactList}\small\item\em Create an instance from a string fragment. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1ServerStatus_aeb999d1270a453047b82fbdaa75e25c2}{ServerStatus} (const \hyperlink{classopenstack_1_1xml_1_1ServerStatus}{ServerStatus} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classopenstack_1_1xml_1_1ServerStatus}{ServerStatus} $\ast$ \hyperlink{classopenstack_1_1xml_1_1ServerStatus_adc79cc3185058e62ac26126d495cf686}{\_\-clone} (::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0) const 
+\begin{DoxyCompactList}\small\item\em Copy the instance polymorphically. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1ServerStatus}{ServerStatus} \& \hyperlink{classopenstack_1_1xml_1_1ServerStatus_ac881af2ed65929f49312dd9f1004be1c}{operator=} (\hyperlink{classopenstack_1_1xml_1_1ServerStatus_a086acdc13b219f6cb6547ec0d7783cb2}{Value} v)
+\begin{DoxyCompactList}\small\item\em Assign the underlying enum value. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classopenstack_1_1xml_1_1ServerStatus_ac4ca449729ecfbecad88668ca57b7d52}{operator Value} () const 
+\begin{DoxyCompactList}\small\item\em Implicit conversion operator to the underlying enum value. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1ServerStatus_a5abc6edd3d941cf93c59c3288c910f28}{
+static const char $\ast$const {\bfseries \_\-xsd\_\-ServerStatus\_\-literals\_\-} \mbox{[}24\mbox{]}}
+\label{classopenstack_1_1xml_1_1ServerStatus_a5abc6edd3d941cf93c59c3288c910f28}
+
+\item 
+\hypertarget{classopenstack_1_1xml_1_1ServerStatus_a7b1aaceca8db5f39e298ef45d957536c}{
+static const \hyperlink{classopenstack_1_1xml_1_1ServerStatus_a086acdc13b219f6cb6547ec0d7783cb2}{Value} {\bfseries \_\-xsd\_\-ServerStatus\_\-indexes\_\-} \mbox{[}24\mbox{]}}
+\label{classopenstack_1_1xml_1_1ServerStatus_a7b1aaceca8db5f39e298ef45d957536c}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1ServerStatus_a566d7cbb56bde5d8f7f9fa1089213d9a}{
+\hyperlink{classopenstack_1_1xml_1_1ServerStatus_a086acdc13b219f6cb6547ec0d7783cb2}{Value} {\bfseries \_\-xsd\_\-ServerStatus\_\-convert} () const }
+\label{classopenstack_1_1xml_1_1ServerStatus_a566d7cbb56bde5d8f7f9fa1089213d9a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Enumeration class corresponding to the ServerStatus schema type. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classopenstack_1_1xml_1_1ServerStatus_a6b201996d2f2adf9e1db4d5841fd1726}{
+\index{openstack::xml::ServerStatus@{openstack::xml::ServerStatus}!ServerStatus@{ServerStatus}}
+\index{ServerStatus@{ServerStatus}!openstack::xml::ServerStatus@{openstack::xml::ServerStatus}}
+\subsubsection[{ServerStatus}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::ServerStatus::ServerStatus (
+\begin{DoxyParamCaption}
+\item[{{\bf Value}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1ServerStatus_a6b201996d2f2adf9e1db4d5841fd1726}
+
+
+Create an instance from the underlying enum value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A enum value. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classopenstack_1_1xml_1_1ServerStatus_a4d375a204d63a8e865f36c8989fa1ae0}{
+\index{openstack::xml::ServerStatus@{openstack::xml::ServerStatus}!ServerStatus@{ServerStatus}}
+\index{ServerStatus@{ServerStatus}!openstack::xml::ServerStatus@{openstack::xml::ServerStatus}}
+\subsubsection[{ServerStatus}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::ServerStatus::ServerStatus (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1ServerStatus_a4d375a204d63a8e865f36c8989fa1ae0}
+
+
+Create an instance from a C string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A string value. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classopenstack_1_1xml_1_1ServerStatus_ac4e816ad4701d02804669da9e472c1c0}{
+\index{openstack::xml::ServerStatus@{openstack::xml::ServerStatus}!ServerStatus@{ServerStatus}}
+\index{ServerStatus@{ServerStatus}!openstack::xml::ServerStatus@{openstack::xml::ServerStatus}}
+\subsubsection[{ServerStatus}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::ServerStatus::ServerStatus (
+\begin{DoxyParamCaption}
+\item[{const ::std::string \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1ServerStatus_ac4e816ad4701d02804669da9e472c1c0}
+
+
+Create an instance from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A string value. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classopenstack_1_1xml_1_1ServerStatus_a1d5c533c9ce1d3f34afeb0a363f2ddef}{
+\index{openstack::xml::ServerStatus@{openstack::xml::ServerStatus}!ServerStatus@{ServerStatus}}
+\index{ServerStatus@{ServerStatus}!openstack::xml::ServerStatus@{openstack::xml::ServerStatus}}
+\subsubsection[{ServerStatus}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::ServerStatus::ServerStatus (
+\begin{DoxyParamCaption}
+\item[{const ::{\bf xml\_\-schema::String} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1ServerStatus_a1d5c533c9ce1d3f34afeb0a363f2ddef}
+
+
+Create an instance from the base value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A base value. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classopenstack_1_1xml_1_1ServerStatus_aeb0940224756bc6fae0b1dd42aaff930}{
+\index{openstack::xml::ServerStatus@{openstack::xml::ServerStatus}!ServerStatus@{ServerStatus}}
+\index{ServerStatus@{ServerStatus}!openstack::xml::ServerStatus@{openstack::xml::ServerStatus}}
+\subsubsection[{ServerStatus}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::ServerStatus::ServerStatus (
+\begin{DoxyParamCaption}
+\item[{const ::xercesc::DOMElement \&}]{e, }
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classopenstack_1_1xml_1_1ServerStatus_aeb0940224756bc6fae0b1dd42aaff930}
+
+
+Create an instance from a DOM element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & A DOM element to extract the data from. \\
+\hline
+{\em f} & Flags to create the new instance with. \\
+\hline
+{\em c} & A pointer to the object that will contain the new instance. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classopenstack_1_1xml_1_1ServerStatus_a18de8828142096479b1a0a79980ad557}{
+\index{openstack::xml::ServerStatus@{openstack::xml::ServerStatus}!ServerStatus@{ServerStatus}}
+\index{ServerStatus@{ServerStatus}!openstack::xml::ServerStatus@{openstack::xml::ServerStatus}}
+\subsubsection[{ServerStatus}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::ServerStatus::ServerStatus (
+\begin{DoxyParamCaption}
+\item[{const ::xercesc::DOMAttr \&}]{a, }
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classopenstack_1_1xml_1_1ServerStatus_a18de8828142096479b1a0a79980ad557}
+
+
+Create an instance from a DOM attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A DOM attribute to extract the data from. \\
+\hline
+{\em f} & Flags to create the new instance with. \\
+\hline
+{\em c} & A pointer to the object that will contain the new instance. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classopenstack_1_1xml_1_1ServerStatus_a1a147728fb68d1f9d61eee5f32bae836}{
+\index{openstack::xml::ServerStatus@{openstack::xml::ServerStatus}!ServerStatus@{ServerStatus}}
+\index{ServerStatus@{ServerStatus}!openstack::xml::ServerStatus@{openstack::xml::ServerStatus}}
+\subsubsection[{ServerStatus}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::ServerStatus::ServerStatus (
+\begin{DoxyParamCaption}
+\item[{const ::std::string \&}]{s, }
+\item[{const ::xercesc::DOMElement $\ast$}]{e, }
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classopenstack_1_1xml_1_1ServerStatus_a1a147728fb68d1f9d61eee5f32bae836}
+
+
+Create an instance from a string fragment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & A string fragment to extract the data from. \\
+\hline
+{\em e} & A pointer to DOM element containing the string fragment. \\
+\hline
+{\em f} & Flags to create the new instance with. \\
+\hline
+{\em c} & A pointer to the object that will contain the new instance. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classopenstack_1_1xml_1_1ServerStatus_aeb999d1270a453047b82fbdaa75e25c2}{
+\index{openstack::xml::ServerStatus@{openstack::xml::ServerStatus}!ServerStatus@{ServerStatus}}
+\index{ServerStatus@{ServerStatus}!openstack::xml::ServerStatus@{openstack::xml::ServerStatus}}
+\subsubsection[{ServerStatus}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::ServerStatus::ServerStatus (
+\begin{DoxyParamCaption}
+\item[{const {\bf ServerStatus} \&}]{x, }
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1ServerStatus_aeb999d1270a453047b82fbdaa75e25c2}
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & An instance to make a copy of. \\
+\hline
+{\em f} & Flags to create the copy with. \\
+\hline
+{\em c} & A pointer to the object that will contain the copy.\\
+\hline
+\end{DoxyParams}
+For polymorphic object models use the {\ttfamily \_\-clone} function instead. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classopenstack_1_1xml_1_1ServerStatus_adc79cc3185058e62ac26126d495cf686}{
+\index{openstack::xml::ServerStatus@{openstack::xml::ServerStatus}!\_\-clone@{\_\-clone}}
+\index{\_\-clone@{\_\-clone}!openstack::xml::ServerStatus@{openstack::xml::ServerStatus}}
+\subsubsection[{\_\-clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ServerStatus} $\ast$ openstack::xml::ServerStatus::\_\-clone (
+\begin{DoxyParamCaption}
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1ServerStatus_adc79cc3185058e62ac26126d495cf686}
+
+
+Copy the instance polymorphically. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Flags to create the copy with. \\
+\hline
+{\em c} & A pointer to the object that will contain the copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the dynamically allocated copy.
+\end{DoxyReturn}
+This function ensures that the dynamic type of the instance is used for copying and should be used for polymorphic object models instead of the copy constructor. \hypertarget{classopenstack_1_1xml_1_1ServerStatus_ac4ca449729ecfbecad88668ca57b7d52}{
+\index{openstack::xml::ServerStatus@{openstack::xml::ServerStatus}!operator Value@{operator Value}}
+\index{operator Value@{operator Value}!openstack::xml::ServerStatus@{openstack::xml::ServerStatus}}
+\subsubsection[{operator Value}]{\setlength{\rightskip}{0pt plus 5cm}virtual openstack::xml::ServerStatus::operator {\bf Value} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1ServerStatus_ac4ca449729ecfbecad88668ca57b7d52}
+
+
+Implicit conversion operator to the underlying enum value. 
+
+\begin{DoxyReturn}{Returns}
+A enum value. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1ServerStatus_ac881af2ed65929f49312dd9f1004be1c}{
+\index{openstack::xml::ServerStatus@{openstack::xml::ServerStatus}!operator=@{operator=}}
+\index{operator=@{operator=}!openstack::xml::ServerStatus@{openstack::xml::ServerStatus}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ServerStatus} \& openstack::xml::ServerStatus::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Value}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1ServerStatus_ac881af2ed65929f49312dd9f1004be1c}
+
+
+Assign the underlying enum value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A enum value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A refernce to the instance. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+xsd/\hyperlink{server_8hpp}{server.hpp}\item 
+xsd/server.cpp\item 
+xsd/server.ipp\end{DoxyCompactItemize}

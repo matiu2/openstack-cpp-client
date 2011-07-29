@@ -1,0 +1,739 @@
+\hypertarget{classopenstack_1_1xml_1_1RateLimit}{
+\section{openstack::xml::RateLimit Class Reference}
+\label{classopenstack_1_1xml_1_1RateLimit}\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+}
+
+
+Class corresponding to the RateLimit schema type.  
+
+
+
+
+{\ttfamily \#include $<$limits.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_afdb3cc48cc897518a63ce4cd88052c94}{
+virtual \hyperlink{classopenstack_1_1xml_1_1RateLimit_afdb3cc48cc897518a63ce4cd88052c94}{$\sim$RateLimit} ()}
+\label{classopenstack_1_1xml_1_1RateLimit_afdb3cc48cc897518a63ce4cd88052c94}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a31c7d433fc41b984db24d187a737a399}{
+void {\bfseries parse} (::xsd::cxx::xml::dom::parser$<$ char $>$ \&,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags})}
+\label{classopenstack_1_1xml_1_1RateLimit_a31c7d433fc41b984db24d187a737a399}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a37dce762860619171b06b9a3744ab478}{
+::xsd::cxx::tree::one$<$ \hyperlink{classopenstack_1_1xml_1_1HTTPVerb}{VerbType} $>$ {\bfseries verb\_\-}}
+\label{classopenstack_1_1xml_1_1RateLimit_a37dce762860619171b06b9a3744ab478}
+
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_aff98f961df51060118ea650b46f0cf57}{
+::xsd::cxx::tree::one$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_af7901803e96cb338e2560358c8ce931b}{URIType} $>$ {\bfseries URI\_\-}}
+\label{classopenstack_1_1xml_1_1RateLimit_aff98f961df51060118ea650b46f0cf57}
+
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_acc8f61d5d28923c0a18fb3e9f1fe9cad}{
+::xsd::cxx::tree::one$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_a548c5e538a1408da78611116ac40aab2}{RegexType} $>$ {\bfseries regex\_\-}}
+\label{classopenstack_1_1xml_1_1RateLimit_acc8f61d5d28923c0a18fb3e9f1fe9cad}
+
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_adb8cfce817dae05e1c575ffba46c0484}{
+::xsd::cxx::tree::one$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimitUnit}{UnitType} $>$ {\bfseries unit\_\-}}
+\label{classopenstack_1_1xml_1_1RateLimit_adb8cfce817dae05e1c575ffba46c0484}
+
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a76c0ea99648b20e8513eb86baaeba310}{
+::xsd::cxx::tree::one$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_acafa69c685469c50108cb0f4c54a5ce2}{ValueType} $>$ {\bfseries value\_\-}}
+\label{classopenstack_1_1xml_1_1RateLimit_a76c0ea99648b20e8513eb86baaeba310}
+
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a944f7ad50829424bf1310e1fd4efb503}{
+::xsd::cxx::tree::one$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_a13144403e8af4dadd7e149adc68ff5d1}{RemainingType} $>$ {\bfseries remaining\_\-}}
+\label{classopenstack_1_1xml_1_1RateLimit_a944f7ad50829424bf1310e1fd4efb503}
+
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a97d6af1e024f5b6959935acd030afdab}{
+::xsd::cxx::tree::one$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_a040904fe6210dfa7070906275285989b}{ResetTimeType} $>$ {\bfseries resetTime\_\-}}
+\label{classopenstack_1_1xml_1_1RateLimit_a97d6af1e024f5b6959935acd030afdab}
+
+\end{DoxyCompactItemize}
+\subsection*{verb}
+\label{_amgrpb512ddf18cfec441e29917122387980f}
+Accessor and modifier functions for the verb required attribute. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_aa08d40842c95ca8853259d991924365e}{
+typedef ::\hyperlink{classopenstack_1_1xml_1_1HTTPVerb}{openstack::xml::HTTPVerb} \hyperlink{classopenstack_1_1xml_1_1RateLimit_aa08d40842c95ca8853259d991924365e}{VerbType}}
+\label{classopenstack_1_1xml_1_1RateLimit_aa08d40842c95ca8853259d991924365e}
+
+\begin{DoxyCompactList}\small\item\em Attribute type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a3dcb11fd6955c31d3b81dfe1d94030be}{
+typedef ::xsd::cxx::tree::traits$<$ \hyperlink{classopenstack_1_1xml_1_1HTTPVerb}{VerbType}, char $>$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_a3dcb11fd6955c31d3b81dfe1d94030be}{VerbTraits}}
+\label{classopenstack_1_1xml_1_1RateLimit_a3dcb11fd6955c31d3b81dfe1d94030be}
+
+\begin{DoxyCompactList}\small\item\em Attribute traits type. \item\end{DoxyCompactList}\item 
+const \hyperlink{classopenstack_1_1xml_1_1HTTPVerb}{VerbType} \& \hyperlink{classopenstack_1_1xml_1_1RateLimit_aa8ba46837d1d8c1decf29dc48e60ea56}{verb} () const 
+\begin{DoxyCompactList}\small\item\em Return a read-\/only (constant) reference to the attribute. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1HTTPVerb}{VerbType} \& \hyperlink{classopenstack_1_1xml_1_1RateLimit_ad36bcf07eb0299ed568b8bf76c7a3ae6}{verb} ()
+\begin{DoxyCompactList}\small\item\em Return a read-\/write reference to the attribute. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1RateLimit_a2e57ad126d94339314507f6ccf6b567f}{verb} (const \hyperlink{classopenstack_1_1xml_1_1HTTPVerb}{VerbType} \&x)
+\begin{DoxyCompactList}\small\item\em Set the attribute value. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1RateLimit_a22d9bcaac627ed869e977c948f13b532}{verb} (::std::auto\_\-ptr$<$ \hyperlink{classopenstack_1_1xml_1_1HTTPVerb}{VerbType} $>$ p)
+\begin{DoxyCompactList}\small\item\em Set the attribute value without copying. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{URI}
+\label{_amgrp8447306210a0972ac94b7d774799df1a}
+Accessor and modifier functions for the URI required attribute. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_af7901803e96cb338e2560358c8ce931b}{
+typedef ::\hyperlink{namespacexml__schema_af6757b5701ccc893f3b551bd70e0c94d}{xml\_\-schema::String} \hyperlink{classopenstack_1_1xml_1_1RateLimit_af7901803e96cb338e2560358c8ce931b}{URIType}}
+\label{classopenstack_1_1xml_1_1RateLimit_af7901803e96cb338e2560358c8ce931b}
+
+\begin{DoxyCompactList}\small\item\em Attribute type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a36ad34b35f2a5a4fafd7610a29fccb40}{
+typedef ::xsd::cxx::tree::traits$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_af7901803e96cb338e2560358c8ce931b}{URIType}, char $>$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_a36ad34b35f2a5a4fafd7610a29fccb40}{URITraits}}
+\label{classopenstack_1_1xml_1_1RateLimit_a36ad34b35f2a5a4fafd7610a29fccb40}
+
+\begin{DoxyCompactList}\small\item\em Attribute traits type. \item\end{DoxyCompactList}\item 
+const \hyperlink{classopenstack_1_1xml_1_1RateLimit_af7901803e96cb338e2560358c8ce931b}{URIType} \& \hyperlink{classopenstack_1_1xml_1_1RateLimit_aac52d5f8ccf1eb4377768df10c3dfd83}{uRI} () const 
+\begin{DoxyCompactList}\small\item\em Return a read-\/only (constant) reference to the attribute. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1RateLimit_af7901803e96cb338e2560358c8ce931b}{URIType} \& \hyperlink{classopenstack_1_1xml_1_1RateLimit_a1154788c45af216d0ef9a3d465ae55de}{uRI} ()
+\begin{DoxyCompactList}\small\item\em Return a read-\/write reference to the attribute. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1RateLimit_a4086a4f2b8c0748ade2ddbee39588df6}{uRI} (const \hyperlink{classopenstack_1_1xml_1_1RateLimit_af7901803e96cb338e2560358c8ce931b}{URIType} \&x)
+\begin{DoxyCompactList}\small\item\em Set the attribute value. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1RateLimit_a42dc865f2ed3ff5355df4478dde7b951}{uRI} (::std::auto\_\-ptr$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_af7901803e96cb338e2560358c8ce931b}{URIType} $>$ p)
+\begin{DoxyCompactList}\small\item\em Set the attribute value without copying. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{regex}
+\label{_amgrp44c5b763d21e9a3ed8cad56977bfd75c}
+Accessor and modifier functions for the regex required attribute. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a548c5e538a1408da78611116ac40aab2}{
+typedef ::\hyperlink{namespacexml__schema_af6757b5701ccc893f3b551bd70e0c94d}{xml\_\-schema::String} \hyperlink{classopenstack_1_1xml_1_1RateLimit_a548c5e538a1408da78611116ac40aab2}{RegexType}}
+\label{classopenstack_1_1xml_1_1RateLimit_a548c5e538a1408da78611116ac40aab2}
+
+\begin{DoxyCompactList}\small\item\em Attribute type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_afdd76b932e3086fe3eaf3f1735e069e6}{
+typedef ::xsd::cxx::tree::traits$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_a548c5e538a1408da78611116ac40aab2}{RegexType}, char $>$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_afdd76b932e3086fe3eaf3f1735e069e6}{RegexTraits}}
+\label{classopenstack_1_1xml_1_1RateLimit_afdd76b932e3086fe3eaf3f1735e069e6}
+
+\begin{DoxyCompactList}\small\item\em Attribute traits type. \item\end{DoxyCompactList}\item 
+const \hyperlink{classopenstack_1_1xml_1_1RateLimit_a548c5e538a1408da78611116ac40aab2}{RegexType} \& \hyperlink{classopenstack_1_1xml_1_1RateLimit_a8f59d3316f42dd2e7adec424fdac85d2}{regex} () const 
+\begin{DoxyCompactList}\small\item\em Return a read-\/only (constant) reference to the attribute. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1RateLimit_a548c5e538a1408da78611116ac40aab2}{RegexType} \& \hyperlink{classopenstack_1_1xml_1_1RateLimit_ad4f178be88f1810e57c76ab37975b0ce}{regex} ()
+\begin{DoxyCompactList}\small\item\em Return a read-\/write reference to the attribute. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1RateLimit_a123f76f7cb2532ffb2e325d33053ed5b}{regex} (const \hyperlink{classopenstack_1_1xml_1_1RateLimit_a548c5e538a1408da78611116ac40aab2}{RegexType} \&x)
+\begin{DoxyCompactList}\small\item\em Set the attribute value. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1RateLimit_a94d28640958e5eafc806dd8a65a58b95}{regex} (::std::auto\_\-ptr$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_a548c5e538a1408da78611116ac40aab2}{RegexType} $>$ p)
+\begin{DoxyCompactList}\small\item\em Set the attribute value without copying. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{unit}
+\label{_amgrp3e34bdebd9bd5edda27e8728904a2552}
+Accessor and modifier functions for the unit required attribute. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a4df8c79ab8755740a6d828fd8927fc17}{
+typedef ::\hyperlink{classopenstack_1_1xml_1_1RateLimitUnit}{openstack::xml::RateLimitUnit} \hyperlink{classopenstack_1_1xml_1_1RateLimit_a4df8c79ab8755740a6d828fd8927fc17}{UnitType}}
+\label{classopenstack_1_1xml_1_1RateLimit_a4df8c79ab8755740a6d828fd8927fc17}
+
+\begin{DoxyCompactList}\small\item\em Attribute type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a75ced76affd8beb0e27f02ffda340fbb}{
+typedef ::xsd::cxx::tree::traits$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimitUnit}{UnitType}, char $>$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_a75ced76affd8beb0e27f02ffda340fbb}{UnitTraits}}
+\label{classopenstack_1_1xml_1_1RateLimit_a75ced76affd8beb0e27f02ffda340fbb}
+
+\begin{DoxyCompactList}\small\item\em Attribute traits type. \item\end{DoxyCompactList}\item 
+const \hyperlink{classopenstack_1_1xml_1_1RateLimitUnit}{UnitType} \& \hyperlink{classopenstack_1_1xml_1_1RateLimit_a0e8c51ef646f47ee87d1776d236eed53}{unit} () const 
+\begin{DoxyCompactList}\small\item\em Return a read-\/only (constant) reference to the attribute. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1RateLimitUnit}{UnitType} \& \hyperlink{classopenstack_1_1xml_1_1RateLimit_a014d80fb0de66c49697373329be0edd6}{unit} ()
+\begin{DoxyCompactList}\small\item\em Return a read-\/write reference to the attribute. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1RateLimit_a49de1642eef66f7728771c90548be3cc}{unit} (const \hyperlink{classopenstack_1_1xml_1_1RateLimitUnit}{UnitType} \&x)
+\begin{DoxyCompactList}\small\item\em Set the attribute value. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1RateLimit_aff4feac43de60d5f11979ba725e6b215}{unit} (::std::auto\_\-ptr$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimitUnit}{UnitType} $>$ p)
+\begin{DoxyCompactList}\small\item\em Set the attribute value without copying. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{value}
+\label{_amgrp2063c1608d6e0baf80249c42e2be5804}
+Accessor and modifier functions for the value required attribute. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_acafa69c685469c50108cb0f4c54a5ce2}{
+typedef ::\hyperlink{namespacexml__schema_a12d975a13061c938969b2b5143e97645}{xml\_\-schema::Int} \hyperlink{classopenstack_1_1xml_1_1RateLimit_acafa69c685469c50108cb0f4c54a5ce2}{ValueType}}
+\label{classopenstack_1_1xml_1_1RateLimit_acafa69c685469c50108cb0f4c54a5ce2}
+
+\begin{DoxyCompactList}\small\item\em Attribute type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a1e0525d62e19b62a911c9ecaeaf2ba2b}{
+typedef ::xsd::cxx::tree::traits$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_acafa69c685469c50108cb0f4c54a5ce2}{ValueType}, char $>$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_a1e0525d62e19b62a911c9ecaeaf2ba2b}{ValueTraits}}
+\label{classopenstack_1_1xml_1_1RateLimit_a1e0525d62e19b62a911c9ecaeaf2ba2b}
+
+\begin{DoxyCompactList}\small\item\em Attribute traits type. \item\end{DoxyCompactList}\item 
+const \hyperlink{classopenstack_1_1xml_1_1RateLimit_acafa69c685469c50108cb0f4c54a5ce2}{ValueType} \& \hyperlink{classopenstack_1_1xml_1_1RateLimit_a469ce1ffa2758bd6b152d9d2672c698e}{value} () const 
+\begin{DoxyCompactList}\small\item\em Return a read-\/only (constant) reference to the attribute. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1RateLimit_acafa69c685469c50108cb0f4c54a5ce2}{ValueType} \& \hyperlink{classopenstack_1_1xml_1_1RateLimit_a08840bc279a6097aec1999cb6e92ec09}{value} ()
+\begin{DoxyCompactList}\small\item\em Return a read-\/write reference to the attribute. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1RateLimit_a4a85a6bee38b0ab4004f9a445528350e}{value} (const \hyperlink{classopenstack_1_1xml_1_1RateLimit_acafa69c685469c50108cb0f4c54a5ce2}{ValueType} \&x)
+\begin{DoxyCompactList}\small\item\em Set the attribute value. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{remaining}
+\label{_amgrp2626772c17d90cf46be4fe981ff30ac8}
+Accessor and modifier functions for the remaining required attribute. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a13144403e8af4dadd7e149adc68ff5d1}{
+typedef ::\hyperlink{namespacexml__schema_a12d975a13061c938969b2b5143e97645}{xml\_\-schema::Int} \hyperlink{classopenstack_1_1xml_1_1RateLimit_a13144403e8af4dadd7e149adc68ff5d1}{RemainingType}}
+\label{classopenstack_1_1xml_1_1RateLimit_a13144403e8af4dadd7e149adc68ff5d1}
+
+\begin{DoxyCompactList}\small\item\em Attribute type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a374815727e564a4367d0771e96e85e74}{
+typedef ::xsd::cxx::tree::traits$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_a13144403e8af4dadd7e149adc68ff5d1}{RemainingType}, char $>$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_a374815727e564a4367d0771e96e85e74}{RemainingTraits}}
+\label{classopenstack_1_1xml_1_1RateLimit_a374815727e564a4367d0771e96e85e74}
+
+\begin{DoxyCompactList}\small\item\em Attribute traits type. \item\end{DoxyCompactList}\item 
+const \hyperlink{classopenstack_1_1xml_1_1RateLimit_a13144403e8af4dadd7e149adc68ff5d1}{RemainingType} \& \hyperlink{classopenstack_1_1xml_1_1RateLimit_a50c03e2fc85fd9f0dc263a11015d2491}{remaining} () const 
+\begin{DoxyCompactList}\small\item\em Return a read-\/only (constant) reference to the attribute. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1RateLimit_a13144403e8af4dadd7e149adc68ff5d1}{RemainingType} \& \hyperlink{classopenstack_1_1xml_1_1RateLimit_aa1d66f42095ada9385341489ac90f737}{remaining} ()
+\begin{DoxyCompactList}\small\item\em Return a read-\/write reference to the attribute. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1RateLimit_a8150f8ecff2aaf0aaae80ff758eae13c}{remaining} (const \hyperlink{classopenstack_1_1xml_1_1RateLimit_a13144403e8af4dadd7e149adc68ff5d1}{RemainingType} \&x)
+\begin{DoxyCompactList}\small\item\em Set the attribute value. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{resetTime}
+\label{_amgrp46a8dfac6df9ff95c1068bf0eb4b2065}
+Accessor and modifier functions for the resetTime required attribute. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a040904fe6210dfa7070906275285989b}{
+typedef ::\hyperlink{namespacexml__schema_a516206ea7b60d1854f758b122bde2f5d}{xml\_\-schema::Long} \hyperlink{classopenstack_1_1xml_1_1RateLimit_a040904fe6210dfa7070906275285989b}{ResetTimeType}}
+\label{classopenstack_1_1xml_1_1RateLimit_a040904fe6210dfa7070906275285989b}
+
+\begin{DoxyCompactList}\small\item\em Attribute type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a3faae34db835d0cd785d8ac14172cec0}{
+typedef ::xsd::cxx::tree::traits$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_a040904fe6210dfa7070906275285989b}{ResetTimeType}, char $>$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_a3faae34db835d0cd785d8ac14172cec0}{ResetTimeTraits}}
+\label{classopenstack_1_1xml_1_1RateLimit_a3faae34db835d0cd785d8ac14172cec0}
+
+\begin{DoxyCompactList}\small\item\em Attribute traits type. \item\end{DoxyCompactList}\item 
+const \hyperlink{classopenstack_1_1xml_1_1RateLimit_a040904fe6210dfa7070906275285989b}{ResetTimeType} \& \hyperlink{classopenstack_1_1xml_1_1RateLimit_af3a6e7fb77881acafc82fda2e6bdda41}{resetTime} () const 
+\begin{DoxyCompactList}\small\item\em Return a read-\/only (constant) reference to the attribute. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1RateLimit_a040904fe6210dfa7070906275285989b}{ResetTimeType} \& \hyperlink{classopenstack_1_1xml_1_1RateLimit_a9730806e581387d5b07a1e686b42b737}{resetTime} ()
+\begin{DoxyCompactList}\small\item\em Return a read-\/write reference to the attribute. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1RateLimit_a3be4eef33d9e4666ee4adf1da63b6e25}{resetTime} (const \hyperlink{classopenstack_1_1xml_1_1RateLimit_a040904fe6210dfa7070906275285989b}{ResetTimeType} \&x)
+\begin{DoxyCompactList}\small\item\em Set the attribute value. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Constructors}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a5bdc0d5af473087d54380c2f9b0886e4}{
+\hyperlink{classopenstack_1_1xml_1_1RateLimit_a5bdc0d5af473087d54380c2f9b0886e4}{RateLimit} (const \hyperlink{classopenstack_1_1xml_1_1HTTPVerb}{VerbType} \&, const \hyperlink{classopenstack_1_1xml_1_1RateLimit_af7901803e96cb338e2560358c8ce931b}{URIType} \&, const \hyperlink{classopenstack_1_1xml_1_1RateLimit_a548c5e538a1408da78611116ac40aab2}{RegexType} \&, const \hyperlink{classopenstack_1_1xml_1_1RateLimitUnit}{UnitType} \&, const \hyperlink{classopenstack_1_1xml_1_1RateLimit_acafa69c685469c50108cb0f4c54a5ce2}{ValueType} \&, const \hyperlink{classopenstack_1_1xml_1_1RateLimit_a13144403e8af4dadd7e149adc68ff5d1}{RemainingType} \&, const \hyperlink{classopenstack_1_1xml_1_1RateLimit_a040904fe6210dfa7070906275285989b}{ResetTimeType} \&)}
+\label{classopenstack_1_1xml_1_1RateLimit_a5bdc0d5af473087d54380c2f9b0886e4}
+
+\begin{DoxyCompactList}\small\item\em Create an instance from the ultimate base and initializers for required elements and attributes. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1RateLimit_a64f813e040e017ec9a4c5b303cfd6685}{RateLimit} (const ::xercesc::DOMElement \&e,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0)
+\begin{DoxyCompactList}\small\item\em Create an instance from a DOM element. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1RateLimit_a45985b51ae41ce6f14de1fdee3ce09ac}{RateLimit} (const \hyperlink{classopenstack_1_1xml_1_1RateLimit}{RateLimit} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classopenstack_1_1xml_1_1RateLimit}{RateLimit} $\ast$ \hyperlink{classopenstack_1_1xml_1_1RateLimit_ac8082112503072f3202bff203d97a6a0}{\_\-clone} (::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0) const 
+\begin{DoxyCompactList}\small\item\em Copy the instance polymorphically. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class corresponding to the RateLimit schema type. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a64f813e040e017ec9a4c5b303cfd6685}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!RateLimit@{RateLimit}}
+\index{RateLimit@{RateLimit}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{RateLimit}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::RateLimit::RateLimit (
+\begin{DoxyParamCaption}
+\item[{const ::xercesc::DOMElement \&}]{e, }
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classopenstack_1_1xml_1_1RateLimit_a64f813e040e017ec9a4c5b303cfd6685}
+
+
+Create an instance from a DOM element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & A DOM element to extract the data from. \\
+\hline
+{\em f} & Flags to create the new instance with. \\
+\hline
+{\em c} & A pointer to the object that will contain the new instance. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a45985b51ae41ce6f14de1fdee3ce09ac}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!RateLimit@{RateLimit}}
+\index{RateLimit@{RateLimit}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{RateLimit}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::RateLimit::RateLimit (
+\begin{DoxyParamCaption}
+\item[{const {\bf RateLimit} \&}]{x, }
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classopenstack_1_1xml_1_1RateLimit_a45985b51ae41ce6f14de1fdee3ce09ac}
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & An instance to make a copy of. \\
+\hline
+{\em f} & Flags to create the copy with. \\
+\hline
+{\em c} & A pointer to the object that will contain the copy.\\
+\hline
+\end{DoxyParams}
+For polymorphic object models use the {\ttfamily \_\-clone} function instead. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_ac8082112503072f3202bff203d97a6a0}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!\_\-clone@{\_\-clone}}
+\index{\_\-clone@{\_\-clone}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{\_\-clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RateLimit} $\ast$ openstack::xml::RateLimit::\_\-clone (
+\begin{DoxyParamCaption}
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_ac8082112503072f3202bff203d97a6a0}
+
+
+Copy the instance polymorphically. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Flags to create the copy with. \\
+\hline
+{\em c} & A pointer to the object that will contain the copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the dynamically allocated copy.
+\end{DoxyReturn}
+This function ensures that the dynamic type of the instance is used for copying and should be used for polymorphic object models instead of the copy constructor. \hypertarget{classopenstack_1_1xml_1_1RateLimit_ad4f178be88f1810e57c76ab37975b0ce}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!regex@{regex}}
+\index{regex@{regex}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{regex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RateLimit::RegexType} \& openstack::xml::RateLimit::regex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_ad4f178be88f1810e57c76ab37975b0ce}
+
+
+Return a read-\/write reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a123f76f7cb2532ffb2e325d33053ed5b}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!regex@{regex}}
+\index{regex@{regex}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{regex}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::RateLimit::regex (
+\begin{DoxyParamCaption}
+\item[{const {\bf RegexType} \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a123f76f7cb2532ffb2e325d33053ed5b}
+
+
+Set the attribute value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A new value to set.\\
+\hline
+\end{DoxyParams}
+This function makes a copy of its argument and sets it as the new value of the attribute. \hypertarget{classopenstack_1_1xml_1_1RateLimit_a8f59d3316f42dd2e7adec424fdac85d2}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!regex@{regex}}
+\index{regex@{regex}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{regex}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf RateLimit::RegexType} \& openstack::xml::RateLimit::regex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a8f59d3316f42dd2e7adec424fdac85d2}
+
+
+Return a read-\/only (constant) reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a94d28640958e5eafc806dd8a65a58b95}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!regex@{regex}}
+\index{regex@{regex}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{regex}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::RateLimit::regex (
+\begin{DoxyParamCaption}
+\item[{::std::auto\_\-ptr$<$ {\bf RegexType} $>$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a94d28640958e5eafc806dd8a65a58b95}
+
+
+Set the attribute value without copying. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & A new value to use.\\
+\hline
+\end{DoxyParams}
+This function will try to use the passed value directly instead of making a copy. \hypertarget{classopenstack_1_1xml_1_1RateLimit_a50c03e2fc85fd9f0dc263a11015d2491}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!remaining@{remaining}}
+\index{remaining@{remaining}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{remaining}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf RateLimit::RemainingType} \& openstack::xml::RateLimit::remaining (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a50c03e2fc85fd9f0dc263a11015d2491}
+
+
+Return a read-\/only (constant) reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_aa1d66f42095ada9385341489ac90f737}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!remaining@{remaining}}
+\index{remaining@{remaining}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{remaining}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RateLimit::RemainingType} \& openstack::xml::RateLimit::remaining (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_aa1d66f42095ada9385341489ac90f737}
+
+
+Return a read-\/write reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a8150f8ecff2aaf0aaae80ff758eae13c}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!remaining@{remaining}}
+\index{remaining@{remaining}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{remaining}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::RateLimit::remaining (
+\begin{DoxyParamCaption}
+\item[{const {\bf RemainingType} \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a8150f8ecff2aaf0aaae80ff758eae13c}
+
+
+Set the attribute value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A new value to set.\\
+\hline
+\end{DoxyParams}
+This function makes a copy of its argument and sets it as the new value of the attribute. \hypertarget{classopenstack_1_1xml_1_1RateLimit_af3a6e7fb77881acafc82fda2e6bdda41}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!resetTime@{resetTime}}
+\index{resetTime@{resetTime}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{resetTime}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf RateLimit::ResetTimeType} \& openstack::xml::RateLimit::resetTime (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_af3a6e7fb77881acafc82fda2e6bdda41}
+
+
+Return a read-\/only (constant) reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a3be4eef33d9e4666ee4adf1da63b6e25}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!resetTime@{resetTime}}
+\index{resetTime@{resetTime}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{resetTime}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::RateLimit::resetTime (
+\begin{DoxyParamCaption}
+\item[{const {\bf ResetTimeType} \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a3be4eef33d9e4666ee4adf1da63b6e25}
+
+
+Set the attribute value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A new value to set.\\
+\hline
+\end{DoxyParams}
+This function makes a copy of its argument and sets it as the new value of the attribute. \hypertarget{classopenstack_1_1xml_1_1RateLimit_a9730806e581387d5b07a1e686b42b737}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!resetTime@{resetTime}}
+\index{resetTime@{resetTime}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{resetTime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RateLimit::ResetTimeType} \& openstack::xml::RateLimit::resetTime (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a9730806e581387d5b07a1e686b42b737}
+
+
+Return a read-\/write reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_aff4feac43de60d5f11979ba725e6b215}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!unit@{unit}}
+\index{unit@{unit}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{unit}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::RateLimit::unit (
+\begin{DoxyParamCaption}
+\item[{::std::auto\_\-ptr$<$ {\bf UnitType} $>$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_aff4feac43de60d5f11979ba725e6b215}
+
+
+Set the attribute value without copying. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & A new value to use.\\
+\hline
+\end{DoxyParams}
+This function will try to use the passed value directly instead of making a copy. \hypertarget{classopenstack_1_1xml_1_1RateLimit_a0e8c51ef646f47ee87d1776d236eed53}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!unit@{unit}}
+\index{unit@{unit}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{unit}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf RateLimit::UnitType} \& openstack::xml::RateLimit::unit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a0e8c51ef646f47ee87d1776d236eed53}
+
+
+Return a read-\/only (constant) reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a014d80fb0de66c49697373329be0edd6}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!unit@{unit}}
+\index{unit@{unit}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{unit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RateLimit::UnitType} \& openstack::xml::RateLimit::unit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a014d80fb0de66c49697373329be0edd6}
+
+
+Return a read-\/write reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a49de1642eef66f7728771c90548be3cc}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!unit@{unit}}
+\index{unit@{unit}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{unit}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::RateLimit::unit (
+\begin{DoxyParamCaption}
+\item[{const {\bf UnitType} \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a49de1642eef66f7728771c90548be3cc}
+
+
+Set the attribute value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A new value to set.\\
+\hline
+\end{DoxyParams}
+This function makes a copy of its argument and sets it as the new value of the attribute. \hypertarget{classopenstack_1_1xml_1_1RateLimit_a42dc865f2ed3ff5355df4478dde7b951}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!uRI@{uRI}}
+\index{uRI@{uRI}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{uRI}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::RateLimit::uRI (
+\begin{DoxyParamCaption}
+\item[{::std::auto\_\-ptr$<$ {\bf URIType} $>$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a42dc865f2ed3ff5355df4478dde7b951}
+
+
+Set the attribute value without copying. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & A new value to use.\\
+\hline
+\end{DoxyParams}
+This function will try to use the passed value directly instead of making a copy. \hypertarget{classopenstack_1_1xml_1_1RateLimit_a1154788c45af216d0ef9a3d465ae55de}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!uRI@{uRI}}
+\index{uRI@{uRI}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{uRI}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RateLimit::URIType} \& openstack::xml::RateLimit::uRI (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a1154788c45af216d0ef9a3d465ae55de}
+
+
+Return a read-\/write reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_aac52d5f8ccf1eb4377768df10c3dfd83}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!uRI@{uRI}}
+\index{uRI@{uRI}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{uRI}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf RateLimit::URIType} \& openstack::xml::RateLimit::uRI (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_aac52d5f8ccf1eb4377768df10c3dfd83}
+
+
+Return a read-\/only (constant) reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a4086a4f2b8c0748ade2ddbee39588df6}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!uRI@{uRI}}
+\index{uRI@{uRI}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{uRI}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::RateLimit::uRI (
+\begin{DoxyParamCaption}
+\item[{const {\bf URIType} \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a4086a4f2b8c0748ade2ddbee39588df6}
+
+
+Set the attribute value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A new value to set.\\
+\hline
+\end{DoxyParams}
+This function makes a copy of its argument and sets it as the new value of the attribute. \hypertarget{classopenstack_1_1xml_1_1RateLimit_a469ce1ffa2758bd6b152d9d2672c698e}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!value@{value}}
+\index{value@{value}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf RateLimit::ValueType} \& openstack::xml::RateLimit::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a469ce1ffa2758bd6b152d9d2672c698e}
+
+
+Return a read-\/only (constant) reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a08840bc279a6097aec1999cb6e92ec09}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!value@{value}}
+\index{value@{value}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RateLimit::ValueType} \& openstack::xml::RateLimit::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a08840bc279a6097aec1999cb6e92ec09}
+
+
+Return a read-\/write reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a4a85a6bee38b0ab4004f9a445528350e}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!value@{value}}
+\index{value@{value}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::RateLimit::value (
+\begin{DoxyParamCaption}
+\item[{const {\bf ValueType} \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a4a85a6bee38b0ab4004f9a445528350e}
+
+
+Set the attribute value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A new value to set.\\
+\hline
+\end{DoxyParams}
+This function makes a copy of its argument and sets it as the new value of the attribute. \hypertarget{classopenstack_1_1xml_1_1RateLimit_a2e57ad126d94339314507f6ccf6b567f}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!verb@{verb}}
+\index{verb@{verb}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{verb}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::RateLimit::verb (
+\begin{DoxyParamCaption}
+\item[{const {\bf VerbType} \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a2e57ad126d94339314507f6ccf6b567f}
+
+
+Set the attribute value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A new value to set.\\
+\hline
+\end{DoxyParams}
+This function makes a copy of its argument and sets it as the new value of the attribute. \hypertarget{classopenstack_1_1xml_1_1RateLimit_ad36bcf07eb0299ed568b8bf76c7a3ae6}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!verb@{verb}}
+\index{verb@{verb}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{verb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RateLimit::VerbType} \& openstack::xml::RateLimit::verb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_ad36bcf07eb0299ed568b8bf76c7a3ae6}
+
+
+Return a read-\/write reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimit_a22d9bcaac627ed869e977c948f13b532}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!verb@{verb}}
+\index{verb@{verb}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{verb}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::RateLimit::verb (
+\begin{DoxyParamCaption}
+\item[{::std::auto\_\-ptr$<$ {\bf VerbType} $>$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_a22d9bcaac627ed869e977c948f13b532}
+
+
+Set the attribute value without copying. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & A new value to use.\\
+\hline
+\end{DoxyParams}
+This function will try to use the passed value directly instead of making a copy. \hypertarget{classopenstack_1_1xml_1_1RateLimit_aa8ba46837d1d8c1decf29dc48e60ea56}{
+\index{openstack::xml::RateLimit@{openstack::xml::RateLimit}!verb@{verb}}
+\index{verb@{verb}!openstack::xml::RateLimit@{openstack::xml::RateLimit}}
+\subsubsection[{verb}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf RateLimit::VerbType} \& openstack::xml::RateLimit::verb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimit_aa8ba46837d1d8c1decf29dc48e60ea56}
+
+
+Return a read-\/only (constant) reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the attribute. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+xsd/\hyperlink{limits_8hpp}{limits.hpp}\item 
+xsd/limits.cpp\item 
+xsd/limits.ipp\end{DoxyCompactItemize}

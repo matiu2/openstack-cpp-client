@@ -1,0 +1,448 @@
+\hypertarget{actions_8hpp}{
+\section{xsd/actions.hpp File Reference}
+\label{actions_8hpp}\index{xsd/actions.hpp@{xsd/actions.hpp}}
+}
+
+
+Generated from actions.xsd.  
+
+
+{\ttfamily \#include $<$xsd/cxx/config.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/pre.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/xml/char-\/utf8.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/exceptions.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/elements.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/types.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/xml/error-\/handler.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/xml/dom/auto-\/ptr.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/element-\/map.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/byte.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/unsigned-\/byte.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/short.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/unsigned-\/short.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/int.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/unsigned-\/int.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/long.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/unsigned-\/long.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/boolean.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/float.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/double.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/decimal.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/element-\/map.txx$>$}\par
+{\ttfamily \#include $<$memory$>$}\par
+{\ttfamily \#include $<$limits$>$}\par
+{\ttfamily \#include $<$algorithm$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/containers.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/list.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/xml/dom/parsing-\/header.hxx$>$}\par
+{\ttfamily \#include \char`\"{}actions.ipp\char`\"{}}\par
+{\ttfamily \#include $<$xsd/cxx/post.hxx$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classopenstack_1_1xml_1_1Reboot__}{openstack::xml::Reboot\_\-}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the reboot root element. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1Rebuild__}{openstack::xml::Rebuild\_\-}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the rebuild root element. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1Resize__}{openstack::xml::Resize\_\-}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the resize root element. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1ConfirmResize__}{openstack::xml::ConfirmResize\_\-}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the confirmResize root element. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1RevertResize__}{openstack::xml::RevertResize\_\-}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the revertResize root element. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1Action}{openstack::xml::Action}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the Action schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1Reboot}{openstack::xml::Reboot}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the Reboot schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1Rebuild}{openstack::xml::Rebuild}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the Rebuild schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1Resize}{openstack::xml::Resize}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the Resize schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1ConfirmResize}{openstack::xml::ConfirmResize}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the ConfirmResize schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1RevertResize}{openstack::xml::RevertResize}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the RevertResize schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1RebootType}{openstack::xml::RebootType}
+\begin{DoxyCompactList}\small\item\em Enumeration class corresponding to the RebootType schema type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacexml__schema}{xml\_\-schema}
+
+
+\begin{DoxyCompactList}\small\item\em C++ namespace for the http://www.w3.org/2001/XMLSchema schema namespace. \item\end{DoxyCompactList}
+
+\item 
+namespace \hyperlink{namespacexml__schema_1_1dom}{xml\_\-schema::dom}
+
+
+\begin{DoxyCompactList}\small\item\em DOM interaction. \item\end{DoxyCompactList}
+
+\item 
+namespace \hyperlink{namespaceopenstack_1_1xml}{openstack::xml}
+
+
+\begin{DoxyCompactList}\small\item\em C++ namespace for the http://docs.rackspacecloud.com/servers/api/v1.0 schema namespace. \item\end{DoxyCompactList}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespacexml__schema_ad34e8fd175bf4f9fece6c670b01aa239}{
+typedef ::xsd::cxx::tree::type \hyperlink{namespacexml__schema_ad34e8fd175bf4f9fece6c670b01aa239}{xml\_\-schema::Type}}
+\label{namespacexml__schema_ad34e8fd175bf4f9fece6c670b01aa239}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the anyType XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a1171be9b6e593e49b895a46671f5dc5f}{
+typedef ::xsd::cxx::tree::simple\_\-type$<$ Type $>$ \hyperlink{namespacexml__schema_a1171be9b6e593e49b895a46671f5dc5f}{xml\_\-schema::SimpleType}}
+\label{namespacexml__schema_a1171be9b6e593e49b895a46671f5dc5f}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the anySimpleType XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{
+typedef ::xsd::cxx::tree::type \hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container}}
+\label{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}
+
+\begin{DoxyCompactList}\small\item\em Alias for the anyType type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a1b7c2d8f9fdcd7812acdfc885225e06e}{
+typedef signed char \hyperlink{namespacexml__schema_a1b7c2d8f9fdcd7812acdfc885225e06e}{xml\_\-schema::Byte}}
+\label{namespacexml__schema_a1b7c2d8f9fdcd7812acdfc885225e06e}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the byte XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a395b3a9628b056f70930e3294e622b7c}{
+typedef unsigned char \hyperlink{namespacexml__schema_a395b3a9628b056f70930e3294e622b7c}{xml\_\-schema::UnsignedByte}}
+\label{namespacexml__schema_a395b3a9628b056f70930e3294e622b7c}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the unsignedByte XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_af32f275204ee102f0f2ebf36d8b2f81a}{
+typedef short \hyperlink{namespacexml__schema_af32f275204ee102f0f2ebf36d8b2f81a}{xml\_\-schema::Short}}
+\label{namespacexml__schema_af32f275204ee102f0f2ebf36d8b2f81a}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the short XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_ac717910ff9e59ceb377d5d108704a89a}{
+typedef unsigned short \hyperlink{namespacexml__schema_ac717910ff9e59ceb377d5d108704a89a}{xml\_\-schema::UnsignedShort}}
+\label{namespacexml__schema_ac717910ff9e59ceb377d5d108704a89a}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the unsignedShort XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a12d975a13061c938969b2b5143e97645}{
+typedef int \hyperlink{namespacexml__schema_a12d975a13061c938969b2b5143e97645}{xml\_\-schema::Int}}
+\label{namespacexml__schema_a12d975a13061c938969b2b5143e97645}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the int XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_ac410e4eabf6080e99cc0fbfa10ee874f}{
+typedef unsigned int \hyperlink{namespacexml__schema_ac410e4eabf6080e99cc0fbfa10ee874f}{xml\_\-schema::UnsignedInt}}
+\label{namespacexml__schema_ac410e4eabf6080e99cc0fbfa10ee874f}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the unsignedInt XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a516206ea7b60d1854f758b122bde2f5d}{
+typedef long long \hyperlink{namespacexml__schema_a516206ea7b60d1854f758b122bde2f5d}{xml\_\-schema::Long}}
+\label{namespacexml__schema_a516206ea7b60d1854f758b122bde2f5d}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the long XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a42f02dabec613faa438d99fac66cb9be}{
+typedef unsigned long long \hyperlink{namespacexml__schema_a42f02dabec613faa438d99fac66cb9be}{xml\_\-schema::UnsignedLong}}
+\label{namespacexml__schema_a42f02dabec613faa438d99fac66cb9be}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the unsignedLong XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a0b11fbf68a691832669ecf4c77b17782}{
+typedef long long \hyperlink{namespacexml__schema_a0b11fbf68a691832669ecf4c77b17782}{xml\_\-schema::Integer}}
+\label{namespacexml__schema_a0b11fbf68a691832669ecf4c77b17782}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the integer XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a39aa9881437fa02c71139d9cd3d6085b}{
+typedef long long \hyperlink{namespacexml__schema_a39aa9881437fa02c71139d9cd3d6085b}{xml\_\-schema::NonPositiveInteger}}
+\label{namespacexml__schema_a39aa9881437fa02c71139d9cd3d6085b}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the nonPositiveInteger XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_ad10bc19dd6ff07f4f4f2d6a7105290e7}{
+typedef unsigned long long \hyperlink{namespacexml__schema_ad10bc19dd6ff07f4f4f2d6a7105290e7}{xml\_\-schema::NonNegativeInteger}}
+\label{namespacexml__schema_ad10bc19dd6ff07f4f4f2d6a7105290e7}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the nonNegativeInteger XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a1e3345b2d2812352f1ee01d3c40499b2}{
+typedef unsigned long long \hyperlink{namespacexml__schema_a1e3345b2d2812352f1ee01d3c40499b2}{xml\_\-schema::PositiveInteger}}
+\label{namespacexml__schema_a1e3345b2d2812352f1ee01d3c40499b2}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the positiveInteger XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a259733f00b5273e1f2988b40be1b9f60}{
+typedef long long \hyperlink{namespacexml__schema_a259733f00b5273e1f2988b40be1b9f60}{xml\_\-schema::NegativeInteger}}
+\label{namespacexml__schema_a259733f00b5273e1f2988b40be1b9f60}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the negativeInteger XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a2749f4f861e3517d559bb221b03e6b5b}{
+typedef bool \hyperlink{namespacexml__schema_a2749f4f861e3517d559bb221b03e6b5b}{xml\_\-schema::Boolean}}
+\label{namespacexml__schema_a2749f4f861e3517d559bb221b03e6b5b}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the boolean XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a5e78682cd0ca4557bf22c75ec8266c6a}{
+typedef float \hyperlink{namespacexml__schema_a5e78682cd0ca4557bf22c75ec8266c6a}{xml\_\-schema::Float}}
+\label{namespacexml__schema_a5e78682cd0ca4557bf22c75ec8266c6a}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the float XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_ad4d9be8ec9a5415e9522df5aaa17f791}{
+typedef double \hyperlink{namespacexml__schema_ad4d9be8ec9a5415e9522df5aaa17f791}{xml\_\-schema::Double}}
+\label{namespacexml__schema_ad4d9be8ec9a5415e9522df5aaa17f791}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the double XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a9ec4af2c5785716c4ecf9e1826163098}{
+typedef double \hyperlink{namespacexml__schema_a9ec4af2c5785716c4ecf9e1826163098}{xml\_\-schema::Decimal}}
+\label{namespacexml__schema_a9ec4af2c5785716c4ecf9e1826163098}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the decimal XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_af6757b5701ccc893f3b551bd70e0c94d}{
+typedef ::xsd::cxx::tree::string$<$ char, SimpleType $>$ \hyperlink{namespacexml__schema_af6757b5701ccc893f3b551bd70e0c94d}{xml\_\-schema::String}}
+\label{namespacexml__schema_af6757b5701ccc893f3b551bd70e0c94d}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the string XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_ab4f1d744ea5be78260b24e88a4e395ee}{
+typedef ::xsd::cxx::tree::normalized\_\-string$<$ char, String $>$ \hyperlink{namespacexml__schema_ab4f1d744ea5be78260b24e88a4e395ee}{xml\_\-schema::NormalizedString}}
+\label{namespacexml__schema_ab4f1d744ea5be78260b24e88a4e395ee}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the normalizedString XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a6c5a46363a79f52c8f09edc7885e259c}{
+typedef ::xsd::cxx::tree::token$<$ char, NormalizedString $>$ \hyperlink{namespacexml__schema_a6c5a46363a79f52c8f09edc7885e259c}{xml\_\-schema::Token}}
+\label{namespacexml__schema_a6c5a46363a79f52c8f09edc7885e259c}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the token XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_af4febacaa19a36f5a1caab58e620f6d5}{
+typedef ::xsd::cxx::tree::name$<$ char, Token $>$ \hyperlink{namespacexml__schema_af4febacaa19a36f5a1caab58e620f6d5}{xml\_\-schema::Name}}
+\label{namespacexml__schema_af4febacaa19a36f5a1caab58e620f6d5}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the Name XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_aff77acdf25cb3f0e2bee25436470dfa8}{
+typedef ::xsd::cxx::tree::nmtoken$<$ char, Token $>$ \hyperlink{namespacexml__schema_aff77acdf25cb3f0e2bee25436470dfa8}{xml\_\-schema::Nmtoken}}
+\label{namespacexml__schema_aff77acdf25cb3f0e2bee25436470dfa8}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the NMTOKEN XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_aa8453d4c59fcb01552ceeaf49de9da76}{
+typedef ::xsd::cxx::tree::nmtokens$<$ char, SimpleType, Nmtoken $>$ \hyperlink{namespacexml__schema_aa8453d4c59fcb01552ceeaf49de9da76}{xml\_\-schema::Nmtokens}}
+\label{namespacexml__schema_aa8453d4c59fcb01552ceeaf49de9da76}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the NMTOKENS XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_aceb9a08fa292b3b3af49f5aa42d06fa9}{
+typedef ::xsd::cxx::tree::ncname$<$ char, Name $>$ \hyperlink{namespacexml__schema_aceb9a08fa292b3b3af49f5aa42d06fa9}{xml\_\-schema::Ncname}}
+\label{namespacexml__schema_aceb9a08fa292b3b3af49f5aa42d06fa9}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the NCName XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_ae32771888035aa186f9432f7e791b0f1}{
+typedef ::xsd::cxx::tree::language$<$ char, Token $>$ \hyperlink{namespacexml__schema_ae32771888035aa186f9432f7e791b0f1}{xml\_\-schema::Language}}
+\label{namespacexml__schema_ae32771888035aa186f9432f7e791b0f1}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the language XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a14dae7debe509f1d905ac7ab650d8c3f}{
+typedef ::xsd::cxx::tree::id$<$ char, Ncname $>$ \hyperlink{namespacexml__schema_a14dae7debe509f1d905ac7ab650d8c3f}{xml\_\-schema::Id}}
+\label{namespacexml__schema_a14dae7debe509f1d905ac7ab650d8c3f}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the ID XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_aec599d3d2c37850cde794950fa8bc1fd}{
+typedef ::xsd::cxx::tree::idref$<$ char, Ncname, Type $>$ \hyperlink{namespacexml__schema_aec599d3d2c37850cde794950fa8bc1fd}{xml\_\-schema::Idref}}
+\label{namespacexml__schema_aec599d3d2c37850cde794950fa8bc1fd}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the IDREF XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_afba3950a30b3d8279e02e9657a2637ab}{
+typedef ::xsd::cxx::tree::idrefs$<$ char, SimpleType, Idref $>$ \hyperlink{namespacexml__schema_afba3950a30b3d8279e02e9657a2637ab}{xml\_\-schema::Idrefs}}
+\label{namespacexml__schema_afba3950a30b3d8279e02e9657a2637ab}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the IDREFS XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_ae14d61a2e71e44fa4b46c9492c59b44d}{
+typedef ::xsd::cxx::tree::uri$<$ char, SimpleType $>$ \hyperlink{namespacexml__schema_ae14d61a2e71e44fa4b46c9492c59b44d}{xml\_\-schema::Uri}}
+\label{namespacexml__schema_ae14d61a2e71e44fa4b46c9492c59b44d}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the anyURI XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a2d07f8e92d03ad192adbbc7498a72b72}{
+typedef ::xsd::cxx::tree::qname$<$ char, SimpleType, Uri, Ncname $>$ \hyperlink{namespacexml__schema_a2d07f8e92d03ad192adbbc7498a72b72}{xml\_\-schema::Qname}}
+\label{namespacexml__schema_a2d07f8e92d03ad192adbbc7498a72b72}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the QName XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_af8732a0949261972e4b167f50a23275d}{
+typedef ::xsd::cxx::tree::buffer$<$ char $>$ \hyperlink{namespacexml__schema_af8732a0949261972e4b167f50a23275d}{xml\_\-schema::Buffer}}
+\label{namespacexml__schema_af8732a0949261972e4b167f50a23275d}
+
+\begin{DoxyCompactList}\small\item\em Binary buffer type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a439c138de03306df7e07a447abfe54ed}{
+typedef ::xsd::cxx::tree::base64\_\-binary$<$ char, SimpleType $>$ \hyperlink{namespacexml__schema_a439c138de03306df7e07a447abfe54ed}{xml\_\-schema::Base64Binary}}
+\label{namespacexml__schema_a439c138de03306df7e07a447abfe54ed}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the base64Binary XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_ac344f65d115a7291df483b253bc995cb}{
+typedef ::xsd::cxx::tree::hex\_\-binary$<$ char, SimpleType $>$ \hyperlink{namespacexml__schema_ac344f65d115a7291df483b253bc995cb}{xml\_\-schema::HexBinary}}
+\label{namespacexml__schema_ac344f65d115a7291df483b253bc995cb}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the hexBinary XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a2c0cb548b6be42f0e539c80f4d111250}{
+typedef ::xsd::cxx::tree::time\_\-zone \hyperlink{namespacexml__schema_a2c0cb548b6be42f0e539c80f4d111250}{xml\_\-schema::TimeZone}}
+\label{namespacexml__schema_a2c0cb548b6be42f0e539c80f4d111250}
+
+\begin{DoxyCompactList}\small\item\em Time zone type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a1ab9f6103d1c58127c37c50226e1b19d}{
+typedef ::xsd::cxx::tree::date$<$ char, SimpleType $>$ \hyperlink{namespacexml__schema_a1ab9f6103d1c58127c37c50226e1b19d}{xml\_\-schema::Date}}
+\label{namespacexml__schema_a1ab9f6103d1c58127c37c50226e1b19d}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the date XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_ac157d7debe19af40c06ef2330429a088}{
+typedef ::xsd::cxx::tree::date\_\-time$<$ char, SimpleType $>$ \hyperlink{namespacexml__schema_ac157d7debe19af40c06ef2330429a088}{xml\_\-schema::DateTime}}
+\label{namespacexml__schema_ac157d7debe19af40c06ef2330429a088}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the dateTime XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_aa7bc30c31d90cae4c4cdae79c647773d}{
+typedef ::xsd::cxx::tree::duration$<$ char, SimpleType $>$ \hyperlink{namespacexml__schema_aa7bc30c31d90cae4c4cdae79c647773d}{xml\_\-schema::Duration}}
+\label{namespacexml__schema_aa7bc30c31d90cae4c4cdae79c647773d}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the duration XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a5b06d49d8c16e03552ccb1b3965a885b}{
+typedef ::xsd::cxx::tree::gday$<$ char, SimpleType $>$ \hyperlink{namespacexml__schema_a5b06d49d8c16e03552ccb1b3965a885b}{xml\_\-schema::Gday}}
+\label{namespacexml__schema_a5b06d49d8c16e03552ccb1b3965a885b}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the gDay XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a3ba0912e4c675fb93fb759d6bfd46395}{
+typedef ::xsd::cxx::tree::gmonth$<$ char, SimpleType $>$ \hyperlink{namespacexml__schema_a3ba0912e4c675fb93fb759d6bfd46395}{xml\_\-schema::Gmonth}}
+\label{namespacexml__schema_a3ba0912e4c675fb93fb759d6bfd46395}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the gMonth XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a2c90cd4093544b12b5ce7fce76c22fb7}{
+typedef ::xsd::cxx::tree::gmonth\_\-day$<$ char, SimpleType $>$ \hyperlink{namespacexml__schema_a2c90cd4093544b12b5ce7fce76c22fb7}{xml\_\-schema::GmonthDay}}
+\label{namespacexml__schema_a2c90cd4093544b12b5ce7fce76c22fb7}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the gMonthDay XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a4ee36addde54a21b720c12f215d5a92e}{
+typedef ::xsd::cxx::tree::gyear$<$ char, SimpleType $>$ \hyperlink{namespacexml__schema_a4ee36addde54a21b720c12f215d5a92e}{xml\_\-schema::Gyear}}
+\label{namespacexml__schema_a4ee36addde54a21b720c12f215d5a92e}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the gYear XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a1d88a18a52a8b9f3b1c8d2c865ba089d}{
+typedef ::xsd::cxx::tree::gyear\_\-month$<$ char, SimpleType $>$ \hyperlink{namespacexml__schema_a1d88a18a52a8b9f3b1c8d2c865ba089d}{xml\_\-schema::GyearMonth}}
+\label{namespacexml__schema_a1d88a18a52a8b9f3b1c8d2c865ba089d}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the gYearMonth XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a9089f1cb5793341884da2b1faa310f09}{
+typedef ::xsd::cxx::tree::time$<$ char, SimpleType $>$ \hyperlink{namespacexml__schema_a9089f1cb5793341884da2b1faa310f09}{xml\_\-schema::Time}}
+\label{namespacexml__schema_a9089f1cb5793341884da2b1faa310f09}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the time XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a34af04faeed4d3cfc482a9f4fa43aa4b}{
+typedef ::xsd::cxx::tree::entity$<$ char, Ncname $>$ \hyperlink{namespacexml__schema_a34af04faeed4d3cfc482a9f4fa43aa4b}{xml\_\-schema::Entity}}
+\label{namespacexml__schema_a34af04faeed4d3cfc482a9f4fa43aa4b}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the ENTITY XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a906654593daefd1bd7462fa2434a6002}{
+typedef ::xsd::cxx::tree::entities$<$ char, SimpleType, Entity $>$ \hyperlink{namespacexml__schema_a906654593daefd1bd7462fa2434a6002}{xml\_\-schema::Entities}}
+\label{namespacexml__schema_a906654593daefd1bd7462fa2434a6002}
+
+\begin{DoxyCompactList}\small\item\em C++ type corresponding to the ENTITIES XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a7dffa68a901bbdd836d7ff3a3e10c9d2}{
+typedef ::xsd::cxx::tree::element\_\-type$<$ char, Type $>$ \hyperlink{namespacexml__schema_a7dffa68a901bbdd836d7ff3a3e10c9d2}{xml\_\-schema::ElementType}}
+\label{namespacexml__schema_a7dffa68a901bbdd836d7ff3a3e10c9d2}
+
+\begin{DoxyCompactList}\small\item\em Base class for element types. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a4fb4e959438708240e2f787eee446141}{
+typedef ::xsd::cxx::tree::element\_\-map$<$ char, Type $>$ \hyperlink{namespacexml__schema_a4fb4e959438708240e2f787eee446141}{xml\_\-schema::ElementMap}}
+\label{namespacexml__schema_a4fb4e959438708240e2f787eee446141}
+
+\begin{DoxyCompactList}\small\item\em Root element map. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{
+typedef ::xsd::cxx::tree::flags \hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags}}
+\label{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}
+
+\begin{DoxyCompactList}\small\item\em Parsing and serialization flags. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{
+typedef ::xsd::cxx::tree::properties$<$ char $>$ \hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}}
+\label{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}
+
+\begin{DoxyCompactList}\small\item\em Parsing properties. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a1385d97f1fb2a3b623185e7ef2a12c08}{
+typedef ::xsd::cxx::tree::severity \hyperlink{namespacexml__schema_a1385d97f1fb2a3b623185e7ef2a12c08}{xml\_\-schema::Severity}}
+\label{namespacexml__schema_a1385d97f1fb2a3b623185e7ef2a12c08}
+
+\begin{DoxyCompactList}\small\item\em Error severity. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a21e804b3775e71d965fc63126fa6f4cb}{
+typedef ::xsd::cxx::tree::error$<$ char $>$ \hyperlink{namespacexml__schema_a21e804b3775e71d965fc63126fa6f4cb}{xml\_\-schema::Error}}
+\label{namespacexml__schema_a21e804b3775e71d965fc63126fa6f4cb}
+
+\begin{DoxyCompactList}\small\item\em Error condition. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_aeacc5a291452af2cabc910be1bae640d}{
+typedef ::xsd::cxx::tree::diagnostics$<$ char $>$ \hyperlink{namespacexml__schema_aeacc5a291452af2cabc910be1bae640d}{xml\_\-schema::Diagnostics}}
+\label{namespacexml__schema_aeacc5a291452af2cabc910be1bae640d}
+
+\begin{DoxyCompactList}\small\item\em List of error conditions. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_ac873abff0228946d91e7ababf2cededc}{
+typedef ::xsd::cxx::tree::exception$<$ char $>$ \hyperlink{namespacexml__schema_ac873abff0228946d91e7ababf2cededc}{xml\_\-schema::Exception}}
+\label{namespacexml__schema_ac873abff0228946d91e7ababf2cededc}
+
+\begin{DoxyCompactList}\small\item\em Root of the C++/Tree exception hierarchy. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a8ad4f95d0dda1ea131f69a7231deb0fe}{
+typedef ::xsd::cxx::tree::bounds$<$ char $>$ \hyperlink{namespacexml__schema_a8ad4f95d0dda1ea131f69a7231deb0fe}{xml\_\-schema::Bounds}}
+\label{namespacexml__schema_a8ad4f95d0dda1ea131f69a7231deb0fe}
+
+\begin{DoxyCompactList}\small\item\em Exception indicating that the size argument exceeds the capacity argument. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a54fd4ff8caf281b84358720a39d7573a}{
+typedef ::xsd::cxx::tree::duplicate\_\-id$<$ char $>$ \hyperlink{namespacexml__schema_a54fd4ff8caf281b84358720a39d7573a}{xml\_\-schema::DuplicateId}}
+\label{namespacexml__schema_a54fd4ff8caf281b84358720a39d7573a}
+
+\begin{DoxyCompactList}\small\item\em Exception indicating that a duplicate ID value was encountered in the object model. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a439552700a98fdcf8db5e211f47edcb6}{
+typedef ::xsd::cxx::tree::parsing$<$ char $>$ \hyperlink{namespacexml__schema_a439552700a98fdcf8db5e211f47edcb6}{xml\_\-schema::Parsing}}
+\label{namespacexml__schema_a439552700a98fdcf8db5e211f47edcb6}
+
+\begin{DoxyCompactList}\small\item\em Exception indicating a parsing failure. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_affcd8b87d336cb78c21a358711d4e876}{
+typedef ::xsd::cxx::tree::expected\_\-element$<$ char $>$ \hyperlink{namespacexml__schema_affcd8b87d336cb78c21a358711d4e876}{xml\_\-schema::ExpectedElement}}
+\label{namespacexml__schema_affcd8b87d336cb78c21a358711d4e876}
+
+\begin{DoxyCompactList}\small\item\em Exception indicating that an expected element was not encountered. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a9d851681cf40547856f7e7ef2c2e1f2f}{
+typedef ::xsd::cxx::tree::unexpected\_\-element$<$ char $>$ \hyperlink{namespacexml__schema_a9d851681cf40547856f7e7ef2c2e1f2f}{xml\_\-schema::UnexpectedElement}}
+\label{namespacexml__schema_a9d851681cf40547856f7e7ef2c2e1f2f}
+
+\begin{DoxyCompactList}\small\item\em Exception indicating that an unexpected element was encountered. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a78581d3d4ffe1356dfe8802b25cda56c}{
+typedef ::xsd::cxx::tree::expected\_\-attribute$<$ char $>$ \hyperlink{namespacexml__schema_a78581d3d4ffe1356dfe8802b25cda56c}{xml\_\-schema::ExpectedAttribute}}
+\label{namespacexml__schema_a78581d3d4ffe1356dfe8802b25cda56c}
+
+\begin{DoxyCompactList}\small\item\em Exception indicating that an expected attribute was not encountered. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_afddcc3f30878e928671a15151128783b}{
+typedef ::xsd::cxx::tree::unexpected\_\-enumerator$<$ char $>$ \hyperlink{namespacexml__schema_afddcc3f30878e928671a15151128783b}{xml\_\-schema::UnexpectedEnumerator}}
+\label{namespacexml__schema_afddcc3f30878e928671a15151128783b}
+
+\begin{DoxyCompactList}\small\item\em Exception indicating that an unexpected enumerator was encountered. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_ae1126b64dc28661806114ccce3a9a568}{
+typedef ::xsd::cxx::tree::expected\_\-text\_\-content$<$ char $>$ \hyperlink{namespacexml__schema_ae1126b64dc28661806114ccce3a9a568}{xml\_\-schema::ExpectedTextContent}}
+\label{namespacexml__schema_ae1126b64dc28661806114ccce3a9a568}
+
+\begin{DoxyCompactList}\small\item\em Exception indicating that the text content was expected for an element. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_ac1001885bc0f0942758a60c65c028058}{
+typedef ::xsd::cxx::tree::no\_\-prefix\_\-mapping$<$ char $>$ \hyperlink{namespacexml__schema_ac1001885bc0f0942758a60c65c028058}{xml\_\-schema::NoPrefixMapping}}
+\label{namespacexml__schema_ac1001885bc0f0942758a60c65c028058}
+
+\begin{DoxyCompactList}\small\item\em Exception indicating that a prefix-\/namespace mapping was not provided. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a7a2506434a2f51df9fee6ec7dc0ad12e}{
+typedef ::xsd::cxx::tree::no\_\-type\_\-info$<$ char $>$ \hyperlink{namespacexml__schema_a7a2506434a2f51df9fee6ec7dc0ad12e}{xml\_\-schema::NoTypeInfo}}
+\label{namespacexml__schema_a7a2506434a2f51df9fee6ec7dc0ad12e}
+
+\begin{DoxyCompactList}\small\item\em Exception indicating that the type information is not available for a type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_af5fd843f86d4a67881d295326ee79bf4}{
+typedef ::xsd::cxx::tree::not\_\-derived$<$ char $>$ \hyperlink{namespacexml__schema_af5fd843f86d4a67881d295326ee79bf4}{xml\_\-schema::NotDerived}}
+\label{namespacexml__schema_af5fd843f86d4a67881d295326ee79bf4}
+
+\begin{DoxyCompactList}\small\item\em Exception indicating that the types are not related by inheritance. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a1e727485a1944aba45cfc01c4510bb97}{
+typedef ::xsd::cxx::tree::no\_\-element\_\-info$<$ char $>$ \hyperlink{namespacexml__schema_a1e727485a1944aba45cfc01c4510bb97}{xml\_\-schema::NoElementInfo}}
+\label{namespacexml__schema_a1e727485a1944aba45cfc01c4510bb97}
+
+\begin{DoxyCompactList}\small\item\em Exception indicating that parsing or serialization information is not available for an element. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{
+typedef ::xsd::cxx::xml::error\_\-handler$<$ char $>$ \hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler}}
+\label{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}
+
+\begin{DoxyCompactList}\small\item\em Error handler callback interface. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespacexml__schema_1_1dom_aea364981e614f964cd9a9fae80e6a7bd}{
+const XMLCh $\ast$const \hyperlink{namespacexml__schema_1_1dom_aea364981e614f964cd9a9fae80e6a7bd}{xml\_\-schema::dom::treeNodeKey} = ::xsd::cxx::tree::user\_\-data\_\-keys::node}
+\label{namespacexml__schema_1_1dom_aea364981e614f964cd9a9fae80e6a7bd}
+
+\begin{DoxyCompactList}\small\item\em DOM user data key for back pointers to tree nodes. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generated from actions.xsd. 

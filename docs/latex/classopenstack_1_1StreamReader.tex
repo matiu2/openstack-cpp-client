@@ -1,0 +1,57 @@
+\hypertarget{classopenstack_1_1StreamReader}{
+\section{openstack::StreamReader Class Reference}
+\label{classopenstack_1_1StreamReader}\index{openstack::StreamReader@{openstack::StreamReader}}
+}
+
+
+{\ttfamily \#include $<$https.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1StreamReader_ac546a8ab7e9c0658e53d620a4aa5967c}{
+{\bfseries StreamReader} (ssl::stream$<$ tcp::socket $>$ \&sslStream)}
+\label{classopenstack_1_1StreamReader_ac546a8ab7e9c0658e53d620a4aa5967c}
+
+\item 
+\hypertarget{classopenstack_1_1StreamReader_ab9a474d176cf53705d9c47c3ebfcf466}{
+boost::asio::streambuf $\ast$ {\bfseries readLine} ()}
+\label{classopenstack_1_1StreamReader_ab9a474d176cf53705d9c47c3ebfcf466}
+
+\item 
+void \hyperlink{classopenstack_1_1StreamReader_a5e389b311a34fb1efacdcb1b3590404e}{readRest} (ostream \&destination, long toReadTotal=-\/1)
+\begin{DoxyCompactList}\small\item\em Copies the rest of the tcp/ip (ssl) stream into a stream. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gives a nice interface to buffered reads, hot off the Internet. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classopenstack_1_1StreamReader_a5e389b311a34fb1efacdcb1b3590404e}{
+\index{openstack::StreamReader@{openstack::StreamReader}!readRest@{readRest}}
+\index{readRest@{readRest}!openstack::StreamReader@{openstack::StreamReader}}
+\subsubsection[{readRest}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::StreamReader::readRest (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{destination, }
+\item[{long}]{toReadTotal = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1StreamReader_a5e389b311a34fb1efacdcb1b3590404e}
+
+
+Copies the rest of the tcp/ip (ssl) stream into a stream. 
+
+We pass the number of bytes because if it tries to read to eof, it'll slow things down while it waits for nothing to come down the line.
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & stream to copy the data to \\
+\hline
+{\em toReadTotal} & number of bytes to read max. -\/1 means just read until eof \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+https.hpp\end{DoxyCompactItemize}

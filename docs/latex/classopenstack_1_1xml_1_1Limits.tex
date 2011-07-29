@@ -1,0 +1,340 @@
+\hypertarget{classopenstack_1_1xml_1_1Limits}{
+\section{openstack::xml::Limits Class Reference}
+\label{classopenstack_1_1xml_1_1Limits}\index{openstack::xml::Limits@{openstack::xml::Limits}}
+}
+
+
+Class corresponding to the Limits schema type.  
+
+
+
+
+{\ttfamily \#include $<$limits.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1Limits_a363033eb7b3fb952922ee58dca7a0c8d}{
+virtual \hyperlink{classopenstack_1_1xml_1_1Limits_a363033eb7b3fb952922ee58dca7a0c8d}{$\sim$Limits} ()}
+\label{classopenstack_1_1xml_1_1Limits_a363033eb7b3fb952922ee58dca7a0c8d}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1Limits_a4e16b4c99499598d059902f228990ef5}{
+void {\bfseries parse} (::xsd::cxx::xml::dom::parser$<$ char $>$ \&,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags})}
+\label{classopenstack_1_1xml_1_1Limits_a4e16b4c99499598d059902f228990ef5}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1Limits_a2fa6ae7ee84bd7007ef57c7b5659d132}{
+::xsd::cxx::tree::one$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimits}{RateType} $>$ {\bfseries rate\_\-}}
+\label{classopenstack_1_1xml_1_1Limits_a2fa6ae7ee84bd7007ef57c7b5659d132}
+
+\item 
+\hypertarget{classopenstack_1_1xml_1_1Limits_a1b12961949c7edbfaa032bc32939ff89}{
+::xsd::cxx::tree::one$<$ \hyperlink{classopenstack_1_1xml_1_1AbsoluteLimits}{AbsoluteType} $>$ {\bfseries absolute\_\-}}
+\label{classopenstack_1_1xml_1_1Limits_a1b12961949c7edbfaa032bc32939ff89}
+
+\end{DoxyCompactItemize}
+\subsection*{rate}
+\label{_amgrp67942503875c1ae74e4b5b80a0dade01}
+Accessor and modifier functions for the rate required element. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1Limits_a17dc165d485c82cdf2277d9022c5be00}{
+typedef ::\hyperlink{classopenstack_1_1xml_1_1RateLimits}{openstack::xml::RateLimits} \hyperlink{classopenstack_1_1xml_1_1Limits_a17dc165d485c82cdf2277d9022c5be00}{RateType}}
+\label{classopenstack_1_1xml_1_1Limits_a17dc165d485c82cdf2277d9022c5be00}
+
+\begin{DoxyCompactList}\small\item\em Element type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1Limits_ac9afd4793d4efcb7a19c4d13087d3709}{
+typedef ::xsd::cxx::tree::traits$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimits}{RateType}, char $>$ \hyperlink{classopenstack_1_1xml_1_1Limits_ac9afd4793d4efcb7a19c4d13087d3709}{RateTraits}}
+\label{classopenstack_1_1xml_1_1Limits_ac9afd4793d4efcb7a19c4d13087d3709}
+
+\begin{DoxyCompactList}\small\item\em Element traits type. \item\end{DoxyCompactList}\item 
+const \hyperlink{classopenstack_1_1xml_1_1RateLimits}{RateType} \& \hyperlink{classopenstack_1_1xml_1_1Limits_a2239553def3fe65f1833be1a1c7027b7}{rate} () const 
+\begin{DoxyCompactList}\small\item\em Return a read-\/only (constant) reference to the element. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1RateLimits}{RateType} \& \hyperlink{classopenstack_1_1xml_1_1Limits_a10a6c48d219401c0848acea2c6c2c687}{rate} ()
+\begin{DoxyCompactList}\small\item\em Return a read-\/write reference to the element. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1Limits_add17848f727bdca7c3bb5729d32c4416}{rate} (const \hyperlink{classopenstack_1_1xml_1_1RateLimits}{RateType} \&x)
+\begin{DoxyCompactList}\small\item\em Set the element value. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1Limits_a29007e8be6fe4551896e3268d6d49812}{rate} (::std::auto\_\-ptr$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimits}{RateType} $>$ p)
+\begin{DoxyCompactList}\small\item\em Set the element value without copying. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{absolute}
+\label{_amgrpdc4d53aa0d117d8b189b36d161af4e96}
+Accessor and modifier functions for the absolute required element. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1Limits_abc90b39e7e1b33a6686396294abf6b72}{
+typedef ::\hyperlink{classopenstack_1_1xml_1_1AbsoluteLimits}{openstack::xml::AbsoluteLimits} \hyperlink{classopenstack_1_1xml_1_1Limits_abc90b39e7e1b33a6686396294abf6b72}{AbsoluteType}}
+\label{classopenstack_1_1xml_1_1Limits_abc90b39e7e1b33a6686396294abf6b72}
+
+\begin{DoxyCompactList}\small\item\em Element type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1Limits_a5c62289a02102d7dce2c0c4905f958fb}{
+typedef ::xsd::cxx::tree::traits$<$ \hyperlink{classopenstack_1_1xml_1_1AbsoluteLimits}{AbsoluteType}, char $>$ \hyperlink{classopenstack_1_1xml_1_1Limits_a5c62289a02102d7dce2c0c4905f958fb}{AbsoluteTraits}}
+\label{classopenstack_1_1xml_1_1Limits_a5c62289a02102d7dce2c0c4905f958fb}
+
+\begin{DoxyCompactList}\small\item\em Element traits type. \item\end{DoxyCompactList}\item 
+const \hyperlink{classopenstack_1_1xml_1_1AbsoluteLimits}{AbsoluteType} \& \hyperlink{classopenstack_1_1xml_1_1Limits_a92add62fda7bfdd3e5fd42134a63af37}{absolute} () const 
+\begin{DoxyCompactList}\small\item\em Return a read-\/only (constant) reference to the element. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1AbsoluteLimits}{AbsoluteType} \& \hyperlink{classopenstack_1_1xml_1_1Limits_a22707d32260bdc81077782a9edbcf3bb}{absolute} ()
+\begin{DoxyCompactList}\small\item\em Return a read-\/write reference to the element. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1Limits_a9e288f7dc7f3d8fe315c1ad88422ad35}{absolute} (const \hyperlink{classopenstack_1_1xml_1_1AbsoluteLimits}{AbsoluteType} \&x)
+\begin{DoxyCompactList}\small\item\em Set the element value. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1Limits_ac5da5985c3002297080a395837396ab0}{absolute} (::std::auto\_\-ptr$<$ \hyperlink{classopenstack_1_1xml_1_1AbsoluteLimits}{AbsoluteType} $>$ p)
+\begin{DoxyCompactList}\small\item\em Set the element value without copying. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Constructors}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1Limits_a2d5ed7fde837095d94c3cd4a85f82e1f}{
+\hyperlink{classopenstack_1_1xml_1_1Limits_a2d5ed7fde837095d94c3cd4a85f82e1f}{Limits} (const \hyperlink{classopenstack_1_1xml_1_1RateLimits}{RateType} \&, const \hyperlink{classopenstack_1_1xml_1_1AbsoluteLimits}{AbsoluteType} \&)}
+\label{classopenstack_1_1xml_1_1Limits_a2d5ed7fde837095d94c3cd4a85f82e1f}
+
+\begin{DoxyCompactList}\small\item\em Create an instance from the ultimate base and initializers for required elements and attributes. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1Limits_a61afef097865c68a2b6f4ea26fd2fc6a}{Limits} (::std::auto\_\-ptr$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimits}{RateType} $>$ \&,::std::auto\_\-ptr$<$ \hyperlink{classopenstack_1_1xml_1_1AbsoluteLimits}{AbsoluteType} $>$ \&)
+\begin{DoxyCompactList}\small\item\em Create an instance from the ultimate base and initializers for required elements and attributes (auto\_\-ptr version). \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1Limits_a0d007c5775a1a71de529f7c27206e364}{Limits} (const ::xercesc::DOMElement \&e,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0)
+\begin{DoxyCompactList}\small\item\em Create an instance from a DOM element. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1Limits_a6194edd4c1066cdb83a977f597c4fb14}{Limits} (const \hyperlink{classopenstack_1_1xml_1_1Limits}{Limits} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classopenstack_1_1xml_1_1Limits}{Limits} $\ast$ \hyperlink{classopenstack_1_1xml_1_1Limits_aa846d3123c965dcd452f23feb7489d84}{\_\-clone} (::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0) const 
+\begin{DoxyCompactList}\small\item\em Copy the instance polymorphically. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class corresponding to the Limits schema type. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classopenstack_1_1xml_1_1Limits_a61afef097865c68a2b6f4ea26fd2fc6a}{
+\index{openstack::xml::Limits@{openstack::xml::Limits}!Limits@{Limits}}
+\index{Limits@{Limits}!openstack::xml::Limits@{openstack::xml::Limits}}
+\subsubsection[{Limits}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::Limits::Limits (
+\begin{DoxyParamCaption}
+\item[{::std::auto\_\-ptr$<$ {\bf RateType} $>$ \&}]{rate, }
+\item[{::std::auto\_\-ptr$<$ {\bf AbsoluteType} $>$ \&}]{absolute}
+\end{DoxyParamCaption}
+)}}
+\label{classopenstack_1_1xml_1_1Limits_a61afef097865c68a2b6f4ea26fd2fc6a}
+
+
+Create an instance from the ultimate base and initializers for required elements and attributes (auto\_\-ptr version). 
+
+This constructor will try to use the passed values directly instead of making copies. \hypertarget{classopenstack_1_1xml_1_1Limits_a0d007c5775a1a71de529f7c27206e364}{
+\index{openstack::xml::Limits@{openstack::xml::Limits}!Limits@{Limits}}
+\index{Limits@{Limits}!openstack::xml::Limits@{openstack::xml::Limits}}
+\subsubsection[{Limits}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::Limits::Limits (
+\begin{DoxyParamCaption}
+\item[{const ::xercesc::DOMElement \&}]{e, }
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classopenstack_1_1xml_1_1Limits_a0d007c5775a1a71de529f7c27206e364}
+
+
+Create an instance from a DOM element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & A DOM element to extract the data from. \\
+\hline
+{\em f} & Flags to create the new instance with. \\
+\hline
+{\em c} & A pointer to the object that will contain the new instance. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classopenstack_1_1xml_1_1Limits_a6194edd4c1066cdb83a977f597c4fb14}{
+\index{openstack::xml::Limits@{openstack::xml::Limits}!Limits@{Limits}}
+\index{Limits@{Limits}!openstack::xml::Limits@{openstack::xml::Limits}}
+\subsubsection[{Limits}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::Limits::Limits (
+\begin{DoxyParamCaption}
+\item[{const {\bf Limits} \&}]{x, }
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classopenstack_1_1xml_1_1Limits_a6194edd4c1066cdb83a977f597c4fb14}
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & An instance to make a copy of. \\
+\hline
+{\em f} & Flags to create the copy with. \\
+\hline
+{\em c} & A pointer to the object that will contain the copy.\\
+\hline
+\end{DoxyParams}
+For polymorphic object models use the {\ttfamily \_\-clone} function instead. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classopenstack_1_1xml_1_1Limits_aa846d3123c965dcd452f23feb7489d84}{
+\index{openstack::xml::Limits@{openstack::xml::Limits}!\_\-clone@{\_\-clone}}
+\index{\_\-clone@{\_\-clone}!openstack::xml::Limits@{openstack::xml::Limits}}
+\subsubsection[{\_\-clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Limits} $\ast$ openstack::xml::Limits::\_\-clone (
+\begin{DoxyParamCaption}
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1Limits_aa846d3123c965dcd452f23feb7489d84}
+
+
+Copy the instance polymorphically. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Flags to create the copy with. \\
+\hline
+{\em c} & A pointer to the object that will contain the copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the dynamically allocated copy.
+\end{DoxyReturn}
+This function ensures that the dynamic type of the instance is used for copying and should be used for polymorphic object models instead of the copy constructor. \hypertarget{classopenstack_1_1xml_1_1Limits_a92add62fda7bfdd3e5fd42134a63af37}{
+\index{openstack::xml::Limits@{openstack::xml::Limits}!absolute@{absolute}}
+\index{absolute@{absolute}!openstack::xml::Limits@{openstack::xml::Limits}}
+\subsubsection[{absolute}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Limits::AbsoluteType} \& openstack::xml::Limits::absolute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1Limits_a92add62fda7bfdd3e5fd42134a63af37}
+
+
+Return a read-\/only (constant) reference to the element. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the element. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1Limits_ac5da5985c3002297080a395837396ab0}{
+\index{openstack::xml::Limits@{openstack::xml::Limits}!absolute@{absolute}}
+\index{absolute@{absolute}!openstack::xml::Limits@{openstack::xml::Limits}}
+\subsubsection[{absolute}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::Limits::absolute (
+\begin{DoxyParamCaption}
+\item[{::std::auto\_\-ptr$<$ {\bf AbsoluteType} $>$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1Limits_ac5da5985c3002297080a395837396ab0}
+
+
+Set the element value without copying. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & A new value to use.\\
+\hline
+\end{DoxyParams}
+This function will try to use the passed value directly instead of making a copy. \hypertarget{classopenstack_1_1xml_1_1Limits_a22707d32260bdc81077782a9edbcf3bb}{
+\index{openstack::xml::Limits@{openstack::xml::Limits}!absolute@{absolute}}
+\index{absolute@{absolute}!openstack::xml::Limits@{openstack::xml::Limits}}
+\subsubsection[{absolute}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Limits::AbsoluteType} \& openstack::xml::Limits::absolute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1Limits_a22707d32260bdc81077782a9edbcf3bb}
+
+
+Return a read-\/write reference to the element. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the element. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1Limits_a9e288f7dc7f3d8fe315c1ad88422ad35}{
+\index{openstack::xml::Limits@{openstack::xml::Limits}!absolute@{absolute}}
+\index{absolute@{absolute}!openstack::xml::Limits@{openstack::xml::Limits}}
+\subsubsection[{absolute}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::Limits::absolute (
+\begin{DoxyParamCaption}
+\item[{const {\bf AbsoluteType} \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1Limits_a9e288f7dc7f3d8fe315c1ad88422ad35}
+
+
+Set the element value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A new value to set.\\
+\hline
+\end{DoxyParams}
+This function makes a copy of its argument and sets it as the new value of the element. \hypertarget{classopenstack_1_1xml_1_1Limits_a2239553def3fe65f1833be1a1c7027b7}{
+\index{openstack::xml::Limits@{openstack::xml::Limits}!rate@{rate}}
+\index{rate@{rate}!openstack::xml::Limits@{openstack::xml::Limits}}
+\subsubsection[{rate}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Limits::RateType} \& openstack::xml::Limits::rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1Limits_a2239553def3fe65f1833be1a1c7027b7}
+
+
+Return a read-\/only (constant) reference to the element. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the element. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1Limits_a10a6c48d219401c0848acea2c6c2c687}{
+\index{openstack::xml::Limits@{openstack::xml::Limits}!rate@{rate}}
+\index{rate@{rate}!openstack::xml::Limits@{openstack::xml::Limits}}
+\subsubsection[{rate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Limits::RateType} \& openstack::xml::Limits::rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1Limits_a10a6c48d219401c0848acea2c6c2c687}
+
+
+Return a read-\/write reference to the element. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the element. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1Limits_a29007e8be6fe4551896e3268d6d49812}{
+\index{openstack::xml::Limits@{openstack::xml::Limits}!rate@{rate}}
+\index{rate@{rate}!openstack::xml::Limits@{openstack::xml::Limits}}
+\subsubsection[{rate}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::Limits::rate (
+\begin{DoxyParamCaption}
+\item[{::std::auto\_\-ptr$<$ {\bf RateType} $>$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1Limits_a29007e8be6fe4551896e3268d6d49812}
+
+
+Set the element value without copying. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & A new value to use.\\
+\hline
+\end{DoxyParams}
+This function will try to use the passed value directly instead of making a copy. \hypertarget{classopenstack_1_1xml_1_1Limits_add17848f727bdca7c3bb5729d32c4416}{
+\index{openstack::xml::Limits@{openstack::xml::Limits}!rate@{rate}}
+\index{rate@{rate}!openstack::xml::Limits@{openstack::xml::Limits}}
+\subsubsection[{rate}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::Limits::rate (
+\begin{DoxyParamCaption}
+\item[{const {\bf RateType} \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1Limits_add17848f727bdca7c3bb5729d32c4416}
+
+
+Set the element value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A new value to set.\\
+\hline
+\end{DoxyParams}
+This function makes a copy of its argument and sets it as the new value of the element. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+xsd/\hyperlink{limits_8hpp}{limits.hpp}\item 
+xsd/limits.cpp\item 
+xsd/limits.ipp\end{DoxyCompactItemize}

@@ -1,0 +1,254 @@
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem}{
+\section{openstack::xml::MetadataItem Class Reference}
+\label{classopenstack_1_1xml_1_1MetadataItem}\index{openstack::xml::MetadataItem@{openstack::xml::MetadataItem}}
+}
+
+
+Class corresponding to the MetadataItem schema type.  
+
+
+
+
+{\ttfamily \#include $<$server.hpp$>$}
+
+Inheritance diagram for openstack::xml::MetadataItem:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classopenstack_1_1xml_1_1MetadataItem}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_a89c922c62b01866ffa2c583cf57696c4}{
+virtual \hyperlink{classopenstack_1_1xml_1_1MetadataItem_a89c922c62b01866ffa2c583cf57696c4}{$\sim$MetadataItem} ()}
+\label{classopenstack_1_1xml_1_1MetadataItem_a89c922c62b01866ffa2c583cf57696c4}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_aa13bfb2ecaa7bbc0eacc3847b3410828}{
+void {\bfseries parse} (::xsd::cxx::xml::dom::parser$<$ char $>$ \&,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags})}
+\label{classopenstack_1_1xml_1_1MetadataItem_aa13bfb2ecaa7bbc0eacc3847b3410828}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_a2d863c314d5f36bf18876775bbefae48}{
+::xsd::cxx::tree::one$<$ \hyperlink{classopenstack_1_1xml_1_1MetadataKey}{KeyType} $>$ {\bfseries key\_\-}}
+\label{classopenstack_1_1xml_1_1MetadataItem_a2d863c314d5f36bf18876775bbefae48}
+
+\end{DoxyCompactItemize}
+\subsection*{key}
+\label{_amgrp3c6e0b8a9c15224a8228b9a98ca1531d}
+Accessor and modifier functions for the key required attribute. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_a34c4f10408f7374a4b5d593b11bf3424}{
+typedef ::\hyperlink{classopenstack_1_1xml_1_1MetadataKey}{openstack::xml::MetadataKey} \hyperlink{classopenstack_1_1xml_1_1MetadataItem_a34c4f10408f7374a4b5d593b11bf3424}{KeyType}}
+\label{classopenstack_1_1xml_1_1MetadataItem_a34c4f10408f7374a4b5d593b11bf3424}
+
+\begin{DoxyCompactList}\small\item\em Attribute type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_a79c7a8d122cbbe6f1bbf550a71e34666}{
+typedef ::xsd::cxx::tree::traits$<$ \hyperlink{classopenstack_1_1xml_1_1MetadataKey}{KeyType}, char $>$ \hyperlink{classopenstack_1_1xml_1_1MetadataItem_a79c7a8d122cbbe6f1bbf550a71e34666}{KeyTraits}}
+\label{classopenstack_1_1xml_1_1MetadataItem_a79c7a8d122cbbe6f1bbf550a71e34666}
+
+\begin{DoxyCompactList}\small\item\em Attribute traits type. \item\end{DoxyCompactList}\item 
+const \hyperlink{classopenstack_1_1xml_1_1MetadataKey}{KeyType} \& \hyperlink{classopenstack_1_1xml_1_1MetadataItem_a85d489e648918746ae330291e15db3e7}{key} () const 
+\begin{DoxyCompactList}\small\item\em Return a read-\/only (constant) reference to the attribute. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1MetadataKey}{KeyType} \& \hyperlink{classopenstack_1_1xml_1_1MetadataItem_af7d0882aa89b1d3daed97fdbcd858272}{key} ()
+\begin{DoxyCompactList}\small\item\em Return a read-\/write reference to the attribute. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1MetadataItem_ac5798876d650df271e79e9048d4743fe}{key} (const \hyperlink{classopenstack_1_1xml_1_1MetadataKey}{KeyType} \&x)
+\begin{DoxyCompactList}\small\item\em Set the attribute value. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1MetadataItem_a045480a4852eb2c40348e29a879ddf66}{key} (::std::auto\_\-ptr$<$ \hyperlink{classopenstack_1_1xml_1_1MetadataKey}{KeyType} $>$ p)
+\begin{DoxyCompactList}\small\item\em Set the attribute value without copying. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Constructors}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_a5692d20cd08d3bce4f5e9378a9d38208}{
+\hyperlink{classopenstack_1_1xml_1_1MetadataItem_a5692d20cd08d3bce4f5e9378a9d38208}{MetadataItem} (const \hyperlink{classopenstack_1_1xml_1_1MetadataKey}{KeyType} \&)}
+\label{classopenstack_1_1xml_1_1MetadataItem_a5692d20cd08d3bce4f5e9378a9d38208}
+
+\begin{DoxyCompactList}\small\item\em Create an instance from initializers for required elements and attributes. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_abc2ce1f108a06de363296d089c398e87}{
+\hyperlink{classopenstack_1_1xml_1_1MetadataItem_abc2ce1f108a06de363296d089c398e87}{MetadataItem} (const char $\ast$, const \hyperlink{classopenstack_1_1xml_1_1MetadataKey}{KeyType} \&)}
+\label{classopenstack_1_1xml_1_1MetadataItem_abc2ce1f108a06de363296d089c398e87}
+
+\begin{DoxyCompactList}\small\item\em Create an instance from a C string and initializers for required elements and attributes. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_a1b6f53f490d0733493bb59ed6a2123e3}{
+\hyperlink{classopenstack_1_1xml_1_1MetadataItem_a1b6f53f490d0733493bb59ed6a2123e3}{MetadataItem} (const ::std::string \&, const \hyperlink{classopenstack_1_1xml_1_1MetadataKey}{KeyType} \&)}
+\label{classopenstack_1_1xml_1_1MetadataItem_a1b6f53f490d0733493bb59ed6a2123e3}
+
+\begin{DoxyCompactList}\small\item\em Create an instance from a string andinitializers for required elements and attributes. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_a8b6da5b76f8de342d70c76f9cc9bb605}{
+\hyperlink{classopenstack_1_1xml_1_1MetadataItem_a8b6da5b76f8de342d70c76f9cc9bb605}{MetadataItem} (const ::\hyperlink{namespacexml__schema_af6757b5701ccc893f3b551bd70e0c94d}{xml\_\-schema::String} \&, const \hyperlink{classopenstack_1_1xml_1_1MetadataKey}{KeyType} \&)}
+\label{classopenstack_1_1xml_1_1MetadataItem_a8b6da5b76f8de342d70c76f9cc9bb605}
+
+\begin{DoxyCompactList}\small\item\em Create an instance from the ultimate base and initializers for required elements and attributes. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1MetadataItem_a85371fb9754aa7c38b3c4d25c10bcd46}{MetadataItem} (const ::xercesc::DOMElement \&e,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0)
+\begin{DoxyCompactList}\small\item\em Create an instance from a DOM element. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1MetadataItem_a31af02833535e6d979726c2b537abe02}{MetadataItem} (const \hyperlink{classopenstack_1_1xml_1_1MetadataItem}{MetadataItem} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classopenstack_1_1xml_1_1MetadataItem}{MetadataItem} $\ast$ \hyperlink{classopenstack_1_1xml_1_1MetadataItem_a1fb35540c47be383ed9e213feb119140}{\_\-clone} (::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0) const 
+\begin{DoxyCompactList}\small\item\em Copy the instance polymorphically. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class corresponding to the MetadataItem schema type. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_a85371fb9754aa7c38b3c4d25c10bcd46}{
+\index{openstack::xml::MetadataItem@{openstack::xml::MetadataItem}!MetadataItem@{MetadataItem}}
+\index{MetadataItem@{MetadataItem}!openstack::xml::MetadataItem@{openstack::xml::MetadataItem}}
+\subsubsection[{MetadataItem}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::MetadataItem::MetadataItem (
+\begin{DoxyParamCaption}
+\item[{const ::xercesc::DOMElement \&}]{e, }
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classopenstack_1_1xml_1_1MetadataItem_a85371fb9754aa7c38b3c4d25c10bcd46}
+
+
+Create an instance from a DOM element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & A DOM element to extract the data from. \\
+\hline
+{\em f} & Flags to create the new instance with. \\
+\hline
+{\em c} & A pointer to the object that will contain the new instance. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_a31af02833535e6d979726c2b537abe02}{
+\index{openstack::xml::MetadataItem@{openstack::xml::MetadataItem}!MetadataItem@{MetadataItem}}
+\index{MetadataItem@{MetadataItem}!openstack::xml::MetadataItem@{openstack::xml::MetadataItem}}
+\subsubsection[{MetadataItem}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::MetadataItem::MetadataItem (
+\begin{DoxyParamCaption}
+\item[{const {\bf MetadataItem} \&}]{x, }
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classopenstack_1_1xml_1_1MetadataItem_a31af02833535e6d979726c2b537abe02}
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & An instance to make a copy of. \\
+\hline
+{\em f} & Flags to create the copy with. \\
+\hline
+{\em c} & A pointer to the object that will contain the copy.\\
+\hline
+\end{DoxyParams}
+For polymorphic object models use the {\ttfamily \_\-clone} function instead. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_a1fb35540c47be383ed9e213feb119140}{
+\index{openstack::xml::MetadataItem@{openstack::xml::MetadataItem}!\_\-clone@{\_\-clone}}
+\index{\_\-clone@{\_\-clone}!openstack::xml::MetadataItem@{openstack::xml::MetadataItem}}
+\subsubsection[{\_\-clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MetadataItem} $\ast$ openstack::xml::MetadataItem::\_\-clone (
+\begin{DoxyParamCaption}
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1MetadataItem_a1fb35540c47be383ed9e213feb119140}
+
+
+Copy the instance polymorphically. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Flags to create the copy with. \\
+\hline
+{\em c} & A pointer to the object that will contain the copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the dynamically allocated copy.
+\end{DoxyReturn}
+This function ensures that the dynamic type of the instance is used for copying and should be used for polymorphic object models instead of the copy constructor. 
+
+Reimplemented from \hyperlink{classopenstack_1_1xml_1_1MetadataValue_a37a4391dc139ac525f3771c831d7af93}{openstack::xml::MetadataValue}.
+
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_a85d489e648918746ae330291e15db3e7}{
+\index{openstack::xml::MetadataItem@{openstack::xml::MetadataItem}!key@{key}}
+\index{key@{key}!openstack::xml::MetadataItem@{openstack::xml::MetadataItem}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MetadataItem::KeyType} \& openstack::xml::MetadataItem::key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1MetadataItem_a85d489e648918746ae330291e15db3e7}
+
+
+Return a read-\/only (constant) reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_af7d0882aa89b1d3daed97fdbcd858272}{
+\index{openstack::xml::MetadataItem@{openstack::xml::MetadataItem}!key@{key}}
+\index{key@{key}!openstack::xml::MetadataItem@{openstack::xml::MetadataItem}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MetadataItem::KeyType} \& openstack::xml::MetadataItem::key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1MetadataItem_af7d0882aa89b1d3daed97fdbcd858272}
+
+
+Return a read-\/write reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1MetadataItem_a045480a4852eb2c40348e29a879ddf66}{
+\index{openstack::xml::MetadataItem@{openstack::xml::MetadataItem}!key@{key}}
+\index{key@{key}!openstack::xml::MetadataItem@{openstack::xml::MetadataItem}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::MetadataItem::key (
+\begin{DoxyParamCaption}
+\item[{::std::auto\_\-ptr$<$ {\bf KeyType} $>$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1MetadataItem_a045480a4852eb2c40348e29a879ddf66}
+
+
+Set the attribute value without copying. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & A new value to use.\\
+\hline
+\end{DoxyParams}
+This function will try to use the passed value directly instead of making a copy. \hypertarget{classopenstack_1_1xml_1_1MetadataItem_ac5798876d650df271e79e9048d4743fe}{
+\index{openstack::xml::MetadataItem@{openstack::xml::MetadataItem}!key@{key}}
+\index{key@{key}!openstack::xml::MetadataItem@{openstack::xml::MetadataItem}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::MetadataItem::key (
+\begin{DoxyParamCaption}
+\item[{const {\bf KeyType} \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1MetadataItem_ac5798876d650df271e79e9048d4743fe}
+
+
+Set the attribute value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A new value to set.\\
+\hline
+\end{DoxyParams}
+This function makes a copy of its argument and sets it as the new value of the attribute. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+xsd/\hyperlink{server_8hpp}{server.hpp}\item 
+xsd/server.cpp\item 
+xsd/server.ipp\end{DoxyCompactItemize}

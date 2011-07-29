@@ -1,0 +1,399 @@
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule}{
+\section{openstack::xml::BackupSchedule Class Reference}
+\label{classopenstack_1_1xml_1_1BackupSchedule}\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+}
+
+
+Class corresponding to the BackupSchedule schema type.  
+
+
+
+
+{\ttfamily \#include $<$backup.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_aeb2faacb846bbf9859de2d08b04665c9}{
+virtual \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_aeb2faacb846bbf9859de2d08b04665c9}{$\sim$BackupSchedule} ()}
+\label{classopenstack_1_1xml_1_1BackupSchedule_aeb2faacb846bbf9859de2d08b04665c9}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a18e0aa7c28b038730a868e86182a9095}{
+void {\bfseries parse} (::xsd::cxx::xml::dom::parser$<$ char $>$ \&,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags})}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a18e0aa7c28b038730a868e86182a9095}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a56e648829e515e056620ca78f2dc43fb}{
+::xsd::cxx::tree::one$<$ \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a4a4b5000949fa636b9d7fc6f4ca4250b}{EnabledType} $>$ {\bfseries enabled\_\-}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a56e648829e515e056620ca78f2dc43fb}
+
+\item 
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a5b8c60766825295002fd2bb2fcad0bda}{
+::xsd::cxx::tree::one$<$ \hyperlink{classopenstack_1_1xml_1_1WeeklyBackup}{WeeklyType} $>$ {\bfseries weekly\_\-}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a5b8c60766825295002fd2bb2fcad0bda}
+
+\item 
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a6f5c141aced27ad2703f0425fe39bdde}{
+::xsd::cxx::tree::one$<$ \hyperlink{classopenstack_1_1xml_1_1DailyBackup}{DailyType} $>$ {\bfseries daily\_\-}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a6f5c141aced27ad2703f0425fe39bdde}
+
+\end{DoxyCompactItemize}
+\subsection*{enabled}
+\label{_amgrpa10311459433adf322f2590a4987c423}
+Accessor and modifier functions for the enabled required attribute. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a4a4b5000949fa636b9d7fc6f4ca4250b}{
+typedef ::\hyperlink{namespacexml__schema_a2749f4f861e3517d559bb221b03e6b5b}{xml\_\-schema::Boolean} \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a4a4b5000949fa636b9d7fc6f4ca4250b}{EnabledType}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a4a4b5000949fa636b9d7fc6f4ca4250b}
+
+\begin{DoxyCompactList}\small\item\em Attribute type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a13f86e1e6fb636e718f83cc2082c6e03}{
+typedef ::xsd::cxx::tree::traits$<$ \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a4a4b5000949fa636b9d7fc6f4ca4250b}{EnabledType}, char $>$ \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a13f86e1e6fb636e718f83cc2082c6e03}{EnabledTraits}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a13f86e1e6fb636e718f83cc2082c6e03}
+
+\begin{DoxyCompactList}\small\item\em Attribute traits type. \item\end{DoxyCompactList}\item 
+const \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a4a4b5000949fa636b9d7fc6f4ca4250b}{EnabledType} \& \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a1bda98267af54befc176f1f31944fc36}{enabled} () const 
+\begin{DoxyCompactList}\small\item\em Return a read-\/only (constant) reference to the attribute. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a4a4b5000949fa636b9d7fc6f4ca4250b}{EnabledType} \& \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a8e97f3d98c5bab15505aa1e56fd085e7}{enabled} ()
+\begin{DoxyCompactList}\small\item\em Return a read-\/write reference to the attribute. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_acd8895151709db3da4d072924292e277}{enabled} (const \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a4a4b5000949fa636b9d7fc6f4ca4250b}{EnabledType} \&x)
+\begin{DoxyCompactList}\small\item\em Set the attribute value. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{weekly}
+\label{_amgrp4a11fc05ed694c195f0703605b64da90}
+Accessor and modifier functions for the weekly required attribute. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a530c9436ac48c4fb34d0424b016a7230}{
+typedef ::\hyperlink{classopenstack_1_1xml_1_1WeeklyBackup}{openstack::xml::WeeklyBackup} \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a530c9436ac48c4fb34d0424b016a7230}{WeeklyType}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a530c9436ac48c4fb34d0424b016a7230}
+
+\begin{DoxyCompactList}\small\item\em Attribute type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_ae974753b4cb20c5fa74b40c42ef1a1f5}{
+typedef ::xsd::cxx::tree::traits$<$ \hyperlink{classopenstack_1_1xml_1_1WeeklyBackup}{WeeklyType}, char $>$ \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_ae974753b4cb20c5fa74b40c42ef1a1f5}{WeeklyTraits}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_ae974753b4cb20c5fa74b40c42ef1a1f5}
+
+\begin{DoxyCompactList}\small\item\em Attribute traits type. \item\end{DoxyCompactList}\item 
+const \hyperlink{classopenstack_1_1xml_1_1WeeklyBackup}{WeeklyType} \& \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a7d44d2e0a48a79ea99d91ea4e54d77f3}{weekly} () const 
+\begin{DoxyCompactList}\small\item\em Return a read-\/only (constant) reference to the attribute. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1WeeklyBackup}{WeeklyType} \& \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a0e45cc102484439c764872e4abbe6926}{weekly} ()
+\begin{DoxyCompactList}\small\item\em Return a read-\/write reference to the attribute. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_acbd380828838098519bff5112808b2de}{weekly} (const \hyperlink{classopenstack_1_1xml_1_1WeeklyBackup}{WeeklyType} \&x)
+\begin{DoxyCompactList}\small\item\em Set the attribute value. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a0c7ea43b44e2581539a542d27315775f}{weekly} (::std::auto\_\-ptr$<$ \hyperlink{classopenstack_1_1xml_1_1WeeklyBackup}{WeeklyType} $>$ p)
+\begin{DoxyCompactList}\small\item\em Set the attribute value without copying. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{daily}
+\label{_amgrpbea79186fd7af2da67e59b4b15df5a26}
+Accessor and modifier functions for the daily required attribute. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a04ace106b568cd4ff79789f76c20e080}{
+typedef ::\hyperlink{classopenstack_1_1xml_1_1DailyBackup}{openstack::xml::DailyBackup} \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a04ace106b568cd4ff79789f76c20e080}{DailyType}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a04ace106b568cd4ff79789f76c20e080}
+
+\begin{DoxyCompactList}\small\item\em Attribute type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a7af205ecf7dcce02e6407a28936106cd}{
+typedef ::xsd::cxx::tree::traits$<$ \hyperlink{classopenstack_1_1xml_1_1DailyBackup}{DailyType}, char $>$ \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a7af205ecf7dcce02e6407a28936106cd}{DailyTraits}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a7af205ecf7dcce02e6407a28936106cd}
+
+\begin{DoxyCompactList}\small\item\em Attribute traits type. \item\end{DoxyCompactList}\item 
+const \hyperlink{classopenstack_1_1xml_1_1DailyBackup}{DailyType} \& \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a1d15ed481ff1c448df964432d5dd0704}{daily} () const 
+\begin{DoxyCompactList}\small\item\em Return a read-\/only (constant) reference to the attribute. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1DailyBackup}{DailyType} \& \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a3643e91d4327238705853b7d2f8f50c4}{daily} ()
+\begin{DoxyCompactList}\small\item\em Return a read-\/write reference to the attribute. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a4eb90fb16864741be4af4d6366e80d7f}{daily} (const \hyperlink{classopenstack_1_1xml_1_1DailyBackup}{DailyType} \&x)
+\begin{DoxyCompactList}\small\item\em Set the attribute value. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_ac099f96e7b48c645f4206dec3602df3d}{daily} (::std::auto\_\-ptr$<$ \hyperlink{classopenstack_1_1xml_1_1DailyBackup}{DailyType} $>$ p)
+\begin{DoxyCompactList}\small\item\em Set the attribute value without copying. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Constructors}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a1c2cc5b89243c039dd3d86708efa02f1}{
+\hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a1c2cc5b89243c039dd3d86708efa02f1}{BackupSchedule} (const \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a4a4b5000949fa636b9d7fc6f4ca4250b}{EnabledType} \&, const \hyperlink{classopenstack_1_1xml_1_1WeeklyBackup}{WeeklyType} \&, const \hyperlink{classopenstack_1_1xml_1_1DailyBackup}{DailyType} \&)}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a1c2cc5b89243c039dd3d86708efa02f1}
+
+\begin{DoxyCompactList}\small\item\em Create an instance from the ultimate base and initializers for required elements and attributes. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1BackupSchedule_ac2435e90a6c6f44323370da24c5ec531}{BackupSchedule} (const ::xercesc::DOMElement \&e,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0)
+\begin{DoxyCompactList}\small\item\em Create an instance from a DOM element. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1BackupSchedule_ae17cb6ab25fff5819368f0a2ead27a89}{BackupSchedule} (const \hyperlink{classopenstack_1_1xml_1_1BackupSchedule}{BackupSchedule} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classopenstack_1_1xml_1_1BackupSchedule}{BackupSchedule} $\ast$ \hyperlink{classopenstack_1_1xml_1_1BackupSchedule_a41fca1f0747411188f71a16cba685544}{\_\-clone} (::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0) const 
+\begin{DoxyCompactList}\small\item\em Copy the instance polymorphically. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class corresponding to the BackupSchedule schema type. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_ac2435e90a6c6f44323370da24c5ec531}{
+\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}!BackupSchedule@{BackupSchedule}}
+\index{BackupSchedule@{BackupSchedule}!openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+\subsubsection[{BackupSchedule}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::BackupSchedule::BackupSchedule (
+\begin{DoxyParamCaption}
+\item[{const ::xercesc::DOMElement \&}]{e, }
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_ac2435e90a6c6f44323370da24c5ec531}
+
+
+Create an instance from a DOM element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & A DOM element to extract the data from. \\
+\hline
+{\em f} & Flags to create the new instance with. \\
+\hline
+{\em c} & A pointer to the object that will contain the new instance. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_ae17cb6ab25fff5819368f0a2ead27a89}{
+\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}!BackupSchedule@{BackupSchedule}}
+\index{BackupSchedule@{BackupSchedule}!openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+\subsubsection[{BackupSchedule}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::BackupSchedule::BackupSchedule (
+\begin{DoxyParamCaption}
+\item[{const {\bf BackupSchedule} \&}]{x, }
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_ae17cb6ab25fff5819368f0a2ead27a89}
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & An instance to make a copy of. \\
+\hline
+{\em f} & Flags to create the copy with. \\
+\hline
+{\em c} & A pointer to the object that will contain the copy.\\
+\hline
+\end{DoxyParams}
+For polymorphic object models use the {\ttfamily \_\-clone} function instead. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a41fca1f0747411188f71a16cba685544}{
+\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}!\_\-clone@{\_\-clone}}
+\index{\_\-clone@{\_\-clone}!openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+\subsubsection[{\_\-clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BackupSchedule} $\ast$ openstack::xml::BackupSchedule::\_\-clone (
+\begin{DoxyParamCaption}
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a41fca1f0747411188f71a16cba685544}
+
+
+Copy the instance polymorphically. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Flags to create the copy with. \\
+\hline
+{\em c} & A pointer to the object that will contain the copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the dynamically allocated copy.
+\end{DoxyReturn}
+This function ensures that the dynamic type of the instance is used for copying and should be used for polymorphic object models instead of the copy constructor. \hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a3643e91d4327238705853b7d2f8f50c4}{
+\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}!daily@{daily}}
+\index{daily@{daily}!openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+\subsubsection[{daily}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BackupSchedule::DailyType} \& openstack::xml::BackupSchedule::daily (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a3643e91d4327238705853b7d2f8f50c4}
+
+
+Return a read-\/write reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a4eb90fb16864741be4af4d6366e80d7f}{
+\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}!daily@{daily}}
+\index{daily@{daily}!openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+\subsubsection[{daily}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::BackupSchedule::daily (
+\begin{DoxyParamCaption}
+\item[{const {\bf DailyType} \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a4eb90fb16864741be4af4d6366e80d7f}
+
+
+Set the attribute value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A new value to set.\\
+\hline
+\end{DoxyParams}
+This function makes a copy of its argument and sets it as the new value of the attribute. \hypertarget{classopenstack_1_1xml_1_1BackupSchedule_ac099f96e7b48c645f4206dec3602df3d}{
+\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}!daily@{daily}}
+\index{daily@{daily}!openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+\subsubsection[{daily}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::BackupSchedule::daily (
+\begin{DoxyParamCaption}
+\item[{::std::auto\_\-ptr$<$ {\bf DailyType} $>$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_ac099f96e7b48c645f4206dec3602df3d}
+
+
+Set the attribute value without copying. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & A new value to use.\\
+\hline
+\end{DoxyParams}
+This function will try to use the passed value directly instead of making a copy. \hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a1d15ed481ff1c448df964432d5dd0704}{
+\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}!daily@{daily}}
+\index{daily@{daily}!openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+\subsubsection[{daily}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf BackupSchedule::DailyType} \& openstack::xml::BackupSchedule::daily (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a1d15ed481ff1c448df964432d5dd0704}
+
+
+Return a read-\/only (constant) reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a1bda98267af54befc176f1f31944fc36}{
+\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}!enabled@{enabled}}
+\index{enabled@{enabled}!openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+\subsubsection[{enabled}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf BackupSchedule::EnabledType} \& openstack::xml::BackupSchedule::enabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a1bda98267af54befc176f1f31944fc36}
+
+
+Return a read-\/only (constant) reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a8e97f3d98c5bab15505aa1e56fd085e7}{
+\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}!enabled@{enabled}}
+\index{enabled@{enabled}!openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+\subsubsection[{enabled}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BackupSchedule::EnabledType} \& openstack::xml::BackupSchedule::enabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a8e97f3d98c5bab15505aa1e56fd085e7}
+
+
+Return a read-\/write reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_acd8895151709db3da4d072924292e277}{
+\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}!enabled@{enabled}}
+\index{enabled@{enabled}!openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+\subsubsection[{enabled}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::BackupSchedule::enabled (
+\begin{DoxyParamCaption}
+\item[{const {\bf EnabledType} \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_acd8895151709db3da4d072924292e277}
+
+
+Set the attribute value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A new value to set.\\
+\hline
+\end{DoxyParams}
+This function makes a copy of its argument and sets it as the new value of the attribute. \hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a7d44d2e0a48a79ea99d91ea4e54d77f3}{
+\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}!weekly@{weekly}}
+\index{weekly@{weekly}!openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+\subsubsection[{weekly}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf BackupSchedule::WeeklyType} \& openstack::xml::BackupSchedule::weekly (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a7d44d2e0a48a79ea99d91ea4e54d77f3}
+
+
+Return a read-\/only (constant) reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the attribute. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1BackupSchedule_acbd380828838098519bff5112808b2de}{
+\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}!weekly@{weekly}}
+\index{weekly@{weekly}!openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+\subsubsection[{weekly}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::BackupSchedule::weekly (
+\begin{DoxyParamCaption}
+\item[{const {\bf WeeklyType} \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_acbd380828838098519bff5112808b2de}
+
+
+Set the attribute value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A new value to set.\\
+\hline
+\end{DoxyParams}
+This function makes a copy of its argument and sets it as the new value of the attribute. \hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a0c7ea43b44e2581539a542d27315775f}{
+\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}!weekly@{weekly}}
+\index{weekly@{weekly}!openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+\subsubsection[{weekly}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::BackupSchedule::weekly (
+\begin{DoxyParamCaption}
+\item[{::std::auto\_\-ptr$<$ {\bf WeeklyType} $>$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a0c7ea43b44e2581539a542d27315775f}
+
+
+Set the attribute value without copying. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & A new value to use.\\
+\hline
+\end{DoxyParams}
+This function will try to use the passed value directly instead of making a copy. \hypertarget{classopenstack_1_1xml_1_1BackupSchedule_a0e45cc102484439c764872e4abbe6926}{
+\index{openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}!weekly@{weekly}}
+\index{weekly@{weekly}!openstack::xml::BackupSchedule@{openstack::xml::BackupSchedule}}
+\subsubsection[{weekly}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BackupSchedule::WeeklyType} \& openstack::xml::BackupSchedule::weekly (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1BackupSchedule_a0e45cc102484439c764872e4abbe6926}
+
+
+Return a read-\/write reference to the attribute. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the attribute. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+xsd/\hyperlink{backup_8hpp}{backup.hpp}\item 
+xsd/backup.cpp\item 
+xsd/backup.ipp\end{DoxyCompactItemize}

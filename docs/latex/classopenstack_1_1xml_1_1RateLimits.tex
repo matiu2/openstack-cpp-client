@@ -1,0 +1,224 @@
+\hypertarget{classopenstack_1_1xml_1_1RateLimits}{
+\section{openstack::xml::RateLimits Class Reference}
+\label{classopenstack_1_1xml_1_1RateLimits}\index{openstack::xml::RateLimits@{openstack::xml::RateLimits}}
+}
+
+
+Class corresponding to the RateLimits schema type.  
+
+
+
+
+{\ttfamily \#include $<$limits.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimits_ad9de094479a5eb897d23ddb6893d1382}{
+virtual \hyperlink{classopenstack_1_1xml_1_1RateLimits_ad9de094479a5eb897d23ddb6893d1382}{$\sim$RateLimits} ()}
+\label{classopenstack_1_1xml_1_1RateLimits_ad9de094479a5eb897d23ddb6893d1382}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimits_a463714f77f16c05232335d7d3e5b20c5}{
+void {\bfseries parse} (::xsd::cxx::xml::dom::parser$<$ char $>$ \&,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags})}
+\label{classopenstack_1_1xml_1_1RateLimits_a463714f77f16c05232335d7d3e5b20c5}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimits_ad954f729a708280507415cf40d1835e9}{
+\hyperlink{classopenstack_1_1xml_1_1RateLimits_a51412c2aa554f271b6bca7986198bcb9}{LimitSequence} {\bfseries limit\_\-}}
+\label{classopenstack_1_1xml_1_1RateLimits_ad954f729a708280507415cf40d1835e9}
+
+\end{DoxyCompactItemize}
+\subsection*{limit}
+\label{_amgrpaa9f73eea60a006820d0f8768bc8a3fc}
+Accessor and modifier functions for the limit sequence element. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimits_a68d2115a5bad59cbdec85ea75191be5b}{
+typedef ::\hyperlink{classopenstack_1_1xml_1_1RateLimit}{openstack::xml::RateLimit} \hyperlink{classopenstack_1_1xml_1_1RateLimits_a68d2115a5bad59cbdec85ea75191be5b}{LimitType}}
+\label{classopenstack_1_1xml_1_1RateLimits_a68d2115a5bad59cbdec85ea75191be5b}
+
+\begin{DoxyCompactList}\small\item\em Element type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimits_a51412c2aa554f271b6bca7986198bcb9}{
+typedef ::xsd::cxx::tree::sequence$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimit}{LimitType} $>$ \hyperlink{classopenstack_1_1xml_1_1RateLimits_a51412c2aa554f271b6bca7986198bcb9}{LimitSequence}}
+\label{classopenstack_1_1xml_1_1RateLimits_a51412c2aa554f271b6bca7986198bcb9}
+
+\begin{DoxyCompactList}\small\item\em Element sequence container type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimits_a721faaf43d91af3756a53fb0fe1bb529}{
+typedef LimitSequence::iterator \hyperlink{classopenstack_1_1xml_1_1RateLimits_a721faaf43d91af3756a53fb0fe1bb529}{LimitIterator}}
+\label{classopenstack_1_1xml_1_1RateLimits_a721faaf43d91af3756a53fb0fe1bb529}
+
+\begin{DoxyCompactList}\small\item\em Element iterator type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimits_a33a1404c13d9ca0f6dcc6973246e1238}{
+typedef LimitSequence::const\_\-iterator \hyperlink{classopenstack_1_1xml_1_1RateLimits_a33a1404c13d9ca0f6dcc6973246e1238}{LimitConstIterator}}
+\label{classopenstack_1_1xml_1_1RateLimits_a33a1404c13d9ca0f6dcc6973246e1238}
+
+\begin{DoxyCompactList}\small\item\em Element constant iterator type. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimits_a8e58e7dcae426cf21999f998a4418e55}{
+typedef ::xsd::cxx::tree::traits$<$ \hyperlink{classopenstack_1_1xml_1_1RateLimit}{LimitType}, char $>$ \hyperlink{classopenstack_1_1xml_1_1RateLimits_a8e58e7dcae426cf21999f998a4418e55}{LimitTraits}}
+\label{classopenstack_1_1xml_1_1RateLimits_a8e58e7dcae426cf21999f998a4418e55}
+
+\begin{DoxyCompactList}\small\item\em Element traits type. \item\end{DoxyCompactList}\item 
+const \hyperlink{classopenstack_1_1xml_1_1RateLimits_a51412c2aa554f271b6bca7986198bcb9}{LimitSequence} \& \hyperlink{classopenstack_1_1xml_1_1RateLimits_a9392f0bb147ffbd7ce645f0314822194}{limit} () const 
+\begin{DoxyCompactList}\small\item\em Return a read-\/only (constant) reference to the element sequence. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1RateLimits_a51412c2aa554f271b6bca7986198bcb9}{LimitSequence} \& \hyperlink{classopenstack_1_1xml_1_1RateLimits_a61563b90eefaaae23cf0ebc799f33fd2}{limit} ()
+\begin{DoxyCompactList}\small\item\em Return a read-\/write reference to the element sequence. \item\end{DoxyCompactList}\item 
+void \hyperlink{classopenstack_1_1xml_1_1RateLimits_a04696ddfa0a4b7798f6f4d867042106a}{limit} (const \hyperlink{classopenstack_1_1xml_1_1RateLimits_a51412c2aa554f271b6bca7986198bcb9}{LimitSequence} \&s)
+\begin{DoxyCompactList}\small\item\em Copy elements from a given sequence. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Constructors}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1xml_1_1RateLimits_a8049d12bffabf9e47b02c86bde2fa540}{
+\hyperlink{classopenstack_1_1xml_1_1RateLimits_a8049d12bffabf9e47b02c86bde2fa540}{RateLimits} ()}
+\label{classopenstack_1_1xml_1_1RateLimits_a8049d12bffabf9e47b02c86bde2fa540}
+
+\begin{DoxyCompactList}\small\item\em Create an instance from the ultimate base and initializers for required elements and attributes. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1RateLimits_a4547ecf1b92a698a730b5bb4e35c4564}{RateLimits} (const ::xercesc::DOMElement \&e,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0)
+\begin{DoxyCompactList}\small\item\em Create an instance from a DOM element. \item\end{DoxyCompactList}\item 
+\hyperlink{classopenstack_1_1xml_1_1RateLimits_aa11864d4d45c735470871bf01b01ec88}{RateLimits} (const \hyperlink{classopenstack_1_1xml_1_1RateLimits}{RateLimits} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classopenstack_1_1xml_1_1RateLimits}{RateLimits} $\ast$ \hyperlink{classopenstack_1_1xml_1_1RateLimits_a4bc0af206771287f05f1a44ee6c34535}{\_\-clone} (::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0,::\hyperlink{namespacexml__schema_a333dea2213742aea47a37532dec4ec27}{xml\_\-schema::Container} $\ast$c=0) const 
+\begin{DoxyCompactList}\small\item\em Copy the instance polymorphically. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class corresponding to the RateLimits schema type. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classopenstack_1_1xml_1_1RateLimits_a4547ecf1b92a698a730b5bb4e35c4564}{
+\index{openstack::xml::RateLimits@{openstack::xml::RateLimits}!RateLimits@{RateLimits}}
+\index{RateLimits@{RateLimits}!openstack::xml::RateLimits@{openstack::xml::RateLimits}}
+\subsubsection[{RateLimits}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::RateLimits::RateLimits (
+\begin{DoxyParamCaption}
+\item[{const ::xercesc::DOMElement \&}]{e, }
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classopenstack_1_1xml_1_1RateLimits_a4547ecf1b92a698a730b5bb4e35c4564}
+
+
+Create an instance from a DOM element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & A DOM element to extract the data from. \\
+\hline
+{\em f} & Flags to create the new instance with. \\
+\hline
+{\em c} & A pointer to the object that will contain the new instance. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classopenstack_1_1xml_1_1RateLimits_aa11864d4d45c735470871bf01b01ec88}{
+\index{openstack::xml::RateLimits@{openstack::xml::RateLimits}!RateLimits@{RateLimits}}
+\index{RateLimits@{RateLimits}!openstack::xml::RateLimits@{openstack::xml::RateLimits}}
+\subsubsection[{RateLimits}]{\setlength{\rightskip}{0pt plus 5cm}openstack::xml::RateLimits::RateLimits (
+\begin{DoxyParamCaption}
+\item[{const {\bf RateLimits} \&}]{x, }
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classopenstack_1_1xml_1_1RateLimits_aa11864d4d45c735470871bf01b01ec88}
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & An instance to make a copy of. \\
+\hline
+{\em f} & Flags to create the copy with. \\
+\hline
+{\em c} & A pointer to the object that will contain the copy.\\
+\hline
+\end{DoxyParams}
+For polymorphic object models use the {\ttfamily \_\-clone} function instead. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classopenstack_1_1xml_1_1RateLimits_a4bc0af206771287f05f1a44ee6c34535}{
+\index{openstack::xml::RateLimits@{openstack::xml::RateLimits}!\_\-clone@{\_\-clone}}
+\index{\_\-clone@{\_\-clone}!openstack::xml::RateLimits@{openstack::xml::RateLimits}}
+\subsubsection[{\_\-clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RateLimits} $\ast$ openstack::xml::RateLimits::\_\-clone (
+\begin{DoxyParamCaption}
+\item[{::{\bf xml\_\-schema::Flags}}]{f = {\ttfamily 0}, }
+\item[{::{\bf xml\_\-schema::Container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimits_a4bc0af206771287f05f1a44ee6c34535}
+
+
+Copy the instance polymorphically. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Flags to create the copy with. \\
+\hline
+{\em c} & A pointer to the object that will contain the copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the dynamically allocated copy.
+\end{DoxyReturn}
+This function ensures that the dynamic type of the instance is used for copying and should be used for polymorphic object models instead of the copy constructor. \hypertarget{classopenstack_1_1xml_1_1RateLimits_a9392f0bb147ffbd7ce645f0314822194}{
+\index{openstack::xml::RateLimits@{openstack::xml::RateLimits}!limit@{limit}}
+\index{limit@{limit}!openstack::xml::RateLimits@{openstack::xml::RateLimits}}
+\subsubsection[{limit}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf RateLimits::LimitSequence} \& openstack::xml::RateLimits::limit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimits_a9392f0bb147ffbd7ce645f0314822194}
+
+
+Return a read-\/only (constant) reference to the element sequence. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the sequence container. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimits_a61563b90eefaaae23cf0ebc799f33fd2}{
+\index{openstack::xml::RateLimits@{openstack::xml::RateLimits}!limit@{limit}}
+\index{limit@{limit}!openstack::xml::RateLimits@{openstack::xml::RateLimits}}
+\subsubsection[{limit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RateLimits::LimitSequence} \& openstack::xml::RateLimits::limit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimits_a61563b90eefaaae23cf0ebc799f33fd2}
+
+
+Return a read-\/write reference to the element sequence. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the sequence container. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1xml_1_1RateLimits_a04696ddfa0a4b7798f6f4d867042106a}{
+\index{openstack::xml::RateLimits@{openstack::xml::RateLimits}!limit@{limit}}
+\index{limit@{limit}!openstack::xml::RateLimits@{openstack::xml::RateLimits}}
+\subsubsection[{limit}]{\setlength{\rightskip}{0pt plus 5cm}void openstack::xml::RateLimits::limit (
+\begin{DoxyParamCaption}
+\item[{const {\bf LimitSequence} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1xml_1_1RateLimits_a04696ddfa0a4b7798f6f4d867042106a}
+
+
+Copy elements from a given sequence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & A sequence to copy elements from.\\
+\hline
+\end{DoxyParams}
+For each element in {\itshape s\/} this function makes a copy and adds it to the sequence. Note that this operation completely changes the sequence and all old elements will be lost. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+xsd/\hyperlink{limits_8hpp}{limits.hpp}\item 
+xsd/limits.cpp\item 
+xsd/limits.ipp\end{DoxyCompactItemize}
