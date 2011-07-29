@@ -1,3 +1,9 @@
+Works with Rackspace Cloud right now.
+
+All it does at the moment is authenticate and print out the output.
+
+API Docs: http://docs.rackspace.com/servers/api/v1.0/cs-devguide/content/index.html
+
 To try it out on ubuntu:
 
 sudo apt-get install libboost-system-dev
