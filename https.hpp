@@ -63,18 +63,19 @@ public:
     * @param destination stream to copy the data to
     * @param toReadTotal number of bytes to read max. -1 means just read until eof
     */
-    void readRest(ostream& destination, long toReadTotal=-1) {
+    void readRest(string& destination, long toReadTotal=-1) {
+        char* bufferContents;
         if (toReadTotal == 0)
             return;
         // Write whatever content we already have into the destination
         unsigned int toRead = toReadTotal - _buffer.size();
         if (_buffer.size() > 0)
-           destination << &_buffer;
+           destination += boost::asio::buffer_cast<const char*>(_buffer.data());
         boost::system::error_code error;
         // Read until EOF or toRead, writing data to output as we go.
         while (boost::asio::read(_sslStream, _buffer, boost::asio::transfer_at_least(1), error)) {
             toRead -= _buffer.size();
-            destination << &_buffer;
+            destination += boost::asio::buffer_cast<const char*>(_buffer.data());
             if ((toRead == 0) && (toReadTotal > 0))
                 return;
         }
@@ -155,19 +156,19 @@ public:
         // Connected :)
     }
     bool isConnected() { return sslStream.lowest_layer().is_open(); }
-    void request(const string& path, Headers& requestHeaders, Headers& responseHeaders, ostream& body) {
+    unsigned short request(const string& path, Headers& requestHeaders, Headers& responseHeaders, string& body) {
         // Make up the request
         boost::asio::streambuf buffer;
         std::stringstream debug_stream;
         ostream request_stream(&buffer);
-        request_stream << "GET " << path << " HTTPS/1.1\r\n";
+        request_stream << "GET " << path << " HTTP/1.1\r\n";
         boost::asio::write(sslStream, buffer);
         requestHeaders.insert(Header("Host", _hostname));
         for (Headers::const_iterator i=requestHeaders.begin(); i != requestHeaders.end(); ++i) {
             request_stream << i->first << ": " << i->second << "\r\n";
             boost::asio::write(sslStream, buffer);
         }
-        request_stream << "\r\n\r\n";
+        request_stream << "\r\n";
         // Send the buffer.
         boost::asio::write(sslStream, buffer);
         unsigned short responseCode = checkResponse();
@@ -181,6 +182,7 @@ public:
         } else {
             input.readRest(body);
         }
+        return responseCode;
     }
 };
 

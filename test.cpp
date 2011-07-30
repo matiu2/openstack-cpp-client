@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
          if (argc >= 4)
              hostname = argv[3];
          Openstack os(argv[1], argv[2], hostname);
-         os.checkConnection();
+         os.servers()->list();
      }
   }
   catch (std::exception& e) {
