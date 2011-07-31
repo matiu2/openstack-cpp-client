@@ -4,7 +4,14 @@ PROJECT (openstack_cpp_client)
 
 ADD_DEFINITIONS(-Wall -Wextra)
 
-SET(DEBUG true)
+if ("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
+    SET(BUILD_XML_LIB false)
+    add_definitions("-D USE_INLINE_CODE")
+    SET(DEBUG false)
+else()
+    SET(BUILD_XML_LIB true)
+    SET(DEBUG true)
+endif()
 
 # Boost
 MESSAGE(STATUS "Checking for Boost System. So that it works the same on all systems.")
@@ -45,5 +52,11 @@ endif()
 
 ADD_SUBDIRECTORY(xsd)
 
-ADD_EXECUTABLE(test test.cpp)
-TARGET_LINK_LIBRARIES(test ${Boost_SYSTEM_LIBRARY} ${OPENSSL_SSL_LIBRARIES} xsd)
+
+if (${BUILD_XML_LIB})
+    ADD_EXECUTABLE(test test.cpp)
+    TARGET_LINK_LIBRARIES(test ${Boost_SYSTEM_LIBRARY} ${OPENSSL_SSL_LIBRARIES} xsd)
+else()
+    ADD_EXECUTABLE(test test.cpp "xsd/server.cpp" "xsd/common.cpp" )
+    TARGET_LINK_LIBRARIES(test ${Boost_SYSTEM_LIBRARY} ${OPENSSL_SSL_LIBRARIES} ${xerces})
+endif()
