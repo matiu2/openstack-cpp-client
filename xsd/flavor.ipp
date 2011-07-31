@@ -43,68 +43,6 @@ namespace openstack
 {
   namespace xml
   {
-    // Flavor_
-    // 
-
-    inline
-    const Flavor_::ValueType& Flavor_::
-    value () const
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    Flavor_::ValueType& Flavor_::
-    value ()
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    void Flavor_::
-    value (const ValueType& x)
-    {
-      return this->value_.set (x);
-    }
-
-    inline
-    void Flavor_::
-    value (::std::auto_ptr< ValueType > p)
-    {
-      return this->value_.set (p);
-    }
-
-    // Flavors_
-    // 
-
-    inline
-    const Flavors_::ValueType& Flavors_::
-    value () const
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    Flavors_::ValueType& Flavors_::
-    value ()
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    void Flavors_::
-    value (const ValueType& x)
-    {
-      return this->value_.set (x);
-    }
-
-    inline
-    void Flavors_::
-    value (::std::auto_ptr< ValueType > p)
-    {
-      return this->value_.set (p);
-    }
-
     // Flavor
     // 
 

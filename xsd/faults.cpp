@@ -55,1228 +55,6 @@ namespace openstack
 {
   namespace xml
   {
-    // CloudServersFault
-    // 
-
-    const ::xml_schema::Type* CloudServersFault::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* CloudServersFault::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    CloudServersFault::
-    CloudServersFault (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    CloudServersFault::
-    CloudServersFault (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    CloudServersFault::
-    CloudServersFault (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    CloudServersFault::
-    CloudServersFault (const CloudServersFault& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    CloudServersFault* CloudServersFault::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class CloudServersFault (*this, f);
-    }
-
-    const ::std::string& CloudServersFault::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& CloudServersFault::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& CloudServersFault::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& CloudServersFault::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string CloudServersFault::
-    name_ ("cloudServersFault");
-
-    const ::std::string CloudServersFault::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    CloudServersFault::
-    ~CloudServersFault ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< CloudServersFault, char, ::xml_schema::Type >
-    _xsd_CloudServersFault_parser_init (CloudServersFault::name (), CloudServersFault::namespace_ ());
-
-    // ItemNotFound
-    // 
-
-    const ::xml_schema::Type* ItemNotFound::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* ItemNotFound::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    ItemNotFound::
-    ItemNotFound (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    ItemNotFound::
-    ItemNotFound (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    ItemNotFound::
-    ItemNotFound (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    ItemNotFound::
-    ItemNotFound (const ItemNotFound& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    ItemNotFound* ItemNotFound::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class ItemNotFound (*this, f);
-    }
-
-    const ::std::string& ItemNotFound::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& ItemNotFound::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& ItemNotFound::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& ItemNotFound::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string ItemNotFound::
-    name_ ("itemNotFound");
-
-    const ::std::string ItemNotFound::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    ItemNotFound::
-    ~ItemNotFound ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< ItemNotFound, char, ::xml_schema::Type >
-    _xsd_ItemNotFound_parser_init (ItemNotFound::name (), ItemNotFound::namespace_ ());
-
-    // BuildInProgress
-    // 
-
-    const ::xml_schema::Type* BuildInProgress::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* BuildInProgress::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    BuildInProgress::
-    BuildInProgress (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    BuildInProgress::
-    BuildInProgress (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    BuildInProgress::
-    BuildInProgress (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    BuildInProgress::
-    BuildInProgress (const BuildInProgress& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    BuildInProgress* BuildInProgress::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class BuildInProgress (*this, f);
-    }
-
-    const ::std::string& BuildInProgress::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& BuildInProgress::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& BuildInProgress::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& BuildInProgress::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string BuildInProgress::
-    name_ ("buildInProgress");
-
-    const ::std::string BuildInProgress::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    BuildInProgress::
-    ~BuildInProgress ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< BuildInProgress, char, ::xml_schema::Type >
-    _xsd_BuildInProgress_parser_init (BuildInProgress::name (), BuildInProgress::namespace_ ());
-
-    // ServerCapacityUnavailable
-    // 
-
-    const ::xml_schema::Type* ServerCapacityUnavailable::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* ServerCapacityUnavailable::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    ServerCapacityUnavailable::
-    ServerCapacityUnavailable (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    ServerCapacityUnavailable::
-    ServerCapacityUnavailable (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    ServerCapacityUnavailable::
-    ServerCapacityUnavailable (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    ServerCapacityUnavailable::
-    ServerCapacityUnavailable (const ServerCapacityUnavailable& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    ServerCapacityUnavailable* ServerCapacityUnavailable::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class ServerCapacityUnavailable (*this, f);
-    }
-
-    const ::std::string& ServerCapacityUnavailable::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& ServerCapacityUnavailable::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& ServerCapacityUnavailable::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& ServerCapacityUnavailable::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string ServerCapacityUnavailable::
-    name_ ("serverCapacityUnavailable");
-
-    const ::std::string ServerCapacityUnavailable::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    ServerCapacityUnavailable::
-    ~ServerCapacityUnavailable ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< ServerCapacityUnavailable, char, ::xml_schema::Type >
-    _xsd_ServerCapacityUnavailable_parser_init (ServerCapacityUnavailable::name (), ServerCapacityUnavailable::namespace_ ());
-
-    // BackupOrResizeInProgress
-    // 
-
-    const ::xml_schema::Type* BackupOrResizeInProgress::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* BackupOrResizeInProgress::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    BackupOrResizeInProgress::
-    BackupOrResizeInProgress (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    BackupOrResizeInProgress::
-    BackupOrResizeInProgress (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    BackupOrResizeInProgress::
-    BackupOrResizeInProgress (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    BackupOrResizeInProgress::
-    BackupOrResizeInProgress (const BackupOrResizeInProgress& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    BackupOrResizeInProgress* BackupOrResizeInProgress::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class BackupOrResizeInProgress (*this, f);
-    }
-
-    const ::std::string& BackupOrResizeInProgress::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& BackupOrResizeInProgress::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& BackupOrResizeInProgress::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& BackupOrResizeInProgress::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string BackupOrResizeInProgress::
-    name_ ("backupOrResizeInProgress");
-
-    const ::std::string BackupOrResizeInProgress::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    BackupOrResizeInProgress::
-    ~BackupOrResizeInProgress ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< BackupOrResizeInProgress, char, ::xml_schema::Type >
-    _xsd_BackupOrResizeInProgress_parser_init (BackupOrResizeInProgress::name (), BackupOrResizeInProgress::namespace_ ());
-
-    // ResizeNotAllowed
-    // 
-
-    const ::xml_schema::Type* ResizeNotAllowed::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* ResizeNotAllowed::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    ResizeNotAllowed::
-    ResizeNotAllowed (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    ResizeNotAllowed::
-    ResizeNotAllowed (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    ResizeNotAllowed::
-    ResizeNotAllowed (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    ResizeNotAllowed::
-    ResizeNotAllowed (const ResizeNotAllowed& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    ResizeNotAllowed* ResizeNotAllowed::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class ResizeNotAllowed (*this, f);
-    }
-
-    const ::std::string& ResizeNotAllowed::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& ResizeNotAllowed::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& ResizeNotAllowed::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& ResizeNotAllowed::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string ResizeNotAllowed::
-    name_ ("resizeNotAllowed");
-
-    const ::std::string ResizeNotAllowed::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    ResizeNotAllowed::
-    ~ResizeNotAllowed ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< ResizeNotAllowed, char, ::xml_schema::Type >
-    _xsd_ResizeNotAllowed_parser_init (ResizeNotAllowed::name (), ResizeNotAllowed::namespace_ ());
-
-    // ServiceUnavailable
-    // 
-
-    const ::xml_schema::Type* ServiceUnavailable::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* ServiceUnavailable::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    ServiceUnavailable::
-    ServiceUnavailable (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    ServiceUnavailable::
-    ServiceUnavailable (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    ServiceUnavailable::
-    ServiceUnavailable (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    ServiceUnavailable::
-    ServiceUnavailable (const ServiceUnavailable& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    ServiceUnavailable* ServiceUnavailable::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class ServiceUnavailable (*this, f);
-    }
-
-    const ::std::string& ServiceUnavailable::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& ServiceUnavailable::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& ServiceUnavailable::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& ServiceUnavailable::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string ServiceUnavailable::
-    name_ ("serviceUnavailable");
-
-    const ::std::string ServiceUnavailable::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    ServiceUnavailable::
-    ~ServiceUnavailable ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< ServiceUnavailable, char, ::xml_schema::Type >
-    _xsd_ServiceUnavailable_parser_init (ServiceUnavailable::name (), ServiceUnavailable::namespace_ ());
-
-    // Unauthorized
-    // 
-
-    const ::xml_schema::Type* Unauthorized::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* Unauthorized::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    Unauthorized::
-    Unauthorized (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    Unauthorized::
-    Unauthorized (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    Unauthorized::
-    Unauthorized (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    Unauthorized::
-    Unauthorized (const Unauthorized& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    Unauthorized* Unauthorized::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class Unauthorized (*this, f);
-    }
-
-    const ::std::string& Unauthorized::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& Unauthorized::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& Unauthorized::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& Unauthorized::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string Unauthorized::
-    name_ ("unauthorized");
-
-    const ::std::string Unauthorized::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    Unauthorized::
-    ~Unauthorized ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< Unauthorized, char, ::xml_schema::Type >
-    _xsd_Unauthorized_parser_init (Unauthorized::name (), Unauthorized::namespace_ ());
-
-    // OverLimit
-    // 
-
-    const ::xml_schema::Type* OverLimit::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* OverLimit::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    OverLimit::
-    OverLimit (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    OverLimit::
-    OverLimit (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    OverLimit::
-    OverLimit (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    OverLimit::
-    OverLimit (const OverLimit& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    OverLimit* OverLimit::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class OverLimit (*this, f);
-    }
-
-    const ::std::string& OverLimit::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& OverLimit::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& OverLimit::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& OverLimit::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string OverLimit::
-    name_ ("overLimit");
-
-    const ::std::string OverLimit::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    OverLimit::
-    ~OverLimit ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< OverLimit, char, ::xml_schema::Type >
-    _xsd_OverLimit_parser_init (OverLimit::name (), OverLimit::namespace_ ());
-
-    // BadRequest
-    // 
-
-    const ::xml_schema::Type* BadRequest::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* BadRequest::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    BadRequest::
-    BadRequest (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    BadRequest::
-    BadRequest (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    BadRequest::
-    BadRequest (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    BadRequest::
-    BadRequest (const BadRequest& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    BadRequest* BadRequest::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class BadRequest (*this, f);
-    }
-
-    const ::std::string& BadRequest::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& BadRequest::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& BadRequest::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& BadRequest::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string BadRequest::
-    name_ ("badRequest");
-
-    const ::std::string BadRequest::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    BadRequest::
-    ~BadRequest ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< BadRequest, char, ::xml_schema::Type >
-    _xsd_BadRequest_parser_init (BadRequest::name (), BadRequest::namespace_ ());
-
-    // BadMediaType
-    // 
-
-    const ::xml_schema::Type* BadMediaType::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* BadMediaType::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    BadMediaType::
-    BadMediaType (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    BadMediaType::
-    BadMediaType (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    BadMediaType::
-    BadMediaType (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    BadMediaType::
-    BadMediaType (const BadMediaType& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    BadMediaType* BadMediaType::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class BadMediaType (*this, f);
-    }
-
-    const ::std::string& BadMediaType::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& BadMediaType::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& BadMediaType::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& BadMediaType::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string BadMediaType::
-    name_ ("badMediaType");
-
-    const ::std::string BadMediaType::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    BadMediaType::
-    ~BadMediaType ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< BadMediaType, char, ::xml_schema::Type >
-    _xsd_BadMediaType_parser_init (BadMediaType::name (), BadMediaType::namespace_ ());
-
-    // BadMethod
-    // 
-
-    const ::xml_schema::Type* BadMethod::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* BadMethod::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    BadMethod::
-    BadMethod (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    BadMethod::
-    BadMethod (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    BadMethod::
-    BadMethod (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    BadMethod::
-    BadMethod (const BadMethod& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    BadMethod* BadMethod::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class BadMethod (*this, f);
-    }
-
-    const ::std::string& BadMethod::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& BadMethod::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& BadMethod::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& BadMethod::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string BadMethod::
-    name_ ("badMethod");
-
-    const ::std::string BadMethod::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    BadMethod::
-    ~BadMethod ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< BadMethod, char, ::xml_schema::Type >
-    _xsd_BadMethod_parser_init (BadMethod::name (), BadMethod::namespace_ ());
-
-    // NotImplemented
-    // 
-
-    const ::xml_schema::Type* NotImplemented::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* NotImplemented::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    NotImplemented::
-    NotImplemented (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    NotImplemented::
-    NotImplemented (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    NotImplemented::
-    NotImplemented (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    NotImplemented::
-    NotImplemented (const NotImplemented& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    NotImplemented* NotImplemented::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class NotImplemented (*this, f);
-    }
-
-    const ::std::string& NotImplemented::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& NotImplemented::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& NotImplemented::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& NotImplemented::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string NotImplemented::
-    name_ ("notImplemented");
-
-    const ::std::string NotImplemented::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    NotImplemented::
-    ~NotImplemented ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< NotImplemented, char, ::xml_schema::Type >
-    _xsd_NotImplemented_parser_init (NotImplemented::name (), NotImplemented::namespace_ ());
-
     // CloudServersAPIFault
     //
 
@@ -2117,6 +895,4033 @@ namespace openstack
     _xsd_NotImplementedAPIFault_type_factory_init (
       "NotImplementedAPIFault",
       "http://docs.rackspacecloud.com/servers/api/v1.0");
+  }
+}
+
+#include <istream>
+#include <xsd/cxx/xml/sax/std-input-source.hxx>
+#include <xsd/cxx/tree/error-handler.hxx>
+
+namespace openstack
+{
+  namespace xml
+  {
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (const ::std::string& u,
+                       ::xml_schema::Flags f,
+                       const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault > r (
+        ::openstack::xml::cloudServersFault (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (const ::std::string& u,
+                       ::xml_schema::ErrorHandler& h,
+                       ::xml_schema::Flags f,
+                       const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault > r (
+        ::openstack::xml::cloudServersFault (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (const ::std::string& u,
+                       ::xercesc::DOMErrorHandler& h,
+                       ::xml_schema::Flags f,
+                       const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault > r (
+        ::openstack::xml::cloudServersFault (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::std::istream& is,
+                       ::xml_schema::Flags f,
+                       const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::cloudServersFault (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::std::istream& is,
+                       ::xml_schema::ErrorHandler& h,
+                       ::xml_schema::Flags f,
+                       const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::cloudServersFault (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::std::istream& is,
+                       ::xercesc::DOMErrorHandler& h,
+                       ::xml_schema::Flags f,
+                       const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::cloudServersFault (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::std::istream& is,
+                       const ::std::string& sid,
+                       ::xml_schema::Flags f,
+                       const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::cloudServersFault (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::std::istream& is,
+                       const ::std::string& sid,
+                       ::xml_schema::ErrorHandler& h,
+                       ::xml_schema::Flags f,
+                       const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::cloudServersFault (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::std::istream& is,
+                       const ::std::string& sid,
+                       ::xercesc::DOMErrorHandler& h,
+                       ::xml_schema::Flags f,
+                       const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::cloudServersFault (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::xercesc::InputSource& i,
+                       ::xml_schema::Flags f,
+                       const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault > r (
+        ::openstack::xml::cloudServersFault (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::xercesc::InputSource& i,
+                       ::xml_schema::ErrorHandler& h,
+                       ::xml_schema::Flags f,
+                       const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault > r (
+        ::openstack::xml::cloudServersFault (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::xercesc::InputSource& i,
+                       ::xercesc::DOMErrorHandler& h,
+                       ::xml_schema::Flags f,
+                       const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault > r (
+        ::openstack::xml::cloudServersFault (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (const ::xercesc::DOMDocument& d,
+                       ::xml_schema::Flags f,
+                       const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault > r (
+          ::openstack::xml::cloudServersFault (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "cloudServersFault",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::CloudServersAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault > r (
+          dynamic_cast< ::openstack::xml::CloudServersAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "cloudServersFault",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                       ::xml_schema::Flags f,
+                       const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "cloudServersFault",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::CloudServersAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault > r (
+          dynamic_cast< ::openstack::xml::CloudServersAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "cloudServersFault",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (const ::std::string& u,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault > r (
+        ::openstack::xml::itemNotFound (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (const ::std::string& u,
+                  ::xml_schema::ErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault > r (
+        ::openstack::xml::itemNotFound (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (const ::std::string& u,
+                  ::xercesc::DOMErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault > r (
+        ::openstack::xml::itemNotFound (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::std::istream& is,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::itemNotFound (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::std::istream& is,
+                  ::xml_schema::ErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::itemNotFound (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::std::istream& is,
+                  ::xercesc::DOMErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::itemNotFound (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::std::istream& is,
+                  const ::std::string& sid,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::itemNotFound (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::std::istream& is,
+                  const ::std::string& sid,
+                  ::xml_schema::ErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::itemNotFound (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::std::istream& is,
+                  const ::std::string& sid,
+                  ::xercesc::DOMErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::itemNotFound (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::xercesc::InputSource& i,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault > r (
+        ::openstack::xml::itemNotFound (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::xercesc::InputSource& i,
+                  ::xml_schema::ErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault > r (
+        ::openstack::xml::itemNotFound (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::xercesc::InputSource& i,
+                  ::xercesc::DOMErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault > r (
+        ::openstack::xml::itemNotFound (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (const ::xercesc::DOMDocument& d,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault > r (
+          ::openstack::xml::itemNotFound (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "itemNotFound",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::ItemNotFoundAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault > r (
+          dynamic_cast< ::openstack::xml::ItemNotFoundAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "itemNotFound",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "itemNotFound",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::ItemNotFoundAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault > r (
+          dynamic_cast< ::openstack::xml::ItemNotFoundAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "itemNotFound",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (const ::std::string& u,
+                     ::xml_schema::Flags f,
+                     const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault > r (
+        ::openstack::xml::buildInProgress (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (const ::std::string& u,
+                     ::xml_schema::ErrorHandler& h,
+                     ::xml_schema::Flags f,
+                     const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault > r (
+        ::openstack::xml::buildInProgress (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (const ::std::string& u,
+                     ::xercesc::DOMErrorHandler& h,
+                     ::xml_schema::Flags f,
+                     const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault > r (
+        ::openstack::xml::buildInProgress (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::std::istream& is,
+                     ::xml_schema::Flags f,
+                     const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::buildInProgress (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::std::istream& is,
+                     ::xml_schema::ErrorHandler& h,
+                     ::xml_schema::Flags f,
+                     const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::buildInProgress (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::std::istream& is,
+                     ::xercesc::DOMErrorHandler& h,
+                     ::xml_schema::Flags f,
+                     const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::buildInProgress (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::std::istream& is,
+                     const ::std::string& sid,
+                     ::xml_schema::Flags f,
+                     const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::buildInProgress (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::std::istream& is,
+                     const ::std::string& sid,
+                     ::xml_schema::ErrorHandler& h,
+                     ::xml_schema::Flags f,
+                     const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::buildInProgress (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::std::istream& is,
+                     const ::std::string& sid,
+                     ::xercesc::DOMErrorHandler& h,
+                     ::xml_schema::Flags f,
+                     const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::buildInProgress (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::xercesc::InputSource& i,
+                     ::xml_schema::Flags f,
+                     const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault > r (
+        ::openstack::xml::buildInProgress (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::xercesc::InputSource& i,
+                     ::xml_schema::ErrorHandler& h,
+                     ::xml_schema::Flags f,
+                     const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault > r (
+        ::openstack::xml::buildInProgress (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::xercesc::InputSource& i,
+                     ::xercesc::DOMErrorHandler& h,
+                     ::xml_schema::Flags f,
+                     const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault > r (
+        ::openstack::xml::buildInProgress (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (const ::xercesc::DOMDocument& d,
+                     ::xml_schema::Flags f,
+                     const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault > r (
+          ::openstack::xml::buildInProgress (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "buildInProgress",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::BuildInProgressAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault > r (
+          dynamic_cast< ::openstack::xml::BuildInProgressAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "buildInProgress",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                     ::xml_schema::Flags f,
+                     const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "buildInProgress",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::BuildInProgressAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault > r (
+          dynamic_cast< ::openstack::xml::BuildInProgressAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "buildInProgress",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (const ::std::string& u,
+                               ::xml_schema::Flags f,
+                               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault > r (
+        ::openstack::xml::serverCapacityUnavailable (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (const ::std::string& u,
+                               ::xml_schema::ErrorHandler& h,
+                               ::xml_schema::Flags f,
+                               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault > r (
+        ::openstack::xml::serverCapacityUnavailable (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (const ::std::string& u,
+                               ::xercesc::DOMErrorHandler& h,
+                               ::xml_schema::Flags f,
+                               const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault > r (
+        ::openstack::xml::serverCapacityUnavailable (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::std::istream& is,
+                               ::xml_schema::Flags f,
+                               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::serverCapacityUnavailable (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::std::istream& is,
+                               ::xml_schema::ErrorHandler& h,
+                               ::xml_schema::Flags f,
+                               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::serverCapacityUnavailable (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::std::istream& is,
+                               ::xercesc::DOMErrorHandler& h,
+                               ::xml_schema::Flags f,
+                               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::serverCapacityUnavailable (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::std::istream& is,
+                               const ::std::string& sid,
+                               ::xml_schema::Flags f,
+                               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::serverCapacityUnavailable (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::std::istream& is,
+                               const ::std::string& sid,
+                               ::xml_schema::ErrorHandler& h,
+                               ::xml_schema::Flags f,
+                               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::serverCapacityUnavailable (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::std::istream& is,
+                               const ::std::string& sid,
+                               ::xercesc::DOMErrorHandler& h,
+                               ::xml_schema::Flags f,
+                               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::serverCapacityUnavailable (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::xercesc::InputSource& i,
+                               ::xml_schema::Flags f,
+                               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault > r (
+        ::openstack::xml::serverCapacityUnavailable (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::xercesc::InputSource& i,
+                               ::xml_schema::ErrorHandler& h,
+                               ::xml_schema::Flags f,
+                               const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault > r (
+        ::openstack::xml::serverCapacityUnavailable (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::xercesc::InputSource& i,
+                               ::xercesc::DOMErrorHandler& h,
+                               ::xml_schema::Flags f,
+                               const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault > r (
+        ::openstack::xml::serverCapacityUnavailable (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (const ::xercesc::DOMDocument& d,
+                               ::xml_schema::Flags f,
+                               const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault > r (
+          ::openstack::xml::serverCapacityUnavailable (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "serverCapacityUnavailable",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::ServerCapacityUnavailableAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault > r (
+          dynamic_cast< ::openstack::xml::ServerCapacityUnavailableAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "serverCapacityUnavailable",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                               ::xml_schema::Flags f,
+                               const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "serverCapacityUnavailable",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::ServerCapacityUnavailableAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault > r (
+          dynamic_cast< ::openstack::xml::ServerCapacityUnavailableAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "serverCapacityUnavailable",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (const ::std::string& u,
+                              ::xml_schema::Flags f,
+                              const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault > r (
+        ::openstack::xml::backupOrResizeInProgress (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (const ::std::string& u,
+                              ::xml_schema::ErrorHandler& h,
+                              ::xml_schema::Flags f,
+                              const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault > r (
+        ::openstack::xml::backupOrResizeInProgress (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (const ::std::string& u,
+                              ::xercesc::DOMErrorHandler& h,
+                              ::xml_schema::Flags f,
+                              const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault > r (
+        ::openstack::xml::backupOrResizeInProgress (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::std::istream& is,
+                              ::xml_schema::Flags f,
+                              const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::backupOrResizeInProgress (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::std::istream& is,
+                              ::xml_schema::ErrorHandler& h,
+                              ::xml_schema::Flags f,
+                              const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::backupOrResizeInProgress (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::std::istream& is,
+                              ::xercesc::DOMErrorHandler& h,
+                              ::xml_schema::Flags f,
+                              const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::backupOrResizeInProgress (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::std::istream& is,
+                              const ::std::string& sid,
+                              ::xml_schema::Flags f,
+                              const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::backupOrResizeInProgress (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::std::istream& is,
+                              const ::std::string& sid,
+                              ::xml_schema::ErrorHandler& h,
+                              ::xml_schema::Flags f,
+                              const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::backupOrResizeInProgress (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::std::istream& is,
+                              const ::std::string& sid,
+                              ::xercesc::DOMErrorHandler& h,
+                              ::xml_schema::Flags f,
+                              const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::backupOrResizeInProgress (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::xercesc::InputSource& i,
+                              ::xml_schema::Flags f,
+                              const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault > r (
+        ::openstack::xml::backupOrResizeInProgress (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::xercesc::InputSource& i,
+                              ::xml_schema::ErrorHandler& h,
+                              ::xml_schema::Flags f,
+                              const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault > r (
+        ::openstack::xml::backupOrResizeInProgress (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::xercesc::InputSource& i,
+                              ::xercesc::DOMErrorHandler& h,
+                              ::xml_schema::Flags f,
+                              const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault > r (
+        ::openstack::xml::backupOrResizeInProgress (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (const ::xercesc::DOMDocument& d,
+                              ::xml_schema::Flags f,
+                              const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault > r (
+          ::openstack::xml::backupOrResizeInProgress (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "backupOrResizeInProgress",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::BackupOrResizeInProgressAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault > r (
+          dynamic_cast< ::openstack::xml::BackupOrResizeInProgressAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "backupOrResizeInProgress",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                              ::xml_schema::Flags f,
+                              const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "backupOrResizeInProgress",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::BackupOrResizeInProgressAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault > r (
+          dynamic_cast< ::openstack::xml::BackupOrResizeInProgressAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "backupOrResizeInProgress",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (const ::std::string& u,
+                      ::xml_schema::Flags f,
+                      const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault > r (
+        ::openstack::xml::resizeNotAllowed (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (const ::std::string& u,
+                      ::xml_schema::ErrorHandler& h,
+                      ::xml_schema::Flags f,
+                      const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault > r (
+        ::openstack::xml::resizeNotAllowed (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (const ::std::string& u,
+                      ::xercesc::DOMErrorHandler& h,
+                      ::xml_schema::Flags f,
+                      const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault > r (
+        ::openstack::xml::resizeNotAllowed (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::std::istream& is,
+                      ::xml_schema::Flags f,
+                      const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::resizeNotAllowed (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::std::istream& is,
+                      ::xml_schema::ErrorHandler& h,
+                      ::xml_schema::Flags f,
+                      const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::resizeNotAllowed (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::std::istream& is,
+                      ::xercesc::DOMErrorHandler& h,
+                      ::xml_schema::Flags f,
+                      const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::resizeNotAllowed (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::std::istream& is,
+                      const ::std::string& sid,
+                      ::xml_schema::Flags f,
+                      const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::resizeNotAllowed (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::std::istream& is,
+                      const ::std::string& sid,
+                      ::xml_schema::ErrorHandler& h,
+                      ::xml_schema::Flags f,
+                      const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::resizeNotAllowed (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::std::istream& is,
+                      const ::std::string& sid,
+                      ::xercesc::DOMErrorHandler& h,
+                      ::xml_schema::Flags f,
+                      const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::resizeNotAllowed (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::xercesc::InputSource& i,
+                      ::xml_schema::Flags f,
+                      const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault > r (
+        ::openstack::xml::resizeNotAllowed (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::xercesc::InputSource& i,
+                      ::xml_schema::ErrorHandler& h,
+                      ::xml_schema::Flags f,
+                      const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault > r (
+        ::openstack::xml::resizeNotAllowed (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::xercesc::InputSource& i,
+                      ::xercesc::DOMErrorHandler& h,
+                      ::xml_schema::Flags f,
+                      const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault > r (
+        ::openstack::xml::resizeNotAllowed (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (const ::xercesc::DOMDocument& d,
+                      ::xml_schema::Flags f,
+                      const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault > r (
+          ::openstack::xml::resizeNotAllowed (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "resizeNotAllowed",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::ResizeNotAllowedAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault > r (
+          dynamic_cast< ::openstack::xml::ResizeNotAllowedAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "resizeNotAllowed",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                      ::xml_schema::Flags f,
+                      const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "resizeNotAllowed",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::ResizeNotAllowedAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault > r (
+          dynamic_cast< ::openstack::xml::ResizeNotAllowedAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "resizeNotAllowed",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (const ::std::string& u,
+                        ::xml_schema::Flags f,
+                        const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault > r (
+        ::openstack::xml::serviceUnavailable (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (const ::std::string& u,
+                        ::xml_schema::ErrorHandler& h,
+                        ::xml_schema::Flags f,
+                        const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault > r (
+        ::openstack::xml::serviceUnavailable (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (const ::std::string& u,
+                        ::xercesc::DOMErrorHandler& h,
+                        ::xml_schema::Flags f,
+                        const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault > r (
+        ::openstack::xml::serviceUnavailable (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::std::istream& is,
+                        ::xml_schema::Flags f,
+                        const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::serviceUnavailable (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::std::istream& is,
+                        ::xml_schema::ErrorHandler& h,
+                        ::xml_schema::Flags f,
+                        const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::serviceUnavailable (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::std::istream& is,
+                        ::xercesc::DOMErrorHandler& h,
+                        ::xml_schema::Flags f,
+                        const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::serviceUnavailable (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::std::istream& is,
+                        const ::std::string& sid,
+                        ::xml_schema::Flags f,
+                        const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::serviceUnavailable (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::std::istream& is,
+                        const ::std::string& sid,
+                        ::xml_schema::ErrorHandler& h,
+                        ::xml_schema::Flags f,
+                        const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::serviceUnavailable (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::std::istream& is,
+                        const ::std::string& sid,
+                        ::xercesc::DOMErrorHandler& h,
+                        ::xml_schema::Flags f,
+                        const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::serviceUnavailable (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::xercesc::InputSource& i,
+                        ::xml_schema::Flags f,
+                        const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault > r (
+        ::openstack::xml::serviceUnavailable (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::xercesc::InputSource& i,
+                        ::xml_schema::ErrorHandler& h,
+                        ::xml_schema::Flags f,
+                        const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault > r (
+        ::openstack::xml::serviceUnavailable (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::xercesc::InputSource& i,
+                        ::xercesc::DOMErrorHandler& h,
+                        ::xml_schema::Flags f,
+                        const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault > r (
+        ::openstack::xml::serviceUnavailable (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (const ::xercesc::DOMDocument& d,
+                        ::xml_schema::Flags f,
+                        const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault > r (
+          ::openstack::xml::serviceUnavailable (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "serviceUnavailable",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::ServiceUnavailableAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault > r (
+          dynamic_cast< ::openstack::xml::ServiceUnavailableAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "serviceUnavailable",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                        ::xml_schema::Flags f,
+                        const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "serviceUnavailable",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::ServiceUnavailableAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault > r (
+          dynamic_cast< ::openstack::xml::ServiceUnavailableAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "serviceUnavailable",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (const ::std::string& u,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault > r (
+        ::openstack::xml::unauthorized (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (const ::std::string& u,
+                  ::xml_schema::ErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault > r (
+        ::openstack::xml::unauthorized (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (const ::std::string& u,
+                  ::xercesc::DOMErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault > r (
+        ::openstack::xml::unauthorized (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::std::istream& is,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::unauthorized (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::std::istream& is,
+                  ::xml_schema::ErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::unauthorized (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::std::istream& is,
+                  ::xercesc::DOMErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::unauthorized (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::std::istream& is,
+                  const ::std::string& sid,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::unauthorized (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::std::istream& is,
+                  const ::std::string& sid,
+                  ::xml_schema::ErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::unauthorized (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::std::istream& is,
+                  const ::std::string& sid,
+                  ::xercesc::DOMErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::unauthorized (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::xercesc::InputSource& i,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault > r (
+        ::openstack::xml::unauthorized (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::xercesc::InputSource& i,
+                  ::xml_schema::ErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault > r (
+        ::openstack::xml::unauthorized (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::xercesc::InputSource& i,
+                  ::xercesc::DOMErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault > r (
+        ::openstack::xml::unauthorized (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (const ::xercesc::DOMDocument& d,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault > r (
+          ::openstack::xml::unauthorized (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "unauthorized",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::UnauthorizedAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault > r (
+          dynamic_cast< ::openstack::xml::UnauthorizedAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "unauthorized",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "unauthorized",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::UnauthorizedAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault > r (
+          dynamic_cast< ::openstack::xml::UnauthorizedAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "unauthorized",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (const ::std::string& u,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault > r (
+        ::openstack::xml::overLimit (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (const ::std::string& u,
+               ::xml_schema::ErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault > r (
+        ::openstack::xml::overLimit (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (const ::std::string& u,
+               ::xercesc::DOMErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault > r (
+        ::openstack::xml::overLimit (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::std::istream& is,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::overLimit (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::std::istream& is,
+               ::xml_schema::ErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::overLimit (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::std::istream& is,
+               ::xercesc::DOMErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::overLimit (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::std::istream& is,
+               const ::std::string& sid,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::overLimit (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::std::istream& is,
+               const ::std::string& sid,
+               ::xml_schema::ErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::overLimit (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::std::istream& is,
+               const ::std::string& sid,
+               ::xercesc::DOMErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::overLimit (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::xercesc::InputSource& i,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault > r (
+        ::openstack::xml::overLimit (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::xercesc::InputSource& i,
+               ::xml_schema::ErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault > r (
+        ::openstack::xml::overLimit (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::xercesc::InputSource& i,
+               ::xercesc::DOMErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault > r (
+        ::openstack::xml::overLimit (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (const ::xercesc::DOMDocument& d,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault > r (
+          ::openstack::xml::overLimit (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "overLimit",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::OverLimitAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault > r (
+          dynamic_cast< ::openstack::xml::OverLimitAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "overLimit",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "overLimit",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::OverLimitAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault > r (
+          dynamic_cast< ::openstack::xml::OverLimitAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "overLimit",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (const ::std::string& u,
+                ::xml_schema::Flags f,
+                const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault > r (
+        ::openstack::xml::badRequest (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (const ::std::string& u,
+                ::xml_schema::ErrorHandler& h,
+                ::xml_schema::Flags f,
+                const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault > r (
+        ::openstack::xml::badRequest (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (const ::std::string& u,
+                ::xercesc::DOMErrorHandler& h,
+                ::xml_schema::Flags f,
+                const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault > r (
+        ::openstack::xml::badRequest (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::std::istream& is,
+                ::xml_schema::Flags f,
+                const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::badRequest (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::std::istream& is,
+                ::xml_schema::ErrorHandler& h,
+                ::xml_schema::Flags f,
+                const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::badRequest (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::std::istream& is,
+                ::xercesc::DOMErrorHandler& h,
+                ::xml_schema::Flags f,
+                const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::badRequest (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::std::istream& is,
+                const ::std::string& sid,
+                ::xml_schema::Flags f,
+                const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::badRequest (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::std::istream& is,
+                const ::std::string& sid,
+                ::xml_schema::ErrorHandler& h,
+                ::xml_schema::Flags f,
+                const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::badRequest (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::std::istream& is,
+                const ::std::string& sid,
+                ::xercesc::DOMErrorHandler& h,
+                ::xml_schema::Flags f,
+                const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::badRequest (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::xercesc::InputSource& i,
+                ::xml_schema::Flags f,
+                const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault > r (
+        ::openstack::xml::badRequest (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::xercesc::InputSource& i,
+                ::xml_schema::ErrorHandler& h,
+                ::xml_schema::Flags f,
+                const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault > r (
+        ::openstack::xml::badRequest (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::xercesc::InputSource& i,
+                ::xercesc::DOMErrorHandler& h,
+                ::xml_schema::Flags f,
+                const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault > r (
+        ::openstack::xml::badRequest (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (const ::xercesc::DOMDocument& d,
+                ::xml_schema::Flags f,
+                const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault > r (
+          ::openstack::xml::badRequest (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "badRequest",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::BadRequestAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault > r (
+          dynamic_cast< ::openstack::xml::BadRequestAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "badRequest",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                ::xml_schema::Flags f,
+                const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "badRequest",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::BadRequestAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault > r (
+          dynamic_cast< ::openstack::xml::BadRequestAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "badRequest",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (const ::std::string& u,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault > r (
+        ::openstack::xml::badMediaType (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (const ::std::string& u,
+                  ::xml_schema::ErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault > r (
+        ::openstack::xml::badMediaType (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (const ::std::string& u,
+                  ::xercesc::DOMErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault > r (
+        ::openstack::xml::badMediaType (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::std::istream& is,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::badMediaType (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::std::istream& is,
+                  ::xml_schema::ErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::badMediaType (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::std::istream& is,
+                  ::xercesc::DOMErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::badMediaType (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::std::istream& is,
+                  const ::std::string& sid,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::badMediaType (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::std::istream& is,
+                  const ::std::string& sid,
+                  ::xml_schema::ErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::badMediaType (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::std::istream& is,
+                  const ::std::string& sid,
+                  ::xercesc::DOMErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::badMediaType (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::xercesc::InputSource& i,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault > r (
+        ::openstack::xml::badMediaType (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::xercesc::InputSource& i,
+                  ::xml_schema::ErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault > r (
+        ::openstack::xml::badMediaType (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::xercesc::InputSource& i,
+                  ::xercesc::DOMErrorHandler& h,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault > r (
+        ::openstack::xml::badMediaType (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (const ::xercesc::DOMDocument& d,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault > r (
+          ::openstack::xml::badMediaType (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "badMediaType",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::BadMediaTypeAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault > r (
+          dynamic_cast< ::openstack::xml::BadMediaTypeAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "badMediaType",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                  ::xml_schema::Flags f,
+                  const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "badMediaType",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::BadMediaTypeAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault > r (
+          dynamic_cast< ::openstack::xml::BadMediaTypeAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "badMediaType",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (const ::std::string& u,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault > r (
+        ::openstack::xml::badMethod (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (const ::std::string& u,
+               ::xml_schema::ErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault > r (
+        ::openstack::xml::badMethod (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (const ::std::string& u,
+               ::xercesc::DOMErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault > r (
+        ::openstack::xml::badMethod (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::std::istream& is,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::badMethod (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::std::istream& is,
+               ::xml_schema::ErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::badMethod (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::std::istream& is,
+               ::xercesc::DOMErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::badMethod (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::std::istream& is,
+               const ::std::string& sid,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::badMethod (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::std::istream& is,
+               const ::std::string& sid,
+               ::xml_schema::ErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::badMethod (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::std::istream& is,
+               const ::std::string& sid,
+               ::xercesc::DOMErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::badMethod (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::xercesc::InputSource& i,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault > r (
+        ::openstack::xml::badMethod (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::xercesc::InputSource& i,
+               ::xml_schema::ErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault > r (
+        ::openstack::xml::badMethod (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::xercesc::InputSource& i,
+               ::xercesc::DOMErrorHandler& h,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault > r (
+        ::openstack::xml::badMethod (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (const ::xercesc::DOMDocument& d,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault > r (
+          ::openstack::xml::badMethod (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "badMethod",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::BadMethodAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault > r (
+          dynamic_cast< ::openstack::xml::BadMethodAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "badMethod",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+               ::xml_schema::Flags f,
+               const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "badMethod",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::BadMethodAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault > r (
+          dynamic_cast< ::openstack::xml::BadMethodAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "badMethod",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (const ::std::string& u,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault > r (
+        ::openstack::xml::notImplemented (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (const ::std::string& u,
+                    ::xml_schema::ErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault > r (
+        ::openstack::xml::notImplemented (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (const ::std::string& u,
+                    ::xercesc::DOMErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault > r (
+        ::openstack::xml::notImplemented (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::std::istream& is,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::notImplemented (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::std::istream& is,
+                    ::xml_schema::ErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::notImplemented (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::std::istream& is,
+                    ::xercesc::DOMErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::notImplemented (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::std::istream& is,
+                    const ::std::string& sid,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::notImplemented (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::std::istream& is,
+                    const ::std::string& sid,
+                    ::xml_schema::ErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::notImplemented (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::std::istream& is,
+                    const ::std::string& sid,
+                    ::xercesc::DOMErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::notImplemented (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::xercesc::InputSource& i,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault > r (
+        ::openstack::xml::notImplemented (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::xercesc::InputSource& i,
+                    ::xml_schema::ErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault > r (
+        ::openstack::xml::notImplemented (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::xercesc::InputSource& i,
+                    ::xercesc::DOMErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault > r (
+        ::openstack::xml::notImplemented (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (const ::xercesc::DOMDocument& d,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault > r (
+          ::openstack::xml::notImplemented (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "notImplemented",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::NotImplementedAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault > r (
+          dynamic_cast< ::openstack::xml::NotImplementedAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "notImplemented",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "notImplemented",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::NotImplementedAPIFault >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault > r (
+          dynamic_cast< ::openstack::xml::NotImplementedAPIFault* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "notImplemented",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
   }
 }
 

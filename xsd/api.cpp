@@ -51,6 +51,10 @@ namespace _xsd
   type_factory_plate_init;
 }
 
+#include <istream>
+#include <xsd/cxx/xml/sax/std-input-source.hxx>
+#include <xsd/cxx/tree/error-handler.hxx>
+
 #include <xsd/cxx/post.hxx>
 
 // Begin epilogue.

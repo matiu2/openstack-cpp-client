@@ -55,194 +55,6 @@ namespace openstack
 {
   namespace xml
   {
-    // Flavor_
-    // 
-
-    const ::xml_schema::Type* Flavor_::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* Flavor_::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    Flavor_::
-    Flavor_ (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    Flavor_::
-    Flavor_ (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    Flavor_::
-    Flavor_ (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    Flavor_::
-    Flavor_ (const Flavor_& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    Flavor_* Flavor_::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class Flavor_ (*this, f);
-    }
-
-    const ::std::string& Flavor_::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& Flavor_::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& Flavor_::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& Flavor_::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string Flavor_::
-    name_ ("flavor");
-
-    const ::std::string Flavor_::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    Flavor_::
-    ~Flavor_ ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< Flavor_, char, ::xml_schema::Type >
-    _xsd_Flavor__parser_init (Flavor_::name (), Flavor_::namespace_ ());
-
-    // Flavors_
-    // 
-
-    const ::xml_schema::Type* Flavors_::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* Flavors_::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    Flavors_::
-    Flavors_ (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    Flavors_::
-    Flavors_ (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    Flavors_::
-    Flavors_ (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    Flavors_::
-    Flavors_ (const Flavors_& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    Flavors_* Flavors_::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class Flavors_ (*this, f);
-    }
-
-    const ::std::string& Flavors_::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& Flavors_::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& Flavors_::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& Flavors_::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string Flavors_::
-    name_ ("flavors");
-
-    const ::std::string Flavors_::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    Flavors_::
-    ~Flavors_ ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< Flavors_, char, ::xml_schema::Type >
-    _xsd_Flavors__parser_init (Flavors_::name (), Flavors_::namespace_ ());
-
     // Flavor
     //
 
@@ -449,6 +261,634 @@ namespace openstack
     _xsd_Flavors_type_factory_init (
       "Flavors",
       "http://docs.rackspacecloud.com/servers/api/v1.0");
+  }
+}
+
+#include <istream>
+#include <xsd/cxx/xml/sax/std-input-source.hxx>
+#include <xsd/cxx/tree/error-handler.hxx>
+
+namespace openstack
+{
+  namespace xml
+  {
+    ::std::auto_ptr< ::openstack::xml::Flavor >
+    flavor (const ::std::string& u,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::Flavor > r (
+        ::openstack::xml::flavor (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavor >
+    flavor (const ::std::string& u,
+            ::xml_schema::ErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Flavor > r (
+        ::openstack::xml::flavor (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavor >
+    flavor (const ::std::string& u,
+            ::xercesc::DOMErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Flavor > r (
+        ::openstack::xml::flavor (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavor >
+    flavor (::std::istream& is,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::flavor (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavor >
+    flavor (::std::istream& is,
+            ::xml_schema::ErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::flavor (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavor >
+    flavor (::std::istream& is,
+            ::xercesc::DOMErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::flavor (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavor >
+    flavor (::std::istream& is,
+            const ::std::string& sid,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::flavor (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavor >
+    flavor (::std::istream& is,
+            const ::std::string& sid,
+            ::xml_schema::ErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::flavor (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavor >
+    flavor (::std::istream& is,
+            const ::std::string& sid,
+            ::xercesc::DOMErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::flavor (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavor >
+    flavor (::xercesc::InputSource& i,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::Flavor > r (
+        ::openstack::xml::flavor (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavor >
+    flavor (::xercesc::InputSource& i,
+            ::xml_schema::ErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Flavor > r (
+        ::openstack::xml::flavor (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavor >
+    flavor (::xercesc::InputSource& i,
+            ::xercesc::DOMErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Flavor > r (
+        ::openstack::xml::flavor (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavor >
+    flavor (const ::xercesc::DOMDocument& d,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::Flavor > r (
+          ::openstack::xml::flavor (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "flavor",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::Flavor >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::Flavor > r (
+          dynamic_cast< ::openstack::xml::Flavor* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "flavor",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavor >
+    flavor (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "flavor",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::Flavor >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::Flavor > r (
+          dynamic_cast< ::openstack::xml::Flavor* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "flavor",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavors >
+    flavors (const ::std::string& u,
+             ::xml_schema::Flags f,
+             const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::Flavors > r (
+        ::openstack::xml::flavors (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavors >
+    flavors (const ::std::string& u,
+             ::xml_schema::ErrorHandler& h,
+             ::xml_schema::Flags f,
+             const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Flavors > r (
+        ::openstack::xml::flavors (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavors >
+    flavors (const ::std::string& u,
+             ::xercesc::DOMErrorHandler& h,
+             ::xml_schema::Flags f,
+             const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Flavors > r (
+        ::openstack::xml::flavors (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavors >
+    flavors (::std::istream& is,
+             ::xml_schema::Flags f,
+             const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::flavors (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavors >
+    flavors (::std::istream& is,
+             ::xml_schema::ErrorHandler& h,
+             ::xml_schema::Flags f,
+             const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::flavors (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavors >
+    flavors (::std::istream& is,
+             ::xercesc::DOMErrorHandler& h,
+             ::xml_schema::Flags f,
+             const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::flavors (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavors >
+    flavors (::std::istream& is,
+             const ::std::string& sid,
+             ::xml_schema::Flags f,
+             const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::flavors (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavors >
+    flavors (::std::istream& is,
+             const ::std::string& sid,
+             ::xml_schema::ErrorHandler& h,
+             ::xml_schema::Flags f,
+             const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::flavors (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavors >
+    flavors (::std::istream& is,
+             const ::std::string& sid,
+             ::xercesc::DOMErrorHandler& h,
+             ::xml_schema::Flags f,
+             const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::flavors (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavors >
+    flavors (::xercesc::InputSource& i,
+             ::xml_schema::Flags f,
+             const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::Flavors > r (
+        ::openstack::xml::flavors (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavors >
+    flavors (::xercesc::InputSource& i,
+             ::xml_schema::ErrorHandler& h,
+             ::xml_schema::Flags f,
+             const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Flavors > r (
+        ::openstack::xml::flavors (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavors >
+    flavors (::xercesc::InputSource& i,
+             ::xercesc::DOMErrorHandler& h,
+             ::xml_schema::Flags f,
+             const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Flavors > r (
+        ::openstack::xml::flavors (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavors >
+    flavors (const ::xercesc::DOMDocument& d,
+             ::xml_schema::Flags f,
+             const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::Flavors > r (
+          ::openstack::xml::flavors (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "flavors",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::Flavors >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::Flavors > r (
+          dynamic_cast< ::openstack::xml::Flavors* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "flavors",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Flavors >
+    flavors (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+             ::xml_schema::Flags f,
+             const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "flavors",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::Flavors >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::Flavors > r (
+          dynamic_cast< ::openstack::xml::Flavors* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "flavors",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
   }
 }
 

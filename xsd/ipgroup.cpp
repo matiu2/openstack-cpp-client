@@ -55,194 +55,6 @@ namespace openstack
 {
   namespace xml
   {
-    // SharedIpGroup_
-    // 
-
-    const ::xml_schema::Type* SharedIpGroup_::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* SharedIpGroup_::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    SharedIpGroup_::
-    SharedIpGroup_ (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    SharedIpGroup_::
-    SharedIpGroup_ (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    SharedIpGroup_::
-    SharedIpGroup_ (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    SharedIpGroup_::
-    SharedIpGroup_ (const SharedIpGroup_& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    SharedIpGroup_* SharedIpGroup_::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class SharedIpGroup_ (*this, f);
-    }
-
-    const ::std::string& SharedIpGroup_::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& SharedIpGroup_::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& SharedIpGroup_::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& SharedIpGroup_::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string SharedIpGroup_::
-    name_ ("sharedIpGroup");
-
-    const ::std::string SharedIpGroup_::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    SharedIpGroup_::
-    ~SharedIpGroup_ ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< SharedIpGroup_, char, ::xml_schema::Type >
-    _xsd_SharedIpGroup__parser_init (SharedIpGroup_::name (), SharedIpGroup_::namespace_ ());
-
-    // SharedIpGroups_
-    // 
-
-    const ::xml_schema::Type* SharedIpGroups_::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* SharedIpGroups_::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    SharedIpGroups_::
-    SharedIpGroups_ (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    SharedIpGroups_::
-    SharedIpGroups_ (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    SharedIpGroups_::
-    SharedIpGroups_ (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    SharedIpGroups_::
-    SharedIpGroups_ (const SharedIpGroups_& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    SharedIpGroups_* SharedIpGroups_::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class SharedIpGroups_ (*this, f);
-    }
-
-    const ::std::string& SharedIpGroups_::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& SharedIpGroups_::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& SharedIpGroups_::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& SharedIpGroups_::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string SharedIpGroups_::
-    name_ ("sharedIpGroups");
-
-    const ::std::string SharedIpGroups_::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    SharedIpGroups_::
-    ~SharedIpGroups_ ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< SharedIpGroups_, char, ::xml_schema::Type >
-    _xsd_SharedIpGroups__parser_init (SharedIpGroups_::name (), SharedIpGroups_::namespace_ ());
-
     // SharedIpGroup
     //
 
@@ -669,6 +481,634 @@ namespace openstack
     _xsd_ServerID_type_factory_init (
       "ServerID",
       "http://docs.rackspacecloud.com/servers/api/v1.0");
+  }
+}
+
+#include <istream>
+#include <xsd/cxx/xml/sax/std-input-source.hxx>
+#include <xsd/cxx/tree/error-handler.hxx>
+
+namespace openstack
+{
+  namespace xml
+  {
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroup >
+    sharedIpGroup (const ::std::string& u,
+                   ::xml_schema::Flags f,
+                   const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::SharedIpGroup > r (
+        ::openstack::xml::sharedIpGroup (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroup >
+    sharedIpGroup (const ::std::string& u,
+                   ::xml_schema::ErrorHandler& h,
+                   ::xml_schema::Flags f,
+                   const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::SharedIpGroup > r (
+        ::openstack::xml::sharedIpGroup (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroup >
+    sharedIpGroup (const ::std::string& u,
+                   ::xercesc::DOMErrorHandler& h,
+                   ::xml_schema::Flags f,
+                   const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::SharedIpGroup > r (
+        ::openstack::xml::sharedIpGroup (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroup >
+    sharedIpGroup (::std::istream& is,
+                   ::xml_schema::Flags f,
+                   const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::sharedIpGroup (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroup >
+    sharedIpGroup (::std::istream& is,
+                   ::xml_schema::ErrorHandler& h,
+                   ::xml_schema::Flags f,
+                   const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::sharedIpGroup (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroup >
+    sharedIpGroup (::std::istream& is,
+                   ::xercesc::DOMErrorHandler& h,
+                   ::xml_schema::Flags f,
+                   const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::sharedIpGroup (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroup >
+    sharedIpGroup (::std::istream& is,
+                   const ::std::string& sid,
+                   ::xml_schema::Flags f,
+                   const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::sharedIpGroup (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroup >
+    sharedIpGroup (::std::istream& is,
+                   const ::std::string& sid,
+                   ::xml_schema::ErrorHandler& h,
+                   ::xml_schema::Flags f,
+                   const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::sharedIpGroup (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroup >
+    sharedIpGroup (::std::istream& is,
+                   const ::std::string& sid,
+                   ::xercesc::DOMErrorHandler& h,
+                   ::xml_schema::Flags f,
+                   const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::sharedIpGroup (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroup >
+    sharedIpGroup (::xercesc::InputSource& i,
+                   ::xml_schema::Flags f,
+                   const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::SharedIpGroup > r (
+        ::openstack::xml::sharedIpGroup (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroup >
+    sharedIpGroup (::xercesc::InputSource& i,
+                   ::xml_schema::ErrorHandler& h,
+                   ::xml_schema::Flags f,
+                   const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::SharedIpGroup > r (
+        ::openstack::xml::sharedIpGroup (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroup >
+    sharedIpGroup (::xercesc::InputSource& i,
+                   ::xercesc::DOMErrorHandler& h,
+                   ::xml_schema::Flags f,
+                   const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::SharedIpGroup > r (
+        ::openstack::xml::sharedIpGroup (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroup >
+    sharedIpGroup (const ::xercesc::DOMDocument& d,
+                   ::xml_schema::Flags f,
+                   const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::SharedIpGroup > r (
+          ::openstack::xml::sharedIpGroup (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "sharedIpGroup",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::SharedIpGroup >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::SharedIpGroup > r (
+          dynamic_cast< ::openstack::xml::SharedIpGroup* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "sharedIpGroup",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroup >
+    sharedIpGroup (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                   ::xml_schema::Flags f,
+                   const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "sharedIpGroup",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::SharedIpGroup >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::SharedIpGroup > r (
+          dynamic_cast< ::openstack::xml::SharedIpGroup* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "sharedIpGroup",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroups >
+    sharedIpGroups (const ::std::string& u,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::SharedIpGroups > r (
+        ::openstack::xml::sharedIpGroups (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroups >
+    sharedIpGroups (const ::std::string& u,
+                    ::xml_schema::ErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::SharedIpGroups > r (
+        ::openstack::xml::sharedIpGroups (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroups >
+    sharedIpGroups (const ::std::string& u,
+                    ::xercesc::DOMErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::SharedIpGroups > r (
+        ::openstack::xml::sharedIpGroups (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroups >
+    sharedIpGroups (::std::istream& is,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::sharedIpGroups (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroups >
+    sharedIpGroups (::std::istream& is,
+                    ::xml_schema::ErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::sharedIpGroups (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroups >
+    sharedIpGroups (::std::istream& is,
+                    ::xercesc::DOMErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::sharedIpGroups (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroups >
+    sharedIpGroups (::std::istream& is,
+                    const ::std::string& sid,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::sharedIpGroups (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroups >
+    sharedIpGroups (::std::istream& is,
+                    const ::std::string& sid,
+                    ::xml_schema::ErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::sharedIpGroups (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroups >
+    sharedIpGroups (::std::istream& is,
+                    const ::std::string& sid,
+                    ::xercesc::DOMErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::sharedIpGroups (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroups >
+    sharedIpGroups (::xercesc::InputSource& i,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::SharedIpGroups > r (
+        ::openstack::xml::sharedIpGroups (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroups >
+    sharedIpGroups (::xercesc::InputSource& i,
+                    ::xml_schema::ErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::SharedIpGroups > r (
+        ::openstack::xml::sharedIpGroups (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroups >
+    sharedIpGroups (::xercesc::InputSource& i,
+                    ::xercesc::DOMErrorHandler& h,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::SharedIpGroups > r (
+        ::openstack::xml::sharedIpGroups (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroups >
+    sharedIpGroups (const ::xercesc::DOMDocument& d,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::SharedIpGroups > r (
+          ::openstack::xml::sharedIpGroups (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "sharedIpGroups",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::SharedIpGroups >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::SharedIpGroups > r (
+          dynamic_cast< ::openstack::xml::SharedIpGroups* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "sharedIpGroups",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::SharedIpGroups >
+    sharedIpGroups (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                    ::xml_schema::Flags f,
+                    const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "sharedIpGroups",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::SharedIpGroups >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::SharedIpGroups > r (
+          dynamic_cast< ::openstack::xml::SharedIpGroups* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "sharedIpGroups",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
   }
 }
 

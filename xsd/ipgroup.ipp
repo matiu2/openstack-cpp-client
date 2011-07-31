@@ -43,68 +43,6 @@ namespace openstack
 {
   namespace xml
   {
-    // SharedIpGroup_
-    // 
-
-    inline
-    const SharedIpGroup_::ValueType& SharedIpGroup_::
-    value () const
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    SharedIpGroup_::ValueType& SharedIpGroup_::
-    value ()
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    void SharedIpGroup_::
-    value (const ValueType& x)
-    {
-      return this->value_.set (x);
-    }
-
-    inline
-    void SharedIpGroup_::
-    value (::std::auto_ptr< ValueType > p)
-    {
-      return this->value_.set (p);
-    }
-
-    // SharedIpGroups_
-    // 
-
-    inline
-    const SharedIpGroups_::ValueType& SharedIpGroups_::
-    value () const
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    SharedIpGroups_::ValueType& SharedIpGroups_::
-    value ()
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    void SharedIpGroups_::
-    value (const ValueType& x)
-    {
-      return this->value_.set (x);
-    }
-
-    inline
-    void SharedIpGroups_::
-    value (::std::auto_ptr< ValueType > p)
-    {
-      return this->value_.set (p);
-    }
-
     // SharedIpGroup
     // 
 

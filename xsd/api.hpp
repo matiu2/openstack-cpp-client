@@ -70,8 +70,6 @@
 
 #include <xsd/cxx/xml/dom/auto-ptr.hxx>
 
-#include <xsd/cxx/tree/element-map.hxx>
-
 #include <xsd/cxx/tree/parsing.hxx>
 #include <xsd/cxx/tree/parsing/byte.hxx>
 #include <xsd/cxx/tree/parsing/unsigned-byte.hxx>
@@ -85,7 +83,6 @@
 #include <xsd/cxx/tree/parsing/float.hxx>
 #include <xsd/cxx/tree/parsing/double.hxx>
 #include <xsd/cxx/tree/parsing/decimal.hxx>
-#include <xsd/cxx/tree/parsing/element-map.txx>
 
 /**
  * @brief C++ namespace for the %http://www.w3.org/2001/XMLSchema
@@ -438,16 +435,6 @@ namespace xml_schema
   typedef ::xsd::cxx::tree::entities< char, SimpleType, Entity > Entities;
 
 
-  /**
-   * @brief Base class for element types.
-   */
-  typedef ::xsd::cxx::tree::element_type< char, Type > ElementType;
-
-  /**
-   * @brief Root element map.
-   */
-  typedef ::xsd::cxx::tree::element_map< char, Type > ElementMap;
-
   // Flags and properties.
   //
 
@@ -553,12 +540,6 @@ namespace xml_schema
   typedef ::xsd::cxx::tree::not_derived< char > NotDerived;
 
   /**
-   * @brief Exception indicating that parsing or serialization
-   * information is not available for an element.
-   */
-  typedef ::xsd::cxx::tree::no_element_info< char > NoElementInfo;
-
-  /**
    * @brief Error handler callback interface.
    */
   typedef ::xsd::cxx::xml::error_handler< char > ErrorHandler;
@@ -581,17 +562,6 @@ namespace xml_schema
     const XMLCh* const treeNodeKey = ::xsd::cxx::tree::user_data_keys::node;
 #endif
   }
-
-  //@cond
-
-#ifndef XSD_CXX_TREE_ELEMENT_MAP_INIT__XML_SCHEMA
-#define XSD_CXX_TREE_ELEMENT_MAP_INIT__XML_SCHEMA
-  static
-  const ::xsd::cxx::tree::element_map_init< char, Type >
-  _xsd_element_map_init;
-#endif
-
-  //@endcond
 }
 
 // Forward declarations.
@@ -693,6 +663,19 @@ namespace openstack
 #include "version.ipp"
 
 #endif // XSD_DONT_INCLUDE_INLINE
+
+#include <iosfwd>
+
+#include <xercesc/sax/InputSource.hpp>
+#include <xercesc/dom/DOMDocument.hpp>
+#include <xercesc/dom/DOMErrorHandler.hpp>
+
+namespace openstack
+{
+  namespace xml
+  {
+  }
+}
 
 #ifndef XSD_DONT_INCLUDE_INLINE
 #include "api.ipp"

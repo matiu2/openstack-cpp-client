@@ -55,194 +55,6 @@ namespace openstack
 {
   namespace xml
   {
-    // Image_
-    // 
-
-    const ::xml_schema::Type* Image_::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* Image_::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    Image_::
-    Image_ (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    Image_::
-    Image_ (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    Image_::
-    Image_ (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    Image_::
-    Image_ (const Image_& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    Image_* Image_::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class Image_ (*this, f);
-    }
-
-    const ::std::string& Image_::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& Image_::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& Image_::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& Image_::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string Image_::
-    name_ ("image");
-
-    const ::std::string Image_::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    Image_::
-    ~Image_ ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< Image_, char, ::xml_schema::Type >
-    _xsd_Image__parser_init (Image_::name (), Image_::namespace_ ());
-
-    // Images_
-    // 
-
-    const ::xml_schema::Type* Images_::
-    _value () const
-    {
-      return &this->value_.get ();
-    }
-
-    ::xml_schema::Type* Images_::
-    _value ()
-    {
-      return &this->value_.get ();
-    }
-
-    Images_::
-    Images_ (const ValueType& x)
-    : value_ (x, 0, 0)
-    {
-    }
-
-    Images_::
-    Images_ (::std::auto_ptr< ValueType > p)
-    : value_ (p, 0, 0)
-    {
-    }
-
-    Images_::
-    Images_ (const ::xercesc::DOMElement& e, ::xml_schema::Flags f)
-    : value_ (f, 0)
-    {
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (e));
-
-      if (n.name () == name_ && n.namespace_ () == namespace__)
-        this->value_.set (ValueTraits::create (e, f, 0));
-      else
-        throw ::xsd::cxx::tree::unexpected_element < char > (
-          n.name (), n.namespace_ (),
-          name_, namespace__);
-    }
-
-    Images_::
-    Images_ (const Images_& x, ::xml_schema::Flags f)
-    : ::xml_schema::ElementType (),
-      value_ (x.value_, f, 0)
-    {
-    }
-
-    Images_* Images_::
-    _clone (::xml_schema::Flags f) const
-    {
-      return new class Images_ (*this, f);
-    }
-
-    const ::std::string& Images_::
-    name ()
-    {
-      return name_;
-    }
-
-    const ::std::string& Images_::
-    namespace_ ()
-    {
-      return namespace__;
-    }
-
-    const ::std::string& Images_::
-    _name () const
-    {
-      return name_;
-    }
-
-    const ::std::string& Images_::
-    _namespace () const
-    {
-      return namespace__;
-    }
-
-    const ::std::string Images_::
-    name_ ("images");
-
-    const ::std::string Images_::
-    namespace__ ("http://docs.rackspacecloud.com/servers/api/v1.0");
-
-    Images_::
-    ~Images_ ()
-    {
-    }
-
-    static 
-    const ::xsd::cxx::tree::parser_init< Images_, char, ::xml_schema::Type >
-    _xsd_Images__parser_init (Images_::name (), Images_::namespace_ ());
-
     // Image
     //
 
@@ -564,6 +376,634 @@ namespace openstack
     _xsd_ImageStatus_type_factory_init (
       "ImageStatus",
       "http://docs.rackspacecloud.com/servers/api/v1.0");
+  }
+}
+
+#include <istream>
+#include <xsd/cxx/xml/sax/std-input-source.hxx>
+#include <xsd/cxx/tree/error-handler.hxx>
+
+namespace openstack
+{
+  namespace xml
+  {
+    ::std::auto_ptr< ::openstack::xml::Image >
+    image (const ::std::string& u,
+           ::xml_schema::Flags f,
+           const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::Image > r (
+        ::openstack::xml::image (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Image >
+    image (const ::std::string& u,
+           ::xml_schema::ErrorHandler& h,
+           ::xml_schema::Flags f,
+           const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Image > r (
+        ::openstack::xml::image (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Image >
+    image (const ::std::string& u,
+           ::xercesc::DOMErrorHandler& h,
+           ::xml_schema::Flags f,
+           const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Image > r (
+        ::openstack::xml::image (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Image >
+    image (::std::istream& is,
+           ::xml_schema::Flags f,
+           const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::image (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Image >
+    image (::std::istream& is,
+           ::xml_schema::ErrorHandler& h,
+           ::xml_schema::Flags f,
+           const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::image (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Image >
+    image (::std::istream& is,
+           ::xercesc::DOMErrorHandler& h,
+           ::xml_schema::Flags f,
+           const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::image (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Image >
+    image (::std::istream& is,
+           const ::std::string& sid,
+           ::xml_schema::Flags f,
+           const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::image (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Image >
+    image (::std::istream& is,
+           const ::std::string& sid,
+           ::xml_schema::ErrorHandler& h,
+           ::xml_schema::Flags f,
+           const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::image (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Image >
+    image (::std::istream& is,
+           const ::std::string& sid,
+           ::xercesc::DOMErrorHandler& h,
+           ::xml_schema::Flags f,
+           const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::image (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Image >
+    image (::xercesc::InputSource& i,
+           ::xml_schema::Flags f,
+           const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::Image > r (
+        ::openstack::xml::image (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Image >
+    image (::xercesc::InputSource& i,
+           ::xml_schema::ErrorHandler& h,
+           ::xml_schema::Flags f,
+           const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Image > r (
+        ::openstack::xml::image (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Image >
+    image (::xercesc::InputSource& i,
+           ::xercesc::DOMErrorHandler& h,
+           ::xml_schema::Flags f,
+           const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Image > r (
+        ::openstack::xml::image (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Image >
+    image (const ::xercesc::DOMDocument& d,
+           ::xml_schema::Flags f,
+           const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::Image > r (
+          ::openstack::xml::image (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "image",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::Image >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::Image > r (
+          dynamic_cast< ::openstack::xml::Image* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "image",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Image >
+    image (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+           ::xml_schema::Flags f,
+           const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "image",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::Image >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::Image > r (
+          dynamic_cast< ::openstack::xml::Image* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "image",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Images >
+    images (const ::std::string& u,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::Images > r (
+        ::openstack::xml::images (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Images >
+    images (const ::std::string& u,
+            ::xml_schema::ErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Images > r (
+        ::openstack::xml::images (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Images >
+    images (const ::std::string& u,
+            ::xercesc::DOMErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          u, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Images > r (
+        ::openstack::xml::images (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Images >
+    images (::std::istream& is,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::images (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Images >
+    images (::std::istream& is,
+            ::xml_schema::ErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::images (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Images >
+    images (::std::istream& is,
+            ::xercesc::DOMErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is);
+      return ::openstack::xml::images (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Images >
+    images (::std::istream& is,
+            const ::std::string& sid,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::images (isrc, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Images >
+    images (::std::istream& is,
+            const ::std::string& sid,
+            ::xml_schema::ErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0,
+        (f & ::xml_schema::Flags::keep_dom) == 0);
+
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::images (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Images >
+    images (::std::istream& is,
+            const ::std::string& sid,
+            ::xercesc::DOMErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
+      return ::openstack::xml::images (isrc, h, f, p);
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Images >
+    images (::xercesc::InputSource& i,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+
+      ::std::auto_ptr< ::openstack::xml::Images > r (
+        ::openstack::xml::images (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Images >
+    images (::xercesc::InputSource& i,
+            ::xml_schema::ErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Images > r (
+        ::openstack::xml::images (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Images >
+    images (::xercesc::InputSource& i,
+            ::xercesc::DOMErrorHandler& h,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::xsd::cxx::xml::dom::parse< char > (
+          i, h, p, f));
+
+      if (!d.get ())
+        throw ::xsd::cxx::tree::parsing< char > ();
+
+      ::std::auto_ptr< ::openstack::xml::Images > r (
+        ::openstack::xml::images (
+          d, f | ::xml_schema::Flags::own_dom, p));
+
+      return r;
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Images >
+    images (const ::xercesc::DOMDocument& d,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties& p)
+    {
+      if (f & ::xml_schema::Flags::keep_dom)
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+          static_cast< ::xercesc::DOMDocument* > (d.cloneNode (true)));
+
+        ::std::auto_ptr< ::openstack::xml::Images > r (
+          ::openstack::xml::images (
+            c, f | ::xml_schema::Flags::own_dom, p));
+
+        return r;
+      }
+
+      const ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "images",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::Images >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+        ::std::auto_ptr< ::openstack::xml::Images > r (
+          dynamic_cast< ::openstack::xml::Images* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "images",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
+
+    ::std::auto_ptr< ::openstack::xml::Images >
+    images (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+            ::xml_schema::Flags f,
+            const ::xml_schema::Properties&)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > c (
+        ((f & ::xml_schema::Flags::keep_dom) &&
+         !(f & ::xml_schema::Flags::own_dom))
+        ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
+        : 0);
+
+      ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
+      const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
+
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (f & ::xml_schema::Flags::keep_dom)
+        doc.setUserData (::xml_schema::dom::treeNodeKey,
+                         (c.get () ? &c : &d),
+                         0);
+
+      ::xsd::cxx::tree::type_factory_map< char >& tfm (
+        ::xsd::cxx::tree::type_factory_map_instance< 0, char > ());
+
+      ::std::auto_ptr< ::xsd::cxx::tree::type > tmp (
+        tfm.create (
+          "images",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          &::xsd::cxx::tree::factory_impl< ::openstack::xml::Images >,
+          true, true, e, n, f, 0));
+
+      if (tmp.get () != 0)
+      {
+
+        ::std::auto_ptr< ::openstack::xml::Images > r (
+          dynamic_cast< ::openstack::xml::Images* > (tmp.get ()));
+
+        if (r.get ())
+          tmp.release ();
+        else
+          throw ::xsd::cxx::tree::not_derived< char > ();
+
+        return r;
+      }
+
+      throw ::xsd::cxx::tree::unexpected_element < char > (
+        n.name (),
+        n.namespace_ (),
+        "images",
+        "http://docs.rackspacecloud.com/servers/api/v1.0");
+    }
   }
 }
 

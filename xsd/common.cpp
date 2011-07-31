@@ -117,6 +117,17 @@ namespace openstack
   }
 }
 
+#include <istream>
+#include <xsd/cxx/xml/sax/std-input-source.hxx>
+#include <xsd/cxx/tree/error-handler.hxx>
+
+namespace openstack
+{
+  namespace xml
+  {
+  }
+}
+
 #include <xsd/cxx/post.hxx>
 
 // Begin epilogue.

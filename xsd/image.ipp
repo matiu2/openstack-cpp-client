@@ -45,68 +45,6 @@ namespace openstack
 {
   namespace xml
   {
-    // Image_
-    // 
-
-    inline
-    const Image_::ValueType& Image_::
-    value () const
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    Image_::ValueType& Image_::
-    value ()
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    void Image_::
-    value (const ValueType& x)
-    {
-      return this->value_.set (x);
-    }
-
-    inline
-    void Image_::
-    value (::std::auto_ptr< ValueType > p)
-    {
-      return this->value_.set (p);
-    }
-
-    // Images_
-    // 
-
-    inline
-    const Images_::ValueType& Images_::
-    value () const
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    Images_::ValueType& Images_::
-    value ()
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    void Images_::
-    value (const ValueType& x)
-    {
-      return this->value_.set (x);
-    }
-
-    inline
-    void Images_::
-    value (::std::auto_ptr< ValueType > p)
-    {
-      return this->value_.set (p);
-    }
-
     // Image
     // 
 

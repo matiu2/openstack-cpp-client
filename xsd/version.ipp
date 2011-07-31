@@ -43,37 +43,6 @@ namespace openstack
 {
   namespace xml
   {
-    // Version_
-    // 
-
-    inline
-    const Version_::ValueType& Version_::
-    value () const
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    Version_::ValueType& Version_::
-    value ()
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    void Version_::
-    value (const ValueType& x)
-    {
-      return this->value_.set (x);
-    }
-
-    inline
-    void Version_::
-    value (::std::auto_ptr< ValueType > p)
-    {
-      return this->value_.set (p);
-    }
-
     // Version
     // 
 

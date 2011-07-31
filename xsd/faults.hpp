@@ -70,8 +70,6 @@
 
 #include <xsd/cxx/xml/dom/auto-ptr.hxx>
 
-#include <xsd/cxx/tree/element-map.hxx>
-
 #include <xsd/cxx/tree/parsing.hxx>
 #include <xsd/cxx/tree/parsing/byte.hxx>
 #include <xsd/cxx/tree/parsing/unsigned-byte.hxx>
@@ -85,7 +83,6 @@
 #include <xsd/cxx/tree/parsing/float.hxx>
 #include <xsd/cxx/tree/parsing/double.hxx>
 #include <xsd/cxx/tree/parsing/decimal.hxx>
-#include <xsd/cxx/tree/parsing/element-map.txx>
 
 /**
  * @brief C++ namespace for the %http://www.w3.org/2001/XMLSchema
@@ -438,16 +435,6 @@ namespace xml_schema
   typedef ::xsd::cxx::tree::entities< char, SimpleType, Entity > Entities;
 
 
-  /**
-   * @brief Base class for element types.
-   */
-  typedef ::xsd::cxx::tree::element_type< char, Type > ElementType;
-
-  /**
-   * @brief Root element map.
-   */
-  typedef ::xsd::cxx::tree::element_map< char, Type > ElementMap;
-
   // Flags and properties.
   //
 
@@ -553,12 +540,6 @@ namespace xml_schema
   typedef ::xsd::cxx::tree::not_derived< char > NotDerived;
 
   /**
-   * @brief Exception indicating that parsing or serialization
-   * information is not available for an element.
-   */
-  typedef ::xsd::cxx::tree::no_element_info< char > NoElementInfo;
-
-  /**
    * @brief Error handler callback interface.
    */
   typedef ::xsd::cxx::xml::error_handler< char > ErrorHandler;
@@ -581,17 +562,6 @@ namespace xml_schema
     const XMLCh* const treeNodeKey = ::xsd::cxx::tree::user_data_keys::node;
 #endif
   }
-
-  //@cond
-
-#ifndef XSD_CXX_TREE_ELEMENT_MAP_INIT__XML_SCHEMA
-#define XSD_CXX_TREE_ELEMENT_MAP_INIT__XML_SCHEMA
-  static
-  const ::xsd::cxx::tree::element_map_init< char, Type >
-  _xsd_element_map_init;
-#endif
-
-  //@endcond
 }
 
 // Forward declarations.
@@ -646,2658 +616,6 @@ namespace openstack
    */
   namespace xml
   {
-    /**
-     * @brief Class corresponding to the %cloudServersFault root element.
-     *
-     * @nosubgrouping
-     */
-    class CloudServersFault: public ::xml_schema::ElementType
-    {
-      public:
-
-      /**
-       * @name Element value
-       *
-       * @brief Accessor and modifier functions for the element value.
-       */
-      //@{
-
-      /**
-       * @brief Element value type.
-       */
-      typedef ::openstack::xml::CloudServersAPIFault ValueType;
-
-      /**
-       * @brief Element value traits type.
-       */
-      typedef ::xsd::cxx::tree::traits< ValueType, char > ValueTraits;
-
-      /**
-       * @brief Return a read-only (constant) reference to the element
-       * value.
-       *
-       * @return A constant reference to the element value.
-       */
-      const ValueType&
-      value () const;
-
-      /**
-       * @brief Return a read-write reference to the element value.
-       *
-       * @return A reference to the element value.
-       */
-      ValueType&
-      value ();
-
-      /**
-       * @brief Set the element value.
-       *
-       * @param x A new value to set.
-       *
-       * This function makes a copy of its argument and sets it as
-       * the new value of the element.
-       */
-      void
-      value (const ValueType& x);
-
-      /**
-       * @brief Set the element value without copying.
-       *
-       * @param p A new value to use.
-       *
-       * This function will try to use the passed value directly
-       * instead of making a copy.
-       */
-      void
-      value (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Return a read-only (constant) pointer to the element
-       * value.
-       *
-       * @return A constant pointer to the element value or 0 if this
-       * element is of a fundamental type.
-       */
-      virtual const ::xml_schema::Type*
-      _value () const;
-
-      /**
-       * @brief Return a pointer to the element value.
-       *
-       * @return A pointer to the element value or 0 if this element is
-       * of a fundamental type.
-       */
-      virtual ::xml_schema::Type*
-      _value ();
-
-      //@}
-
-      /**
-       * @name Constructors
-       */
-      //@{
-
-      /**
-       * @brief Create an instance from an initializer for the element
-       * value.
-       *
-       * @param x Element value.
-       */
-      CloudServersFault (const ValueType& x);
-
-      /**
-       * @brief Create an instance from an initializer for
-       * the element value (auto_ptr version).
-       *
-       * @param p Element value to use.
-       *
-       * This constructor will try to use the passed value directly
-       * instead of making a copy.
-       */
-      CloudServersFault (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Create an instance from a DOM element.
-       *
-       * @param e A DOM element to extract the data from.
-       * @param f Flags to create the new instance with.
-       */
-      CloudServersFault (const ::xercesc::DOMElement& e, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy constructor.
-       *
-       * @param x An instance to make a copy of.
-       * @param f Flags to create the copy with.
-       *
-       * For polymorphic object models use the @c _clone function instead.
-       */
-      CloudServersFault (const CloudServersFault& x, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy the instance polymorphically.
-       *
-       * @param f Flags to create the copy with.
-       * @return A pointer to the dynamically allocated copy.
-       *
-       * This function ensures that the dynamic type of the instance is
-       * used for copying and should be used for polymorphic object
-       * models instead of the copy constructor.
-       */
-      virtual CloudServersFault*
-      _clone (::xml_schema::Flags f = 0) const;
-
-      //@}
-
-      /**
-       * @name Element name and namespace
-       *
-       * @brief Accessor functions for the element name and namespace.
-       */
-      //@{
-
-      /**
-       * @brief Return the element name (static function).
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      static const ::std::string&
-      name ();
-
-      /**
-       * @brief Return the element namespace (static function).
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      static const ::std::string&
-      namespace_ ();
-
-      /**
-       * @brief Return the element name.
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      virtual const ::std::string&
-      _name () const;
-
-      /**
-       * @brief Return the element namespace.
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      virtual const ::std::string&
-      _namespace () const;
-
-      //@}
-
-      /**
-       * @brief Destructor.
-       */
-      virtual 
-      ~CloudServersFault ();
-
-      //@cond
-
-      protected:
-      ::xsd::cxx::tree::one< ValueType > value_;
-      static const ::std::string name_;
-      static const ::std::string namespace__;
-
-      //@endcond
-    };
-
-    /**
-     * @brief Class corresponding to the %itemNotFound root element.
-     *
-     * @nosubgrouping
-     */
-    class ItemNotFound: public ::xml_schema::ElementType
-    {
-      public:
-
-      /**
-       * @name Element value
-       *
-       * @brief Accessor and modifier functions for the element value.
-       */
-      //@{
-
-      /**
-       * @brief Element value type.
-       */
-      typedef ::openstack::xml::ItemNotFoundAPIFault ValueType;
-
-      /**
-       * @brief Element value traits type.
-       */
-      typedef ::xsd::cxx::tree::traits< ValueType, char > ValueTraits;
-
-      /**
-       * @brief Return a read-only (constant) reference to the element
-       * value.
-       *
-       * @return A constant reference to the element value.
-       */
-      const ValueType&
-      value () const;
-
-      /**
-       * @brief Return a read-write reference to the element value.
-       *
-       * @return A reference to the element value.
-       */
-      ValueType&
-      value ();
-
-      /**
-       * @brief Set the element value.
-       *
-       * @param x A new value to set.
-       *
-       * This function makes a copy of its argument and sets it as
-       * the new value of the element.
-       */
-      void
-      value (const ValueType& x);
-
-      /**
-       * @brief Set the element value without copying.
-       *
-       * @param p A new value to use.
-       *
-       * This function will try to use the passed value directly
-       * instead of making a copy.
-       */
-      void
-      value (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Return a read-only (constant) pointer to the element
-       * value.
-       *
-       * @return A constant pointer to the element value or 0 if this
-       * element is of a fundamental type.
-       */
-      virtual const ::xml_schema::Type*
-      _value () const;
-
-      /**
-       * @brief Return a pointer to the element value.
-       *
-       * @return A pointer to the element value or 0 if this element is
-       * of a fundamental type.
-       */
-      virtual ::xml_schema::Type*
-      _value ();
-
-      //@}
-
-      /**
-       * @name Constructors
-       */
-      //@{
-
-      /**
-       * @brief Create an instance from an initializer for the element
-       * value.
-       *
-       * @param x Element value.
-       */
-      ItemNotFound (const ValueType& x);
-
-      /**
-       * @brief Create an instance from an initializer for
-       * the element value (auto_ptr version).
-       *
-       * @param p Element value to use.
-       *
-       * This constructor will try to use the passed value directly
-       * instead of making a copy.
-       */
-      ItemNotFound (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Create an instance from a DOM element.
-       *
-       * @param e A DOM element to extract the data from.
-       * @param f Flags to create the new instance with.
-       */
-      ItemNotFound (const ::xercesc::DOMElement& e, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy constructor.
-       *
-       * @param x An instance to make a copy of.
-       * @param f Flags to create the copy with.
-       *
-       * For polymorphic object models use the @c _clone function instead.
-       */
-      ItemNotFound (const ItemNotFound& x, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy the instance polymorphically.
-       *
-       * @param f Flags to create the copy with.
-       * @return A pointer to the dynamically allocated copy.
-       *
-       * This function ensures that the dynamic type of the instance is
-       * used for copying and should be used for polymorphic object
-       * models instead of the copy constructor.
-       */
-      virtual ItemNotFound*
-      _clone (::xml_schema::Flags f = 0) const;
-
-      //@}
-
-      /**
-       * @name Element name and namespace
-       *
-       * @brief Accessor functions for the element name and namespace.
-       */
-      //@{
-
-      /**
-       * @brief Return the element name (static function).
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      static const ::std::string&
-      name ();
-
-      /**
-       * @brief Return the element namespace (static function).
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      static const ::std::string&
-      namespace_ ();
-
-      /**
-       * @brief Return the element name.
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      virtual const ::std::string&
-      _name () const;
-
-      /**
-       * @brief Return the element namespace.
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      virtual const ::std::string&
-      _namespace () const;
-
-      //@}
-
-      /**
-       * @brief Destructor.
-       */
-      virtual 
-      ~ItemNotFound ();
-
-      //@cond
-
-      protected:
-      ::xsd::cxx::tree::one< ValueType > value_;
-      static const ::std::string name_;
-      static const ::std::string namespace__;
-
-      //@endcond
-    };
-
-    /**
-     * @brief Class corresponding to the %buildInProgress root element.
-     *
-     * @nosubgrouping
-     */
-    class BuildInProgress: public ::xml_schema::ElementType
-    {
-      public:
-
-      /**
-       * @name Element value
-       *
-       * @brief Accessor and modifier functions for the element value.
-       */
-      //@{
-
-      /**
-       * @brief Element value type.
-       */
-      typedef ::openstack::xml::BuildInProgressAPIFault ValueType;
-
-      /**
-       * @brief Element value traits type.
-       */
-      typedef ::xsd::cxx::tree::traits< ValueType, char > ValueTraits;
-
-      /**
-       * @brief Return a read-only (constant) reference to the element
-       * value.
-       *
-       * @return A constant reference to the element value.
-       */
-      const ValueType&
-      value () const;
-
-      /**
-       * @brief Return a read-write reference to the element value.
-       *
-       * @return A reference to the element value.
-       */
-      ValueType&
-      value ();
-
-      /**
-       * @brief Set the element value.
-       *
-       * @param x A new value to set.
-       *
-       * This function makes a copy of its argument and sets it as
-       * the new value of the element.
-       */
-      void
-      value (const ValueType& x);
-
-      /**
-       * @brief Set the element value without copying.
-       *
-       * @param p A new value to use.
-       *
-       * This function will try to use the passed value directly
-       * instead of making a copy.
-       */
-      void
-      value (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Return a read-only (constant) pointer to the element
-       * value.
-       *
-       * @return A constant pointer to the element value or 0 if this
-       * element is of a fundamental type.
-       */
-      virtual const ::xml_schema::Type*
-      _value () const;
-
-      /**
-       * @brief Return a pointer to the element value.
-       *
-       * @return A pointer to the element value or 0 if this element is
-       * of a fundamental type.
-       */
-      virtual ::xml_schema::Type*
-      _value ();
-
-      //@}
-
-      /**
-       * @name Constructors
-       */
-      //@{
-
-      /**
-       * @brief Create an instance from an initializer for the element
-       * value.
-       *
-       * @param x Element value.
-       */
-      BuildInProgress (const ValueType& x);
-
-      /**
-       * @brief Create an instance from an initializer for
-       * the element value (auto_ptr version).
-       *
-       * @param p Element value to use.
-       *
-       * This constructor will try to use the passed value directly
-       * instead of making a copy.
-       */
-      BuildInProgress (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Create an instance from a DOM element.
-       *
-       * @param e A DOM element to extract the data from.
-       * @param f Flags to create the new instance with.
-       */
-      BuildInProgress (const ::xercesc::DOMElement& e, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy constructor.
-       *
-       * @param x An instance to make a copy of.
-       * @param f Flags to create the copy with.
-       *
-       * For polymorphic object models use the @c _clone function instead.
-       */
-      BuildInProgress (const BuildInProgress& x, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy the instance polymorphically.
-       *
-       * @param f Flags to create the copy with.
-       * @return A pointer to the dynamically allocated copy.
-       *
-       * This function ensures that the dynamic type of the instance is
-       * used for copying and should be used for polymorphic object
-       * models instead of the copy constructor.
-       */
-      virtual BuildInProgress*
-      _clone (::xml_schema::Flags f = 0) const;
-
-      //@}
-
-      /**
-       * @name Element name and namespace
-       *
-       * @brief Accessor functions for the element name and namespace.
-       */
-      //@{
-
-      /**
-       * @brief Return the element name (static function).
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      static const ::std::string&
-      name ();
-
-      /**
-       * @brief Return the element namespace (static function).
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      static const ::std::string&
-      namespace_ ();
-
-      /**
-       * @brief Return the element name.
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      virtual const ::std::string&
-      _name () const;
-
-      /**
-       * @brief Return the element namespace.
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      virtual const ::std::string&
-      _namespace () const;
-
-      //@}
-
-      /**
-       * @brief Destructor.
-       */
-      virtual 
-      ~BuildInProgress ();
-
-      //@cond
-
-      protected:
-      ::xsd::cxx::tree::one< ValueType > value_;
-      static const ::std::string name_;
-      static const ::std::string namespace__;
-
-      //@endcond
-    };
-
-    /**
-     * @brief Class corresponding to the %serverCapacityUnavailable root element.
-     *
-     * @nosubgrouping
-     */
-    class ServerCapacityUnavailable: public ::xml_schema::ElementType
-    {
-      public:
-
-      /**
-       * @name Element value
-       *
-       * @brief Accessor and modifier functions for the element value.
-       */
-      //@{
-
-      /**
-       * @brief Element value type.
-       */
-      typedef ::openstack::xml::ServerCapacityUnavailableAPIFault ValueType;
-
-      /**
-       * @brief Element value traits type.
-       */
-      typedef ::xsd::cxx::tree::traits< ValueType, char > ValueTraits;
-
-      /**
-       * @brief Return a read-only (constant) reference to the element
-       * value.
-       *
-       * @return A constant reference to the element value.
-       */
-      const ValueType&
-      value () const;
-
-      /**
-       * @brief Return a read-write reference to the element value.
-       *
-       * @return A reference to the element value.
-       */
-      ValueType&
-      value ();
-
-      /**
-       * @brief Set the element value.
-       *
-       * @param x A new value to set.
-       *
-       * This function makes a copy of its argument and sets it as
-       * the new value of the element.
-       */
-      void
-      value (const ValueType& x);
-
-      /**
-       * @brief Set the element value without copying.
-       *
-       * @param p A new value to use.
-       *
-       * This function will try to use the passed value directly
-       * instead of making a copy.
-       */
-      void
-      value (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Return a read-only (constant) pointer to the element
-       * value.
-       *
-       * @return A constant pointer to the element value or 0 if this
-       * element is of a fundamental type.
-       */
-      virtual const ::xml_schema::Type*
-      _value () const;
-
-      /**
-       * @brief Return a pointer to the element value.
-       *
-       * @return A pointer to the element value or 0 if this element is
-       * of a fundamental type.
-       */
-      virtual ::xml_schema::Type*
-      _value ();
-
-      //@}
-
-      /**
-       * @name Constructors
-       */
-      //@{
-
-      /**
-       * @brief Create an instance from an initializer for the element
-       * value.
-       *
-       * @param x Element value.
-       */
-      ServerCapacityUnavailable (const ValueType& x);
-
-      /**
-       * @brief Create an instance from an initializer for
-       * the element value (auto_ptr version).
-       *
-       * @param p Element value to use.
-       *
-       * This constructor will try to use the passed value directly
-       * instead of making a copy.
-       */
-      ServerCapacityUnavailable (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Create an instance from a DOM element.
-       *
-       * @param e A DOM element to extract the data from.
-       * @param f Flags to create the new instance with.
-       */
-      ServerCapacityUnavailable (const ::xercesc::DOMElement& e, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy constructor.
-       *
-       * @param x An instance to make a copy of.
-       * @param f Flags to create the copy with.
-       *
-       * For polymorphic object models use the @c _clone function instead.
-       */
-      ServerCapacityUnavailable (const ServerCapacityUnavailable& x, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy the instance polymorphically.
-       *
-       * @param f Flags to create the copy with.
-       * @return A pointer to the dynamically allocated copy.
-       *
-       * This function ensures that the dynamic type of the instance is
-       * used for copying and should be used for polymorphic object
-       * models instead of the copy constructor.
-       */
-      virtual ServerCapacityUnavailable*
-      _clone (::xml_schema::Flags f = 0) const;
-
-      //@}
-
-      /**
-       * @name Element name and namespace
-       *
-       * @brief Accessor functions for the element name and namespace.
-       */
-      //@{
-
-      /**
-       * @brief Return the element name (static function).
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      static const ::std::string&
-      name ();
-
-      /**
-       * @brief Return the element namespace (static function).
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      static const ::std::string&
-      namespace_ ();
-
-      /**
-       * @brief Return the element name.
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      virtual const ::std::string&
-      _name () const;
-
-      /**
-       * @brief Return the element namespace.
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      virtual const ::std::string&
-      _namespace () const;
-
-      //@}
-
-      /**
-       * @brief Destructor.
-       */
-      virtual 
-      ~ServerCapacityUnavailable ();
-
-      //@cond
-
-      protected:
-      ::xsd::cxx::tree::one< ValueType > value_;
-      static const ::std::string name_;
-      static const ::std::string namespace__;
-
-      //@endcond
-    };
-
-    /**
-     * @brief Class corresponding to the %backupOrResizeInProgress root element.
-     *
-     * @nosubgrouping
-     */
-    class BackupOrResizeInProgress: public ::xml_schema::ElementType
-    {
-      public:
-
-      /**
-       * @name Element value
-       *
-       * @brief Accessor and modifier functions for the element value.
-       */
-      //@{
-
-      /**
-       * @brief Element value type.
-       */
-      typedef ::openstack::xml::BackupOrResizeInProgressAPIFault ValueType;
-
-      /**
-       * @brief Element value traits type.
-       */
-      typedef ::xsd::cxx::tree::traits< ValueType, char > ValueTraits;
-
-      /**
-       * @brief Return a read-only (constant) reference to the element
-       * value.
-       *
-       * @return A constant reference to the element value.
-       */
-      const ValueType&
-      value () const;
-
-      /**
-       * @brief Return a read-write reference to the element value.
-       *
-       * @return A reference to the element value.
-       */
-      ValueType&
-      value ();
-
-      /**
-       * @brief Set the element value.
-       *
-       * @param x A new value to set.
-       *
-       * This function makes a copy of its argument and sets it as
-       * the new value of the element.
-       */
-      void
-      value (const ValueType& x);
-
-      /**
-       * @brief Set the element value without copying.
-       *
-       * @param p A new value to use.
-       *
-       * This function will try to use the passed value directly
-       * instead of making a copy.
-       */
-      void
-      value (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Return a read-only (constant) pointer to the element
-       * value.
-       *
-       * @return A constant pointer to the element value or 0 if this
-       * element is of a fundamental type.
-       */
-      virtual const ::xml_schema::Type*
-      _value () const;
-
-      /**
-       * @brief Return a pointer to the element value.
-       *
-       * @return A pointer to the element value or 0 if this element is
-       * of a fundamental type.
-       */
-      virtual ::xml_schema::Type*
-      _value ();
-
-      //@}
-
-      /**
-       * @name Constructors
-       */
-      //@{
-
-      /**
-       * @brief Create an instance from an initializer for the element
-       * value.
-       *
-       * @param x Element value.
-       */
-      BackupOrResizeInProgress (const ValueType& x);
-
-      /**
-       * @brief Create an instance from an initializer for
-       * the element value (auto_ptr version).
-       *
-       * @param p Element value to use.
-       *
-       * This constructor will try to use the passed value directly
-       * instead of making a copy.
-       */
-      BackupOrResizeInProgress (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Create an instance from a DOM element.
-       *
-       * @param e A DOM element to extract the data from.
-       * @param f Flags to create the new instance with.
-       */
-      BackupOrResizeInProgress (const ::xercesc::DOMElement& e, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy constructor.
-       *
-       * @param x An instance to make a copy of.
-       * @param f Flags to create the copy with.
-       *
-       * For polymorphic object models use the @c _clone function instead.
-       */
-      BackupOrResizeInProgress (const BackupOrResizeInProgress& x, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy the instance polymorphically.
-       *
-       * @param f Flags to create the copy with.
-       * @return A pointer to the dynamically allocated copy.
-       *
-       * This function ensures that the dynamic type of the instance is
-       * used for copying and should be used for polymorphic object
-       * models instead of the copy constructor.
-       */
-      virtual BackupOrResizeInProgress*
-      _clone (::xml_schema::Flags f = 0) const;
-
-      //@}
-
-      /**
-       * @name Element name and namespace
-       *
-       * @brief Accessor functions for the element name and namespace.
-       */
-      //@{
-
-      /**
-       * @brief Return the element name (static function).
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      static const ::std::string&
-      name ();
-
-      /**
-       * @brief Return the element namespace (static function).
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      static const ::std::string&
-      namespace_ ();
-
-      /**
-       * @brief Return the element name.
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      virtual const ::std::string&
-      _name () const;
-
-      /**
-       * @brief Return the element namespace.
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      virtual const ::std::string&
-      _namespace () const;
-
-      //@}
-
-      /**
-       * @brief Destructor.
-       */
-      virtual 
-      ~BackupOrResizeInProgress ();
-
-      //@cond
-
-      protected:
-      ::xsd::cxx::tree::one< ValueType > value_;
-      static const ::std::string name_;
-      static const ::std::string namespace__;
-
-      //@endcond
-    };
-
-    /**
-     * @brief Class corresponding to the %resizeNotAllowed root element.
-     *
-     * @nosubgrouping
-     */
-    class ResizeNotAllowed: public ::xml_schema::ElementType
-    {
-      public:
-
-      /**
-       * @name Element value
-       *
-       * @brief Accessor and modifier functions for the element value.
-       */
-      //@{
-
-      /**
-       * @brief Element value type.
-       */
-      typedef ::openstack::xml::ResizeNotAllowedAPIFault ValueType;
-
-      /**
-       * @brief Element value traits type.
-       */
-      typedef ::xsd::cxx::tree::traits< ValueType, char > ValueTraits;
-
-      /**
-       * @brief Return a read-only (constant) reference to the element
-       * value.
-       *
-       * @return A constant reference to the element value.
-       */
-      const ValueType&
-      value () const;
-
-      /**
-       * @brief Return a read-write reference to the element value.
-       *
-       * @return A reference to the element value.
-       */
-      ValueType&
-      value ();
-
-      /**
-       * @brief Set the element value.
-       *
-       * @param x A new value to set.
-       *
-       * This function makes a copy of its argument and sets it as
-       * the new value of the element.
-       */
-      void
-      value (const ValueType& x);
-
-      /**
-       * @brief Set the element value without copying.
-       *
-       * @param p A new value to use.
-       *
-       * This function will try to use the passed value directly
-       * instead of making a copy.
-       */
-      void
-      value (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Return a read-only (constant) pointer to the element
-       * value.
-       *
-       * @return A constant pointer to the element value or 0 if this
-       * element is of a fundamental type.
-       */
-      virtual const ::xml_schema::Type*
-      _value () const;
-
-      /**
-       * @brief Return a pointer to the element value.
-       *
-       * @return A pointer to the element value or 0 if this element is
-       * of a fundamental type.
-       */
-      virtual ::xml_schema::Type*
-      _value ();
-
-      //@}
-
-      /**
-       * @name Constructors
-       */
-      //@{
-
-      /**
-       * @brief Create an instance from an initializer for the element
-       * value.
-       *
-       * @param x Element value.
-       */
-      ResizeNotAllowed (const ValueType& x);
-
-      /**
-       * @brief Create an instance from an initializer for
-       * the element value (auto_ptr version).
-       *
-       * @param p Element value to use.
-       *
-       * This constructor will try to use the passed value directly
-       * instead of making a copy.
-       */
-      ResizeNotAllowed (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Create an instance from a DOM element.
-       *
-       * @param e A DOM element to extract the data from.
-       * @param f Flags to create the new instance with.
-       */
-      ResizeNotAllowed (const ::xercesc::DOMElement& e, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy constructor.
-       *
-       * @param x An instance to make a copy of.
-       * @param f Flags to create the copy with.
-       *
-       * For polymorphic object models use the @c _clone function instead.
-       */
-      ResizeNotAllowed (const ResizeNotAllowed& x, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy the instance polymorphically.
-       *
-       * @param f Flags to create the copy with.
-       * @return A pointer to the dynamically allocated copy.
-       *
-       * This function ensures that the dynamic type of the instance is
-       * used for copying and should be used for polymorphic object
-       * models instead of the copy constructor.
-       */
-      virtual ResizeNotAllowed*
-      _clone (::xml_schema::Flags f = 0) const;
-
-      //@}
-
-      /**
-       * @name Element name and namespace
-       *
-       * @brief Accessor functions for the element name and namespace.
-       */
-      //@{
-
-      /**
-       * @brief Return the element name (static function).
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      static const ::std::string&
-      name ();
-
-      /**
-       * @brief Return the element namespace (static function).
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      static const ::std::string&
-      namespace_ ();
-
-      /**
-       * @brief Return the element name.
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      virtual const ::std::string&
-      _name () const;
-
-      /**
-       * @brief Return the element namespace.
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      virtual const ::std::string&
-      _namespace () const;
-
-      //@}
-
-      /**
-       * @brief Destructor.
-       */
-      virtual 
-      ~ResizeNotAllowed ();
-
-      //@cond
-
-      protected:
-      ::xsd::cxx::tree::one< ValueType > value_;
-      static const ::std::string name_;
-      static const ::std::string namespace__;
-
-      //@endcond
-    };
-
-    /**
-     * @brief Class corresponding to the %serviceUnavailable root element.
-     *
-     * @nosubgrouping
-     */
-    class ServiceUnavailable: public ::xml_schema::ElementType
-    {
-      public:
-
-      /**
-       * @name Element value
-       *
-       * @brief Accessor and modifier functions for the element value.
-       */
-      //@{
-
-      /**
-       * @brief Element value type.
-       */
-      typedef ::openstack::xml::ServiceUnavailableAPIFault ValueType;
-
-      /**
-       * @brief Element value traits type.
-       */
-      typedef ::xsd::cxx::tree::traits< ValueType, char > ValueTraits;
-
-      /**
-       * @brief Return a read-only (constant) reference to the element
-       * value.
-       *
-       * @return A constant reference to the element value.
-       */
-      const ValueType&
-      value () const;
-
-      /**
-       * @brief Return a read-write reference to the element value.
-       *
-       * @return A reference to the element value.
-       */
-      ValueType&
-      value ();
-
-      /**
-       * @brief Set the element value.
-       *
-       * @param x A new value to set.
-       *
-       * This function makes a copy of its argument and sets it as
-       * the new value of the element.
-       */
-      void
-      value (const ValueType& x);
-
-      /**
-       * @brief Set the element value without copying.
-       *
-       * @param p A new value to use.
-       *
-       * This function will try to use the passed value directly
-       * instead of making a copy.
-       */
-      void
-      value (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Return a read-only (constant) pointer to the element
-       * value.
-       *
-       * @return A constant pointer to the element value or 0 if this
-       * element is of a fundamental type.
-       */
-      virtual const ::xml_schema::Type*
-      _value () const;
-
-      /**
-       * @brief Return a pointer to the element value.
-       *
-       * @return A pointer to the element value or 0 if this element is
-       * of a fundamental type.
-       */
-      virtual ::xml_schema::Type*
-      _value ();
-
-      //@}
-
-      /**
-       * @name Constructors
-       */
-      //@{
-
-      /**
-       * @brief Create an instance from an initializer for the element
-       * value.
-       *
-       * @param x Element value.
-       */
-      ServiceUnavailable (const ValueType& x);
-
-      /**
-       * @brief Create an instance from an initializer for
-       * the element value (auto_ptr version).
-       *
-       * @param p Element value to use.
-       *
-       * This constructor will try to use the passed value directly
-       * instead of making a copy.
-       */
-      ServiceUnavailable (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Create an instance from a DOM element.
-       *
-       * @param e A DOM element to extract the data from.
-       * @param f Flags to create the new instance with.
-       */
-      ServiceUnavailable (const ::xercesc::DOMElement& e, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy constructor.
-       *
-       * @param x An instance to make a copy of.
-       * @param f Flags to create the copy with.
-       *
-       * For polymorphic object models use the @c _clone function instead.
-       */
-      ServiceUnavailable (const ServiceUnavailable& x, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy the instance polymorphically.
-       *
-       * @param f Flags to create the copy with.
-       * @return A pointer to the dynamically allocated copy.
-       *
-       * This function ensures that the dynamic type of the instance is
-       * used for copying and should be used for polymorphic object
-       * models instead of the copy constructor.
-       */
-      virtual ServiceUnavailable*
-      _clone (::xml_schema::Flags f = 0) const;
-
-      //@}
-
-      /**
-       * @name Element name and namespace
-       *
-       * @brief Accessor functions for the element name and namespace.
-       */
-      //@{
-
-      /**
-       * @brief Return the element name (static function).
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      static const ::std::string&
-      name ();
-
-      /**
-       * @brief Return the element namespace (static function).
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      static const ::std::string&
-      namespace_ ();
-
-      /**
-       * @brief Return the element name.
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      virtual const ::std::string&
-      _name () const;
-
-      /**
-       * @brief Return the element namespace.
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      virtual const ::std::string&
-      _namespace () const;
-
-      //@}
-
-      /**
-       * @brief Destructor.
-       */
-      virtual 
-      ~ServiceUnavailable ();
-
-      //@cond
-
-      protected:
-      ::xsd::cxx::tree::one< ValueType > value_;
-      static const ::std::string name_;
-      static const ::std::string namespace__;
-
-      //@endcond
-    };
-
-    /**
-     * @brief Class corresponding to the %unauthorized root element.
-     *
-     * @nosubgrouping
-     */
-    class Unauthorized: public ::xml_schema::ElementType
-    {
-      public:
-
-      /**
-       * @name Element value
-       *
-       * @brief Accessor and modifier functions for the element value.
-       */
-      //@{
-
-      /**
-       * @brief Element value type.
-       */
-      typedef ::openstack::xml::UnauthorizedAPIFault ValueType;
-
-      /**
-       * @brief Element value traits type.
-       */
-      typedef ::xsd::cxx::tree::traits< ValueType, char > ValueTraits;
-
-      /**
-       * @brief Return a read-only (constant) reference to the element
-       * value.
-       *
-       * @return A constant reference to the element value.
-       */
-      const ValueType&
-      value () const;
-
-      /**
-       * @brief Return a read-write reference to the element value.
-       *
-       * @return A reference to the element value.
-       */
-      ValueType&
-      value ();
-
-      /**
-       * @brief Set the element value.
-       *
-       * @param x A new value to set.
-       *
-       * This function makes a copy of its argument and sets it as
-       * the new value of the element.
-       */
-      void
-      value (const ValueType& x);
-
-      /**
-       * @brief Set the element value without copying.
-       *
-       * @param p A new value to use.
-       *
-       * This function will try to use the passed value directly
-       * instead of making a copy.
-       */
-      void
-      value (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Return a read-only (constant) pointer to the element
-       * value.
-       *
-       * @return A constant pointer to the element value or 0 if this
-       * element is of a fundamental type.
-       */
-      virtual const ::xml_schema::Type*
-      _value () const;
-
-      /**
-       * @brief Return a pointer to the element value.
-       *
-       * @return A pointer to the element value or 0 if this element is
-       * of a fundamental type.
-       */
-      virtual ::xml_schema::Type*
-      _value ();
-
-      //@}
-
-      /**
-       * @name Constructors
-       */
-      //@{
-
-      /**
-       * @brief Create an instance from an initializer for the element
-       * value.
-       *
-       * @param x Element value.
-       */
-      Unauthorized (const ValueType& x);
-
-      /**
-       * @brief Create an instance from an initializer for
-       * the element value (auto_ptr version).
-       *
-       * @param p Element value to use.
-       *
-       * This constructor will try to use the passed value directly
-       * instead of making a copy.
-       */
-      Unauthorized (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Create an instance from a DOM element.
-       *
-       * @param e A DOM element to extract the data from.
-       * @param f Flags to create the new instance with.
-       */
-      Unauthorized (const ::xercesc::DOMElement& e, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy constructor.
-       *
-       * @param x An instance to make a copy of.
-       * @param f Flags to create the copy with.
-       *
-       * For polymorphic object models use the @c _clone function instead.
-       */
-      Unauthorized (const Unauthorized& x, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy the instance polymorphically.
-       *
-       * @param f Flags to create the copy with.
-       * @return A pointer to the dynamically allocated copy.
-       *
-       * This function ensures that the dynamic type of the instance is
-       * used for copying and should be used for polymorphic object
-       * models instead of the copy constructor.
-       */
-      virtual Unauthorized*
-      _clone (::xml_schema::Flags f = 0) const;
-
-      //@}
-
-      /**
-       * @name Element name and namespace
-       *
-       * @brief Accessor functions for the element name and namespace.
-       */
-      //@{
-
-      /**
-       * @brief Return the element name (static function).
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      static const ::std::string&
-      name ();
-
-      /**
-       * @brief Return the element namespace (static function).
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      static const ::std::string&
-      namespace_ ();
-
-      /**
-       * @brief Return the element name.
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      virtual const ::std::string&
-      _name () const;
-
-      /**
-       * @brief Return the element namespace.
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      virtual const ::std::string&
-      _namespace () const;
-
-      //@}
-
-      /**
-       * @brief Destructor.
-       */
-      virtual 
-      ~Unauthorized ();
-
-      //@cond
-
-      protected:
-      ::xsd::cxx::tree::one< ValueType > value_;
-      static const ::std::string name_;
-      static const ::std::string namespace__;
-
-      //@endcond
-    };
-
-    /**
-     * @brief Class corresponding to the %overLimit root element.
-     *
-     * @nosubgrouping
-     */
-    class OverLimit: public ::xml_schema::ElementType
-    {
-      public:
-
-      /**
-       * @name Element value
-       *
-       * @brief Accessor and modifier functions for the element value.
-       */
-      //@{
-
-      /**
-       * @brief Element value type.
-       */
-      typedef ::openstack::xml::OverLimitAPIFault ValueType;
-
-      /**
-       * @brief Element value traits type.
-       */
-      typedef ::xsd::cxx::tree::traits< ValueType, char > ValueTraits;
-
-      /**
-       * @brief Return a read-only (constant) reference to the element
-       * value.
-       *
-       * @return A constant reference to the element value.
-       */
-      const ValueType&
-      value () const;
-
-      /**
-       * @brief Return a read-write reference to the element value.
-       *
-       * @return A reference to the element value.
-       */
-      ValueType&
-      value ();
-
-      /**
-       * @brief Set the element value.
-       *
-       * @param x A new value to set.
-       *
-       * This function makes a copy of its argument and sets it as
-       * the new value of the element.
-       */
-      void
-      value (const ValueType& x);
-
-      /**
-       * @brief Set the element value without copying.
-       *
-       * @param p A new value to use.
-       *
-       * This function will try to use the passed value directly
-       * instead of making a copy.
-       */
-      void
-      value (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Return a read-only (constant) pointer to the element
-       * value.
-       *
-       * @return A constant pointer to the element value or 0 if this
-       * element is of a fundamental type.
-       */
-      virtual const ::xml_schema::Type*
-      _value () const;
-
-      /**
-       * @brief Return a pointer to the element value.
-       *
-       * @return A pointer to the element value or 0 if this element is
-       * of a fundamental type.
-       */
-      virtual ::xml_schema::Type*
-      _value ();
-
-      //@}
-
-      /**
-       * @name Constructors
-       */
-      //@{
-
-      /**
-       * @brief Create an instance from an initializer for the element
-       * value.
-       *
-       * @param x Element value.
-       */
-      OverLimit (const ValueType& x);
-
-      /**
-       * @brief Create an instance from an initializer for
-       * the element value (auto_ptr version).
-       *
-       * @param p Element value to use.
-       *
-       * This constructor will try to use the passed value directly
-       * instead of making a copy.
-       */
-      OverLimit (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Create an instance from a DOM element.
-       *
-       * @param e A DOM element to extract the data from.
-       * @param f Flags to create the new instance with.
-       */
-      OverLimit (const ::xercesc::DOMElement& e, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy constructor.
-       *
-       * @param x An instance to make a copy of.
-       * @param f Flags to create the copy with.
-       *
-       * For polymorphic object models use the @c _clone function instead.
-       */
-      OverLimit (const OverLimit& x, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy the instance polymorphically.
-       *
-       * @param f Flags to create the copy with.
-       * @return A pointer to the dynamically allocated copy.
-       *
-       * This function ensures that the dynamic type of the instance is
-       * used for copying and should be used for polymorphic object
-       * models instead of the copy constructor.
-       */
-      virtual OverLimit*
-      _clone (::xml_schema::Flags f = 0) const;
-
-      //@}
-
-      /**
-       * @name Element name and namespace
-       *
-       * @brief Accessor functions for the element name and namespace.
-       */
-      //@{
-
-      /**
-       * @brief Return the element name (static function).
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      static const ::std::string&
-      name ();
-
-      /**
-       * @brief Return the element namespace (static function).
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      static const ::std::string&
-      namespace_ ();
-
-      /**
-       * @brief Return the element name.
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      virtual const ::std::string&
-      _name () const;
-
-      /**
-       * @brief Return the element namespace.
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      virtual const ::std::string&
-      _namespace () const;
-
-      //@}
-
-      /**
-       * @brief Destructor.
-       */
-      virtual 
-      ~OverLimit ();
-
-      //@cond
-
-      protected:
-      ::xsd::cxx::tree::one< ValueType > value_;
-      static const ::std::string name_;
-      static const ::std::string namespace__;
-
-      //@endcond
-    };
-
-    /**
-     * @brief Class corresponding to the %badRequest root element.
-     *
-     * @nosubgrouping
-     */
-    class BadRequest: public ::xml_schema::ElementType
-    {
-      public:
-
-      /**
-       * @name Element value
-       *
-       * @brief Accessor and modifier functions for the element value.
-       */
-      //@{
-
-      /**
-       * @brief Element value type.
-       */
-      typedef ::openstack::xml::BadRequestAPIFault ValueType;
-
-      /**
-       * @brief Element value traits type.
-       */
-      typedef ::xsd::cxx::tree::traits< ValueType, char > ValueTraits;
-
-      /**
-       * @brief Return a read-only (constant) reference to the element
-       * value.
-       *
-       * @return A constant reference to the element value.
-       */
-      const ValueType&
-      value () const;
-
-      /**
-       * @brief Return a read-write reference to the element value.
-       *
-       * @return A reference to the element value.
-       */
-      ValueType&
-      value ();
-
-      /**
-       * @brief Set the element value.
-       *
-       * @param x A new value to set.
-       *
-       * This function makes a copy of its argument and sets it as
-       * the new value of the element.
-       */
-      void
-      value (const ValueType& x);
-
-      /**
-       * @brief Set the element value without copying.
-       *
-       * @param p A new value to use.
-       *
-       * This function will try to use the passed value directly
-       * instead of making a copy.
-       */
-      void
-      value (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Return a read-only (constant) pointer to the element
-       * value.
-       *
-       * @return A constant pointer to the element value or 0 if this
-       * element is of a fundamental type.
-       */
-      virtual const ::xml_schema::Type*
-      _value () const;
-
-      /**
-       * @brief Return a pointer to the element value.
-       *
-       * @return A pointer to the element value or 0 if this element is
-       * of a fundamental type.
-       */
-      virtual ::xml_schema::Type*
-      _value ();
-
-      //@}
-
-      /**
-       * @name Constructors
-       */
-      //@{
-
-      /**
-       * @brief Create an instance from an initializer for the element
-       * value.
-       *
-       * @param x Element value.
-       */
-      BadRequest (const ValueType& x);
-
-      /**
-       * @brief Create an instance from an initializer for
-       * the element value (auto_ptr version).
-       *
-       * @param p Element value to use.
-       *
-       * This constructor will try to use the passed value directly
-       * instead of making a copy.
-       */
-      BadRequest (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Create an instance from a DOM element.
-       *
-       * @param e A DOM element to extract the data from.
-       * @param f Flags to create the new instance with.
-       */
-      BadRequest (const ::xercesc::DOMElement& e, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy constructor.
-       *
-       * @param x An instance to make a copy of.
-       * @param f Flags to create the copy with.
-       *
-       * For polymorphic object models use the @c _clone function instead.
-       */
-      BadRequest (const BadRequest& x, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy the instance polymorphically.
-       *
-       * @param f Flags to create the copy with.
-       * @return A pointer to the dynamically allocated copy.
-       *
-       * This function ensures that the dynamic type of the instance is
-       * used for copying and should be used for polymorphic object
-       * models instead of the copy constructor.
-       */
-      virtual BadRequest*
-      _clone (::xml_schema::Flags f = 0) const;
-
-      //@}
-
-      /**
-       * @name Element name and namespace
-       *
-       * @brief Accessor functions for the element name and namespace.
-       */
-      //@{
-
-      /**
-       * @brief Return the element name (static function).
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      static const ::std::string&
-      name ();
-
-      /**
-       * @brief Return the element namespace (static function).
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      static const ::std::string&
-      namespace_ ();
-
-      /**
-       * @brief Return the element name.
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      virtual const ::std::string&
-      _name () const;
-
-      /**
-       * @brief Return the element namespace.
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      virtual const ::std::string&
-      _namespace () const;
-
-      //@}
-
-      /**
-       * @brief Destructor.
-       */
-      virtual 
-      ~BadRequest ();
-
-      //@cond
-
-      protected:
-      ::xsd::cxx::tree::one< ValueType > value_;
-      static const ::std::string name_;
-      static const ::std::string namespace__;
-
-      //@endcond
-    };
-
-    /**
-     * @brief Class corresponding to the %badMediaType root element.
-     *
-     * @nosubgrouping
-     */
-    class BadMediaType: public ::xml_schema::ElementType
-    {
-      public:
-
-      /**
-       * @name Element value
-       *
-       * @brief Accessor and modifier functions for the element value.
-       */
-      //@{
-
-      /**
-       * @brief Element value type.
-       */
-      typedef ::openstack::xml::BadMediaTypeAPIFault ValueType;
-
-      /**
-       * @brief Element value traits type.
-       */
-      typedef ::xsd::cxx::tree::traits< ValueType, char > ValueTraits;
-
-      /**
-       * @brief Return a read-only (constant) reference to the element
-       * value.
-       *
-       * @return A constant reference to the element value.
-       */
-      const ValueType&
-      value () const;
-
-      /**
-       * @brief Return a read-write reference to the element value.
-       *
-       * @return A reference to the element value.
-       */
-      ValueType&
-      value ();
-
-      /**
-       * @brief Set the element value.
-       *
-       * @param x A new value to set.
-       *
-       * This function makes a copy of its argument and sets it as
-       * the new value of the element.
-       */
-      void
-      value (const ValueType& x);
-
-      /**
-       * @brief Set the element value without copying.
-       *
-       * @param p A new value to use.
-       *
-       * This function will try to use the passed value directly
-       * instead of making a copy.
-       */
-      void
-      value (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Return a read-only (constant) pointer to the element
-       * value.
-       *
-       * @return A constant pointer to the element value or 0 if this
-       * element is of a fundamental type.
-       */
-      virtual const ::xml_schema::Type*
-      _value () const;
-
-      /**
-       * @brief Return a pointer to the element value.
-       *
-       * @return A pointer to the element value or 0 if this element is
-       * of a fundamental type.
-       */
-      virtual ::xml_schema::Type*
-      _value ();
-
-      //@}
-
-      /**
-       * @name Constructors
-       */
-      //@{
-
-      /**
-       * @brief Create an instance from an initializer for the element
-       * value.
-       *
-       * @param x Element value.
-       */
-      BadMediaType (const ValueType& x);
-
-      /**
-       * @brief Create an instance from an initializer for
-       * the element value (auto_ptr version).
-       *
-       * @param p Element value to use.
-       *
-       * This constructor will try to use the passed value directly
-       * instead of making a copy.
-       */
-      BadMediaType (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Create an instance from a DOM element.
-       *
-       * @param e A DOM element to extract the data from.
-       * @param f Flags to create the new instance with.
-       */
-      BadMediaType (const ::xercesc::DOMElement& e, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy constructor.
-       *
-       * @param x An instance to make a copy of.
-       * @param f Flags to create the copy with.
-       *
-       * For polymorphic object models use the @c _clone function instead.
-       */
-      BadMediaType (const BadMediaType& x, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy the instance polymorphically.
-       *
-       * @param f Flags to create the copy with.
-       * @return A pointer to the dynamically allocated copy.
-       *
-       * This function ensures that the dynamic type of the instance is
-       * used for copying and should be used for polymorphic object
-       * models instead of the copy constructor.
-       */
-      virtual BadMediaType*
-      _clone (::xml_schema::Flags f = 0) const;
-
-      //@}
-
-      /**
-       * @name Element name and namespace
-       *
-       * @brief Accessor functions for the element name and namespace.
-       */
-      //@{
-
-      /**
-       * @brief Return the element name (static function).
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      static const ::std::string&
-      name ();
-
-      /**
-       * @brief Return the element namespace (static function).
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      static const ::std::string&
-      namespace_ ();
-
-      /**
-       * @brief Return the element name.
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      virtual const ::std::string&
-      _name () const;
-
-      /**
-       * @brief Return the element namespace.
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      virtual const ::std::string&
-      _namespace () const;
-
-      //@}
-
-      /**
-       * @brief Destructor.
-       */
-      virtual 
-      ~BadMediaType ();
-
-      //@cond
-
-      protected:
-      ::xsd::cxx::tree::one< ValueType > value_;
-      static const ::std::string name_;
-      static const ::std::string namespace__;
-
-      //@endcond
-    };
-
-    /**
-     * @brief Class corresponding to the %badMethod root element.
-     *
-     * @nosubgrouping
-     */
-    class BadMethod: public ::xml_schema::ElementType
-    {
-      public:
-
-      /**
-       * @name Element value
-       *
-       * @brief Accessor and modifier functions for the element value.
-       */
-      //@{
-
-      /**
-       * @brief Element value type.
-       */
-      typedef ::openstack::xml::BadMethodAPIFault ValueType;
-
-      /**
-       * @brief Element value traits type.
-       */
-      typedef ::xsd::cxx::tree::traits< ValueType, char > ValueTraits;
-
-      /**
-       * @brief Return a read-only (constant) reference to the element
-       * value.
-       *
-       * @return A constant reference to the element value.
-       */
-      const ValueType&
-      value () const;
-
-      /**
-       * @brief Return a read-write reference to the element value.
-       *
-       * @return A reference to the element value.
-       */
-      ValueType&
-      value ();
-
-      /**
-       * @brief Set the element value.
-       *
-       * @param x A new value to set.
-       *
-       * This function makes a copy of its argument and sets it as
-       * the new value of the element.
-       */
-      void
-      value (const ValueType& x);
-
-      /**
-       * @brief Set the element value without copying.
-       *
-       * @param p A new value to use.
-       *
-       * This function will try to use the passed value directly
-       * instead of making a copy.
-       */
-      void
-      value (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Return a read-only (constant) pointer to the element
-       * value.
-       *
-       * @return A constant pointer to the element value or 0 if this
-       * element is of a fundamental type.
-       */
-      virtual const ::xml_schema::Type*
-      _value () const;
-
-      /**
-       * @brief Return a pointer to the element value.
-       *
-       * @return A pointer to the element value or 0 if this element is
-       * of a fundamental type.
-       */
-      virtual ::xml_schema::Type*
-      _value ();
-
-      //@}
-
-      /**
-       * @name Constructors
-       */
-      //@{
-
-      /**
-       * @brief Create an instance from an initializer for the element
-       * value.
-       *
-       * @param x Element value.
-       */
-      BadMethod (const ValueType& x);
-
-      /**
-       * @brief Create an instance from an initializer for
-       * the element value (auto_ptr version).
-       *
-       * @param p Element value to use.
-       *
-       * This constructor will try to use the passed value directly
-       * instead of making a copy.
-       */
-      BadMethod (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Create an instance from a DOM element.
-       *
-       * @param e A DOM element to extract the data from.
-       * @param f Flags to create the new instance with.
-       */
-      BadMethod (const ::xercesc::DOMElement& e, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy constructor.
-       *
-       * @param x An instance to make a copy of.
-       * @param f Flags to create the copy with.
-       *
-       * For polymorphic object models use the @c _clone function instead.
-       */
-      BadMethod (const BadMethod& x, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy the instance polymorphically.
-       *
-       * @param f Flags to create the copy with.
-       * @return A pointer to the dynamically allocated copy.
-       *
-       * This function ensures that the dynamic type of the instance is
-       * used for copying and should be used for polymorphic object
-       * models instead of the copy constructor.
-       */
-      virtual BadMethod*
-      _clone (::xml_schema::Flags f = 0) const;
-
-      //@}
-
-      /**
-       * @name Element name and namespace
-       *
-       * @brief Accessor functions for the element name and namespace.
-       */
-      //@{
-
-      /**
-       * @brief Return the element name (static function).
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      static const ::std::string&
-      name ();
-
-      /**
-       * @brief Return the element namespace (static function).
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      static const ::std::string&
-      namespace_ ();
-
-      /**
-       * @brief Return the element name.
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      virtual const ::std::string&
-      _name () const;
-
-      /**
-       * @brief Return the element namespace.
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      virtual const ::std::string&
-      _namespace () const;
-
-      //@}
-
-      /**
-       * @brief Destructor.
-       */
-      virtual 
-      ~BadMethod ();
-
-      //@cond
-
-      protected:
-      ::xsd::cxx::tree::one< ValueType > value_;
-      static const ::std::string name_;
-      static const ::std::string namespace__;
-
-      //@endcond
-    };
-
-    /**
-     * @brief Class corresponding to the %notImplemented root element.
-     *
-     * @nosubgrouping
-     */
-    class NotImplemented: public ::xml_schema::ElementType
-    {
-      public:
-
-      /**
-       * @name Element value
-       *
-       * @brief Accessor and modifier functions for the element value.
-       */
-      //@{
-
-      /**
-       * @brief Element value type.
-       */
-      typedef ::openstack::xml::NotImplementedAPIFault ValueType;
-
-      /**
-       * @brief Element value traits type.
-       */
-      typedef ::xsd::cxx::tree::traits< ValueType, char > ValueTraits;
-
-      /**
-       * @brief Return a read-only (constant) reference to the element
-       * value.
-       *
-       * @return A constant reference to the element value.
-       */
-      const ValueType&
-      value () const;
-
-      /**
-       * @brief Return a read-write reference to the element value.
-       *
-       * @return A reference to the element value.
-       */
-      ValueType&
-      value ();
-
-      /**
-       * @brief Set the element value.
-       *
-       * @param x A new value to set.
-       *
-       * This function makes a copy of its argument and sets it as
-       * the new value of the element.
-       */
-      void
-      value (const ValueType& x);
-
-      /**
-       * @brief Set the element value without copying.
-       *
-       * @param p A new value to use.
-       *
-       * This function will try to use the passed value directly
-       * instead of making a copy.
-       */
-      void
-      value (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Return a read-only (constant) pointer to the element
-       * value.
-       *
-       * @return A constant pointer to the element value or 0 if this
-       * element is of a fundamental type.
-       */
-      virtual const ::xml_schema::Type*
-      _value () const;
-
-      /**
-       * @brief Return a pointer to the element value.
-       *
-       * @return A pointer to the element value or 0 if this element is
-       * of a fundamental type.
-       */
-      virtual ::xml_schema::Type*
-      _value ();
-
-      //@}
-
-      /**
-       * @name Constructors
-       */
-      //@{
-
-      /**
-       * @brief Create an instance from an initializer for the element
-       * value.
-       *
-       * @param x Element value.
-       */
-      NotImplemented (const ValueType& x);
-
-      /**
-       * @brief Create an instance from an initializer for
-       * the element value (auto_ptr version).
-       *
-       * @param p Element value to use.
-       *
-       * This constructor will try to use the passed value directly
-       * instead of making a copy.
-       */
-      NotImplemented (::std::auto_ptr< ValueType > p);
-
-      /**
-       * @brief Create an instance from a DOM element.
-       *
-       * @param e A DOM element to extract the data from.
-       * @param f Flags to create the new instance with.
-       */
-      NotImplemented (const ::xercesc::DOMElement& e, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy constructor.
-       *
-       * @param x An instance to make a copy of.
-       * @param f Flags to create the copy with.
-       *
-       * For polymorphic object models use the @c _clone function instead.
-       */
-      NotImplemented (const NotImplemented& x, ::xml_schema::Flags f = 0);
-
-      /**
-       * @brief Copy the instance polymorphically.
-       *
-       * @param f Flags to create the copy with.
-       * @return A pointer to the dynamically allocated copy.
-       *
-       * This function ensures that the dynamic type of the instance is
-       * used for copying and should be used for polymorphic object
-       * models instead of the copy constructor.
-       */
-      virtual NotImplemented*
-      _clone (::xml_schema::Flags f = 0) const;
-
-      //@}
-
-      /**
-       * @name Element name and namespace
-       *
-       * @brief Accessor functions for the element name and namespace.
-       */
-      //@{
-
-      /**
-       * @brief Return the element name (static function).
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      static const ::std::string&
-      name ();
-
-      /**
-       * @brief Return the element namespace (static function).
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      static const ::std::string&
-      namespace_ ();
-
-      /**
-       * @brief Return the element name.
-       *
-       * @return A read-only string reference containing the element
-       * name.
-       */
-      virtual const ::std::string&
-      _name () const;
-
-      /**
-       * @brief Return the element namespace.
-       *
-       * @return A read-only string reference containing the element
-       * namespace.
-       */
-      virtual const ::std::string&
-      _namespace () const;
-
-      //@}
-
-      /**
-       * @brief Destructor.
-       */
-      virtual 
-      ~NotImplemented ();
-
-      //@cond
-
-      protected:
-      ::xsd::cxx::tree::one< ValueType > value_;
-      static const ::std::string name_;
-      static const ::std::string namespace__;
-
-      //@endcond
-    };
-
     /**
      * @brief Class corresponding to the %CloudServersAPIFault schema type.
      *
@@ -4632,6 +1950,3307 @@ namespace openstack
 #ifndef XSD_DONT_INCLUDE_INLINE
 
 #endif // XSD_DONT_INCLUDE_INLINE
+
+#include <iosfwd>
+
+#include <xercesc/sax/InputSource.hpp>
+#include <xercesc/dom/DOMDocument.hpp>
+#include <xercesc/dom/DOMErrorHandler.hpp>
+
+namespace openstack
+{
+  namespace xml
+  {
+    /**
+     * @name Parsing functions for the %cloudServersFault document root.
+     */
+    //@{
+
+    /**
+     * @brief Parse a URI or a local file.
+     *
+     * @param uri A URI or a local file name.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (const ::std::string& uri,
+                       ::xml_schema::Flags f = 0,
+                       const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with an error handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (const ::std::string& uri,
+                       ::xml_schema::ErrorHandler& eh,
+                       ::xml_schema::Flags f = 0,
+                       const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (const ::std::string& uri,
+                       ::xercesc::DOMErrorHandler& eh,
+                       ::xml_schema::Flags f = 0,
+                       const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream.
+     *
+     * @param is A standrad input stream.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::std::istream& is,
+                       ::xml_schema::Flags f = 0,
+                       const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with an error handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::std::istream& is,
+                       ::xml_schema::ErrorHandler& eh,
+                       ::xml_schema::Flags f = 0,
+                       const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::std::istream& is,
+                       ::xercesc::DOMErrorHandler& eh,
+                       ::xml_schema::Flags f = 0,
+                       const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::std::istream& is,
+                       const ::std::string& id,
+                       ::xml_schema::Flags f = 0,
+                       const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and an
+     * error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::std::istream& is,
+                       const ::std::string& id,
+                       ::xml_schema::ErrorHandler& eh,
+                       ::xml_schema::Flags f = 0,
+                       const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::std::istream& is,
+                       const ::std::string& id,
+                       ::xercesc::DOMErrorHandler& eh,
+                       ::xml_schema::Flags f = 0,
+                       const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::xercesc::InputSource& is,
+                       ::xml_schema::Flags f = 0,
+                       const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with an error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::xercesc::InputSource& is,
+                       ::xml_schema::ErrorHandler& eh,
+                       ::xml_schema::Flags f = 0,
+                       const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::xercesc::InputSource& is,
+                       ::xercesc::DOMErrorHandler& eh,
+                       ::xml_schema::Flags f = 0,
+                       const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (const ::xercesc::DOMDocument& d,
+                       ::xml_schema::Flags f = 0,
+                       const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A pointer to the Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function is normally used together with the keep_dom and
+     * own_dom parsing flags to assign ownership of the DOM document
+     * to the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::CloudServersAPIFault >
+    cloudServersFault (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                       ::xml_schema::Flags f = 0,
+                       const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    //@}
+
+    /**
+     * @name Parsing functions for the %itemNotFound document root.
+     */
+    //@{
+
+    /**
+     * @brief Parse a URI or a local file.
+     *
+     * @param uri A URI or a local file name.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (const ::std::string& uri,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with an error handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (const ::std::string& uri,
+                  ::xml_schema::ErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (const ::std::string& uri,
+                  ::xercesc::DOMErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream.
+     *
+     * @param is A standrad input stream.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::std::istream& is,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with an error handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::std::istream& is,
+                  ::xml_schema::ErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::std::istream& is,
+                  ::xercesc::DOMErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::std::istream& is,
+                  const ::std::string& id,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and an
+     * error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::std::istream& is,
+                  const ::std::string& id,
+                  ::xml_schema::ErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::std::istream& is,
+                  const ::std::string& id,
+                  ::xercesc::DOMErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::xercesc::InputSource& is,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with an error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::xercesc::InputSource& is,
+                  ::xml_schema::ErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::xercesc::InputSource& is,
+                  ::xercesc::DOMErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (const ::xercesc::DOMDocument& d,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A pointer to the Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function is normally used together with the keep_dom and
+     * own_dom parsing flags to assign ownership of the DOM document
+     * to the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::ItemNotFoundAPIFault >
+    itemNotFound (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    //@}
+
+    /**
+     * @name Parsing functions for the %buildInProgress document root.
+     */
+    //@{
+
+    /**
+     * @brief Parse a URI or a local file.
+     *
+     * @param uri A URI or a local file name.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (const ::std::string& uri,
+                     ::xml_schema::Flags f = 0,
+                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with an error handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (const ::std::string& uri,
+                     ::xml_schema::ErrorHandler& eh,
+                     ::xml_schema::Flags f = 0,
+                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (const ::std::string& uri,
+                     ::xercesc::DOMErrorHandler& eh,
+                     ::xml_schema::Flags f = 0,
+                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream.
+     *
+     * @param is A standrad input stream.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::std::istream& is,
+                     ::xml_schema::Flags f = 0,
+                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with an error handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::std::istream& is,
+                     ::xml_schema::ErrorHandler& eh,
+                     ::xml_schema::Flags f = 0,
+                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::std::istream& is,
+                     ::xercesc::DOMErrorHandler& eh,
+                     ::xml_schema::Flags f = 0,
+                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::std::istream& is,
+                     const ::std::string& id,
+                     ::xml_schema::Flags f = 0,
+                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and an
+     * error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::std::istream& is,
+                     const ::std::string& id,
+                     ::xml_schema::ErrorHandler& eh,
+                     ::xml_schema::Flags f = 0,
+                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::std::istream& is,
+                     const ::std::string& id,
+                     ::xercesc::DOMErrorHandler& eh,
+                     ::xml_schema::Flags f = 0,
+                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::xercesc::InputSource& is,
+                     ::xml_schema::Flags f = 0,
+                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with an error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::xercesc::InputSource& is,
+                     ::xml_schema::ErrorHandler& eh,
+                     ::xml_schema::Flags f = 0,
+                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::xercesc::InputSource& is,
+                     ::xercesc::DOMErrorHandler& eh,
+                     ::xml_schema::Flags f = 0,
+                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (const ::xercesc::DOMDocument& d,
+                     ::xml_schema::Flags f = 0,
+                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A pointer to the Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function is normally used together with the keep_dom and
+     * own_dom parsing flags to assign ownership of the DOM document
+     * to the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::BuildInProgressAPIFault >
+    buildInProgress (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                     ::xml_schema::Flags f = 0,
+                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    //@}
+
+    /**
+     * @name Parsing functions for the %serverCapacityUnavailable document root.
+     */
+    //@{
+
+    /**
+     * @brief Parse a URI or a local file.
+     *
+     * @param uri A URI or a local file name.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (const ::std::string& uri,
+                               ::xml_schema::Flags f = 0,
+                               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with an error handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (const ::std::string& uri,
+                               ::xml_schema::ErrorHandler& eh,
+                               ::xml_schema::Flags f = 0,
+                               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (const ::std::string& uri,
+                               ::xercesc::DOMErrorHandler& eh,
+                               ::xml_schema::Flags f = 0,
+                               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream.
+     *
+     * @param is A standrad input stream.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::std::istream& is,
+                               ::xml_schema::Flags f = 0,
+                               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with an error handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::std::istream& is,
+                               ::xml_schema::ErrorHandler& eh,
+                               ::xml_schema::Flags f = 0,
+                               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::std::istream& is,
+                               ::xercesc::DOMErrorHandler& eh,
+                               ::xml_schema::Flags f = 0,
+                               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::std::istream& is,
+                               const ::std::string& id,
+                               ::xml_schema::Flags f = 0,
+                               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and an
+     * error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::std::istream& is,
+                               const ::std::string& id,
+                               ::xml_schema::ErrorHandler& eh,
+                               ::xml_schema::Flags f = 0,
+                               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::std::istream& is,
+                               const ::std::string& id,
+                               ::xercesc::DOMErrorHandler& eh,
+                               ::xml_schema::Flags f = 0,
+                               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::xercesc::InputSource& is,
+                               ::xml_schema::Flags f = 0,
+                               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with an error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::xercesc::InputSource& is,
+                               ::xml_schema::ErrorHandler& eh,
+                               ::xml_schema::Flags f = 0,
+                               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::xercesc::InputSource& is,
+                               ::xercesc::DOMErrorHandler& eh,
+                               ::xml_schema::Flags f = 0,
+                               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (const ::xercesc::DOMDocument& d,
+                               ::xml_schema::Flags f = 0,
+                               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A pointer to the Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function is normally used together with the keep_dom and
+     * own_dom parsing flags to assign ownership of the DOM document
+     * to the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServerCapacityUnavailableAPIFault >
+    serverCapacityUnavailable (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                               ::xml_schema::Flags f = 0,
+                               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    //@}
+
+    /**
+     * @name Parsing functions for the %backupOrResizeInProgress document root.
+     */
+    //@{
+
+    /**
+     * @brief Parse a URI or a local file.
+     *
+     * @param uri A URI or a local file name.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (const ::std::string& uri,
+                              ::xml_schema::Flags f = 0,
+                              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with an error handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (const ::std::string& uri,
+                              ::xml_schema::ErrorHandler& eh,
+                              ::xml_schema::Flags f = 0,
+                              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (const ::std::string& uri,
+                              ::xercesc::DOMErrorHandler& eh,
+                              ::xml_schema::Flags f = 0,
+                              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream.
+     *
+     * @param is A standrad input stream.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::std::istream& is,
+                              ::xml_schema::Flags f = 0,
+                              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with an error handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::std::istream& is,
+                              ::xml_schema::ErrorHandler& eh,
+                              ::xml_schema::Flags f = 0,
+                              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::std::istream& is,
+                              ::xercesc::DOMErrorHandler& eh,
+                              ::xml_schema::Flags f = 0,
+                              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::std::istream& is,
+                              const ::std::string& id,
+                              ::xml_schema::Flags f = 0,
+                              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and an
+     * error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::std::istream& is,
+                              const ::std::string& id,
+                              ::xml_schema::ErrorHandler& eh,
+                              ::xml_schema::Flags f = 0,
+                              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::std::istream& is,
+                              const ::std::string& id,
+                              ::xercesc::DOMErrorHandler& eh,
+                              ::xml_schema::Flags f = 0,
+                              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::xercesc::InputSource& is,
+                              ::xml_schema::Flags f = 0,
+                              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with an error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::xercesc::InputSource& is,
+                              ::xml_schema::ErrorHandler& eh,
+                              ::xml_schema::Flags f = 0,
+                              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::xercesc::InputSource& is,
+                              ::xercesc::DOMErrorHandler& eh,
+                              ::xml_schema::Flags f = 0,
+                              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (const ::xercesc::DOMDocument& d,
+                              ::xml_schema::Flags f = 0,
+                              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A pointer to the Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function is normally used together with the keep_dom and
+     * own_dom parsing flags to assign ownership of the DOM document
+     * to the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::BackupOrResizeInProgressAPIFault >
+    backupOrResizeInProgress (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                              ::xml_schema::Flags f = 0,
+                              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    //@}
+
+    /**
+     * @name Parsing functions for the %resizeNotAllowed document root.
+     */
+    //@{
+
+    /**
+     * @brief Parse a URI or a local file.
+     *
+     * @param uri A URI or a local file name.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (const ::std::string& uri,
+                      ::xml_schema::Flags f = 0,
+                      const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with an error handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (const ::std::string& uri,
+                      ::xml_schema::ErrorHandler& eh,
+                      ::xml_schema::Flags f = 0,
+                      const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (const ::std::string& uri,
+                      ::xercesc::DOMErrorHandler& eh,
+                      ::xml_schema::Flags f = 0,
+                      const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream.
+     *
+     * @param is A standrad input stream.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::std::istream& is,
+                      ::xml_schema::Flags f = 0,
+                      const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with an error handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::std::istream& is,
+                      ::xml_schema::ErrorHandler& eh,
+                      ::xml_schema::Flags f = 0,
+                      const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::std::istream& is,
+                      ::xercesc::DOMErrorHandler& eh,
+                      ::xml_schema::Flags f = 0,
+                      const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::std::istream& is,
+                      const ::std::string& id,
+                      ::xml_schema::Flags f = 0,
+                      const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and an
+     * error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::std::istream& is,
+                      const ::std::string& id,
+                      ::xml_schema::ErrorHandler& eh,
+                      ::xml_schema::Flags f = 0,
+                      const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::std::istream& is,
+                      const ::std::string& id,
+                      ::xercesc::DOMErrorHandler& eh,
+                      ::xml_schema::Flags f = 0,
+                      const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::xercesc::InputSource& is,
+                      ::xml_schema::Flags f = 0,
+                      const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with an error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::xercesc::InputSource& is,
+                      ::xml_schema::ErrorHandler& eh,
+                      ::xml_schema::Flags f = 0,
+                      const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::xercesc::InputSource& is,
+                      ::xercesc::DOMErrorHandler& eh,
+                      ::xml_schema::Flags f = 0,
+                      const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (const ::xercesc::DOMDocument& d,
+                      ::xml_schema::Flags f = 0,
+                      const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A pointer to the Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function is normally used together with the keep_dom and
+     * own_dom parsing flags to assign ownership of the DOM document
+     * to the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::ResizeNotAllowedAPIFault >
+    resizeNotAllowed (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                      ::xml_schema::Flags f = 0,
+                      const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    //@}
+
+    /**
+     * @name Parsing functions for the %serviceUnavailable document root.
+     */
+    //@{
+
+    /**
+     * @brief Parse a URI or a local file.
+     *
+     * @param uri A URI or a local file name.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (const ::std::string& uri,
+                        ::xml_schema::Flags f = 0,
+                        const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with an error handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (const ::std::string& uri,
+                        ::xml_schema::ErrorHandler& eh,
+                        ::xml_schema::Flags f = 0,
+                        const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (const ::std::string& uri,
+                        ::xercesc::DOMErrorHandler& eh,
+                        ::xml_schema::Flags f = 0,
+                        const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream.
+     *
+     * @param is A standrad input stream.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::std::istream& is,
+                        ::xml_schema::Flags f = 0,
+                        const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with an error handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::std::istream& is,
+                        ::xml_schema::ErrorHandler& eh,
+                        ::xml_schema::Flags f = 0,
+                        const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::std::istream& is,
+                        ::xercesc::DOMErrorHandler& eh,
+                        ::xml_schema::Flags f = 0,
+                        const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::std::istream& is,
+                        const ::std::string& id,
+                        ::xml_schema::Flags f = 0,
+                        const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and an
+     * error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::std::istream& is,
+                        const ::std::string& id,
+                        ::xml_schema::ErrorHandler& eh,
+                        ::xml_schema::Flags f = 0,
+                        const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::std::istream& is,
+                        const ::std::string& id,
+                        ::xercesc::DOMErrorHandler& eh,
+                        ::xml_schema::Flags f = 0,
+                        const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::xercesc::InputSource& is,
+                        ::xml_schema::Flags f = 0,
+                        const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with an error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::xercesc::InputSource& is,
+                        ::xml_schema::ErrorHandler& eh,
+                        ::xml_schema::Flags f = 0,
+                        const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::xercesc::InputSource& is,
+                        ::xercesc::DOMErrorHandler& eh,
+                        ::xml_schema::Flags f = 0,
+                        const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (const ::xercesc::DOMDocument& d,
+                        ::xml_schema::Flags f = 0,
+                        const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A pointer to the Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function is normally used together with the keep_dom and
+     * own_dom parsing flags to assign ownership of the DOM document
+     * to the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::ServiceUnavailableAPIFault >
+    serviceUnavailable (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                        ::xml_schema::Flags f = 0,
+                        const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    //@}
+
+    /**
+     * @name Parsing functions for the %unauthorized document root.
+     */
+    //@{
+
+    /**
+     * @brief Parse a URI or a local file.
+     *
+     * @param uri A URI or a local file name.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (const ::std::string& uri,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with an error handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (const ::std::string& uri,
+                  ::xml_schema::ErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (const ::std::string& uri,
+                  ::xercesc::DOMErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream.
+     *
+     * @param is A standrad input stream.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::std::istream& is,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with an error handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::std::istream& is,
+                  ::xml_schema::ErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::std::istream& is,
+                  ::xercesc::DOMErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::std::istream& is,
+                  const ::std::string& id,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and an
+     * error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::std::istream& is,
+                  const ::std::string& id,
+                  ::xml_schema::ErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::std::istream& is,
+                  const ::std::string& id,
+                  ::xercesc::DOMErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::xercesc::InputSource& is,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with an error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::xercesc::InputSource& is,
+                  ::xml_schema::ErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::xercesc::InputSource& is,
+                  ::xercesc::DOMErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (const ::xercesc::DOMDocument& d,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A pointer to the Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function is normally used together with the keep_dom and
+     * own_dom parsing flags to assign ownership of the DOM document
+     * to the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::UnauthorizedAPIFault >
+    unauthorized (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    //@}
+
+    /**
+     * @name Parsing functions for the %overLimit document root.
+     */
+    //@{
+
+    /**
+     * @brief Parse a URI or a local file.
+     *
+     * @param uri A URI or a local file name.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (const ::std::string& uri,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with an error handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (const ::std::string& uri,
+               ::xml_schema::ErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (const ::std::string& uri,
+               ::xercesc::DOMErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream.
+     *
+     * @param is A standrad input stream.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::std::istream& is,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with an error handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::std::istream& is,
+               ::xml_schema::ErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::std::istream& is,
+               ::xercesc::DOMErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::std::istream& is,
+               const ::std::string& id,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and an
+     * error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::std::istream& is,
+               const ::std::string& id,
+               ::xml_schema::ErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::std::istream& is,
+               const ::std::string& id,
+               ::xercesc::DOMErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::xercesc::InputSource& is,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with an error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::xercesc::InputSource& is,
+               ::xml_schema::ErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::xercesc::InputSource& is,
+               ::xercesc::DOMErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (const ::xercesc::DOMDocument& d,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A pointer to the Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function is normally used together with the keep_dom and
+     * own_dom parsing flags to assign ownership of the DOM document
+     * to the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::OverLimitAPIFault >
+    overLimit (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    //@}
+
+    /**
+     * @name Parsing functions for the %badRequest document root.
+     */
+    //@{
+
+    /**
+     * @brief Parse a URI or a local file.
+     *
+     * @param uri A URI or a local file name.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (const ::std::string& uri,
+                ::xml_schema::Flags f = 0,
+                const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with an error handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (const ::std::string& uri,
+                ::xml_schema::ErrorHandler& eh,
+                ::xml_schema::Flags f = 0,
+                const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (const ::std::string& uri,
+                ::xercesc::DOMErrorHandler& eh,
+                ::xml_schema::Flags f = 0,
+                const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream.
+     *
+     * @param is A standrad input stream.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::std::istream& is,
+                ::xml_schema::Flags f = 0,
+                const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with an error handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::std::istream& is,
+                ::xml_schema::ErrorHandler& eh,
+                ::xml_schema::Flags f = 0,
+                const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::std::istream& is,
+                ::xercesc::DOMErrorHandler& eh,
+                ::xml_schema::Flags f = 0,
+                const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::std::istream& is,
+                const ::std::string& id,
+                ::xml_schema::Flags f = 0,
+                const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and an
+     * error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::std::istream& is,
+                const ::std::string& id,
+                ::xml_schema::ErrorHandler& eh,
+                ::xml_schema::Flags f = 0,
+                const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::std::istream& is,
+                const ::std::string& id,
+                ::xercesc::DOMErrorHandler& eh,
+                ::xml_schema::Flags f = 0,
+                const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::xercesc::InputSource& is,
+                ::xml_schema::Flags f = 0,
+                const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with an error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::xercesc::InputSource& is,
+                ::xml_schema::ErrorHandler& eh,
+                ::xml_schema::Flags f = 0,
+                const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::xercesc::InputSource& is,
+                ::xercesc::DOMErrorHandler& eh,
+                ::xml_schema::Flags f = 0,
+                const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (const ::xercesc::DOMDocument& d,
+                ::xml_schema::Flags f = 0,
+                const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A pointer to the Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function is normally used together with the keep_dom and
+     * own_dom parsing flags to assign ownership of the DOM document
+     * to the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadRequestAPIFault >
+    badRequest (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                ::xml_schema::Flags f = 0,
+                const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    //@}
+
+    /**
+     * @name Parsing functions for the %badMediaType document root.
+     */
+    //@{
+
+    /**
+     * @brief Parse a URI or a local file.
+     *
+     * @param uri A URI or a local file name.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (const ::std::string& uri,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with an error handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (const ::std::string& uri,
+                  ::xml_schema::ErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (const ::std::string& uri,
+                  ::xercesc::DOMErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream.
+     *
+     * @param is A standrad input stream.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::std::istream& is,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with an error handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::std::istream& is,
+                  ::xml_schema::ErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::std::istream& is,
+                  ::xercesc::DOMErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::std::istream& is,
+                  const ::std::string& id,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and an
+     * error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::std::istream& is,
+                  const ::std::string& id,
+                  ::xml_schema::ErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::std::istream& is,
+                  const ::std::string& id,
+                  ::xercesc::DOMErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::xercesc::InputSource& is,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with an error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::xercesc::InputSource& is,
+                  ::xml_schema::ErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::xercesc::InputSource& is,
+                  ::xercesc::DOMErrorHandler& eh,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (const ::xercesc::DOMDocument& d,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A pointer to the Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function is normally used together with the keep_dom and
+     * own_dom parsing flags to assign ownership of the DOM document
+     * to the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMediaTypeAPIFault >
+    badMediaType (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                  ::xml_schema::Flags f = 0,
+                  const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    //@}
+
+    /**
+     * @name Parsing functions for the %badMethod document root.
+     */
+    //@{
+
+    /**
+     * @brief Parse a URI or a local file.
+     *
+     * @param uri A URI or a local file name.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (const ::std::string& uri,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with an error handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (const ::std::string& uri,
+               ::xml_schema::ErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (const ::std::string& uri,
+               ::xercesc::DOMErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream.
+     *
+     * @param is A standrad input stream.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::std::istream& is,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with an error handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::std::istream& is,
+               ::xml_schema::ErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::std::istream& is,
+               ::xercesc::DOMErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::std::istream& is,
+               const ::std::string& id,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and an
+     * error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::std::istream& is,
+               const ::std::string& id,
+               ::xml_schema::ErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::std::istream& is,
+               const ::std::string& id,
+               ::xercesc::DOMErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::xercesc::InputSource& is,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with an error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::xercesc::InputSource& is,
+               ::xml_schema::ErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::xercesc::InputSource& is,
+               ::xercesc::DOMErrorHandler& eh,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (const ::xercesc::DOMDocument& d,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A pointer to the Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function is normally used together with the keep_dom and
+     * own_dom parsing flags to assign ownership of the DOM document
+     * to the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::BadMethodAPIFault >
+    badMethod (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+               ::xml_schema::Flags f = 0,
+               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    //@}
+
+    /**
+     * @name Parsing functions for the %notImplemented document root.
+     */
+    //@{
+
+    /**
+     * @brief Parse a URI or a local file.
+     *
+     * @param uri A URI or a local file name.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (const ::std::string& uri,
+                    ::xml_schema::Flags f = 0,
+                    const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with an error handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (const ::std::string& uri,
+                    ::xml_schema::ErrorHandler& eh,
+                    ::xml_schema::Flags f = 0,
+                    const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a URI or a local file with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param uri A URI or a local file name.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (const ::std::string& uri,
+                    ::xercesc::DOMErrorHandler& eh,
+                    ::xml_schema::Flags f = 0,
+                    const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream.
+     *
+     * @param is A standrad input stream.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::std::istream& is,
+                    ::xml_schema::Flags f = 0,
+                    const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with an error handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::std::istream& is,
+                    ::xml_schema::ErrorHandler& eh,
+                    ::xml_schema::Flags f = 0,
+                    const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a Xerces-C++ DOM error
+     * handler.
+     *
+     * @param is A standrad input stream.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::std::istream& is,
+                    ::xercesc::DOMErrorHandler& eh,
+                    ::xml_schema::Flags f = 0,
+                    const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::std::istream& is,
+                    const ::std::string& id,
+                    ::xml_schema::Flags f = 0,
+                    const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and an
+     * error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::std::istream& is,
+                    const ::std::string& id,
+                    ::xml_schema::ErrorHandler& eh,
+                    ::xml_schema::Flags f = 0,
+                    const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a standard input stream with a resource id and a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param is A standrad input stream.
+     * @param id A resource id.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * The resource id is used to identify the document being parsed in
+     * diagnostics as well as to resolve relative paths.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::std::istream& is,
+                    const ::std::string& id,
+                    ::xercesc::DOMErrorHandler& eh,
+                    ::xml_schema::Flags f = 0,
+                    const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function uses exceptions to report parsing errors.
+     */
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::xercesc::InputSource& is,
+                    ::xml_schema::Flags f = 0,
+                    const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with an error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh An error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::xercesc::InputSource& is,
+                    ::xml_schema::ErrorHandler& eh,
+                    ::xml_schema::Flags f = 0,
+                    const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ input source with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param is A Xerces-C++ input source.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function reports parsing errors by calling the error handler.
+     */
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::xercesc::InputSource& is,
+                    ::xercesc::DOMErrorHandler& eh,
+                    ::xml_schema::Flags f = 0,
+                    const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (const ::xercesc::DOMDocument& d,
+                    ::xml_schema::Flags f = 0,
+                    const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    /**
+     * @brief Parse a Xerces-C++ DOM document.
+     *
+     * @param d A pointer to the Xerces-C++ DOM document.
+     * @param f Parsing flags.
+     * @param p Parsing properties. 
+     * @return A pointer to the root of the object model.
+     *
+     * This function is normally used together with the keep_dom and
+     * own_dom parsing flags to assign ownership of the DOM document
+     * to the object model.
+     */
+    ::std::auto_ptr< ::openstack::xml::NotImplementedAPIFault >
+    notImplemented (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >& d,
+                    ::xml_schema::Flags f = 0,
+                    const ::xml_schema::Properties& p = ::xml_schema::Properties ());
+
+    //@}
+  }
+}
 
 #ifndef XSD_DONT_INCLUDE_INLINE
 #include "faults.ipp"

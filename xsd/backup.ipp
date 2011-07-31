@@ -43,37 +43,6 @@ namespace openstack
 {
   namespace xml
   {
-    // BackupSchedule_
-    // 
-
-    inline
-    const BackupSchedule_::ValueType& BackupSchedule_::
-    value () const
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    BackupSchedule_::ValueType& BackupSchedule_::
-    value ()
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    void BackupSchedule_::
-    value (const ValueType& x)
-    {
-      return this->value_.set (x);
-    }
-
-    inline
-    void BackupSchedule_::
-    value (::std::auto_ptr< ValueType > p)
-    {
-      return this->value_.set (p);
-    }
-
     // BackupSchedule
     // 
 

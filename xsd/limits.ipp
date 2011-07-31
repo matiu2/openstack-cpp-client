@@ -43,37 +43,6 @@ namespace openstack
 {
   namespace xml
   {
-    // Limits_
-    // 
-
-    inline
-    const Limits_::ValueType& Limits_::
-    value () const
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    Limits_::ValueType& Limits_::
-    value ()
-    {
-      return this->value_.get ();
-    }
-
-    inline
-    void Limits_::
-    value (const ValueType& x)
-    {
-      return this->value_.set (x);
-    }
-
-    inline
-    void Limits_::
-    value (::std::auto_ptr< ValueType > p)
-    {
-      return this->value_.set (p);
-    }
-
     // Limits
     // 
 
