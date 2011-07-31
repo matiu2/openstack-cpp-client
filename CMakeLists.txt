@@ -4,14 +4,15 @@ PROJECT (openstack_cpp_client)
 
 ADD_DEFINITIONS(-Wall -Wextra)
 
+# Are we in debug mode
 if ("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
-    SET(BUILD_XML_LIB false)
-    add_definitions("-D USE_INLINE_CODE")
     SET(DEBUG false)
 else()
-    SET(BUILD_XML_LIB true)
     SET(DEBUG true)
 endif()
+
+# Option to use the static library or not
+OPTION(UseXSDStaticLibrary "If true, will compile XSD code to a static library and possibly reduce compilation time." ON)
 
 # Boost
 MESSAGE(STATUS "Checking for Boost System. So that it works the same on all systems.")
@@ -52,8 +53,7 @@ endif()
 
 ADD_SUBDIRECTORY(xsd)
 
-
-if (${BUILD_XML_LIB})
+if (${UseXSDStaticLibrary})
     ADD_EXECUTABLE(test test.cpp)
     TARGET_LINK_LIBRARIES(test ${Boost_SYSTEM_LIBRARY} ${OPENSSL_SSL_LIBRARIES} xsd)
 else()

@@ -22,9 +22,6 @@
 #include <sstream>
 #include <iostream>
 #include "xsd/server.hpp"
-#ifdef USE_INLINE_CODE
-#include "xsd/server.ipp"
-#endif
 
 namespace openstack {
 

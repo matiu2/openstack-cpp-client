@@ -4,8 +4,7 @@ PROJECT (xsd)
 
 file(GLOB xsd_cpp_files *.cpp)
 
-
-if (${BUILD_XML_LIB})
+if (${UseXSDStaticLibrary})
     add_library(xsd STATIC ${xsd_cpp_files})
     target_link_libraries(xsd ${xerces})
 else()
