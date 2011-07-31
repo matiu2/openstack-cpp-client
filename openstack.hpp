@@ -54,7 +54,7 @@ private:
         HTTPS::Headers requestHeaders, responseHeaders;
         requestHeaders.insert(HTTPS::Header("X-Auth-User", _user));
         requestHeaders.insert(HTTPS::Header("X-Auth-Key", _apikey));
-        std::string body;
+        std::stringstream body;
         connection().request("/v1.0", requestHeaders, responseHeaders, body);
         // Read in what we care about
         _authToken = readHeader(responseHeaders, "x-auth-token");

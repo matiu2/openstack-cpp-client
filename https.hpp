@@ -63,19 +63,18 @@ public:
     * @param destination stream to copy the data to
     * @param toReadTotal number of bytes to read max. -1 means just read until eof
     */
-    void readRest(string& destination, long toReadTotal=-1) {
-        char* bufferContents;
+    void readRest(stringstream& destination, long toReadTotal=-1) {
         if (toReadTotal == 0)
             return;
         // Write whatever content we already have into the destination
         unsigned int toRead = toReadTotal - _buffer.size();
         if (_buffer.size() > 0)
-           destination += boost::asio::buffer_cast<const char*>(_buffer.data());
+            destination << &_buffer;
         boost::system::error_code error;
         // Read until EOF or toRead, writing data to output as we go.
         while (boost::asio::read(_sslStream, _buffer, boost::asio::transfer_at_least(1), error)) {
             toRead -= _buffer.size();
-            destination += boost::asio::buffer_cast<const char*>(_buffer.data());
+            destination << &_buffer;
             if ((toRead == 0) && (toReadTotal > 0))
                 return;
         }
@@ -156,7 +155,7 @@ public:
         // Connected :)
     }
     bool isConnected() { return sslStream.lowest_layer().is_open(); }
-    unsigned short request(const string& path, Headers& requestHeaders, Headers& responseHeaders, string& body) {
+    unsigned short request(const string& path, Headers& requestHeaders, Headers& responseHeaders, stringstream& body) {
         // Make up the request
         boost::asio::streambuf buffer;
         std::stringstream debug_stream;
