@@ -19,10 +19,10 @@
 #ifndef OPENSTACK_HPP
 #define OPENSTACK_HPP
 
-#include "https.hpp"
-#include "servers.hpp"
+#include "services/https.hpp"
+#include "services/servers.hpp"
 #include <boost/shared_ptr.hpp>
-#include "url.hpp"
+#include "lib/url.hpp"
 
 using boost::shared_ptr;
 

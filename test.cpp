@@ -17,7 +17,7 @@
  */
 
 #include "openstack.hpp"
-#include "xsd/server.hpp"
+#include "xml/server.hpp"
 #include <iostream>
 #include <string>
 

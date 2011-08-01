@@ -21,7 +21,7 @@
 
 #include <sstream>
 #include <iostream>
-#include "xsd/server.hpp"
+#include "../xml/server.hpp"
 
 namespace openstack {
 
