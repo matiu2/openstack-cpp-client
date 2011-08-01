@@ -27,6 +27,23 @@ using std::string;
 using openstack::Openstack;
 using openstack::xml::Servers;
 using openstack::xml::Server;
+using openstack::xml::Metadata;
+
+/**
+* @brief Reads a server's metadata into a stream
+*
+* @param output stream to push output
+* @param server server to data from
+*/
+void readServerMetaData(ostream& output, const Server& server) {
+    const Server::MetadataOptional& metadata = server.metadata();
+    if (metadata.present()) {
+        const Metadata::MetaSequence& list = metadata->meta();
+        for (Metadata::MetaConstIterator meta=list.begin(); meta!=list.end(); ++meta) {
+            output << "    " << meta->key() << " = " << *meta << endl;
+        }
+    }
+}
 
 int main(int argc, char* argv[]) {
     try {
@@ -39,8 +56,13 @@ int main(int argc, char* argv[]) {
            Openstack os(argv[1], argv[2], hostname);
            const Servers::ServerSequence& servers = os.servers()->list();
            std::cout << "Found Servers:" << std::endl;
-           for(Servers::ServerConstIterator server=servers.begin();server!=servers.end();++server)
-               std::cout << "ID: " << server->id() << " - " << "Name: " << server->name() << std::endl;
+           for(Servers::ServerConstIterator server=servers.begin();server!=servers.end();++server) {
+               cout << "Server: " << endl
+                    << "  ID: " << server->id() << endl
+                    << "  name: " << server->name() << endl
+                    << "  metadata: " << endl;
+                readServerMetaData(cout, *server);
+           }
         }
     } catch (std::exception& e) {
       std::cout << "Exception: " << e.what() << "\n";
