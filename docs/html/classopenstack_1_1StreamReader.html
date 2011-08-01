@@ -83,20 +83,20 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>StreamReader</b> (ssl::stream&lt; tcp::socket &gt; &amp;sslStream)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9a474d176cf53705d9c47c3ebfcf466"></a><!-- doxytag: member="openstack::StreamReader::readLine" ref="ab9a474d176cf53705d9c47c3ebfcf466" args="()" -->
 boost::asio::streambuf *&#160;</td><td class="memItemRight" valign="bottom"><b>readLine</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenstack_1_1StreamReader.html#a5e389b311a34fb1efacdcb1b3590404e">readRest</a> (ostream &amp;destination, long toReadTotal=-1)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the rest of the tcp/ip (ssl) stream into a stream.  <a href="#a5e389b311a34fb1efacdcb1b3590404e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenstack_1_1StreamReader.html#af5252596a338fceedd24ef85455600be">readRest</a> (stringstream &amp;destination, long toReadTotal=-1)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the rest of the tcp/ip (ssl) stream into a stream.  <a href="#af5252596a338fceedd24ef85455600be"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Gives a nice interface to buffered reads, hot off the Internet. </p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a5e389b311a34fb1efacdcb1b3590404e"></a><!-- doxytag: member="openstack::StreamReader::readRest" ref="a5e389b311a34fb1efacdcb1b3590404e" args="(ostream &amp;destination, long toReadTotal=&#45;1)" -->
+<a class="anchor" id="af5252596a338fceedd24ef85455600be"></a><!-- doxytag: member="openstack::StreamReader::readRest" ref="af5252596a338fceedd24ef85455600be" args="(stringstream &amp;destination, long toReadTotal=&#45;1)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void openstack::StreamReader::readRest </td>
           <td>(</td>
-          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramtype">stringstream &amp;&#160;</td>
           <td class="paramname"><em>destination</em>, </td>
         </tr>
         <tr>
@@ -144,7 +144,7 @@ boost::asio::streambuf *&#160;</td><td class="memItemRight" valign="bottom"><b>r
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Jul 30 2011 04:55:18 for OpenstackAPI by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Aug 1 2011 17:49:21 for OpenstackAPI by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

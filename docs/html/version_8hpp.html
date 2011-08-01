@@ -81,7 +81,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;xsd/cxx/tree/types.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/xml/error-handler.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/xml/dom/auto-ptr.hxx&gt;</code><br/>
-<code>#include &lt;xsd/cxx/tree/element-map.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/byte.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/unsigned-byte.hxx&gt;</code><br/>
@@ -95,13 +94,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;xsd/cxx/tree/parsing/float.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/double.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/decimal.hxx&gt;</code><br/>
-<code>#include &lt;xsd/cxx/tree/parsing/element-map.txx&gt;</code><br/>
 <code>#include &lt;memory&gt;</code><br/>
 <code>#include &lt;limits&gt;</code><br/>
 <code>#include &lt;algorithm&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/containers.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/list.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/xml/dom/parsing-header.hxx&gt;</code><br/>
+<code>#include &lt;iosfwd&gt;</code><br/>
+<code>#include &lt;xercesc/sax/InputSource.hpp&gt;</code><br/>
+<code>#include &lt;xercesc/dom/DOMDocument.hpp&gt;</code><br/>
+<code>#include &lt;xercesc/dom/DOMErrorHandler.hpp&gt;</code><br/>
 <code>#include &quot;version.ipp&quot;</code><br/>
 <code>#include &lt;xsd/cxx/post.hxx&gt;</code><br/>
 </div>
@@ -109,8 +111,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenstack_1_1xml_1_1Version__.html">openstack::xml::Version_</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Class corresponding to the version root element.  <a href="classopenstack_1_1xml_1_1Version__.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Class corresponding to the Version schema type.  <a href="classopenstack_1_1xml_1_1Version.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenstack_1_1xml_1_1VersionStatus.html">openstack::xml::VersionStatus</a></td></tr>
@@ -132,6 +132,51 @@ Namespaces</h2></td></tr>
 <p><tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>C++ namespace for the http://docs.rackspacecloud.com/servers/api/v1.0 schema namespace. </p>
 <br/></td></tr>
 </p>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Parsing functions for the version document root.</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#acabe571be97ab931700903750e0bccf9">openstack::xml::version</a> (const ::std::string &amp;uri,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a URI or a local file.  <a href="#acabe571be97ab931700903750e0bccf9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#abc5a8dd0cbb67912d8135c08a2e7e440">openstack::xml::version</a> (const ::std::string &amp;uri,::<a class="el" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc">xml_schema::ErrorHandler</a> &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a URI or a local file with an error handler.  <a href="#abc5a8dd0cbb67912d8135c08a2e7e440"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a2c7384f794cc90f72265a9f446a87b37">openstack::xml::version</a> (const ::std::string &amp;uri,::xercesc::DOMErrorHandler &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a URI or a local file with a Xerces-C++ DOM error handler.  <a href="#a2c7384f794cc90f72265a9f446a87b37"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a7dc9fa453536cfa9b4f5fc1bf224d43f">openstack::xml::version</a> (::std::istream &amp;is,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a standard input stream.  <a href="#a7dc9fa453536cfa9b4f5fc1bf224d43f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#ab0c8e0a0f182a6d57bd1c739d5e08c67">openstack::xml::version</a> (::std::istream &amp;is,::<a class="el" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc">xml_schema::ErrorHandler</a> &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a standard input stream with an error handler.  <a href="#ab0c8e0a0f182a6d57bd1c739d5e08c67"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#ac6fdb66f91ee005df19f0ce88f645022">openstack::xml::version</a> (::std::istream &amp;is,::xercesc::DOMErrorHandler &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a standard input stream with a Xerces-C++ DOM error handler.  <a href="#ac6fdb66f91ee005df19f0ce88f645022"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#acd07ead1a645d03c672d40f8dbbce626">openstack::xml::version</a> (::std::istream &amp;is, const ::std::string &amp;id,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a standard input stream with a resource id.  <a href="#acd07ead1a645d03c672d40f8dbbce626"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#afec3a10dab849aa03c29d74147be2fc2">openstack::xml::version</a> (::std::istream &amp;is, const ::std::string &amp;id,::<a class="el" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc">xml_schema::ErrorHandler</a> &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a standard input stream with a resource id and an error handler.  <a href="#afec3a10dab849aa03c29d74147be2fc2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a28780f5a5373da0905d71b9fd6a547be">openstack::xml::version</a> (::std::istream &amp;is, const ::std::string &amp;id,::xercesc::DOMErrorHandler &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a standard input stream with a resource id and a Xerces-C++ DOM error handler.  <a href="#a28780f5a5373da0905d71b9fd6a547be"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#abe04fe22fb0af8ea5413138613300625">openstack::xml::version</a> (::xercesc::InputSource &amp;is,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Xerces-C++ input source.  <a href="#abe04fe22fb0af8ea5413138613300625"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a4f86e4107b706b038ea17ba4b07b89d5">openstack::xml::version</a> (::xercesc::InputSource &amp;is,::<a class="el" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc">xml_schema::ErrorHandler</a> &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Xerces-C++ input source with an error handler.  <a href="#a4f86e4107b706b038ea17ba4b07b89d5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a3fa291d8cfc5c0986f8a0c41912b1937">openstack::xml::version</a> (::xercesc::InputSource &amp;is,::xercesc::DOMErrorHandler &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Xerces-C++ input source with a Xerces-C++ DOM error handler.  <a href="#a3fa291d8cfc5c0986f8a0c41912b1937"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a4934a2b52ce51788c603c0a87fd90fd5">openstack::xml::version</a> (const ::xercesc::DOMDocument &amp;d,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Xerces-C++ DOM document.  <a href="#a4934a2b52ce51788c603c0a87fd90fd5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a4ecc9f7ab2a9107da9f5af99989d1a1b">openstack::xml::version</a> (::xml_schema::dom::auto_ptr&lt; ::xercesc::DOMDocument &gt; &amp;d,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Xerces-C++ DOM document.  <a href="#a4ecc9f7ab2a9107da9f5af99989d1a1b"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Generated from version.xsd. </p>
@@ -150,7 +195,7 @@ Namespaces</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Jul 30 2011 04:55:18 for OpenstackAPI by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Aug 1 2011 17:49:21 for OpenstackAPI by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

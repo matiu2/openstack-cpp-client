@@ -114,13 +114,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00055"></a>00055        boost::asio::read_until(_sslStream, _buffer, <span class="stringliteral">&quot;\r\n&quot;</span>); <span class="comment">// Fill the buffer</span>
 <a name="l00056"></a>00056        <span class="keywordflow">return</span> &amp;_buffer;
 <a name="l00057"></a>00057     }
-<a name="l00066"></a><a class="code" href="classopenstack_1_1StreamReader.html#a5e389b311a34fb1efacdcb1b3590404e">00066</a>     <span class="keywordtype">void</span> <a class="code" href="classopenstack_1_1StreamReader.html#a5e389b311a34fb1efacdcb1b3590404e" title="Copies the rest of the tcp/ip (ssl) stream into a stream.">readRest</a>(ostream&amp; destination, <span class="keywordtype">long</span> toReadTotal=-1) {
+<a name="l00066"></a><a class="code" href="classopenstack_1_1StreamReader.html#af5252596a338fceedd24ef85455600be">00066</a>     <span class="keywordtype">void</span> <a class="code" href="classopenstack_1_1StreamReader.html#af5252596a338fceedd24ef85455600be" title="Copies the rest of the tcp/ip (ssl) stream into a stream.">readRest</a>(stringstream&amp; destination, <span class="keywordtype">long</span> toReadTotal=-1) {
 <a name="l00067"></a>00067         <span class="keywordflow">if</span> (toReadTotal == 0)
 <a name="l00068"></a>00068             <span class="keywordflow">return</span>;
 <a name="l00069"></a>00069         <span class="comment">// Write whatever content we already have into the destination</span>
 <a name="l00070"></a>00070         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> toRead = toReadTotal - _buffer.size();
 <a name="l00071"></a>00071         <span class="keywordflow">if</span> (_buffer.size() &gt; 0)
-<a name="l00072"></a>00072            destination &lt;&lt; &amp;_buffer;
+<a name="l00072"></a>00072             destination &lt;&lt; &amp;_buffer;
 <a name="l00073"></a>00073         boost::system::error_code error;
 <a name="l00074"></a>00074         <span class="comment">// Read until EOF or toRead, writing data to output as we go.</span>
 <a name="l00075"></a>00075         <span class="keywordflow">while</span> (boost::asio::read(_sslStream, _buffer, boost::asio::transfer_at_least(1), error)) {
@@ -205,20 +205,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00154"></a>00154         sslStream.handshake(ssl::stream_base::client);
 <a name="l00155"></a>00155         <span class="comment">// Connected :)</span>
 <a name="l00156"></a>00156     }
-<a name="l00157"></a>00157     <span class="keywordtype">bool</span> isConnected() { <span class="keywordflow">return</span> sslStream.lowest_layer().is_open(); }
-<a name="l00158"></a>00158     <span class="keywordtype">void</span> request(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; path, Headers&amp; requestHeaders, Headers&amp; responseHeaders, ostream&amp; body) {
+<a name="l00157"></a>00157     <span class="keywordtype">bool</span> isConnected()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> sslStream.lowest_layer().is_open(); }
+<a name="l00158"></a>00158     <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> request(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; path, Headers&amp; requestHeaders, Headers&amp; responseHeaders, stringstream&amp; body) {
 <a name="l00159"></a>00159         <span class="comment">// Make up the request</span>
 <a name="l00160"></a>00160         boost::asio::streambuf buffer;
 <a name="l00161"></a>00161         std::stringstream debug_stream;
 <a name="l00162"></a>00162         ostream request_stream(&amp;buffer);
-<a name="l00163"></a>00163         request_stream &lt;&lt; <span class="stringliteral">&quot;GET &quot;</span> &lt;&lt; path &lt;&lt; <span class="stringliteral">&quot; HTTPS/1.1\r\n&quot;</span>;
+<a name="l00163"></a>00163         request_stream &lt;&lt; <span class="stringliteral">&quot;GET &quot;</span> &lt;&lt; path &lt;&lt; <span class="stringliteral">&quot; HTTP/1.1\r\n&quot;</span>;
 <a name="l00164"></a>00164         boost::asio::write(sslStream, buffer);
 <a name="l00165"></a>00165         requestHeaders.insert(Header(<span class="stringliteral">&quot;Host&quot;</span>, _hostname));
 <a name="l00166"></a>00166         <span class="keywordflow">for</span> (Headers::const_iterator i=requestHeaders.begin(); i != requestHeaders.end(); ++i) {
 <a name="l00167"></a>00167             request_stream &lt;&lt; i-&gt;first &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; i-&gt;second &lt;&lt; <span class="stringliteral">&quot;\r\n&quot;</span>;
 <a name="l00168"></a>00168             boost::asio::write(sslStream, buffer);
 <a name="l00169"></a>00169         }
-<a name="l00170"></a>00170         request_stream &lt;&lt; <span class="stringliteral">&quot;\r\n\r\n&quot;</span>;
+<a name="l00170"></a>00170         request_stream &lt;&lt; <span class="stringliteral">&quot;\r\n&quot;</span>;
 <a name="l00171"></a>00171         <span class="comment">// Send the buffer.</span>
 <a name="l00172"></a>00172         boost::asio::write(sslStream, buffer);
 <a name="l00173"></a>00173         <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> responseCode = checkResponse();
@@ -228,14 +228,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00177"></a>00177         cpHeader contentLengthHeader = responseHeaders.find(<span class="stringliteral">&quot;content-length&quot;</span>);
 <a name="l00178"></a>00178         <span class="keywordflow">if</span> (contentLengthHeader != responseHeaders.end()) {
 <a name="l00179"></a>00179             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> toRead = lexical_cast&lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&gt;((*contentLengthHeader).second);
-<a name="l00180"></a>00180             input.<a class="code" href="classopenstack_1_1StreamReader.html#a5e389b311a34fb1efacdcb1b3590404e" title="Copies the rest of the tcp/ip (ssl) stream into a stream.">readRest</a>(body, toRead);
+<a name="l00180"></a>00180             input.<a class="code" href="classopenstack_1_1StreamReader.html#af5252596a338fceedd24ef85455600be" title="Copies the rest of the tcp/ip (ssl) stream into a stream.">readRest</a>(body, toRead);
 <a name="l00181"></a>00181         } <span class="keywordflow">else</span> {
-<a name="l00182"></a>00182             input.<a class="code" href="classopenstack_1_1StreamReader.html#a5e389b311a34fb1efacdcb1b3590404e" title="Copies the rest of the tcp/ip (ssl) stream into a stream.">readRest</a>(body);
+<a name="l00182"></a>00182             input.<a class="code" href="classopenstack_1_1StreamReader.html#af5252596a338fceedd24ef85455600be" title="Copies the rest of the tcp/ip (ssl) stream into a stream.">readRest</a>(body);
 <a name="l00183"></a>00183         }
-<a name="l00184"></a>00184     }
-<a name="l00185"></a>00185 };
-<a name="l00186"></a>00186 
-<a name="l00187"></a>00187 } <span class="comment">// namespace openstack</span>
+<a name="l00184"></a>00184         <span class="keywordflow">return</span> responseCode;
+<a name="l00185"></a>00185     }
+<a name="l00186"></a>00186 };
+<a name="l00187"></a>00187 
+<a name="l00188"></a>00188 } <span class="comment">// namespace openstack</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -252,7 +253,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Jul 30 2011 04:55:18 for OpenstackAPI by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Aug 1 2011 17:49:21 for OpenstackAPI by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

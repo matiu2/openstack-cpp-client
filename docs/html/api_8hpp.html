@@ -80,7 +80,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;xsd/cxx/tree/types.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/xml/error-handler.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/xml/dom/auto-ptr.hxx&gt;</code><br/>
-<code>#include &lt;xsd/cxx/tree/element-map.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/byte.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/unsigned-byte.hxx&gt;</code><br/>
@@ -94,7 +93,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;xsd/cxx/tree/parsing/float.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/double.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/decimal.hxx&gt;</code><br/>
-<code>#include &lt;xsd/cxx/tree/parsing/element-map.txx&gt;</code><br/>
 <code>#include &lt;memory&gt;</code><br/>
 <code>#include &lt;limits&gt;</code><br/>
 <code>#include &lt;algorithm&gt;</code><br/>
@@ -119,6 +117,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;faults.ipp&quot;</code><br/>
 <code>#include &quot;limits.ipp&quot;</code><br/>
 <code>#include &quot;version.ipp&quot;</code><br/>
+<code>#include &lt;iosfwd&gt;</code><br/>
+<code>#include &lt;xercesc/sax/InputSource.hpp&gt;</code><br/>
+<code>#include &lt;xercesc/dom/DOMDocument.hpp&gt;</code><br/>
+<code>#include &lt;xercesc/dom/DOMErrorHandler.hpp&gt;</code><br/>
 <code>#include &quot;api.ipp&quot;</code><br/>
 <code>#include &lt;xsd/cxx/post.hxx&gt;</code><br/>
 </div>
@@ -159,7 +161,7 @@ Namespaces</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Jul 30 2011 04:55:18 for OpenstackAPI by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Aug 1 2011 17:49:21 for OpenstackAPI by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

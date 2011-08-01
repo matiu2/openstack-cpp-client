@@ -81,64 +81,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00019"></a>00019 <span class="preprocessor">#ifndef SERVER_HPP</span>
 <a name="l00020"></a>00020 <span class="preprocessor"></span><span class="preprocessor">#define SERVER_HPP</span>
 <a name="l00021"></a>00021 <span class="preprocessor"></span>
-<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;stdexpt&gt;</span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;ostream&gt;</span>
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="keyword">using</span> std::LogicError;
-<a name="l00026"></a>00026 
-<a name="l00027"></a>00027 <span class="keyword">namespace </span>openstack {
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029 <span class="comment">// Forward declarations</span>
-<a name="l00030"></a>00030 <span class="keyword">class </span>OpenStack;
-<a name="l00031"></a>00031 <span class="keyword">class </span>Server;
-<a name="l00032"></a>00032 
-<a name="l00033"></a><a class="code" href="classopenstack_1_1Servers.html">00033</a> <span class="keyword">class </span><a class="code" href="classopenstack_1_1Servers.html">Servers</a> {
-<a name="l00034"></a>00034 <span class="keyword">public</span>:
-<a name="l00035"></a>00035     <span class="keyword">typedef</span> vector&lt;Server&gt; ServerList;
-<a name="l00036"></a>00036 <span class="keyword">private</span>:
-<a name="l00037"></a>00037     <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classopenstack_1_1Openstack.html">Openstack</a>; 
-<a name="l00038"></a>00038     <a class="code" href="classopenstack_1_1Servers.html">Servers</a>(<a class="code" href="classopenstack_1_1Openstack.html">Openstack</a>&amp; parent) : _parent(parent), _connection(0) {} <span class="comment">// So only Openstack can create us</span>
-<a name="l00039"></a>00039     ~<a class="code" href="classopenstack_1_1Servers.html">Servers</a>(<a class="code" href="classopenstack_1_1Openstack.html">Openstack</a>&amp; parent) {
-<a name="l00040"></a>00040         <span class="keywordflow">if</span> (_connection != 0)
-<a name="l00041"></a>00041             <span class="keyword">delete</span> _connection;
-<a name="l00042"></a>00042     }
-<a name="l00043"></a>00043 <span class="keyword">private</span>:
-<a name="l00044"></a>00044     <a class="code" href="classopenstack_1_1Openstack.html">Openstack</a>&amp; _parent;
-<a name="l00045"></a>00045     <a class="code" href="classopenstack_1_1HTTPS.html">HTTPS</a>* _connection;
-<a name="l00046"></a>00046 <span class="keyword">public</span>:
-<a name="l00047"></a>00047     <a class="code" href="classopenstack_1_1HTTPS.html">HTTPS</a>* connection() {
-<a name="l00048"></a>00048         <span class="keywordflow">if</span> (_connection == 0) {
-<a name="l00049"></a>00049             <span class="keywordflow">if</span> (_parent.hostName.empty())
-<a name="l00050"></a>00050                 <span class="keywordflow">throw</span> LogicError(<span class="stringliteral">&quot;Tried to connect to servers api but haven&#39;t authed to main API yet&quot;</span>)
-<a name="l00051"></a>00051             <span class="keywordflow">else</span> {
-<a name="l00052"></a>00052                 _connection = <span class="keyword">new</span> <a class="code" href="classopenstack_1_1HTTPS.html">HTTPS</a>(_parent.serverUrl());
-<a name="l00053"></a>00053                 _connection-&gt;connect();
-<a name="l00054"></a>00054             }
-<a name="l00055"></a>00055         }
-<a name="l00056"></a>00056         <span class="keywordflow">return</span> _connection;
-<a name="l00057"></a>00057     }
-<a name="l00058"></a>00058     ServerList list() {
-<a name="l00059"></a>00059         HTTPS::Headers requestHeaders, responseHeaders;
-<a name="l00060"></a>00060         std::ostream body;
-<a name="l00061"></a>00061         requestHeaders.insert(HTTPS::Header(<span class="stringliteral">&quot;X-Auth-Token&quot;</span>, parent.authToken()));
-<a name="l00062"></a>00062         requestHeaders.insert(HTTPS::Header(<span class="stringliteral">&quot;Accept&quot;</span>, <span class="stringliteral">&quot;application/xml&quot;</span>));
-<a name="l00063"></a>00063         <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> responseCode = connection().request(<span class="stringliteral">&quot;/servers&quot;</span>, requestHeaders, responseHeaders, body);
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067     }
-<a name="l00068"></a>00068     
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071 }
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073 <span class="keyword">class </span>Server {
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075 };
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 } <span class="comment">// namespace openstack</span>
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 <span class="preprocessor">#endif // SERVER_HPP</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="server_8hpp.html" title="Generated from server.xsd.">xsd/server.hpp</a>&quot;</span>
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 <span class="keyword">namespace </span>openstack {
+<a name="l00027"></a>00027 
+<a name="l00028"></a><a class="code" href="classopenstack_1_1Servers.html">00028</a> <span class="keyword">class </span><a class="code" href="classopenstack_1_1Servers.html">Servers</a> {
+<a name="l00029"></a>00029 <span class="keyword">private</span>:
+<a name="l00030"></a>00030     <span class="keywordtype">string</span> _token;
+<a name="l00031"></a>00031     <span class="keywordtype">string</span> _hostname;
+<a name="l00032"></a>00032     <span class="keyword">mutable</span> <a class="code" href="classopenstack_1_1HTTPS.html">HTTPS</a> _connection;
+<a name="l00033"></a>00033     <span class="keywordtype">string</span> _pathBase;
+<a name="l00034"></a>00034 <span class="keyword">protected</span>:
+<a name="l00035"></a>00035     <span class="comment">// Cached values</span>
+<a name="l00036"></a>00036     <span class="keyword">mutable</span> std::auto_ptr&lt; xml::Servers &gt; _servers;
+<a name="l00059"></a><a class="code" href="classopenstack_1_1Servers.html#a26cf89cc479c447e4e9503bd3d7674ab">00059</a>     std::auto_ptr&lt;xml::Servers&gt; <a class="code" href="classopenstack_1_1Servers.html#a26cf89cc479c447e4e9503bd3d7674ab">_list</a>(<span class="keywordtype">bool</span> details=<span class="keyword">false</span>)<span class="keyword"> const </span>{
+<a name="l00060"></a>00060         <span class="comment">// Do the request</span>
+<a name="l00061"></a>00061         HTTPS::Headers requestHeaders, responseHeaders;
+<a name="l00062"></a>00062         std::stringstream body;
+<a name="l00063"></a>00063         requestHeaders.insert(HTTPS::Header(<span class="stringliteral">&quot;X-Auth-Token&quot;</span>, _token));
+<a name="l00064"></a>00064         requestHeaders.insert(HTTPS::Header(<span class="stringliteral">&quot;Accept&quot;</span>, <span class="stringliteral">&quot;application/xml&quot;</span>));
+<a name="l00065"></a>00065         <span class="keywordflow">if</span> (details) 
+<a name="l00066"></a>00066             connection().request(_pathBase + <span class="stringliteral">&quot;/servers/detail&quot;</span>, requestHeaders, responseHeaders, body);
+<a name="l00067"></a>00067         <span class="keywordflow">else</span>
+<a name="l00068"></a>00068             connection().request(_pathBase + <span class="stringliteral">&quot;/servers&quot;</span>, requestHeaders, responseHeaders, body);
+<a name="l00069"></a>00069         <span class="comment">// Parse the body and return the object</span>
+<a name="l00070"></a>00070         body.seekp(std::stringstream::beg); <span class="comment">// Go back to the beginning of our stream</span>
+<a name="l00071"></a>00071         <span class="keywordflow">return</span> <a class="code" href="namespaceopenstack_1_1xml.html#a3b7d778d803861163a44ef0798ed51da" title="Parse a URI or a local file.">xml::servers</a>(body, xml_schema::Flags::dont_validate);
+<a name="l00072"></a>00072     }
+<a name="l00073"></a>00073 <span class="keyword">public</span>:
+<a name="l00074"></a>00074     <a class="code" href="classopenstack_1_1Servers.html">Servers</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; hostname, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; path, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; token) :
+<a name="l00075"></a>00075         _token(token), _hostname(hostname), _connection(hostname), _pathBase(path) {}
+<a name="l00076"></a>00076     HTTPS&amp; connection()<span class="keyword"> const </span>{
+<a name="l00077"></a>00077         <span class="keywordflow">if</span> (!_connection.isConnected())
+<a name="l00078"></a>00078             _connection.connect();
+<a name="l00079"></a>00079         <span class="keywordflow">return</span> _connection;
+<a name="l00080"></a>00080     }
+<a name="l00089"></a><a class="code" href="classopenstack_1_1Servers.html#ac7aa9b652744badc3ea60b685404bf6a">00089</a>     <a class="code" href="classopenstack_1_1xml_1_1Servers.html#a9cc28e68df0ebb654db381f4bc6b43e0" title="Element sequence container type.">xml::Servers::ServerSequence</a>&amp; <a class="code" href="classopenstack_1_1Servers.html#ac7aa9b652744badc3ea60b685404bf6a" title="Returns a reference to our cached vector of xml::Servers.">list</a>(<span class="keywordtype">bool</span> details=<span class="keyword">true</span>, <span class="keywordtype">bool</span> useCache=<span class="keyword">true</span>) {
+<a name="l00090"></a>00090         <span class="keywordflow">if</span> ((!useCache) || (_servers.get() == 0))
+<a name="l00091"></a>00091             _servers = <a class="code" href="classopenstack_1_1Servers.html#a26cf89cc479c447e4e9503bd3d7674ab">_list</a>(details);
+<a name="l00092"></a>00092         <span class="keywordflow">return</span> _servers-&gt;server();
+<a name="l00093"></a>00093     }
+<a name="l00094"></a>00094     <span class="keyword">const</span> <a class="code" href="classopenstack_1_1xml_1_1Servers.html#a9cc28e68df0ebb654db381f4bc6b43e0" title="Element sequence container type.">xml::Servers::ServerSequence</a>&amp; <a class="code" href="classopenstack_1_1Servers.html#ac7aa9b652744badc3ea60b685404bf6a" title="Returns a reference to our cached vector of xml::Servers.">list</a>(<span class="keywordtype">bool</span> details=<span class="keyword">true</span>, <span class="keywordtype">bool</span> useCache=<span class="keyword">true</span>)<span class="keyword"> const </span>{
+<a name="l00095"></a>00095         <span class="keywordflow">if</span> ((!useCache) || (_servers.get() == 0))
+<a name="l00096"></a>00096             _servers = <a class="code" href="classopenstack_1_1Servers.html#a26cf89cc479c447e4e9503bd3d7674ab">_list</a>(details);
+<a name="l00097"></a>00097         <span class="keywordflow">return</span> _servers-&gt;server();
+<a name="l00098"></a>00098     }
+<a name="l00099"></a>00099 };
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 } <span class="comment">// namespace openstack</span>
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 <span class="preprocessor">#endif // SERVER_HPP</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -155,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Jul 30 2011 04:55:18 for OpenstackAPI by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Aug 1 2011 17:49:21 for OpenstackAPI by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

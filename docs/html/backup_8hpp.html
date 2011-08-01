@@ -81,7 +81,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;xsd/cxx/tree/types.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/xml/error-handler.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/xml/dom/auto-ptr.hxx&gt;</code><br/>
-<code>#include &lt;xsd/cxx/tree/element-map.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/byte.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/unsigned-byte.hxx&gt;</code><br/>
@@ -95,13 +94,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;xsd/cxx/tree/parsing/float.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/double.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/decimal.hxx&gt;</code><br/>
-<code>#include &lt;xsd/cxx/tree/parsing/element-map.txx&gt;</code><br/>
 <code>#include &lt;memory&gt;</code><br/>
 <code>#include &lt;limits&gt;</code><br/>
 <code>#include &lt;algorithm&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/containers.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/list.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/xml/dom/parsing-header.hxx&gt;</code><br/>
+<code>#include &lt;iosfwd&gt;</code><br/>
+<code>#include &lt;xercesc/sax/InputSource.hpp&gt;</code><br/>
+<code>#include &lt;xercesc/dom/DOMDocument.hpp&gt;</code><br/>
+<code>#include &lt;xercesc/dom/DOMErrorHandler.hpp&gt;</code><br/>
 <code>#include &quot;backup.ipp&quot;</code><br/>
 <code>#include &lt;xsd/cxx/post.hxx&gt;</code><br/>
 </div>
@@ -109,8 +111,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenstack_1_1xml_1_1BackupSchedule__.html">openstack::xml::BackupSchedule_</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Class corresponding to the backupSchedule root element.  <a href="classopenstack_1_1xml_1_1BackupSchedule__.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Class corresponding to the BackupSchedule schema type.  <a href="classopenstack_1_1xml_1_1BackupSchedule.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenstack_1_1xml_1_1DailyBackup.html">openstack::xml::DailyBackup</a></td></tr>
@@ -134,6 +134,51 @@ Namespaces</h2></td></tr>
 <p><tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>C++ namespace for the http://docs.rackspacecloud.com/servers/api/v1.0 schema namespace. </p>
 <br/></td></tr>
 </p>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Parsing functions for the backupSchedule document root.</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a8c4d45e688715521e43e5326eedf3dd3">openstack::xml::backupSchedule</a> (const ::std::string &amp;uri,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a URI or a local file.  <a href="#a8c4d45e688715521e43e5326eedf3dd3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a433ff0446639f0f96ea49c894c7ab779">openstack::xml::backupSchedule</a> (const ::std::string &amp;uri,::<a class="el" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc">xml_schema::ErrorHandler</a> &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a URI or a local file with an error handler.  <a href="#a433ff0446639f0f96ea49c894c7ab779"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a56c6c1c4e34aa7e2274c1c67f40f83af">openstack::xml::backupSchedule</a> (const ::std::string &amp;uri,::xercesc::DOMErrorHandler &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a URI or a local file with a Xerces-C++ DOM error handler.  <a href="#a56c6c1c4e34aa7e2274c1c67f40f83af"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a2227b096be45abda23ec4d87be8859d9">openstack::xml::backupSchedule</a> (::std::istream &amp;is,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a standard input stream.  <a href="#a2227b096be45abda23ec4d87be8859d9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a4a917e9c03a865f2e40fb56eee4401c1">openstack::xml::backupSchedule</a> (::std::istream &amp;is,::<a class="el" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc">xml_schema::ErrorHandler</a> &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a standard input stream with an error handler.  <a href="#a4a917e9c03a865f2e40fb56eee4401c1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a53f31cea8addbe0262170e58492f159d">openstack::xml::backupSchedule</a> (::std::istream &amp;is,::xercesc::DOMErrorHandler &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a standard input stream with a Xerces-C++ DOM error handler.  <a href="#a53f31cea8addbe0262170e58492f159d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a744f6ba45e9f006a58501a471a048abb">openstack::xml::backupSchedule</a> (::std::istream &amp;is, const ::std::string &amp;id,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a standard input stream with a resource id.  <a href="#a744f6ba45e9f006a58501a471a048abb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a4fa919c147952a81bc6d9159ae5b91ef">openstack::xml::backupSchedule</a> (::std::istream &amp;is, const ::std::string &amp;id,::<a class="el" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc">xml_schema::ErrorHandler</a> &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a standard input stream with a resource id and an error handler.  <a href="#a4fa919c147952a81bc6d9159ae5b91ef"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#aba23f4c9c80b8ae2aedd2c9c7e5e96b6">openstack::xml::backupSchedule</a> (::std::istream &amp;is, const ::std::string &amp;id,::xercesc::DOMErrorHandler &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a standard input stream with a resource id and a Xerces-C++ DOM error handler.  <a href="#aba23f4c9c80b8ae2aedd2c9c7e5e96b6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#aee4d4ab6731c94b2f8415692aa11b172">openstack::xml::backupSchedule</a> (::xercesc::InputSource &amp;is,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Xerces-C++ input source.  <a href="#aee4d4ab6731c94b2f8415692aa11b172"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a7fa46ab80e73c89f1f1cdc874082a7b2">openstack::xml::backupSchedule</a> (::xercesc::InputSource &amp;is,::<a class="el" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc">xml_schema::ErrorHandler</a> &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Xerces-C++ input source with an error handler.  <a href="#a7fa46ab80e73c89f1f1cdc874082a7b2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#aa5971e0f9d667e4449478ea62cb8f4ea">openstack::xml::backupSchedule</a> (::xercesc::InputSource &amp;is,::xercesc::DOMErrorHandler &amp;eh,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Xerces-C++ input source with a Xerces-C++ DOM error handler.  <a href="#aa5971e0f9d667e4449478ea62cb8f4ea"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#aa7d02b84a8a48205ac3615c9027d8240">openstack::xml::backupSchedule</a> (const ::xercesc::DOMDocument &amp;d,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Xerces-C++ DOM document.  <a href="#aa7d02b84a8a48205ac3615c9027d8240"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
+&lt; ::<a class="el" href="classopenstack_1_1xml_1_1BackupSchedule.html">openstack::xml::BackupSchedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a4a1970cf4ec8d917e3c781430ad8ebad">openstack::xml::backupSchedule</a> (::xml_schema::dom::auto_ptr&lt; ::xercesc::DOMDocument &gt; &amp;d,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Xerces-C++ DOM document.  <a href="#a4a1970cf4ec8d917e3c781430ad8ebad"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Generated from backup.xsd. </p>
@@ -152,7 +197,7 @@ Namespaces</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Jul 30 2011 04:55:18 for OpenstackAPI by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Aug 1 2011 17:49:21 for OpenstackAPI by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

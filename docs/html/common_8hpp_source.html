@@ -133,341 +133,334 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071 <span class="preprocessor">#include &lt;xsd/cxx/xml/dom/auto-ptr.hxx&gt;</span>
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073 <span class="preprocessor">#include &lt;xsd/cxx/tree/element-map.hxx&gt;</span>
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing.hxx&gt;</span>
-<a name="l00076"></a>00076 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/byte.hxx&gt;</span>
-<a name="l00077"></a>00077 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/unsigned-byte.hxx&gt;</span>
-<a name="l00078"></a>00078 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/short.hxx&gt;</span>
-<a name="l00079"></a>00079 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/unsigned-short.hxx&gt;</span>
-<a name="l00080"></a>00080 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/int.hxx&gt;</span>
-<a name="l00081"></a>00081 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/unsigned-int.hxx&gt;</span>
-<a name="l00082"></a>00082 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/long.hxx&gt;</span>
-<a name="l00083"></a>00083 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/unsigned-long.hxx&gt;</span>
-<a name="l00084"></a>00084 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/boolean.hxx&gt;</span>
-<a name="l00085"></a>00085 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/float.hxx&gt;</span>
-<a name="l00086"></a>00086 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/double.hxx&gt;</span>
-<a name="l00087"></a>00087 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/decimal.hxx&gt;</span>
-<a name="l00088"></a>00088 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/element-map.txx&gt;</span>
-<a name="l00089"></a>00089 
-<a name="l00094"></a>00094 <span class="keyword">namespace </span>xml_schema
-<a name="l00095"></a>00095 {
-<a name="l00096"></a>00096   <span class="comment">// anyType and anySimpleType.</span>
-<a name="l00097"></a>00097   <span class="comment">//</span>
-<a name="l00098"></a>00098 
-<a name="l00103"></a>00103   typedef ::xsd::cxx::tree::type <a class="code" href="namespacexml__schema.html#ad34e8fd175bf4f9fece6c670b01aa239" title="C++ type corresponding to the anyType XML Schema built-in type.">Type</a>;
-<a name="l00104"></a>00104 
-<a name="l00109"></a>00109   typedef ::xsd::cxx::tree::simple_type&lt; Type &gt; <a class="code" href="namespacexml__schema.html#a1171be9b6e593e49b895a46671f5dc5f" title="C++ type corresponding to the anySimpleType XML Schema built-in type.">SimpleType</a>;
-<a name="l00110"></a>00110 
-<a name="l00114"></a>00114   typedef ::xsd::cxx::tree::type <a class="code" href="namespacexml__schema.html#a333dea2213742aea47a37532dec4ec27" title="Alias for the anyType type.">Container</a>;
-<a name="l00115"></a>00115 
+<a name="l00073"></a>00073 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing.hxx&gt;</span>
+<a name="l00074"></a>00074 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/byte.hxx&gt;</span>
+<a name="l00075"></a>00075 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/unsigned-byte.hxx&gt;</span>
+<a name="l00076"></a>00076 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/short.hxx&gt;</span>
+<a name="l00077"></a>00077 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/unsigned-short.hxx&gt;</span>
+<a name="l00078"></a>00078 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/int.hxx&gt;</span>
+<a name="l00079"></a>00079 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/unsigned-int.hxx&gt;</span>
+<a name="l00080"></a>00080 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/long.hxx&gt;</span>
+<a name="l00081"></a>00081 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/unsigned-long.hxx&gt;</span>
+<a name="l00082"></a>00082 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/boolean.hxx&gt;</span>
+<a name="l00083"></a>00083 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/float.hxx&gt;</span>
+<a name="l00084"></a>00084 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/double.hxx&gt;</span>
+<a name="l00085"></a>00085 <span class="preprocessor">#include &lt;xsd/cxx/tree/parsing/decimal.hxx&gt;</span>
+<a name="l00086"></a>00086 
+<a name="l00091"></a>00091 <span class="keyword">namespace </span>xml_schema
+<a name="l00092"></a>00092 {
+<a name="l00093"></a>00093   <span class="comment">// anyType and anySimpleType.</span>
+<a name="l00094"></a>00094   <span class="comment">//</span>
+<a name="l00095"></a>00095 
+<a name="l00100"></a>00100   typedef ::xsd::cxx::tree::type <a class="code" href="namespacexml__schema.html#ad34e8fd175bf4f9fece6c670b01aa239" title="C++ type corresponding to the anyType XML Schema built-in type.">Type</a>;
+<a name="l00101"></a>00101 
+<a name="l00106"></a>00106   typedef ::xsd::cxx::tree::simple_type&lt; Type &gt; <a class="code" href="namespacexml__schema.html#a1171be9b6e593e49b895a46671f5dc5f" title="C++ type corresponding to the anySimpleType XML Schema built-in type.">SimpleType</a>;
+<a name="l00107"></a>00107 
+<a name="l00111"></a>00111   typedef ::xsd::cxx::tree::type <a class="code" href="namespacexml__schema.html#a333dea2213742aea47a37532dec4ec27" title="Alias for the anyType type.">Container</a>;
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114   <span class="comment">// 8-bit</span>
+<a name="l00115"></a>00115   <span class="comment">//</span>
 <a name="l00116"></a>00116 
-<a name="l00117"></a>00117   <span class="comment">// 8-bit</span>
-<a name="l00118"></a>00118   <span class="comment">//</span>
-<a name="l00119"></a>00119 
-<a name="l00124"></a>00124   <span class="keyword">typedef</span> <span class="keywordtype">signed</span> <span class="keywordtype">char</span> <a class="code" href="namespacexml__schema.html#a1b7c2d8f9fdcd7812acdfc885225e06e" title="C++ type corresponding to the byte XML Schema built-in type.">Byte</a>;
-<a name="l00125"></a>00125 
-<a name="l00130"></a>00130   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="namespacexml__schema.html#a395b3a9628b056f70930e3294e622b7c" title="C++ type corresponding to the unsignedByte XML Schema built-in type.">UnsignedByte</a>;
-<a name="l00131"></a>00131 
+<a name="l00121"></a>00121   <span class="keyword">typedef</span> <span class="keywordtype">signed</span> <span class="keywordtype">char</span> <a class="code" href="namespacexml__schema.html#a1b7c2d8f9fdcd7812acdfc885225e06e" title="C++ type corresponding to the byte XML Schema built-in type.">Byte</a>;
+<a name="l00122"></a>00122 
+<a name="l00127"></a>00127   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="namespacexml__schema.html#a395b3a9628b056f70930e3294e622b7c" title="C++ type corresponding to the unsignedByte XML Schema built-in type.">UnsignedByte</a>;
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130   <span class="comment">// 16-bit</span>
+<a name="l00131"></a>00131   <span class="comment">//</span>
 <a name="l00132"></a>00132 
-<a name="l00133"></a>00133   <span class="comment">// 16-bit</span>
-<a name="l00134"></a>00134   <span class="comment">//</span>
-<a name="l00135"></a>00135 
-<a name="l00140"></a>00140   <span class="keyword">typedef</span> <span class="keywordtype">short</span> <a class="code" href="namespacexml__schema.html#af32f275204ee102f0f2ebf36d8b2f81a" title="C++ type corresponding to the short XML Schema built-in type.">Short</a>;
-<a name="l00141"></a>00141 
-<a name="l00146"></a>00146   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="namespacexml__schema.html#ac717910ff9e59ceb377d5d108704a89a" title="C++ type corresponding to the unsignedShort XML Schema built-in type.">UnsignedShort</a>;
-<a name="l00147"></a>00147 
+<a name="l00137"></a>00137   <span class="keyword">typedef</span> <span class="keywordtype">short</span> <a class="code" href="namespacexml__schema.html#af32f275204ee102f0f2ebf36d8b2f81a" title="C++ type corresponding to the short XML Schema built-in type.">Short</a>;
+<a name="l00138"></a>00138 
+<a name="l00143"></a>00143   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="namespacexml__schema.html#ac717910ff9e59ceb377d5d108704a89a" title="C++ type corresponding to the unsignedShort XML Schema built-in type.">UnsignedShort</a>;
+<a name="l00144"></a>00144 
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146   <span class="comment">// 32-bit</span>
+<a name="l00147"></a>00147   <span class="comment">//</span>
 <a name="l00148"></a>00148 
-<a name="l00149"></a>00149   <span class="comment">// 32-bit</span>
-<a name="l00150"></a>00150   <span class="comment">//</span>
-<a name="l00151"></a>00151 
-<a name="l00156"></a>00156   <span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code" href="namespacexml__schema.html#a12d975a13061c938969b2b5143e97645" title="C++ type corresponding to the int XML Schema built-in type.">Int</a>;
-<a name="l00157"></a>00157 
-<a name="l00162"></a>00162   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="namespacexml__schema.html#ac410e4eabf6080e99cc0fbfa10ee874f" title="C++ type corresponding to the unsignedInt XML Schema built-in type.">UnsignedInt</a>;
-<a name="l00163"></a>00163 
+<a name="l00153"></a>00153   <span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code" href="namespacexml__schema.html#a12d975a13061c938969b2b5143e97645" title="C++ type corresponding to the int XML Schema built-in type.">Int</a>;
+<a name="l00154"></a>00154 
+<a name="l00159"></a>00159   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="namespacexml__schema.html#ac410e4eabf6080e99cc0fbfa10ee874f" title="C++ type corresponding to the unsignedInt XML Schema built-in type.">UnsignedInt</a>;
+<a name="l00160"></a>00160 
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162   <span class="comment">// 64-bit</span>
+<a name="l00163"></a>00163   <span class="comment">//</span>
 <a name="l00164"></a>00164 
-<a name="l00165"></a>00165   <span class="comment">// 64-bit</span>
-<a name="l00166"></a>00166   <span class="comment">//</span>
-<a name="l00167"></a>00167 
-<a name="l00172"></a>00172   <span class="keyword">typedef</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="namespacexml__schema.html#a516206ea7b60d1854f758b122bde2f5d" title="C++ type corresponding to the long XML Schema built-in type.">Long</a>;
-<a name="l00173"></a>00173 
-<a name="l00178"></a>00178   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="namespacexml__schema.html#a42f02dabec613faa438d99fac66cb9be" title="C++ type corresponding to the unsignedLong XML Schema built-in type.">UnsignedLong</a>;
-<a name="l00179"></a>00179 
+<a name="l00169"></a>00169   <span class="keyword">typedef</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="namespacexml__schema.html#a516206ea7b60d1854f758b122bde2f5d" title="C++ type corresponding to the long XML Schema built-in type.">Long</a>;
+<a name="l00170"></a>00170 
+<a name="l00175"></a>00175   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="namespacexml__schema.html#a42f02dabec613faa438d99fac66cb9be" title="C++ type corresponding to the unsignedLong XML Schema built-in type.">UnsignedLong</a>;
+<a name="l00176"></a>00176 
+<a name="l00177"></a>00177 
+<a name="l00178"></a>00178   <span class="comment">// Supposed to be arbitrary-length integral types.</span>
+<a name="l00179"></a>00179   <span class="comment">//</span>
 <a name="l00180"></a>00180 
-<a name="l00181"></a>00181   <span class="comment">// Supposed to be arbitrary-length integral types.</span>
-<a name="l00182"></a>00182   <span class="comment">//</span>
-<a name="l00183"></a>00183 
-<a name="l00188"></a>00188   <span class="keyword">typedef</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="namespacexml__schema.html#a0b11fbf68a691832669ecf4c77b17782" title="C++ type corresponding to the integer XML Schema built-in type.">Integer</a>;
-<a name="l00189"></a>00189 
-<a name="l00194"></a>00194   <span class="keyword">typedef</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="namespacexml__schema.html#a39aa9881437fa02c71139d9cd3d6085b" title="C++ type corresponding to the nonPositiveInteger XML Schema built-in type.">NonPositiveInteger</a>;
-<a name="l00195"></a>00195 
-<a name="l00200"></a>00200   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="namespacexml__schema.html#ad10bc19dd6ff07f4f4f2d6a7105290e7" title="C++ type corresponding to the nonNegativeInteger XML Schema built-in type.">NonNegativeInteger</a>;
-<a name="l00201"></a>00201 
-<a name="l00206"></a>00206   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="namespacexml__schema.html#a1e3345b2d2812352f1ee01d3c40499b2" title="C++ type corresponding to the positiveInteger XML Schema built-in type.">PositiveInteger</a>;
-<a name="l00207"></a>00207 
-<a name="l00212"></a>00212   <span class="keyword">typedef</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="namespacexml__schema.html#a259733f00b5273e1f2988b40be1b9f60" title="C++ type corresponding to the negativeInteger XML Schema built-in type.">NegativeInteger</a>;
-<a name="l00213"></a>00213 
+<a name="l00185"></a>00185   <span class="keyword">typedef</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="namespacexml__schema.html#a0b11fbf68a691832669ecf4c77b17782" title="C++ type corresponding to the integer XML Schema built-in type.">Integer</a>;
+<a name="l00186"></a>00186 
+<a name="l00191"></a>00191   <span class="keyword">typedef</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="namespacexml__schema.html#a39aa9881437fa02c71139d9cd3d6085b" title="C++ type corresponding to the nonPositiveInteger XML Schema built-in type.">NonPositiveInteger</a>;
+<a name="l00192"></a>00192 
+<a name="l00197"></a>00197   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="namespacexml__schema.html#ad10bc19dd6ff07f4f4f2d6a7105290e7" title="C++ type corresponding to the nonNegativeInteger XML Schema built-in type.">NonNegativeInteger</a>;
+<a name="l00198"></a>00198 
+<a name="l00203"></a>00203   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="namespacexml__schema.html#a1e3345b2d2812352f1ee01d3c40499b2" title="C++ type corresponding to the positiveInteger XML Schema built-in type.">PositiveInteger</a>;
+<a name="l00204"></a>00204 
+<a name="l00209"></a>00209   <span class="keyword">typedef</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="namespacexml__schema.html#a259733f00b5273e1f2988b40be1b9f60" title="C++ type corresponding to the negativeInteger XML Schema built-in type.">NegativeInteger</a>;
+<a name="l00210"></a>00210 
+<a name="l00211"></a>00211 
+<a name="l00212"></a>00212   <span class="comment">// Boolean.</span>
+<a name="l00213"></a>00213   <span class="comment">//</span>
 <a name="l00214"></a>00214 
-<a name="l00215"></a>00215   <span class="comment">// Boolean.</span>
-<a name="l00216"></a>00216   <span class="comment">//</span>
-<a name="l00217"></a>00217 
-<a name="l00222"></a>00222   <span class="keyword">typedef</span> <span class="keywordtype">bool</span> <a class="code" href="namespacexml__schema.html#a2749f4f861e3517d559bb221b03e6b5b" title="C++ type corresponding to the boolean XML Schema built-in type.">Boolean</a>;
-<a name="l00223"></a>00223 
+<a name="l00219"></a>00219   <span class="keyword">typedef</span> <span class="keywordtype">bool</span> <a class="code" href="namespacexml__schema.html#a2749f4f861e3517d559bb221b03e6b5b" title="C++ type corresponding to the boolean XML Schema built-in type.">Boolean</a>;
+<a name="l00220"></a>00220 
+<a name="l00221"></a>00221 
+<a name="l00222"></a>00222   <span class="comment">// Floating-point types.</span>
+<a name="l00223"></a>00223   <span class="comment">//</span>
 <a name="l00224"></a>00224 
-<a name="l00225"></a>00225   <span class="comment">// Floating-point types.</span>
-<a name="l00226"></a>00226   <span class="comment">//</span>
-<a name="l00227"></a>00227 
-<a name="l00232"></a>00232   <span class="keyword">typedef</span> <span class="keywordtype">float</span> <a class="code" href="namespacexml__schema.html#a5e78682cd0ca4557bf22c75ec8266c6a" title="C++ type corresponding to the float XML Schema built-in type.">Float</a>;
-<a name="l00233"></a>00233 
-<a name="l00238"></a>00238   <span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code" href="namespacexml__schema.html#ad4d9be8ec9a5415e9522df5aaa17f791" title="C++ type corresponding to the double XML Schema built-in type.">Double</a>;
-<a name="l00239"></a>00239 
-<a name="l00244"></a>00244   <span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code" href="namespacexml__schema.html#a9ec4af2c5785716c4ecf9e1826163098" title="C++ type corresponding to the decimal XML Schema built-in type.">Decimal</a>;
-<a name="l00245"></a>00245 
+<a name="l00229"></a>00229   <span class="keyword">typedef</span> <span class="keywordtype">float</span> <a class="code" href="namespacexml__schema.html#a5e78682cd0ca4557bf22c75ec8266c6a" title="C++ type corresponding to the float XML Schema built-in type.">Float</a>;
+<a name="l00230"></a>00230 
+<a name="l00235"></a>00235   <span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code" href="namespacexml__schema.html#ad4d9be8ec9a5415e9522df5aaa17f791" title="C++ type corresponding to the double XML Schema built-in type.">Double</a>;
+<a name="l00236"></a>00236 
+<a name="l00241"></a>00241   <span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code" href="namespacexml__schema.html#a9ec4af2c5785716c4ecf9e1826163098" title="C++ type corresponding to the decimal XML Schema built-in type.">Decimal</a>;
+<a name="l00242"></a>00242 
+<a name="l00243"></a>00243 
+<a name="l00244"></a>00244   <span class="comment">// String types.</span>
+<a name="l00245"></a>00245   <span class="comment">//</span>
 <a name="l00246"></a>00246 
-<a name="l00247"></a>00247   <span class="comment">// String types.</span>
-<a name="l00248"></a>00248   <span class="comment">//</span>
-<a name="l00249"></a>00249 
-<a name="l00254"></a>00254   typedef ::xsd::cxx::tree::string&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#af6757b5701ccc893f3b551bd70e0c94d" title="C++ type corresponding to the string XML Schema built-in type.">String</a>;
-<a name="l00255"></a>00255 
-<a name="l00260"></a>00260   typedef ::xsd::cxx::tree::normalized_string&lt; char, String &gt; <a class="code" href="namespacexml__schema.html#ab4f1d744ea5be78260b24e88a4e395ee" title="C++ type corresponding to the normalizedString XML Schema built-in type.">NormalizedString</a>;
-<a name="l00261"></a>00261 
-<a name="l00266"></a>00266   typedef ::xsd::cxx::tree::token&lt; char, NormalizedString &gt; <a class="code" href="namespacexml__schema.html#a6c5a46363a79f52c8f09edc7885e259c" title="C++ type corresponding to the token XML Schema built-in type.">Token</a>;
-<a name="l00267"></a>00267 
-<a name="l00272"></a>00272   typedef ::xsd::cxx::tree::name&lt; char, Token &gt; <a class="code" href="namespacexml__schema.html#af4febacaa19a36f5a1caab58e620f6d5" title="C++ type corresponding to the Name XML Schema built-in type.">Name</a>;
-<a name="l00273"></a>00273 
-<a name="l00278"></a>00278   typedef ::xsd::cxx::tree::nmtoken&lt; char, Token &gt; <a class="code" href="namespacexml__schema.html#aff77acdf25cb3f0e2bee25436470dfa8" title="C++ type corresponding to the NMTOKEN XML Schema built-in type.">Nmtoken</a>;
-<a name="l00279"></a>00279 
-<a name="l00284"></a>00284   typedef ::xsd::cxx::tree::nmtokens&lt; char, SimpleType, Nmtoken &gt; <a class="code" href="namespacexml__schema.html#aa8453d4c59fcb01552ceeaf49de9da76" title="C++ type corresponding to the NMTOKENS XML Schema built-in type.">Nmtokens</a>;
-<a name="l00285"></a>00285 
-<a name="l00290"></a>00290   typedef ::xsd::cxx::tree::ncname&lt; char, Name &gt; <a class="code" href="namespacexml__schema.html#aceb9a08fa292b3b3af49f5aa42d06fa9" title="C++ type corresponding to the NCName XML Schema built-in type.">Ncname</a>;
-<a name="l00291"></a>00291 
-<a name="l00296"></a>00296   typedef ::xsd::cxx::tree::language&lt; char, Token &gt; <a class="code" href="namespacexml__schema.html#ae32771888035aa186f9432f7e791b0f1" title="C++ type corresponding to the language XML Schema built-in type.">Language</a>;
-<a name="l00297"></a>00297 
+<a name="l00251"></a>00251   typedef ::xsd::cxx::tree::string&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#af6757b5701ccc893f3b551bd70e0c94d" title="C++ type corresponding to the string XML Schema built-in type.">String</a>;
+<a name="l00252"></a>00252 
+<a name="l00257"></a>00257   typedef ::xsd::cxx::tree::normalized_string&lt; char, String &gt; <a class="code" href="namespacexml__schema.html#ab4f1d744ea5be78260b24e88a4e395ee" title="C++ type corresponding to the normalizedString XML Schema built-in type.">NormalizedString</a>;
+<a name="l00258"></a>00258 
+<a name="l00263"></a>00263   typedef ::xsd::cxx::tree::token&lt; char, NormalizedString &gt; <a class="code" href="namespacexml__schema.html#a6c5a46363a79f52c8f09edc7885e259c" title="C++ type corresponding to the token XML Schema built-in type.">Token</a>;
+<a name="l00264"></a>00264 
+<a name="l00269"></a>00269   typedef ::xsd::cxx::tree::name&lt; char, Token &gt; <a class="code" href="namespacexml__schema.html#af4febacaa19a36f5a1caab58e620f6d5" title="C++ type corresponding to the Name XML Schema built-in type.">Name</a>;
+<a name="l00270"></a>00270 
+<a name="l00275"></a>00275   typedef ::xsd::cxx::tree::nmtoken&lt; char, Token &gt; <a class="code" href="namespacexml__schema.html#aff77acdf25cb3f0e2bee25436470dfa8" title="C++ type corresponding to the NMTOKEN XML Schema built-in type.">Nmtoken</a>;
+<a name="l00276"></a>00276 
+<a name="l00281"></a>00281   typedef ::xsd::cxx::tree::nmtokens&lt; char, SimpleType, Nmtoken &gt; <a class="code" href="namespacexml__schema.html#aa8453d4c59fcb01552ceeaf49de9da76" title="C++ type corresponding to the NMTOKENS XML Schema built-in type.">Nmtokens</a>;
+<a name="l00282"></a>00282 
+<a name="l00287"></a>00287   typedef ::xsd::cxx::tree::ncname&lt; char, Name &gt; <a class="code" href="namespacexml__schema.html#aceb9a08fa292b3b3af49f5aa42d06fa9" title="C++ type corresponding to the NCName XML Schema built-in type.">Ncname</a>;
+<a name="l00288"></a>00288 
+<a name="l00293"></a>00293   typedef ::xsd::cxx::tree::language&lt; char, Token &gt; <a class="code" href="namespacexml__schema.html#ae32771888035aa186f9432f7e791b0f1" title="C++ type corresponding to the language XML Schema built-in type.">Language</a>;
+<a name="l00294"></a>00294 
+<a name="l00295"></a>00295 
+<a name="l00296"></a>00296   <span class="comment">// ID/IDREF.</span>
+<a name="l00297"></a>00297   <span class="comment">//</span>
 <a name="l00298"></a>00298 
-<a name="l00299"></a>00299   <span class="comment">// ID/IDREF.</span>
-<a name="l00300"></a>00300   <span class="comment">//</span>
-<a name="l00301"></a>00301 
-<a name="l00306"></a>00306   typedef ::xsd::cxx::tree::id&lt; char, Ncname &gt; <a class="code" href="namespacexml__schema.html#a14dae7debe509f1d905ac7ab650d8c3f" title="C++ type corresponding to the ID XML Schema built-in type.">Id</a>;
-<a name="l00307"></a>00307 
-<a name="l00312"></a>00312   typedef ::xsd::cxx::tree::idref&lt; char, Ncname, Type &gt; <a class="code" href="namespacexml__schema.html#aec599d3d2c37850cde794950fa8bc1fd" title="C++ type corresponding to the IDREF XML Schema built-in type.">Idref</a>;
-<a name="l00313"></a>00313 
-<a name="l00318"></a>00318   typedef ::xsd::cxx::tree::idrefs&lt; char, SimpleType, Idref &gt; <a class="code" href="namespacexml__schema.html#afba3950a30b3d8279e02e9657a2637ab" title="C++ type corresponding to the IDREFS XML Schema built-in type.">Idrefs</a>;
-<a name="l00319"></a>00319 
+<a name="l00303"></a>00303   typedef ::xsd::cxx::tree::id&lt; char, Ncname &gt; <a class="code" href="namespacexml__schema.html#a14dae7debe509f1d905ac7ab650d8c3f" title="C++ type corresponding to the ID XML Schema built-in type.">Id</a>;
+<a name="l00304"></a>00304 
+<a name="l00309"></a>00309   typedef ::xsd::cxx::tree::idref&lt; char, Ncname, Type &gt; <a class="code" href="namespacexml__schema.html#aec599d3d2c37850cde794950fa8bc1fd" title="C++ type corresponding to the IDREF XML Schema built-in type.">Idref</a>;
+<a name="l00310"></a>00310 
+<a name="l00315"></a>00315   typedef ::xsd::cxx::tree::idrefs&lt; char, SimpleType, Idref &gt; <a class="code" href="namespacexml__schema.html#afba3950a30b3d8279e02e9657a2637ab" title="C++ type corresponding to the IDREFS XML Schema built-in type.">Idrefs</a>;
+<a name="l00316"></a>00316 
+<a name="l00317"></a>00317 
+<a name="l00318"></a>00318   <span class="comment">// URI.</span>
+<a name="l00319"></a>00319   <span class="comment">//</span>
 <a name="l00320"></a>00320 
-<a name="l00321"></a>00321   <span class="comment">// URI.</span>
-<a name="l00322"></a>00322   <span class="comment">//</span>
-<a name="l00323"></a>00323 
-<a name="l00328"></a>00328   typedef ::xsd::cxx::tree::uri&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#ae14d61a2e71e44fa4b46c9492c59b44d" title="C++ type corresponding to the anyURI XML Schema built-in type.">Uri</a>;
-<a name="l00329"></a>00329 
+<a name="l00325"></a>00325   typedef ::xsd::cxx::tree::uri&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#ae14d61a2e71e44fa4b46c9492c59b44d" title="C++ type corresponding to the anyURI XML Schema built-in type.">Uri</a>;
+<a name="l00326"></a>00326 
+<a name="l00327"></a>00327 
+<a name="l00328"></a>00328   <span class="comment">// Qualified name.</span>
+<a name="l00329"></a>00329   <span class="comment">//</span>
 <a name="l00330"></a>00330 
-<a name="l00331"></a>00331   <span class="comment">// Qualified name.</span>
-<a name="l00332"></a>00332   <span class="comment">//</span>
-<a name="l00333"></a>00333 
-<a name="l00338"></a>00338   typedef ::xsd::cxx::tree::qname&lt; char, SimpleType, Uri, Ncname &gt; <a class="code" href="namespacexml__schema.html#a2d07f8e92d03ad192adbbc7498a72b72" title="C++ type corresponding to the QName XML Schema built-in type.">Qname</a>;
-<a name="l00339"></a>00339 
+<a name="l00335"></a>00335   typedef ::xsd::cxx::tree::qname&lt; char, SimpleType, Uri, Ncname &gt; <a class="code" href="namespacexml__schema.html#a2d07f8e92d03ad192adbbc7498a72b72" title="C++ type corresponding to the QName XML Schema built-in type.">Qname</a>;
+<a name="l00336"></a>00336 
+<a name="l00337"></a>00337 
+<a name="l00338"></a>00338   <span class="comment">// Binary.</span>
+<a name="l00339"></a>00339   <span class="comment">//</span>
 <a name="l00340"></a>00340 
-<a name="l00341"></a>00341   <span class="comment">// Binary.</span>
-<a name="l00342"></a>00342   <span class="comment">//</span>
-<a name="l00343"></a>00343 
-<a name="l00347"></a>00347   typedef ::xsd::cxx::tree::buffer&lt; char &gt; <a class="code" href="namespacexml__schema.html#af8732a0949261972e4b167f50a23275d" title="Binary buffer type.">Buffer</a>;
-<a name="l00348"></a>00348 
-<a name="l00353"></a>00353   typedef ::xsd::cxx::tree::base64_binary&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a439c138de03306df7e07a447abfe54ed" title="C++ type corresponding to the base64Binary XML Schema built-in type.">Base64Binary</a>;
-<a name="l00354"></a>00354 
-<a name="l00359"></a>00359   typedef ::xsd::cxx::tree::hex_binary&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#ac344f65d115a7291df483b253bc995cb" title="C++ type corresponding to the hexBinary XML Schema built-in type.">HexBinary</a>;
-<a name="l00360"></a>00360 
+<a name="l00344"></a>00344   typedef ::xsd::cxx::tree::buffer&lt; char &gt; <a class="code" href="namespacexml__schema.html#af8732a0949261972e4b167f50a23275d" title="Binary buffer type.">Buffer</a>;
+<a name="l00345"></a>00345 
+<a name="l00350"></a>00350   typedef ::xsd::cxx::tree::base64_binary&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a439c138de03306df7e07a447abfe54ed" title="C++ type corresponding to the base64Binary XML Schema built-in type.">Base64Binary</a>;
+<a name="l00351"></a>00351 
+<a name="l00356"></a>00356   typedef ::xsd::cxx::tree::hex_binary&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#ac344f65d115a7291df483b253bc995cb" title="C++ type corresponding to the hexBinary XML Schema built-in type.">HexBinary</a>;
+<a name="l00357"></a>00357 
+<a name="l00358"></a>00358 
+<a name="l00359"></a>00359   <span class="comment">// Date/time.</span>
+<a name="l00360"></a>00360   <span class="comment">//</span>
 <a name="l00361"></a>00361 
-<a name="l00362"></a>00362   <span class="comment">// Date/time.</span>
-<a name="l00363"></a>00363   <span class="comment">//</span>
-<a name="l00364"></a>00364 
-<a name="l00368"></a>00368   typedef ::xsd::cxx::tree::time_zone <a class="code" href="namespacexml__schema.html#a2c0cb548b6be42f0e539c80f4d111250" title="Time zone type.">TimeZone</a>;
-<a name="l00369"></a>00369 
-<a name="l00374"></a>00374   typedef ::xsd::cxx::tree::date&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a1ab9f6103d1c58127c37c50226e1b19d" title="C++ type corresponding to the date XML Schema built-in type.">Date</a>;
-<a name="l00375"></a>00375 
-<a name="l00380"></a>00380   typedef ::xsd::cxx::tree::date_time&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#ac157d7debe19af40c06ef2330429a088" title="C++ type corresponding to the dateTime XML Schema built-in type.">DateTime</a>;
-<a name="l00381"></a>00381 
-<a name="l00386"></a>00386   typedef ::xsd::cxx::tree::duration&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#aa7bc30c31d90cae4c4cdae79c647773d" title="C++ type corresponding to the duration XML Schema built-in type.">Duration</a>;
-<a name="l00387"></a>00387 
-<a name="l00392"></a>00392   typedef ::xsd::cxx::tree::gday&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a5b06d49d8c16e03552ccb1b3965a885b" title="C++ type corresponding to the gDay XML Schema built-in type.">Gday</a>;
-<a name="l00393"></a>00393 
-<a name="l00398"></a>00398   typedef ::xsd::cxx::tree::gmonth&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a3ba0912e4c675fb93fb759d6bfd46395" title="C++ type corresponding to the gMonth XML Schema built-in type.">Gmonth</a>;
-<a name="l00399"></a>00399 
-<a name="l00404"></a>00404   typedef ::xsd::cxx::tree::gmonth_day&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a2c90cd4093544b12b5ce7fce76c22fb7" title="C++ type corresponding to the gMonthDay XML Schema built-in type.">GmonthDay</a>;
-<a name="l00405"></a>00405 
-<a name="l00410"></a>00410   typedef ::xsd::cxx::tree::gyear&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a4ee36addde54a21b720c12f215d5a92e" title="C++ type corresponding to the gYear XML Schema built-in type.">Gyear</a>;
-<a name="l00411"></a>00411 
-<a name="l00416"></a>00416   typedef ::xsd::cxx::tree::gyear_month&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a1d88a18a52a8b9f3b1c8d2c865ba089d" title="C++ type corresponding to the gYearMonth XML Schema built-in type.">GyearMonth</a>;
-<a name="l00417"></a>00417 
-<a name="l00422"></a>00422   typedef ::xsd::cxx::tree::time&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a9089f1cb5793341884da2b1faa310f09" title="C++ type corresponding to the time XML Schema built-in type.">Time</a>;
-<a name="l00423"></a>00423 
+<a name="l00365"></a>00365   typedef ::xsd::cxx::tree::time_zone <a class="code" href="namespacexml__schema.html#a2c0cb548b6be42f0e539c80f4d111250" title="Time zone type.">TimeZone</a>;
+<a name="l00366"></a>00366 
+<a name="l00371"></a>00371   typedef ::xsd::cxx::tree::date&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a1ab9f6103d1c58127c37c50226e1b19d" title="C++ type corresponding to the date XML Schema built-in type.">Date</a>;
+<a name="l00372"></a>00372 
+<a name="l00377"></a>00377   typedef ::xsd::cxx::tree::date_time&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#ac157d7debe19af40c06ef2330429a088" title="C++ type corresponding to the dateTime XML Schema built-in type.">DateTime</a>;
+<a name="l00378"></a>00378 
+<a name="l00383"></a>00383   typedef ::xsd::cxx::tree::duration&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#aa7bc30c31d90cae4c4cdae79c647773d" title="C++ type corresponding to the duration XML Schema built-in type.">Duration</a>;
+<a name="l00384"></a>00384 
+<a name="l00389"></a>00389   typedef ::xsd::cxx::tree::gday&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a5b06d49d8c16e03552ccb1b3965a885b" title="C++ type corresponding to the gDay XML Schema built-in type.">Gday</a>;
+<a name="l00390"></a>00390 
+<a name="l00395"></a>00395   typedef ::xsd::cxx::tree::gmonth&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a3ba0912e4c675fb93fb759d6bfd46395" title="C++ type corresponding to the gMonth XML Schema built-in type.">Gmonth</a>;
+<a name="l00396"></a>00396 
+<a name="l00401"></a>00401   typedef ::xsd::cxx::tree::gmonth_day&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a2c90cd4093544b12b5ce7fce76c22fb7" title="C++ type corresponding to the gMonthDay XML Schema built-in type.">GmonthDay</a>;
+<a name="l00402"></a>00402 
+<a name="l00407"></a>00407   typedef ::xsd::cxx::tree::gyear&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a4ee36addde54a21b720c12f215d5a92e" title="C++ type corresponding to the gYear XML Schema built-in type.">Gyear</a>;
+<a name="l00408"></a>00408 
+<a name="l00413"></a>00413   typedef ::xsd::cxx::tree::gyear_month&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a1d88a18a52a8b9f3b1c8d2c865ba089d" title="C++ type corresponding to the gYearMonth XML Schema built-in type.">GyearMonth</a>;
+<a name="l00414"></a>00414 
+<a name="l00419"></a>00419   typedef ::xsd::cxx::tree::time&lt; char, SimpleType &gt; <a class="code" href="namespacexml__schema.html#a9089f1cb5793341884da2b1faa310f09" title="C++ type corresponding to the time XML Schema built-in type.">Time</a>;
+<a name="l00420"></a>00420 
+<a name="l00421"></a>00421 
+<a name="l00422"></a>00422   <span class="comment">// Entity.</span>
+<a name="l00423"></a>00423   <span class="comment">//</span>
 <a name="l00424"></a>00424 
-<a name="l00425"></a>00425   <span class="comment">// Entity.</span>
-<a name="l00426"></a>00426   <span class="comment">//</span>
-<a name="l00427"></a>00427 
-<a name="l00432"></a>00432   typedef ::xsd::cxx::tree::entity&lt; char, Ncname &gt; <a class="code" href="namespacexml__schema.html#a34af04faeed4d3cfc482a9f4fa43aa4b" title="C++ type corresponding to the ENTITY XML Schema built-in type.">Entity</a>;
-<a name="l00433"></a>00433 
-<a name="l00438"></a>00438   typedef ::xsd::cxx::tree::entities&lt; char, SimpleType, Entity &gt; <a class="code" href="namespacexml__schema.html#a906654593daefd1bd7462fa2434a6002" title="C++ type corresponding to the ENTITIES XML Schema built-in type.">Entities</a>;
-<a name="l00439"></a>00439 
+<a name="l00429"></a>00429   typedef ::xsd::cxx::tree::entity&lt; char, Ncname &gt; <a class="code" href="namespacexml__schema.html#a34af04faeed4d3cfc482a9f4fa43aa4b" title="C++ type corresponding to the ENTITY XML Schema built-in type.">Entity</a>;
+<a name="l00430"></a>00430 
+<a name="l00435"></a>00435   typedef ::xsd::cxx::tree::entities&lt; char, SimpleType, Entity &gt; <a class="code" href="namespacexml__schema.html#a906654593daefd1bd7462fa2434a6002" title="C++ type corresponding to the ENTITIES XML Schema built-in type.">Entities</a>;
+<a name="l00436"></a>00436 
+<a name="l00437"></a>00437 
+<a name="l00438"></a>00438   <span class="comment">// Flags and properties.</span>
+<a name="l00439"></a>00439   <span class="comment">//</span>
 <a name="l00440"></a>00440 
-<a name="l00444"></a>00444   typedef ::xsd::cxx::tree::element_type&lt; char, Type &gt; <a class="code" href="namespacexml__schema.html#a7dffa68a901bbdd836d7ff3a3e10c9d2" title="Base class for element types.">ElementType</a>;
+<a name="l00444"></a>00444   typedef ::xsd::cxx::tree::flags <a class="code" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943" title="Parsing and serialization flags.">Flags</a>;
 <a name="l00445"></a>00445 
-<a name="l00449"></a>00449   typedef ::xsd::cxx::tree::element_map&lt; char, Type &gt; <a class="code" href="namespacexml__schema.html#a4fb4e959438708240e2f787eee446141" title="Root element map.">ElementMap</a>;
+<a name="l00449"></a>00449   typedef ::xsd::cxx::tree::properties&lt; char &gt; <a class="code" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c" title="Parsing properties.">Properties</a>;
 <a name="l00450"></a>00450 
-<a name="l00451"></a>00451   <span class="comment">// Flags and properties.</span>
+<a name="l00451"></a>00451   <span class="comment">// Parsing/serialization diagnostics.</span>
 <a name="l00452"></a>00452   <span class="comment">//</span>
 <a name="l00453"></a>00453 
-<a name="l00457"></a>00457   typedef ::xsd::cxx::tree::flags <a class="code" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943" title="Parsing and serialization flags.">Flags</a>;
+<a name="l00457"></a>00457   typedef ::xsd::cxx::tree::severity <a class="code" href="namespacexml__schema.html#a1385d97f1fb2a3b623185e7ef2a12c08" title="Error severity.">Severity</a>;
 <a name="l00458"></a>00458 
-<a name="l00462"></a>00462   typedef ::xsd::cxx::tree::properties&lt; char &gt; <a class="code" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c" title="Parsing properties.">Properties</a>;
+<a name="l00462"></a>00462   typedef ::xsd::cxx::tree::error&lt; char &gt; <a class="code" href="namespacexml__schema.html#a21e804b3775e71d965fc63126fa6f4cb" title="Error condition.">Error</a>;
 <a name="l00463"></a>00463 
-<a name="l00464"></a>00464   <span class="comment">// Parsing/serialization diagnostics.</span>
-<a name="l00465"></a>00465   <span class="comment">//</span>
-<a name="l00466"></a>00466 
-<a name="l00470"></a>00470   typedef ::xsd::cxx::tree::severity <a class="code" href="namespacexml__schema.html#a1385d97f1fb2a3b623185e7ef2a12c08" title="Error severity.">Severity</a>;
+<a name="l00467"></a>00467   typedef ::xsd::cxx::tree::diagnostics&lt; char &gt; <a class="code" href="namespacexml__schema.html#aeacc5a291452af2cabc910be1bae640d" title="List of error conditions.">Diagnostics</a>;
+<a name="l00468"></a>00468 
+<a name="l00469"></a>00469   <span class="comment">// Exceptions.</span>
+<a name="l00470"></a>00470   <span class="comment">//</span>
 <a name="l00471"></a>00471 
-<a name="l00475"></a>00475   typedef ::xsd::cxx::tree::error&lt; char &gt; <a class="code" href="namespacexml__schema.html#a21e804b3775e71d965fc63126fa6f4cb" title="Error condition.">Error</a>;
+<a name="l00475"></a>00475   typedef ::xsd::cxx::tree::exception&lt; char &gt; <a class="code" href="namespacexml__schema.html#ac873abff0228946d91e7ababf2cededc" title="Root of the C++/Tree exception hierarchy.">Exception</a>;
 <a name="l00476"></a>00476 
-<a name="l00480"></a>00480   typedef ::xsd::cxx::tree::diagnostics&lt; char &gt; <a class="code" href="namespacexml__schema.html#aeacc5a291452af2cabc910be1bae640d" title="List of error conditions.">Diagnostics</a>;
-<a name="l00481"></a>00481 
-<a name="l00482"></a>00482   <span class="comment">// Exceptions.</span>
-<a name="l00483"></a>00483   <span class="comment">//</span>
-<a name="l00484"></a>00484 
-<a name="l00488"></a>00488   typedef ::xsd::cxx::tree::exception&lt; char &gt; <a class="code" href="namespacexml__schema.html#ac873abff0228946d91e7ababf2cededc" title="Root of the C++/Tree exception hierarchy.">Exception</a>;
-<a name="l00489"></a>00489 
-<a name="l00494"></a>00494   typedef ::xsd::cxx::tree::bounds&lt; char &gt; <a class="code" href="namespacexml__schema.html#a8ad4f95d0dda1ea131f69a7231deb0fe" title="Exception indicating that the size argument exceeds the capacity argument.">Bounds</a>;
-<a name="l00495"></a>00495 
-<a name="l00500"></a>00500   typedef ::xsd::cxx::tree::duplicate_id&lt; char &gt; <a class="code" href="namespacexml__schema.html#a54fd4ff8caf281b84358720a39d7573a" title="Exception indicating that a duplicate ID value was encountered in the object model.">DuplicateId</a>;
-<a name="l00501"></a>00501 
-<a name="l00505"></a>00505   typedef ::xsd::cxx::tree::parsing&lt; char &gt; <a class="code" href="namespacexml__schema.html#a439552700a98fdcf8db5e211f47edcb6" title="Exception indicating a parsing failure.">Parsing</a>;
-<a name="l00506"></a>00506 
-<a name="l00511"></a>00511   typedef ::xsd::cxx::tree::expected_element&lt; char &gt; <a class="code" href="namespacexml__schema.html#affcd8b87d336cb78c21a358711d4e876" title="Exception indicating that an expected element was not encountered.">ExpectedElement</a>;
-<a name="l00512"></a>00512 
-<a name="l00517"></a>00517   typedef ::xsd::cxx::tree::unexpected_element&lt; char &gt; <a class="code" href="namespacexml__schema.html#a9d851681cf40547856f7e7ef2c2e1f2f" title="Exception indicating that an unexpected element was encountered.">UnexpectedElement</a>;
-<a name="l00518"></a>00518 
-<a name="l00523"></a>00523   typedef ::xsd::cxx::tree::expected_attribute&lt; char &gt; <a class="code" href="namespacexml__schema.html#a78581d3d4ffe1356dfe8802b25cda56c" title="Exception indicating that an expected attribute was not encountered.">ExpectedAttribute</a>;
-<a name="l00524"></a>00524 
-<a name="l00529"></a>00529   typedef ::xsd::cxx::tree::unexpected_enumerator&lt; char &gt; <a class="code" href="namespacexml__schema.html#afddcc3f30878e928671a15151128783b" title="Exception indicating that an unexpected enumerator was encountered.">UnexpectedEnumerator</a>;
-<a name="l00530"></a>00530 
-<a name="l00535"></a>00535   typedef ::xsd::cxx::tree::expected_text_content&lt; char &gt; <a class="code" href="namespacexml__schema.html#ae1126b64dc28661806114ccce3a9a568" title="Exception indicating that the text content was expected for an element.">ExpectedTextContent</a>;
-<a name="l00536"></a>00536 
-<a name="l00541"></a>00541   typedef ::xsd::cxx::tree::no_prefix_mapping&lt; char &gt; <a class="code" href="namespacexml__schema.html#ac1001885bc0f0942758a60c65c028058" title="Exception indicating that a prefix-namespace mapping was not provided.">NoPrefixMapping</a>;
-<a name="l00542"></a>00542 
-<a name="l00547"></a>00547   typedef ::xsd::cxx::tree::no_type_info&lt; char &gt; <a class="code" href="namespacexml__schema.html#a7a2506434a2f51df9fee6ec7dc0ad12e" title="Exception indicating that the type information is not available for a type.">NoTypeInfo</a>;
-<a name="l00548"></a>00548 
-<a name="l00553"></a>00553   typedef ::xsd::cxx::tree::not_derived&lt; char &gt; <a class="code" href="namespacexml__schema.html#af5fd843f86d4a67881d295326ee79bf4" title="Exception indicating that the types are not related by inheritance.">NotDerived</a>;
-<a name="l00554"></a>00554 
-<a name="l00559"></a>00559   typedef ::xsd::cxx::tree::no_element_info&lt; char &gt; <a class="code" href="namespacexml__schema.html#a1e727485a1944aba45cfc01c4510bb97" title="Exception indicating that parsing or serialization information is not available for an element...">NoElementInfo</a>;
-<a name="l00560"></a>00560 
-<a name="l00564"></a>00564   typedef ::xsd::cxx::xml::error_handler&lt; char &gt; <a class="code" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc" title="Error handler callback interface.">ErrorHandler</a>;
-<a name="l00565"></a>00565 
-<a name="l00569"></a>00569   <span class="keyword">namespace </span>dom
-<a name="l00570"></a>00570   {
-<a name="l00574"></a>00574     using ::xsd::cxx::xml::dom::auto_ptr;
-<a name="l00575"></a>00575 
-<a name="l00576"></a>00576 <span class="preprocessor">#ifndef XSD_CXX_TREE_TREE_NODE_KEY__XML_SCHEMA</span>
-<a name="l00577"></a>00577 <span class="preprocessor"></span><span class="preprocessor">#define XSD_CXX_TREE_TREE_NODE_KEY__XML_SCHEMA</span>
-<a name="l00578"></a>00578 <span class="preprocessor"></span>
-<a name="l00581"></a>00581     <span class="keyword">const</span> XMLCh* <span class="keyword">const</span> <a class="code" href="namespacexml__schema_1_1dom.html#aea364981e614f964cd9a9fae80e6a7bd" title="DOM user data key for back pointers to tree nodes.">treeNodeKey</a> = ::xsd::cxx::tree::user_data_keys::node;
-<a name="l00582"></a>00582 <span class="preprocessor">#endif</span>
-<a name="l00583"></a>00583 <span class="preprocessor"></span>  }
-<a name="l00584"></a>00584 
-<a name="l00585"></a>00585   <span class="comment">//@cond</span>
-<a name="l00586"></a>00586 
-<a name="l00587"></a>00587 <span class="preprocessor">#ifndef XSD_CXX_TREE_ELEMENT_MAP_INIT__XML_SCHEMA</span>
-<a name="l00588"></a>00588 <span class="preprocessor"></span><span class="preprocessor">#define XSD_CXX_TREE_ELEMENT_MAP_INIT__XML_SCHEMA</span>
-<a name="l00589"></a>00589 <span class="preprocessor"></span>  <span class="keyword">static</span>
-<a name="l00590"></a>00590   const ::xsd::cxx::tree::element_map_init&lt; char, Type &gt;
-<a name="l00591"></a>00591   _xsd_element_map_init;
-<a name="l00592"></a>00592 <span class="preprocessor">#endif</span>
+<a name="l00481"></a>00481   typedef ::xsd::cxx::tree::bounds&lt; char &gt; <a class="code" href="namespacexml__schema.html#a8ad4f95d0dda1ea131f69a7231deb0fe" title="Exception indicating that the size argument exceeds the capacity argument.">Bounds</a>;
+<a name="l00482"></a>00482 
+<a name="l00487"></a>00487   typedef ::xsd::cxx::tree::duplicate_id&lt; char &gt; <a class="code" href="namespacexml__schema.html#a54fd4ff8caf281b84358720a39d7573a" title="Exception indicating that a duplicate ID value was encountered in the object model.">DuplicateId</a>;
+<a name="l00488"></a>00488 
+<a name="l00492"></a>00492   typedef ::xsd::cxx::tree::parsing&lt; char &gt; <a class="code" href="namespacexml__schema.html#a439552700a98fdcf8db5e211f47edcb6" title="Exception indicating a parsing failure.">Parsing</a>;
+<a name="l00493"></a>00493 
+<a name="l00498"></a>00498   typedef ::xsd::cxx::tree::expected_element&lt; char &gt; <a class="code" href="namespacexml__schema.html#affcd8b87d336cb78c21a358711d4e876" title="Exception indicating that an expected element was not encountered.">ExpectedElement</a>;
+<a name="l00499"></a>00499 
+<a name="l00504"></a>00504   typedef ::xsd::cxx::tree::unexpected_element&lt; char &gt; <a class="code" href="namespacexml__schema.html#a9d851681cf40547856f7e7ef2c2e1f2f" title="Exception indicating that an unexpected element was encountered.">UnexpectedElement</a>;
+<a name="l00505"></a>00505 
+<a name="l00510"></a>00510   typedef ::xsd::cxx::tree::expected_attribute&lt; char &gt; <a class="code" href="namespacexml__schema.html#a78581d3d4ffe1356dfe8802b25cda56c" title="Exception indicating that an expected attribute was not encountered.">ExpectedAttribute</a>;
+<a name="l00511"></a>00511 
+<a name="l00516"></a>00516   typedef ::xsd::cxx::tree::unexpected_enumerator&lt; char &gt; <a class="code" href="namespacexml__schema.html#afddcc3f30878e928671a15151128783b" title="Exception indicating that an unexpected enumerator was encountered.">UnexpectedEnumerator</a>;
+<a name="l00517"></a>00517 
+<a name="l00522"></a>00522   typedef ::xsd::cxx::tree::expected_text_content&lt; char &gt; <a class="code" href="namespacexml__schema.html#ae1126b64dc28661806114ccce3a9a568" title="Exception indicating that the text content was expected for an element.">ExpectedTextContent</a>;
+<a name="l00523"></a>00523 
+<a name="l00528"></a>00528   typedef ::xsd::cxx::tree::no_prefix_mapping&lt; char &gt; <a class="code" href="namespacexml__schema.html#ac1001885bc0f0942758a60c65c028058" title="Exception indicating that a prefix-namespace mapping was not provided.">NoPrefixMapping</a>;
+<a name="l00529"></a>00529 
+<a name="l00534"></a>00534   typedef ::xsd::cxx::tree::no_type_info&lt; char &gt; <a class="code" href="namespacexml__schema.html#a7a2506434a2f51df9fee6ec7dc0ad12e" title="Exception indicating that the type information is not available for a type.">NoTypeInfo</a>;
+<a name="l00535"></a>00535 
+<a name="l00540"></a>00540   typedef ::xsd::cxx::tree::not_derived&lt; char &gt; <a class="code" href="namespacexml__schema.html#af5fd843f86d4a67881d295326ee79bf4" title="Exception indicating that the types are not related by inheritance.">NotDerived</a>;
+<a name="l00541"></a>00541 
+<a name="l00545"></a>00545   typedef ::xsd::cxx::xml::error_handler&lt; char &gt; <a class="code" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc" title="Error handler callback interface.">ErrorHandler</a>;
+<a name="l00546"></a>00546 
+<a name="l00550"></a>00550   <span class="keyword">namespace </span>dom
+<a name="l00551"></a>00551   {
+<a name="l00555"></a>00555     using ::xsd::cxx::xml::dom::auto_ptr;
+<a name="l00556"></a>00556 
+<a name="l00557"></a>00557 <span class="preprocessor">#ifndef XSD_CXX_TREE_TREE_NODE_KEY__XML_SCHEMA</span>
+<a name="l00558"></a>00558 <span class="preprocessor"></span><span class="preprocessor">#define XSD_CXX_TREE_TREE_NODE_KEY__XML_SCHEMA</span>
+<a name="l00559"></a>00559 <span class="preprocessor"></span>
+<a name="l00562"></a>00562     <span class="keyword">const</span> XMLCh* <span class="keyword">const</span> <a class="code" href="namespacexml__schema_1_1dom.html#aea364981e614f964cd9a9fae80e6a7bd" title="DOM user data key for back pointers to tree nodes.">treeNodeKey</a> = ::xsd::cxx::tree::user_data_keys::node;
+<a name="l00563"></a>00563 <span class="preprocessor">#endif</span>
+<a name="l00564"></a>00564 <span class="preprocessor"></span>  }
+<a name="l00565"></a>00565 }
+<a name="l00566"></a>00566 
+<a name="l00567"></a>00567 <span class="comment">// Forward declarations.</span>
+<a name="l00568"></a>00568 <span class="comment">//</span>
+<a name="l00569"></a>00569 <span class="keyword">namespace </span>openstack
+<a name="l00570"></a>00570 {
+<a name="l00571"></a>00571   <span class="keyword">namespace </span>xml
+<a name="l00572"></a>00572   {
+<a name="l00573"></a>00573     <span class="keyword">class </span>Progress;
+<a name="l00574"></a>00574   }
+<a name="l00575"></a>00575 }
+<a name="l00576"></a>00576 
+<a name="l00577"></a>00577 
+<a name="l00578"></a>00578 <span class="preprocessor">#include &lt;memory&gt;</span>    <span class="comment">// std::auto_ptr</span>
+<a name="l00579"></a>00579 <span class="preprocessor">#include &lt;limits&gt;</span>    <span class="comment">// std::numeric_limits</span>
+<a name="l00580"></a>00580 <span class="preprocessor">#include &lt;algorithm&gt;</span> <span class="comment">// std::binary_search</span>
+<a name="l00581"></a>00581 
+<a name="l00582"></a>00582 <span class="preprocessor">#include &lt;xsd/cxx/xml/char-utf8.hxx&gt;</span>
+<a name="l00583"></a>00583 
+<a name="l00584"></a>00584 <span class="preprocessor">#include &lt;xsd/cxx/tree/exceptions.hxx&gt;</span>
+<a name="l00585"></a>00585 <span class="preprocessor">#include &lt;xsd/cxx/tree/elements.hxx&gt;</span>
+<a name="l00586"></a>00586 <span class="preprocessor">#include &lt;xsd/cxx/tree/containers.hxx&gt;</span>
+<a name="l00587"></a>00587 <span class="preprocessor">#include &lt;xsd/cxx/tree/list.hxx&gt;</span>
+<a name="l00588"></a>00588 
+<a name="l00589"></a>00589 <span class="preprocessor">#include &lt;xsd/cxx/xml/dom/parsing-header.hxx&gt;</span>
+<a name="l00590"></a>00590 
+<a name="l00591"></a>00591 <span class="preprocessor">#ifndef XSD_DONT_INCLUDE_INLINE</span>
+<a name="l00592"></a>00592 <span class="preprocessor"></span><span class="preprocessor">#define XSD_DONT_INCLUDE_INLINE</span>
 <a name="l00593"></a>00593 <span class="preprocessor"></span>
-<a name="l00594"></a>00594   <span class="comment">//@endcond</span>
-<a name="l00595"></a>00595 }
-<a name="l00596"></a>00596 
-<a name="l00597"></a>00597 <span class="comment">// Forward declarations.</span>
-<a name="l00598"></a>00598 <span class="comment">//</span>
+<a name="l00594"></a>00594 <span class="preprocessor">#undef XSD_DONT_INCLUDE_INLINE</span>
+<a name="l00595"></a>00595 <span class="preprocessor"></span><span class="preprocessor">#else</span>
+<a name="l00596"></a>00596 <span class="preprocessor"></span>
+<a name="l00597"></a>00597 <span class="preprocessor">#endif // XSD_DONT_INCLUDE_INLINE</span>
+<a name="l00598"></a>00598 <span class="preprocessor"></span>
 <a name="l00599"></a>00599 <span class="keyword">namespace </span>openstack
 <a name="l00600"></a>00600 {
-<a name="l00601"></a>00601   <span class="keyword">namespace </span>xml
-<a name="l00602"></a>00602   {
-<a name="l00603"></a>00603     <span class="keyword">class </span>Progress;
-<a name="l00604"></a>00604   }
-<a name="l00605"></a>00605 }
-<a name="l00606"></a>00606 
-<a name="l00607"></a>00607 
-<a name="l00608"></a>00608 <span class="preprocessor">#include &lt;memory&gt;</span>    <span class="comment">// std::auto_ptr</span>
-<a name="l00609"></a>00609 <span class="preprocessor">#include &lt;limits&gt;</span>    <span class="comment">// std::numeric_limits</span>
-<a name="l00610"></a>00610 <span class="preprocessor">#include &lt;algorithm&gt;</span> <span class="comment">// std::binary_search</span>
-<a name="l00611"></a>00611 
-<a name="l00612"></a>00612 <span class="preprocessor">#include &lt;xsd/cxx/xml/char-utf8.hxx&gt;</span>
-<a name="l00613"></a>00613 
-<a name="l00614"></a>00614 <span class="preprocessor">#include &lt;xsd/cxx/tree/exceptions.hxx&gt;</span>
-<a name="l00615"></a>00615 <span class="preprocessor">#include &lt;xsd/cxx/tree/elements.hxx&gt;</span>
-<a name="l00616"></a>00616 <span class="preprocessor">#include &lt;xsd/cxx/tree/containers.hxx&gt;</span>
-<a name="l00617"></a>00617 <span class="preprocessor">#include &lt;xsd/cxx/tree/list.hxx&gt;</span>
-<a name="l00618"></a>00618 
-<a name="l00619"></a>00619 <span class="preprocessor">#include &lt;xsd/cxx/xml/dom/parsing-header.hxx&gt;</span>
-<a name="l00620"></a>00620 
-<a name="l00621"></a>00621 <span class="preprocessor">#ifndef XSD_DONT_INCLUDE_INLINE</span>
-<a name="l00622"></a>00622 <span class="preprocessor"></span><span class="preprocessor">#define XSD_DONT_INCLUDE_INLINE</span>
-<a name="l00623"></a>00623 <span class="preprocessor"></span>
-<a name="l00624"></a>00624 <span class="preprocessor">#undef XSD_DONT_INCLUDE_INLINE</span>
-<a name="l00625"></a>00625 <span class="preprocessor"></span><span class="preprocessor">#else</span>
-<a name="l00626"></a>00626 <span class="preprocessor"></span>
-<a name="l00627"></a>00627 <span class="preprocessor">#endif // XSD_DONT_INCLUDE_INLINE</span>
-<a name="l00628"></a>00628 <span class="preprocessor"></span>
-<a name="l00629"></a>00629 <span class="keyword">namespace </span>openstack
-<a name="l00630"></a>00630 {
-<a name="l00635"></a>00635   <span class="keyword">namespace </span>xml
-<a name="l00636"></a>00636   {
-<a name="l00642"></a>00642     <span class="keyword">class </span>Progress: <span class="keyword">public</span> ::xsd::cxx::tree::fundamental_base&lt; ::xml_schema::Int, char, ::xml_schema::SimpleType &gt;
-<a name="l00643"></a>00643     {
-<a name="l00644"></a>00644       <span class="keyword">public</span>:
+<a name="l00605"></a>00605   <span class="keyword">namespace </span>xml
+<a name="l00606"></a>00606   {
+<a name="l00612"></a><a class="code" href="classopenstack_1_1xml_1_1Progress.html">00612</a>     <span class="keyword">class </span><a class="code" href="classopenstack_1_1xml_1_1Progress.html" title="Class corresponding to the Progress schema type.">Progress</a>: <span class="keyword">public</span> ::xsd::cxx::tree::fundamental_base&lt; ::xml_schema::Int, char, ::xml_schema::SimpleType &gt;
+<a name="l00613"></a>00613     {
+<a name="l00614"></a>00614       <span class="keyword">public</span>:
+<a name="l00619"></a>00619 
+<a name="l00624"></a>00624       <a class="code" href="classopenstack_1_1xml_1_1Progress.html#a284b101defb645e8e4c1dca48a81d4dd" title="Create an instance from the ultimate base and initializers for required elements and attributes...">Progress</a> (<a class="code" href="namespacexml__schema.html#a12d975a13061c938969b2b5143e97645" title="C++ type corresponding to the int XML Schema built-in type.">const ::xml_schema::Int</a>&amp;);
+<a name="l00625"></a>00625 
+<a name="l00634"></a>00634       <a class="code" href="classopenstack_1_1xml_1_1Progress.html#a284b101defb645e8e4c1dca48a81d4dd" title="Create an instance from the ultimate base and initializers for required elements and attributes...">Progress</a> (const ::xercesc::DOMElement&amp; e,
+<a name="l00635"></a>00635                 ::<a class="code" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943" title="Parsing and serialization flags.">xml_schema::Flags</a> f = 0,
+<a name="l00636"></a>00636                 ::<a class="code" href="namespacexml__schema.html#a333dea2213742aea47a37532dec4ec27" title="Alias for the anyType type.">xml_schema::Container</a>* c = 0);
+<a name="l00637"></a>00637 
+<a name="l00646"></a>00646       <a class="code" href="classopenstack_1_1xml_1_1Progress.html#a284b101defb645e8e4c1dca48a81d4dd" title="Create an instance from the ultimate base and initializers for required elements and attributes...">Progress</a> (const ::xercesc::DOMAttr&amp; a,
+<a name="l00647"></a>00647                 ::<a class="code" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943" title="Parsing and serialization flags.">xml_schema::Flags</a> f = 0,
+<a name="l00648"></a>00648                 ::<a class="code" href="namespacexml__schema.html#a333dea2213742aea47a37532dec4ec27" title="Alias for the anyType type.">xml_schema::Container</a>* c = 0);
 <a name="l00649"></a>00649 
-<a name="l00654"></a>00654       <a class="code" href="classopenstack_1_1xml_1_1Progress.html#a284b101defb645e8e4c1dca48a81d4dd" title="Create an instance from the ultimate base and initializers for required elements and attributes...">Progress</a> (<a class="code" href="namespacexml__schema.html#a12d975a13061c938969b2b5143e97645" title="C++ type corresponding to the int XML Schema built-in type.">const ::xml_schema::Int</a>&amp;);
-<a name="l00655"></a>00655 
-<a name="l00664"></a>00664       <a class="code" href="classopenstack_1_1xml_1_1Progress.html#a284b101defb645e8e4c1dca48a81d4dd" title="Create an instance from the ultimate base and initializers for required elements and attributes...">Progress</a> (const ::xercesc::DOMElement&amp; e,
-<a name="l00665"></a>00665                 ::<a class="code" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943" title="Parsing and serialization flags.">xml_schema::Flags</a> f = 0,
-<a name="l00666"></a>00666                 ::<a class="code" href="namespacexml__schema.html#a333dea2213742aea47a37532dec4ec27" title="Alias for the anyType type.">xml_schema::Container</a>* c = 0);
-<a name="l00667"></a>00667 
-<a name="l00676"></a>00676       <a class="code" href="classopenstack_1_1xml_1_1Progress.html#a284b101defb645e8e4c1dca48a81d4dd" title="Create an instance from the ultimate base and initializers for required elements and attributes...">Progress</a> (const ::xercesc::DOMAttr&amp; a,
-<a name="l00677"></a>00677                 ::<a class="code" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943" title="Parsing and serialization flags.">xml_schema::Flags</a> f = 0,
-<a name="l00678"></a>00678                 ::<a class="code" href="namespacexml__schema.html#a333dea2213742aea47a37532dec4ec27" title="Alias for the anyType type.">xml_schema::Container</a>* c = 0);
-<a name="l00679"></a>00679 
-<a name="l00689"></a>00689       <a class="code" href="classopenstack_1_1xml_1_1Progress.html#a284b101defb645e8e4c1dca48a81d4dd" title="Create an instance from the ultimate base and initializers for required elements and attributes...">Progress</a> (const ::std::string&amp; s,
-<a name="l00690"></a>00690                 const ::xercesc::DOMElement* e,
-<a name="l00691"></a>00691                 ::<a class="code" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943" title="Parsing and serialization flags.">xml_schema::Flags</a> f = 0,
-<a name="l00692"></a>00692                 ::<a class="code" href="namespacexml__schema.html#a333dea2213742aea47a37532dec4ec27" title="Alias for the anyType type.">xml_schema::Container</a>* c = 0);
+<a name="l00659"></a>00659       <a class="code" href="classopenstack_1_1xml_1_1Progress.html#a284b101defb645e8e4c1dca48a81d4dd" title="Create an instance from the ultimate base and initializers for required elements and attributes...">Progress</a> (const ::std::string&amp; s,
+<a name="l00660"></a>00660                 const ::xercesc::DOMElement* e,
+<a name="l00661"></a>00661                 ::<a class="code" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943" title="Parsing and serialization flags.">xml_schema::Flags</a> f = 0,
+<a name="l00662"></a>00662                 ::<a class="code" href="namespacexml__schema.html#a333dea2213742aea47a37532dec4ec27" title="Alias for the anyType type.">xml_schema::Container</a>* c = 0);
+<a name="l00663"></a>00663 
+<a name="l00673"></a>00673       <a class="code" href="classopenstack_1_1xml_1_1Progress.html#a284b101defb645e8e4c1dca48a81d4dd" title="Create an instance from the ultimate base and initializers for required elements and attributes...">Progress</a> (<span class="keyword">const</span> <a class="code" href="classopenstack_1_1xml_1_1Progress.html" title="Class corresponding to the Progress schema type.">Progress</a>&amp; x,
+<a name="l00674"></a>00674                 ::<a class="code" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943" title="Parsing and serialization flags.">xml_schema::Flags</a> f = 0,
+<a name="l00675"></a>00675                 ::<a class="code" href="namespacexml__schema.html#a333dea2213742aea47a37532dec4ec27" title="Alias for the anyType type.">xml_schema::Container</a>* c = 0);
+<a name="l00676"></a>00676 
+<a name="l00688"></a>00688       <span class="keyword">virtual</span> <a class="code" href="classopenstack_1_1xml_1_1Progress.html" title="Class corresponding to the Progress schema type.">Progress</a>*
+<a name="l00689"></a>00689       <a class="code" href="classopenstack_1_1xml_1_1Progress.html#aaef24f561fc38e90098f344d0742047d" title="Copy the instance polymorphically.">_clone</a> (::<a class="code" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943" title="Parsing and serialization flags.">xml_schema::Flags</a> f = 0,
+<a name="l00690"></a>00690               ::<a class="code" href="namespacexml__schema.html#a333dea2213742aea47a37532dec4ec27" title="Alias for the anyType type.">xml_schema::Container</a>* c = 0) <span class="keyword">const</span>;
+<a name="l00691"></a>00691 
 <a name="l00693"></a>00693 
-<a name="l00703"></a>00703       <a class="code" href="classopenstack_1_1xml_1_1Progress.html#a284b101defb645e8e4c1dca48a81d4dd" title="Create an instance from the ultimate base and initializers for required elements and attributes...">Progress</a> (<span class="keyword">const</span> <a class="code" href="classopenstack_1_1xml_1_1Progress.html#a284b101defb645e8e4c1dca48a81d4dd" title="Create an instance from the ultimate base and initializers for required elements and attributes...">Progress</a>&amp; x,
-<a name="l00704"></a>00704                 ::<a class="code" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943" title="Parsing and serialization flags.">xml_schema::Flags</a> f = 0,
-<a name="l00705"></a>00705                 ::<a class="code" href="namespacexml__schema.html#a333dea2213742aea47a37532dec4ec27" title="Alias for the anyType type.">xml_schema::Container</a>* c = 0);
-<a name="l00706"></a>00706 
-<a name="l00718"></a>00718       <span class="keyword">virtual</span> <a class="code" href="classopenstack_1_1xml_1_1Progress.html#a284b101defb645e8e4c1dca48a81d4dd" title="Create an instance from the ultimate base and initializers for required elements and attributes...">Progress</a>*
-<a name="l00719"></a>00719       <a class="code" href="classopenstack_1_1xml_1_1Progress.html#aaef24f561fc38e90098f344d0742047d" title="Copy the instance polymorphically.">_clone</a> (::<a class="code" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943" title="Parsing and serialization flags.">xml_schema::Flags</a> f = 0,
-<a name="l00720"></a>00720               ::<a class="code" href="namespacexml__schema.html#a333dea2213742aea47a37532dec4ec27" title="Alias for the anyType type.">xml_schema::Container</a>* c = 0) <span class="keyword">const</span>;
-<a name="l00721"></a>00721 
-<a name="l00723"></a>00723 
-<a name="l00727"></a>00727       <span class="keyword">virtual</span> 
-<a name="l00728"></a>00728       <a class="code" href="classopenstack_1_1xml_1_1Progress.html#a9b1680dd93a49e7e1db2d8a7fd4eb846" title="Destructor.">~Progress</a> ();
-<a name="l00729"></a>00729     };
-<a name="l00730"></a>00730   }
-<a name="l00731"></a>00731 }
-<a name="l00732"></a>00732 
-<a name="l00733"></a>00733 <span class="preprocessor">#ifndef XSD_DONT_INCLUDE_INLINE</span>
-<a name="l00734"></a>00734 <span class="preprocessor"></span>
-<a name="l00735"></a>00735 <span class="preprocessor">#endif // XSD_DONT_INCLUDE_INLINE</span>
-<a name="l00736"></a>00736 <span class="preprocessor"></span>
-<a name="l00737"></a>00737 <span class="preprocessor">#ifndef XSD_DONT_INCLUDE_INLINE</span>
-<a name="l00738"></a>00738 <span class="preprocessor"></span><span class="preprocessor">#include &quot;common.ipp&quot;</span>
-<a name="l00739"></a>00739 <span class="preprocessor">#endif // XSD_DONT_INCLUDE_INLINE</span>
-<a name="l00740"></a>00740 <span class="preprocessor"></span>
-<a name="l00741"></a>00741 <span class="preprocessor">#include &lt;xsd/cxx/post.hxx&gt;</span>
-<a name="l00742"></a>00742 
-<a name="l00743"></a>00743 <span class="comment">// Begin epilogue.</span>
-<a name="l00744"></a>00744 <span class="comment">//</span>
-<a name="l00745"></a>00745 <span class="comment">//</span>
-<a name="l00746"></a>00746 <span class="comment">// End epilogue.</span>
-<a name="l00747"></a>00747 
-<a name="l00748"></a>00748 <span class="preprocessor">#endif // XSDS_COMMON_HPP</span>
+<a name="l00697"></a>00697       <span class="keyword">virtual</span> 
+<a name="l00698"></a>00698       <a class="code" href="classopenstack_1_1xml_1_1Progress.html#a9b1680dd93a49e7e1db2d8a7fd4eb846" title="Destructor.">~Progress</a> ();
+<a name="l00699"></a>00699     };
+<a name="l00700"></a>00700   }
+<a name="l00701"></a>00701 }
+<a name="l00702"></a>00702 
+<a name="l00703"></a>00703 <span class="preprocessor">#ifndef XSD_DONT_INCLUDE_INLINE</span>
+<a name="l00704"></a>00704 <span class="preprocessor"></span>
+<a name="l00705"></a>00705 <span class="preprocessor">#endif // XSD_DONT_INCLUDE_INLINE</span>
+<a name="l00706"></a>00706 <span class="preprocessor"></span>
+<a name="l00707"></a>00707 <span class="preprocessor">#include &lt;iosfwd&gt;</span>
+<a name="l00708"></a>00708 
+<a name="l00709"></a>00709 <span class="preprocessor">#include &lt;xercesc/sax/InputSource.hpp&gt;</span>
+<a name="l00710"></a>00710 <span class="preprocessor">#include &lt;xercesc/dom/DOMDocument.hpp&gt;</span>
+<a name="l00711"></a>00711 <span class="preprocessor">#include &lt;xercesc/dom/DOMErrorHandler.hpp&gt;</span>
+<a name="l00712"></a>00712 
+<a name="l00713"></a>00713 <span class="keyword">namespace </span>openstack
+<a name="l00714"></a>00714 {
+<a name="l00715"></a>00715   <span class="keyword">namespace </span>xml
+<a name="l00716"></a>00716   {
+<a name="l00717"></a>00717   }
+<a name="l00718"></a>00718 }
+<a name="l00719"></a>00719 
+<a name="l00720"></a>00720 <span class="preprocessor">#ifndef XSD_DONT_INCLUDE_INLINE</span>
+<a name="l00721"></a>00721 <span class="preprocessor"></span><span class="preprocessor">#include &quot;common.ipp&quot;</span>
+<a name="l00722"></a>00722 <span class="preprocessor">#endif // XSD_DONT_INCLUDE_INLINE</span>
+<a name="l00723"></a>00723 <span class="preprocessor"></span>
+<a name="l00724"></a>00724 <span class="preprocessor">#include &lt;xsd/cxx/post.hxx&gt;</span>
+<a name="l00725"></a>00725 
+<a name="l00726"></a>00726 <span class="comment">// Begin epilogue.</span>
+<a name="l00727"></a>00727 <span class="comment">//</span>
+<a name="l00728"></a>00728 <span class="comment">//</span>
+<a name="l00729"></a>00729 <span class="comment">// End epilogue.</span>
+<a name="l00730"></a>00730 
+<a name="l00731"></a>00731 <span class="preprocessor">#endif // XSDS_COMMON_HPP</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -484,7 +477,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Jul 30 2011 04:55:18 for OpenstackAPI by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Aug 1 2011 17:49:21 for OpenstackAPI by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

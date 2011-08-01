@@ -15,7 +15,6 @@ Generated from version.xsd.
 {\ttfamily \#include $<$xsd/cxx/tree/types.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/xml/error-\/handler.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/xml/dom/auto-\/ptr.hxx$>$}\par
-{\ttfamily \#include $<$xsd/cxx/tree/element-\/map.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/parsing.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/byte.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/unsigned-\/byte.hxx$>$}\par
@@ -29,20 +28,21 @@ Generated from version.xsd.
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/float.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/double.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/decimal.hxx$>$}\par
-{\ttfamily \#include $<$xsd/cxx/tree/parsing/element-\/map.txx$>$}\par
 {\ttfamily \#include $<$memory$>$}\par
 {\ttfamily \#include $<$limits$>$}\par
 {\ttfamily \#include $<$algorithm$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/containers.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/list.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/xml/dom/parsing-\/header.hxx$>$}\par
+{\ttfamily \#include $<$iosfwd$>$}\par
+{\ttfamily \#include $<$xercesc/sax/InputSource.hpp$>$}\par
+{\ttfamily \#include $<$xercesc/dom/DOMDocument.hpp$>$}\par
+{\ttfamily \#include $<$xercesc/dom/DOMErrorHandler.hpp$>$}\par
 {\ttfamily \#include \char`\"{}version.ipp\char`\"{}}\par
 {\ttfamily \#include $<$xsd/cxx/post.hxx$>$}\par
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{classopenstack_1_1xml_1_1Version__}{openstack::xml::Version\_\-}
-\begin{DoxyCompactList}\small\item\em Class corresponding to the version root element. \item\end{DoxyCompactList}\item 
 class \hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version}
 \begin{DoxyCompactList}\small\item\em Class corresponding to the Version schema type. \item\end{DoxyCompactList}\item 
 class \hyperlink{classopenstack_1_1xml_1_1VersionStatus}{openstack::xml::VersionStatus}
@@ -68,6 +68,39 @@ namespace \hyperlink{namespaceopenstack_1_1xml}{openstack::xml}
 \begin{DoxyCompactList}\small\item\em C++ namespace for the http://docs.rackspacecloud.com/servers/api/v1.0 schema namespace. \item\end{DoxyCompactList}
 
 \end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf Parsing functions for the version document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_acabe571be97ab931700903750e0bccf9}{openstack::xml::version} (const ::std::string \&uri,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_abc5a8dd0cbb67912d8135c08a2e7e440}{openstack::xml::version} (const ::std::string \&uri,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_a2c7384f794cc90f72265a9f446a87b37}{openstack::xml::version} (const ::std::string \&uri,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_a7dc9fa453536cfa9b4f5fc1bf224d43f}{openstack::xml::version} (::std::istream \&is,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_ab0c8e0a0f182a6d57bd1c739d5e08c67}{openstack::xml::version} (::std::istream \&is,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_ac6fdb66f91ee005df19f0ce88f645022}{openstack::xml::version} (::std::istream \&is,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_acd07ead1a645d03c672d40f8dbbce626}{openstack::xml::version} (::std::istream \&is, const ::std::string \&id,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_afec3a10dab849aa03c29d74147be2fc2}{openstack::xml::version} (::std::istream \&is, const ::std::string \&id,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id and an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_a28780f5a5373da0905d71b9fd6a547be}{openstack::xml::version} (::std::istream \&is, const ::std::string \&id,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id and a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_abe04fe22fb0af8ea5413138613300625}{openstack::xml::version} (::xercesc::InputSource \&is,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_a4f86e4107b706b038ea17ba4b07b89d5}{openstack::xml::version} (::xercesc::InputSource \&is,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_a3fa291d8cfc5c0986f8a0c41912b1937}{openstack::xml::version} (::xercesc::InputSource \&is,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_a4934a2b52ce51788c603c0a87fd90fd5}{openstack::xml::version} (const ::xercesc::DOMDocument \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_a4ecc9f7ab2a9107da9f5af99989d1a1b}{openstack::xml::version} (::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
 
 
 \subsection{Detailed Description}

@@ -67,9 +67,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <h1>openstack::Servers Class Reference</h1>  </div>
 </div>
@@ -77,21 +77,90 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <!-- doxytag: class="openstack::Servers" -->
 <p><a href="classopenstack_1_1Servers-members.html">List of all members.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa70db2a459e7754dcabc9ab2895ab61a"></a><!-- doxytag: member="openstack::Servers::ServerList" ref="aa70db2a459e7754dcabc9ab2895ab61a" args="" -->
-typedef vector&lt; Server &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ServerList</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af625fb9e0932322dd17ff3aa876f7065"></a><!-- doxytag: member="openstack::Servers::connection" ref="af625fb9e0932322dd17ff3aa876f7065" args="()" -->
-<a class="el" href="classopenstack_1_1HTTPS.html">HTTPS</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>connection</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4f8fe1f4dd16b8eacdfc9b7f44cf981"></a><!-- doxytag: member="openstack::Servers::list" ref="ae4f8fe1f4dd16b8eacdfc9b7f44cf981" args="()" -->
-ServerList&#160;</td><td class="memItemRight" valign="bottom"><b>list</b> ()</td></tr>
-<tr><td colspan="2"><h2><a name="friends"></a>
-Friends</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58e01d02fe556a89795cf7624a7a8405"></a><!-- doxytag: member="openstack::Servers::Openstack" ref="a58e01d02fe556a89795cf7624a7a8405" args="" -->
-class&#160;</td><td class="memItemRight" valign="bottom"><b>Openstack</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa73baeb7fe19a9fcbb33b9b1c321c0b3"></a><!-- doxytag: member="openstack::Servers::Servers" ref="aa73baeb7fe19a9fcbb33b9b1c321c0b3" args="(const string &amp;hostname, const string &amp;path, const string &amp;token)" -->
+&#160;</td><td class="memItemRight" valign="bottom"><b>Servers</b> (const string &amp;hostname, const string &amp;path, const string &amp;token)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac46388d4916edea6bbe24c6c1189397a"></a><!-- doxytag: member="openstack::Servers::connection" ref="ac46388d4916edea6bbe24c6c1189397a" args="() const " -->
+<a class="el" href="classopenstack_1_1HTTPS.html">HTTPS</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>connection</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopenstack_1_1xml_1_1Servers.html#a9cc28e68df0ebb654db381f4bc6b43e0">xml::Servers::ServerSequence</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenstack_1_1Servers.html#ac7aa9b652744badc3ea60b685404bf6a">list</a> (bool details=true, bool useCache=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to our cached vector of <a class="el" href="classopenstack_1_1xml_1_1Servers.html" title="Class corresponding to the Servers schema type.">xml::Servers</a>.  <a href="#ac7aa9b652744badc3ea60b685404bf6a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb5dba2917cd66a660a633f8e1d43e66"></a><!-- doxytag: member="openstack::Servers::list" ref="aeb5dba2917cd66a660a633f8e1d43e66" args="(bool details=true, bool useCache=true) const " -->
+const <br class="typebreak"/>
+<a class="el" href="classopenstack_1_1xml_1_1Servers.html#a9cc28e68df0ebb654db381f4bc6b43e0">xml::Servers::ServerSequence</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>list</b> (bool details=true, bool useCache=true) const </td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::auto_ptr&lt; <a class="el" href="classopenstack_1_1xml_1_1Servers.html">xml::Servers</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenstack_1_1Servers.html#a26cf89cc479c447e4e9503bd3d7674ab">_list</a> (bool details=false) const </td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab534573dddb549645c4a205e910bfc58"></a><!-- doxytag: member="openstack::Servers::_servers" ref="ab534573dddb549645c4a205e910bfc58" args="" -->
+std::auto_ptr&lt; <a class="el" href="classopenstack_1_1xml_1_1Servers.html">xml::Servers</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_servers</b></td></tr>
 </table>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a26cf89cc479c447e4e9503bd3d7674ab"></a><!-- doxytag: member="openstack::Servers::_list" ref="a26cf89cc479c447e4e9503bd3d7674ab" args="(bool details=false) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::auto_ptr&lt;<a class="el" href="classopenstack_1_1xml_1_1Servers.html">xml::Servers</a>&gt; openstack::Servers::_list </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>details</em> = <code>false</code></td><td>)</td>
+          <td> const<code> [inline, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Downloads and parses something like this:</p>
+<p>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt; &lt;servers xmlns="http://docs.rackspacecloud.com/servers/api/v1.0"&gt; &lt;server id="1234" name="admin"&gt; &lt;server id="563" name="stats"&gt; &lt;server id="456546" name="web2"&gt; &lt;server id="2345345" name="web1"&gt; &lt;server id="234345" name="db1"&gt; &lt;server id="34788" name="db2"&gt; &lt;/servers&gt;"</p>
+<p>To use the return value: const <a class="el" href="classopenstack_1_1xml_1_1Servers.html#a9cc28e68df0ebb654db381f4bc6b43e0" title="Element sequence container type.">xml::Servers::ServerSequence</a> oc.servers().<a class="el" href="classopenstack_1_1Servers.html#ac7aa9b652744badc3ea60b685404bf6a" title="Returns a reference to our cached vector of xml::Servers.">list()</a>.server(); for(<a class="el" href="classopenstack_1_1xml_1_1Servers.html#af86869ba8bbdae35978d0ec2ea7ef4c3" title="Element constant iterator type.">xml::Servers::ServerConstIterator</a> server=list.begin();server!=list.end();++server) std::cout &lt;&lt; "ID: " &lt;&lt; server-&gt;id() &lt;&lt; " - " &lt;&lt; "Name: " &lt;&lt; server-&gt;name() &lt;&lt; std::endl;</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">details</td><td>if true, will get all the server details. If false, will get just the IDs and names</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A smart pointer to an <a class="el" href="classopenstack_1_1xml_1_1Servers.html" title="Class corresponding to the Servers schema type.">xml::Servers</a> instance. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac7aa9b652744badc3ea60b685404bf6a"></a><!-- doxytag: member="openstack::Servers::list" ref="ac7aa9b652744badc3ea60b685404bf6a" args="(bool details=true, bool useCache=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classopenstack_1_1xml_1_1Servers.html#a9cc28e68df0ebb654db381f4bc6b43e0">xml::Servers::ServerSequence</a>&amp; openstack::Servers::list </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>details</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useCache</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns a reference to our cached vector of <a class="el" href="classopenstack_1_1xml_1_1Servers.html" title="Class corresponding to the Servers schema type.">xml::Servers</a>. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">details</td><td>if false the output will only have the server names </td></tr>
+    <tr><td class="paramname">useCache</td><td>if true and a cached value is available, it'll just use that and not connect to the service.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a refernce to our cached vector of servers </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="servers_8hpp_source.html">servers.hpp</a></li>
 </ul>
@@ -110,7 +179,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Openstack</b></td></
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Jul 30 2011 04:55:18 for OpenstackAPI by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Aug 1 2011 17:49:21 for OpenstackAPI by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

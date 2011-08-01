@@ -2,35 +2,89 @@
 \section{openstack::Servers Class Reference}
 \label{classopenstack_1_1Servers}\index{openstack::Servers@{openstack::Servers}}
 }
-\subsection*{Public Types}
-\begin{DoxyCompactItemize}
-\item 
-\hypertarget{classopenstack_1_1Servers_aa70db2a459e7754dcabc9ab2895ab61a}{
-typedef vector$<$ Server $>$ {\bfseries ServerList}}
-\label{classopenstack_1_1Servers_aa70db2a459e7754dcabc9ab2895ab61a}
-
-\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classopenstack_1_1Servers_af625fb9e0932322dd17ff3aa876f7065}{
-\hyperlink{classopenstack_1_1HTTPS}{HTTPS} $\ast$ {\bfseries connection} ()}
-\label{classopenstack_1_1Servers_af625fb9e0932322dd17ff3aa876f7065}
+\hypertarget{classopenstack_1_1Servers_aa73baeb7fe19a9fcbb33b9b1c321c0b3}{
+{\bfseries Servers} (const string \&hostname, const string \&path, const string \&token)}
+\label{classopenstack_1_1Servers_aa73baeb7fe19a9fcbb33b9b1c321c0b3}
 
 \item 
-\hypertarget{classopenstack_1_1Servers_ae4f8fe1f4dd16b8eacdfc9b7f44cf981}{
-ServerList {\bfseries list} ()}
-\label{classopenstack_1_1Servers_ae4f8fe1f4dd16b8eacdfc9b7f44cf981}
+\hypertarget{classopenstack_1_1Servers_ac46388d4916edea6bbe24c6c1189397a}{
+\hyperlink{classopenstack_1_1HTTPS}{HTTPS} \& {\bfseries connection} () const }
+\label{classopenstack_1_1Servers_ac46388d4916edea6bbe24c6c1189397a}
+
+\item 
+\hyperlink{classopenstack_1_1xml_1_1Servers_a9cc28e68df0ebb654db381f4bc6b43e0}{xml::Servers::ServerSequence} \& \hyperlink{classopenstack_1_1Servers_ac7aa9b652744badc3ea60b685404bf6a}{list} (bool details=true, bool useCache=true)
+\begin{DoxyCompactList}\small\item\em Returns a reference to our cached vector of \hyperlink{classopenstack_1_1xml_1_1Servers}{xml::Servers}. \item\end{DoxyCompactList}\item 
+\hypertarget{classopenstack_1_1Servers_aeb5dba2917cd66a660a633f8e1d43e66}{
+const \hyperlink{classopenstack_1_1xml_1_1Servers_a9cc28e68df0ebb654db381f4bc6b43e0}{xml::Servers::ServerSequence} \& {\bfseries list} (bool details=true, bool useCache=true) const }
+\label{classopenstack_1_1Servers_aeb5dba2917cd66a660a633f8e1d43e66}
 
 \end{DoxyCompactItemize}
-\subsection*{Friends}
+\subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classopenstack_1_1Servers_a58e01d02fe556a89795cf7624a7a8405}{
-class {\bfseries Openstack}}
-\label{classopenstack_1_1Servers_a58e01d02fe556a89795cf7624a7a8405}
+std::auto\_\-ptr$<$ \hyperlink{classopenstack_1_1xml_1_1Servers}{xml::Servers} $>$ \hyperlink{classopenstack_1_1Servers_a26cf89cc479c447e4e9503bd3d7674ab}{\_\-list} (bool details=false) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1Servers_ab534573dddb549645c4a205e910bfc58}{
+std::auto\_\-ptr$<$ \hyperlink{classopenstack_1_1xml_1_1Servers}{xml::Servers} $>$ {\bfseries \_\-servers}}
+\label{classopenstack_1_1Servers_ab534573dddb549645c4a205e910bfc58}
 
 \end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classopenstack_1_1Servers_a26cf89cc479c447e4e9503bd3d7674ab}{
+\index{openstack::Servers@{openstack::Servers}!\_\-list@{\_\-list}}
+\index{\_\-list@{\_\-list}!openstack::Servers@{openstack::Servers}}
+\subsubsection[{\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}std::auto\_\-ptr$<${\bf xml::Servers}$>$ openstack::Servers::\_\-list (
+\begin{DoxyParamCaption}
+\item[{bool}]{details = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{classopenstack_1_1Servers_a26cf89cc479c447e4e9503bd3d7674ab}
+Downloads and parses something like this:
+
+$<$?xml version=\char`\"{}1.0\char`\"{} encoding=\char`\"{}UTF-\/8\char`\"{} standalone=\char`\"{}yes\char`\"{}?$>$ $<$servers xmlns=\char`\"{}http://docs.rackspacecloud.com/servers/api/v1.0\char`\"{}$>$ $<$server id=\char`\"{}1234\char`\"{} name=\char`\"{}admin\char`\"{}$>$ $<$server id=\char`\"{}563\char`\"{} name=\char`\"{}stats\char`\"{}$>$ $<$server id=\char`\"{}456546\char`\"{} name=\char`\"{}web2\char`\"{}$>$ $<$server id=\char`\"{}2345345\char`\"{} name=\char`\"{}web1\char`\"{}$>$ $<$server id=\char`\"{}234345\char`\"{} name=\char`\"{}db1\char`\"{}$>$ $<$server id=\char`\"{}34788\char`\"{} name=\char`\"{}db2\char`\"{}$>$ $<$/servers$>$"
+
+To use the return value: const \hyperlink{classopenstack_1_1xml_1_1Servers_a9cc28e68df0ebb654db381f4bc6b43e0}{xml::Servers::ServerSequence} oc.servers().\hyperlink{classopenstack_1_1Servers_ac7aa9b652744badc3ea60b685404bf6a}{list()}.server(); for(\hyperlink{classopenstack_1_1xml_1_1Servers_af86869ba8bbdae35978d0ec2ea7ef4c3}{xml::Servers::ServerConstIterator} server=list.begin();server!=list.end();++server) std::cout $<$$<$ \char`\"{}ID: \char`\"{} $<$$<$ server-\/$>$id() $<$$<$ \char`\"{} -\/ \char`\"{} $<$$<$ \char`\"{}Name: \char`\"{} $<$$<$ server-\/$>$name() $<$$<$ std::endl;
+
+
+\begin{DoxyParams}{Parameters}
+{\em details} & if true, will get all the server details. If false, will get just the IDs and names\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A smart pointer to an \hyperlink{classopenstack_1_1xml_1_1Servers}{xml::Servers} instance. 
+\end{DoxyReturn}
+\hypertarget{classopenstack_1_1Servers_ac7aa9b652744badc3ea60b685404bf6a}{
+\index{openstack::Servers@{openstack::Servers}!list@{list}}
+\index{list@{list}!openstack::Servers@{openstack::Servers}}
+\subsubsection[{list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf xml::Servers::ServerSequence}\& openstack::Servers::list (
+\begin{DoxyParamCaption}
+\item[{bool}]{details = {\ttfamily true}, }
+\item[{bool}]{useCache = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classopenstack_1_1Servers_ac7aa9b652744badc3ea60b685404bf6a}
+
+
+Returns a reference to our cached vector of \hyperlink{classopenstack_1_1xml_1_1Servers}{xml::Servers}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em details} & if false the output will only have the server names \\
+\hline
+{\em useCache} & if true and a cached value is available, it'll just use that and not connect to the service.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a refernce to our cached vector of servers 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
