@@ -154,7 +154,7 @@ public:
         sslStream.handshake(ssl::stream_base::client);
         // Connected :)
     }
-    bool isConnected() { return sslStream.lowest_layer().is_open(); }
+    bool isConnected() const { return sslStream.lowest_layer().is_open(); }
     unsigned short request(const string& path, Headers& requestHeaders, Headers& responseHeaders, stringstream& body) {
         // Make up the request
         boost::asio::streambuf buffer;

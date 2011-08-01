@@ -26,6 +26,7 @@ using std::endl;
 using std::string;
 using openstack::Openstack;
 using openstack::xml::Servers;
+using openstack::xml::Server;
 
 int main(int argc, char* argv[]) {
     try {
@@ -36,10 +37,9 @@ int main(int argc, char* argv[]) {
            if (argc >= 4)
                hostname = argv[3];
            Openstack os(argv[1], argv[2], hostname);
-           std::auto_ptr< Servers > servers = os.servers()->list();
-           const Servers::ServerSequence list = servers->server();
+           const Servers::ServerSequence& servers = os.servers()->list();
            std::cout << "Found Servers:" << std::endl;
-           for(Servers::ServerConstIterator server=list.begin();server!=list.end();++server)
+           for(Servers::ServerConstIterator server=servers.begin();server!=servers.end();++server)
                std::cout << "ID: " << server->id() << " - " << "Name: " << server->name() << std::endl;
         }
     } catch (std::exception& e) {

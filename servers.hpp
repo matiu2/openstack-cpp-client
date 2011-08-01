@@ -29,16 +29,11 @@ class Servers {
 private:
     string _token;
     string _hostname;
-    HTTPS _connection;
+    mutable HTTPS _connection;
     string _pathBase;
-public:
-    Servers(const string& hostname, const string& path, const string& token) :
-        _token(token), _hostname(hostname), _connection(hostname), _pathBase(path) {}
-    HTTPS& connection() {
-        if (!_connection.isConnected())
-            _connection.connect();
-        return _connection;
-    }
+protected:
+    // Cached values
+    mutable std::auto_ptr< xml::Servers > _servers;
     /**
     * Downloads and parses something like this:
     * 
@@ -61,7 +56,7 @@ public:
     *
     * @return A smart pointer to an xml::Servers instance.
     */
-    std::auto_ptr<xml::Servers> list(bool details=false) {
+    std::auto_ptr<xml::Servers> _list(bool details=false) const {
         // Do the request
         HTTPS::Headers requestHeaders, responseHeaders;
         std::stringstream body;
@@ -74,6 +69,32 @@ public:
         // Parse the body and return the object
         body.seekp(std::stringstream::beg); // Go back to the beginning of our stream
         return xml::servers(body, xml_schema::Flags::dont_validate);
+    }
+public:
+    Servers(const string& hostname, const string& path, const string& token) :
+        _token(token), _hostname(hostname), _connection(hostname), _pathBase(path) {}
+    HTTPS& connection() const {
+        if (!_connection.isConnected())
+            _connection.connect();
+        return _connection;
+    }
+    /**
+    * @brief Returns a reference to our cached vector of xml::Servers
+    *
+    * @param details if false the output will only have the server names
+    * @param useCache if true and a cached value is available, it'll just use that and not connect to the service.
+    *
+    * @return a refernce to our cached vector of servers
+    */
+    xml::Servers::ServerSequence& list(bool details=true, bool useCache=true) {
+        if ((!useCache) || (_servers.get() == 0))
+            _servers = _list(details);
+        return _servers->server();
+    }
+    const xml::Servers::ServerSequence& list(bool details=true, bool useCache=true) const {
+        if ((!useCache) || (_servers.get() == 0))
+            _servers = _list(details);
+        return _servers->server();
     }
 };
 
