@@ -24,6 +24,7 @@
 #include "../xml/server.hpp"
 
 namespace openstack {
+namespace services {
 
 class Servers {
 private:
@@ -98,6 +99,7 @@ public:
     }
 };
 
+} // namespace services
 } // namespace openstack
 
 #endif // SERVER_HPP

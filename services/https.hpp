@@ -41,6 +41,7 @@ using std::ostream;
 using std::stringstream;
 
 namespace openstack {
+namespace services {
 
 /**
 * Gives a nice interface to buffered reads, hot off the Internet.
@@ -185,4 +186,5 @@ public:
     }
 };
 
+} // namespace services
 } // namespace openstack

@@ -26,6 +26,8 @@
 
 using boost::shared_ptr;
 
+using openstack::services::HTTPS;
+
 namespace openstack {
 
 class Openstack {
@@ -39,8 +41,8 @@ private:
     string _storageUrl;
     string _storageToken;
 
-    HTTPS _connection;
-    shared_ptr<Servers> _servers;
+    services::HTTPS _connection;
+    shared_ptr<services::Servers> _servers;
 
     string readHeader(const HTTPS::Headers& headers, const string& headerName) {
         HTTPS::cpHeader contentLengthHeader = headers.find(headerName);
@@ -73,11 +75,11 @@ private:
 public:
     Openstack(const string& user, const string& apikey, const string& hostname) 
         : _user(user), _apikey(apikey), _hostname(hostname), _connection(hostname) {}
-    shared_ptr<Servers> servers() {
+    shared_ptr<services::Servers> servers() {
         if (_servers.get() == 0) {
             if (_serverUrl.empty()) { connection(); } // Get the serverurl if we haven't already
             std::pair<string, string> hostAndPath = getHostAndPath(_serverUrl);
-            _servers.reset(new Servers(hostAndPath.first, hostAndPath.second, _authToken));
+            _servers.reset(new services::Servers(hostAndPath.first, hostAndPath.second, _authToken));
         }
         return _servers;
     }
