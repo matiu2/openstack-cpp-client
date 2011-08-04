@@ -84,6 +84,21 @@
 #include <xsd/cxx/tree/parsing/double.hxx>
 #include <xsd/cxx/tree/parsing/decimal.hxx>
 
+#include <xsd/cxx/xml/dom/serialization-header.hxx>
+#include <xsd/cxx/tree/serialization.hxx>
+#include <xsd/cxx/tree/serialization/byte.hxx>
+#include <xsd/cxx/tree/serialization/unsigned-byte.hxx>
+#include <xsd/cxx/tree/serialization/short.hxx>
+#include <xsd/cxx/tree/serialization/unsigned-short.hxx>
+#include <xsd/cxx/tree/serialization/int.hxx>
+#include <xsd/cxx/tree/serialization/unsigned-int.hxx>
+#include <xsd/cxx/tree/serialization/long.hxx>
+#include <xsd/cxx/tree/serialization/unsigned-long.hxx>
+#include <xsd/cxx/tree/serialization/boolean.hxx>
+#include <xsd/cxx/tree/serialization/float.hxx>
+#include <xsd/cxx/tree/serialization/double.hxx>
+#include <xsd/cxx/tree/serialization/decimal.hxx>
+
 /**
  * @brief C++ namespace for the %http://www.w3.org/2001/XMLSchema
  * schema namespace.
@@ -435,6 +450,39 @@ namespace xml_schema
   typedef ::xsd::cxx::tree::entities< char, SimpleType, Entity > Entities;
 
 
+  // Namespace information and list stream. Used in
+  // serialization functions.
+  //
+  /**
+   * @brief Namespace serialization information.
+   */
+  typedef ::xsd::cxx::xml::dom::namespace_info< char > NamespaceInfo;
+
+  /**
+   * @brief Namespace serialization information map.
+   */
+  typedef ::xsd::cxx::xml::dom::namespace_infomap< char > NamespaceInfomap;
+
+  /**
+   * @brief List serialization stream.
+   */
+  typedef ::xsd::cxx::tree::list_stream< char > ListStream;
+
+  /**
+   * @brief Serialization wrapper for the %double type.
+   */
+  typedef ::xsd::cxx::tree::as_double< Double > AsDouble;
+
+  /**
+   * @brief Serialization wrapper for the %decimal type.
+   */
+  typedef ::xsd::cxx::tree::as_decimal< Decimal > AsDecimal;
+
+  /**
+   * @brief Simple type facet.
+   */
+  typedef ::xsd::cxx::tree::facet Facet;
+
   // Flags and properties.
   //
 
@@ -538,6 +586,11 @@ namespace xml_schema
    * related by inheritance.
    */
   typedef ::xsd::cxx::tree::not_derived< char > NotDerived;
+
+  /**
+   * @brief Exception indicating a serialization failure.
+   */
+  typedef ::xsd::cxx::tree::serialization< char > Serialization;
 
   /**
    * @brief Error handler callback interface.
@@ -2336,6 +2389,214 @@ namespace openstack
             const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
     //@}
+  }
+}
+
+#include <iosfwd>
+
+#include <xercesc/dom/DOMDocument.hpp>
+#include <xercesc/dom/DOMErrorHandler.hpp>
+#include <xercesc/framework/XMLFormatter.hpp>
+
+#include <xsd/cxx/xml/dom/auto-ptr.hxx>
+
+namespace openstack
+{
+  namespace xml
+  {
+    /**
+     * @name Serialization functions for the %limits document root.
+     */
+    //@{
+
+    /**
+     * @brief Serialize to a standard output stream.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    limits (::std::ostream& os,
+            const ::openstack::xml::Limits& x, 
+            const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+            const ::std::string& e = "UTF-8",
+            ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with an error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    limits (::std::ostream& os,
+            const ::openstack::xml::Limits& x, 
+            ::xml_schema::ErrorHandler& eh,
+            const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+            const ::std::string& e = "UTF-8",
+            ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    limits (::std::ostream& os,
+            const ::openstack::xml::Limits& x, 
+            ::xercesc::DOMErrorHandler& eh,
+            const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+            const ::std::string& e = "UTF-8",
+            ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    limits (::xercesc::XMLFormatTarget& ft,
+            const ::openstack::xml::Limits& x, 
+            const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+            const ::std::string& e = "UTF-8",
+            ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with an error
+     * handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    limits (::xercesc::XMLFormatTarget& ft,
+            const ::openstack::xml::Limits& x, 
+            ::xml_schema::ErrorHandler& eh,
+            const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+            const ::std::string& e = "UTF-8",
+            ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    limits (::xercesc::XMLFormatTarget& ft,
+            const ::openstack::xml::Limits& x, 
+            ::xercesc::DOMErrorHandler& eh,
+            const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+            const ::std::string& e = "UTF-8",
+            ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to an existing Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param x An object model to serialize.
+     * @param f Serialization flags.
+     *
+     * Note that it is your responsibility to create the DOM document
+     * with the correct root element as well as set the necessary
+     * namespace mapping attributes.
+     */
+    void
+    limits (::xercesc::DOMDocument& d,
+            const ::openstack::xml::Limits& x,
+            ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a new Xerces-C++ DOM document.
+     *
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param f Serialization flags.
+     * @return A pointer to the new Xerces-C++ DOM document.
+     */
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    limits (const ::openstack::xml::Limits& x, 
+            const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+            ::xml_schema::Flags f = 0);
+
+    //@}
+
+    void
+    operator<< (::xercesc::DOMElement&, const Limits&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const RateLimits&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const AbsoluteLimits&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const RateLimit&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const AbsoluteLimit&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const HTTPVerb&);
+
+    void
+    operator<< (::xercesc::DOMAttr&, const HTTPVerb&);
+
+    void
+    operator<< (::xml_schema::ListStream&,
+                const HTTPVerb&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const RateLimitUnit&);
+
+    void
+    operator<< (::xercesc::DOMAttr&, const RateLimitUnit&);
+
+    void
+    operator<< (::xml_schema::ListStream&,
+                const RateLimitUnit&);
   }
 }
 

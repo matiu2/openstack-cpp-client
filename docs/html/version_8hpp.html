@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>OpenstackAPI: xsd/version.hpp File Reference</title>
+<title>OpenstackAPI: xml/version.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="dir_009e0c517fce22cb692eb0aff2452b14.html">xsd</a>      </li>
+      <li class="navelem"><a class="el" href="dir_f833a10f84840ffd1d489f9c1b04339a.html">xml</a>      </li>
     </ul>
   </div>
 </div>
@@ -65,7 +65,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Defines</a>  </div>
+<a href="#define-members">Defines</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <h1>version.hpp File Reference</h1>  </div>
 </div>
@@ -94,6 +95,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;xsd/cxx/tree/parsing/float.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/double.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/decimal.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/xml/dom/serialization-header.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/byte.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/unsigned-byte.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/short.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/unsigned-short.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/int.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/unsigned-int.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/long.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/unsigned-long.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/boolean.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/float.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/double.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/decimal.hxx&gt;</code><br/>
 <code>#include &lt;memory&gt;</code><br/>
 <code>#include &lt;limits&gt;</code><br/>
 <code>#include &lt;algorithm&gt;</code><br/>
@@ -104,6 +119,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;xercesc/sax/InputSource.hpp&gt;</code><br/>
 <code>#include &lt;xercesc/dom/DOMDocument.hpp&gt;</code><br/>
 <code>#include &lt;xercesc/dom/DOMErrorHandler.hpp&gt;</code><br/>
+<code>#include &lt;xercesc/framework/XMLFormatter.hpp&gt;</code><br/>
 <code>#include &quot;version.ipp&quot;</code><br/>
 <code>#include &lt;xsd/cxx/post.hxx&gt;</code><br/>
 </div>
@@ -134,6 +150,14 @@ Namespaces</h2></td></tr>
 </p>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0ac0862321dad273f7ad96225d2d063"></a><!-- doxytag: member="version.hpp::operator&lt;&lt;" ref="ae0ac0862321dad273f7ad96225d2d063" args="(::xercesc::DOMElement &amp;e, const Version &amp;i)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>openstack::xml::operator&lt;&lt;</b> (::xercesc::DOMElement &amp;e, const Version &amp;i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38bb2600ab1a68cb96247e0025b1b9ff"></a><!-- doxytag: member="version.hpp::operator&lt;&lt;" ref="a38bb2600ab1a68cb96247e0025b1b9ff" args="(::xercesc::DOMElement &amp;e, const VersionStatus &amp;i)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>openstack::xml::operator&lt;&lt;</b> (::xercesc::DOMElement &amp;e, const VersionStatus &amp;i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fe8ebd5cc27be14c222af784ec25d90"></a><!-- doxytag: member="version.hpp::operator&lt;&lt;" ref="a5fe8ebd5cc27be14c222af784ec25d90" args="(::xercesc::DOMAttr &amp;a, const VersionStatus &amp;i)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>openstack::xml::operator&lt;&lt;</b> (::xercesc::DOMAttr &amp;a, const VersionStatus &amp;i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7799b47326a9be5a6b340ae59e83dd4"></a><!-- doxytag: member="version.hpp::operator&lt;&lt;" ref="af7799b47326a9be5a6b340ae59e83dd4" args="(::xml_schema::ListStream &amp;l, const VersionStatus &amp;i)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>openstack::xml::operator&lt;&lt;</b> (::<a class="el" href="namespacexml__schema.html#aa893a219e389ee6716fe6545a6bffe7e">xml_schema::ListStream</a> &amp;l, const VersionStatus &amp;i)</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Parsing functions for the version document root.</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
 &lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#acabe571be97ab931700903750e0bccf9">openstack::xml::version</a> (const ::std::string &amp;uri,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
@@ -177,6 +201,24 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
 &lt; ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a4ecc9f7ab2a9107da9f5af99989d1a1b">openstack::xml::version</a> (::xml_schema::dom::auto_ptr&lt; ::xercesc::DOMDocument &gt; &amp;d,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Xerces-C++ DOM document.  <a href="#a4ecc9f7ab2a9107da9f5af99989d1a1b"></a><br/></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Serialization functions for the version document root.</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a9d46789c6c1a997fbfc6a92fd06adca1">openstack::xml::version</a> (::std::ostream &amp;os, const ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &amp;x, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a standard output stream.  <a href="#a9d46789c6c1a997fbfc6a92fd06adca1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a4aa46ca733a009a87638b45e2a825df7">openstack::xml::version</a> (::std::ostream &amp;os, const ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &amp;x,::<a class="el" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc">xml_schema::ErrorHandler</a> &amp;eh, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a standard output stream with an error handler.  <a href="#a4aa46ca733a009a87638b45e2a825df7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#aaa0a58e0cabd0fe5b2d37b5db90f9b9d">openstack::xml::version</a> (::std::ostream &amp;os, const ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &amp;x,::xercesc::DOMErrorHandler &amp;eh, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a standard output stream with a Xerces-C++ DOM error handler.  <a href="#aaa0a58e0cabd0fe5b2d37b5db90f9b9d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a2d9c3e3fb19eff5e1705aeef781b7378">openstack::xml::version</a> (::xercesc::XMLFormatTarget &amp;ft, const ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &amp;x, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a Xerces-C++ XML format target.  <a href="#a2d9c3e3fb19eff5e1705aeef781b7378"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#abc49dc76c7608df89bcc5ed63a414064">openstack::xml::version</a> (::xercesc::XMLFormatTarget &amp;ft, const ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &amp;x,::<a class="el" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc">xml_schema::ErrorHandler</a> &amp;eh, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a Xerces-C++ XML format target with an error handler.  <a href="#abc49dc76c7608df89bcc5ed63a414064"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a56d1ca7a9a77f633e076049a9d2e9805">openstack::xml::version</a> (::xercesc::XMLFormatTarget &amp;ft, const ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &amp;x,::xercesc::DOMErrorHandler &amp;eh, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a Xerces-C++ XML format target with a Xerces-C++ DOM error handler.  <a href="#a56d1ca7a9a77f633e076049a9d2e9805"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a5624a801d3e7d6f01f0462bba60e0b83">openstack::xml::version</a> (::xercesc::DOMDocument &amp;d, const ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &amp;x,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to an existing Xerces-C++ DOM document.  <a href="#a5624a801d3e7d6f01f0462bba60e0b83"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::xml_schema::dom::auto_ptr<br class="typebreak"/>
+&lt; ::xercesc::DOMDocument &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a40af4080478f63df6abadb48f7d0bbef">openstack::xml::version</a> (const ::<a class="el" href="classopenstack_1_1xml_1_1Version.html">openstack::xml::Version</a> &amp;x, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(),::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a new Xerces-C++ DOM document.  <a href="#a40af4080478f63df6abadb48f7d0bbef"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Generated from version.xsd. </p>
@@ -195,7 +237,7 @@ Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Aug 1 2011 17:49:21 for OpenstackAPI by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Aug 3 2011 07:52:12 for OpenstackAPI by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

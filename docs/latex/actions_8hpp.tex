@@ -1,6 +1,6 @@
 \hypertarget{actions_8hpp}{
-\section{xsd/actions.hpp File Reference}
-\label{actions_8hpp}\index{xsd/actions.hpp@{xsd/actions.hpp}}
+\section{xml/actions.hpp File Reference}
+\label{actions_8hpp}\index{xml/actions.hpp@{xml/actions.hpp}}
 }
 
 
@@ -28,6 +28,20 @@ Generated from actions.xsd.
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/float.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/double.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/decimal.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/xml/dom/serialization-\/header.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/byte.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/byte.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/short.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/short.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/int.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/int.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/long.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/long.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/boolean.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/float.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/double.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/decimal.hxx$>$}\par
 {\ttfamily \#include $<$memory$>$}\par
 {\ttfamily \#include $<$limits$>$}\par
 {\ttfamily \#include $<$algorithm$>$}\par
@@ -38,6 +52,7 @@ Generated from actions.xsd.
 {\ttfamily \#include $<$xercesc/sax/InputSource.hpp$>$}\par
 {\ttfamily \#include $<$xercesc/dom/DOMDocument.hpp$>$}\par
 {\ttfamily \#include $<$xercesc/dom/DOMErrorHandler.hpp$>$}\par
+{\ttfamily \#include $<$xercesc/framework/XMLFormatter.hpp$>$}\par
 {\ttfamily \#include \char`\"{}actions.ipp\char`\"{}}\par
 {\ttfamily \#include $<$xsd/cxx/post.hxx$>$}\par
 \subsection*{Classes}
@@ -321,6 +336,36 @@ typedef ::xsd::cxx::tree::entities$<$ char, SimpleType, Entity $>$ \hyperlink{na
 \label{namespacexml__schema_a906654593daefd1bd7462fa2434a6002}
 
 \begin{DoxyCompactList}\small\item\em C++ type corresponding to the ENTITIES XML Schema built-\/in type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a8173946ae3599b216a89eb59b530d892}{
+typedef ::xsd::cxx::xml::dom::namespace\_\-info$<$ char $>$ \hyperlink{namespacexml__schema_a8173946ae3599b216a89eb59b530d892}{xml\_\-schema::NamespaceInfo}}
+\label{namespacexml__schema_a8173946ae3599b216a89eb59b530d892}
+
+\begin{DoxyCompactList}\small\item\em Namespace serialization information. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{
+typedef ::xsd::cxx::xml::dom::namespace\_\-infomap$<$ char $>$ \hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}}
+\label{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}
+
+\begin{DoxyCompactList}\small\item\em Namespace serialization information map. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}{
+typedef ::xsd::cxx::tree::list\_\-stream$<$ char $>$ \hyperlink{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}{xml\_\-schema::ListStream}}
+\label{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}
+
+\begin{DoxyCompactList}\small\item\em List serialization stream. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_aa545905674840a1a78372d01225678ad}{
+typedef ::xsd::cxx::tree::as\_\-double$<$ Double $>$ \hyperlink{namespacexml__schema_aa545905674840a1a78372d01225678ad}{xml\_\-schema::AsDouble}}
+\label{namespacexml__schema_aa545905674840a1a78372d01225678ad}
+
+\begin{DoxyCompactList}\small\item\em Serialization wrapper for the double type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a251ac89cf4eabb9ca4f83331d3851e55}{
+typedef ::xsd::cxx::tree::as\_\-decimal$<$ Decimal $>$ \hyperlink{namespacexml__schema_a251ac89cf4eabb9ca4f83331d3851e55}{xml\_\-schema::AsDecimal}}
+\label{namespacexml__schema_a251ac89cf4eabb9ca4f83331d3851e55}
+
+\begin{DoxyCompactList}\small\item\em Serialization wrapper for the decimal type. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a67625d5062557951330d2dccee220f7d}{
+typedef ::xsd::cxx::tree::facet \hyperlink{namespacexml__schema_a67625d5062557951330d2dccee220f7d}{xml\_\-schema::Facet}}
+\label{namespacexml__schema_a67625d5062557951330d2dccee220f7d}
+
+\begin{DoxyCompactList}\small\item\em Simple type facet. \item\end{DoxyCompactList}\item 
 \hypertarget{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{
 typedef ::xsd::cxx::tree::flags \hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags}}
 \label{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}
@@ -406,12 +451,94 @@ typedef ::xsd::cxx::tree::not\_\-derived$<$ char $>$ \hyperlink{namespacexml__sc
 \label{namespacexml__schema_af5fd843f86d4a67881d295326ee79bf4}
 
 \begin{DoxyCompactList}\small\item\em Exception indicating that the types are not related by inheritance. \item\end{DoxyCompactList}\item 
+\hypertarget{namespacexml__schema_a54d32500aa6240de815682c42a236b26}{
+typedef ::xsd::cxx::tree::serialization$<$ char $>$ \hyperlink{namespacexml__schema_a54d32500aa6240de815682c42a236b26}{xml\_\-schema::Serialization}}
+\label{namespacexml__schema_a54d32500aa6240de815682c42a236b26}
+
+\begin{DoxyCompactList}\small\item\em Exception indicating a serialization failure. \item\end{DoxyCompactList}\item 
 \hypertarget{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{
 typedef ::xsd::cxx::xml::error\_\-handler$<$ char $>$ \hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler}}
 \label{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}
 
 \begin{DoxyCompactList}\small\item\em Error handler callback interface. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a8acbf23b6f737cca5ab6fd31446459a4}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const Action \&i)}
+\label{namespaceopenstack_1_1xml_a8acbf23b6f737cca5ab6fd31446459a4}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_afa30a46c4f710b94f24e7684bf4059b3}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMAttr \&, const Action \&)}
+\label{namespaceopenstack_1_1xml_afa30a46c4f710b94f24e7684bf4059b3}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a4926578b0e1ef0813b1ec2b3230037e8}{
+void {\bfseries openstack::xml::operator$<$$<$} (::\hyperlink{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}{xml\_\-schema::ListStream} \&, const Action \&)}
+\label{namespaceopenstack_1_1xml_a4926578b0e1ef0813b1ec2b3230037e8}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_ae83364fd9f0fc27bbe824392fba717fd}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const Reboot \&i)}
+\label{namespaceopenstack_1_1xml_ae83364fd9f0fc27bbe824392fba717fd}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a8d9b0caacb60382fe8b5ce0259dd4d5f}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const Rebuild \&i)}
+\label{namespaceopenstack_1_1xml_a8d9b0caacb60382fe8b5ce0259dd4d5f}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a17ac24ec263340f587360f347da5ecc4}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const Resize \&i)}
+\label{namespaceopenstack_1_1xml_a17ac24ec263340f587360f347da5ecc4}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_aee8bb56eb855897f1974e029862f6f23}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const ConfirmResize \&i)}
+\label{namespaceopenstack_1_1xml_aee8bb56eb855897f1974e029862f6f23}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a7932b955df8eb481805f5953c6320676}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMAttr \&a, const ConfirmResize \&i)}
+\label{namespaceopenstack_1_1xml_a7932b955df8eb481805f5953c6320676}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a4ddd5cdd6addc14e45d1208a17eb86e1}{
+void {\bfseries openstack::xml::operator$<$$<$} (::\hyperlink{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}{xml\_\-schema::ListStream} \&l, const ConfirmResize \&i)}
+\label{namespaceopenstack_1_1xml_a4ddd5cdd6addc14e45d1208a17eb86e1}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a741497f6b0c470d809a0b5f441b7e6ff}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const RevertResize \&i)}
+\label{namespaceopenstack_1_1xml_a741497f6b0c470d809a0b5f441b7e6ff}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a88ddb9d5fe237de082a37d9d1d17b2be}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMAttr \&a, const RevertResize \&i)}
+\label{namespaceopenstack_1_1xml_a88ddb9d5fe237de082a37d9d1d17b2be}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a1829ac8a3f752da2aa83809ba1f586e9}{
+void {\bfseries openstack::xml::operator$<$$<$} (::\hyperlink{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}{xml\_\-schema::ListStream} \&l, const RevertResize \&i)}
+\label{namespaceopenstack_1_1xml_a1829ac8a3f752da2aa83809ba1f586e9}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a6699df789729542de6ae20a812a91fe9}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const RebootType \&i)}
+\label{namespaceopenstack_1_1xml_a6699df789729542de6ae20a812a91fe9}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a26824292b932ecd54ef47ee6c22f00b7}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMAttr \&a, const RebootType \&i)}
+\label{namespaceopenstack_1_1xml_a26824292b932ecd54ef47ee6c22f00b7}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a6eb8a4aad0a958639f796b1096307ec9}{
+void {\bfseries openstack::xml::operator$<$$<$} (::\hyperlink{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}{xml\_\-schema::ListStream} \&l, const RebootType \&i)}
+\label{namespaceopenstack_1_1xml_a6eb8a4aad0a958639f796b1096307ec9}
+
+\end{DoxyCompactItemize}
 \begin{Indent}{\bf Parsing functions for the reboot document root.}\par
 \begin{DoxyCompactItemize}
 \item 
@@ -571,6 +698,106 @@ typedef ::xsd::cxx::xml::error\_\-handler$<$ char $>$ \hyperlink{namespacexml__s
 \begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
 ::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1RevertResize}{openstack::xml::RevertResize} $>$ \hyperlink{namespaceopenstack_1_1xml_a10277bbeb1ce8bcec5f3af93d731c349}{openstack::xml::revertResize} (::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
 \begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the reboot document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_a370aedd3cc6dd32e451257200502dd36}{openstack::xml::reboot} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Reboot}{openstack::xml::Reboot} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_abfd49c5ec3bc142de05cabe15cdb2e2a}{openstack::xml::reboot} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Reboot}{openstack::xml::Reboot} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a05b7e49309de48afb1e67ce35cd91ac8}{openstack::xml::reboot} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Reboot}{openstack::xml::Reboot} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a7a97afd2b1a76faa0fc37af1d90134cc}{openstack::xml::reboot} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Reboot}{openstack::xml::Reboot} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a7ae4e340f7021221ab2d5bedabdb82a8}{openstack::xml::reboot} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Reboot}{openstack::xml::Reboot} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a6d1b09780b83cf3145cfdcab1c10a156}{openstack::xml::reboot} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Reboot}{openstack::xml::Reboot} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_adfd0bd081844c114341ae09a0fb9adf9}{openstack::xml::reboot} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1Reboot}{openstack::xml::Reboot} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_a75dfecb7b030d846aba22735e35950f4}{openstack::xml::reboot} (const ::\hyperlink{classopenstack_1_1xml_1_1Reboot}{openstack::xml::Reboot} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the rebuild document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_afb9f33e365ea306a216be31c33da34a0}{openstack::xml::rebuild} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Rebuild}{openstack::xml::Rebuild} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_aeb884c6f4b24348c4ae226fd578d448d}{openstack::xml::rebuild} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Rebuild}{openstack::xml::Rebuild} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_af232a729d56193a35472360fd00d90a1}{openstack::xml::rebuild} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Rebuild}{openstack::xml::Rebuild} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a1c9708fce8dcf179c578ded904595e65}{openstack::xml::rebuild} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Rebuild}{openstack::xml::Rebuild} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a0a3fd1c4a309376a077b176ac09c4e0a}{openstack::xml::rebuild} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Rebuild}{openstack::xml::Rebuild} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a30508014f46f892f17e42191dcb4ce8f}{openstack::xml::rebuild} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Rebuild}{openstack::xml::Rebuild} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_ab02dddbec44f787d1efa87490a0e7da7}{openstack::xml::rebuild} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1Rebuild}{openstack::xml::Rebuild} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_a8a27dc7fcc7a5f8d2fb8a9c202adde0c}{openstack::xml::rebuild} (const ::\hyperlink{classopenstack_1_1xml_1_1Rebuild}{openstack::xml::Rebuild} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the resize document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_a0672dea3d3bea763f7cdab12b92fa34b}{openstack::xml::resize} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Resize}{openstack::xml::Resize} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_aa0ebba11cbee2cdc43bf800d84d208a4}{openstack::xml::resize} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Resize}{openstack::xml::Resize} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a0aa17e273fb50d227be62b7910649827}{openstack::xml::resize} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Resize}{openstack::xml::Resize} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a3de3faf9d5405043beca66feac1faff8}{openstack::xml::resize} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Resize}{openstack::xml::Resize} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a090b48fdfbddcf496a31937fd7dd0fac}{openstack::xml::resize} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Resize}{openstack::xml::Resize} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_acdbc34d421ce6f87e4ff416649a3a1f2}{openstack::xml::resize} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Resize}{openstack::xml::Resize} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a7ccbece846c2a9f61466819b5954137c}{openstack::xml::resize} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1Resize}{openstack::xml::Resize} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_a2661795a66624a089b8a816fa001d70f}{openstack::xml::resize} (const ::\hyperlink{classopenstack_1_1xml_1_1Resize}{openstack::xml::Resize} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the confirmResize document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_adbaa86c4f42b98e160c08066138b7fbf}{openstack::xml::confirmResize} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1ConfirmResize}{openstack::xml::ConfirmResize} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a4ecb250aa58b2a685ebf816cc716eebf}{openstack::xml::confirmResize} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1ConfirmResize}{openstack::xml::ConfirmResize} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a792f09be81c64ed68e40a16e3c595370}{openstack::xml::confirmResize} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1ConfirmResize}{openstack::xml::ConfirmResize} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a24a353e0478a11accecae685b74ff98c}{openstack::xml::confirmResize} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1ConfirmResize}{openstack::xml::ConfirmResize} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_ac83a918c69e338d66712f96d58c0f617}{openstack::xml::confirmResize} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1ConfirmResize}{openstack::xml::ConfirmResize} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a6ce70f07f2c47edb32f8e21969b6c479}{openstack::xml::confirmResize} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1ConfirmResize}{openstack::xml::ConfirmResize} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a4638c772c2d073c3a515058bb56fab40}{openstack::xml::confirmResize} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1ConfirmResize}{openstack::xml::ConfirmResize} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_a2e9e03e86766bbd5aa57ef37bae5d7c7}{openstack::xml::confirmResize} (const ::\hyperlink{classopenstack_1_1xml_1_1ConfirmResize}{openstack::xml::ConfirmResize} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the revertResize document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_a1fcdaee9d0703b6a09be315514e558c9}{openstack::xml::revertResize} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1RevertResize}{openstack::xml::RevertResize} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_ab74cd4647d60e4f7523bd5b4d3b7b5f6}{openstack::xml::revertResize} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1RevertResize}{openstack::xml::RevertResize} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_aef15a23b54913402e3972096b50400c7}{openstack::xml::revertResize} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1RevertResize}{openstack::xml::RevertResize} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_ac4166714f95b01741769c8755d6c875d}{openstack::xml::revertResize} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1RevertResize}{openstack::xml::RevertResize} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_ae0c0240bed38b3ed62fe6369b15927d3}{openstack::xml::revertResize} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1RevertResize}{openstack::xml::RevertResize} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a74a64322ff0377004cebd71ab10986c8}{openstack::xml::revertResize} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1RevertResize}{openstack::xml::RevertResize} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a33d329edc4ec3809b84cad190bec3ae3}{openstack::xml::revertResize} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1RevertResize}{openstack::xml::RevertResize} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_a3bf5e6dc1e921b373a90effcb920be87}{openstack::xml::revertResize} (const ::\hyperlink{classopenstack_1_1xml_1_1RevertResize}{openstack::xml::RevertResize} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}

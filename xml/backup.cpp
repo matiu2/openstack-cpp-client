@@ -680,6 +680,301 @@ namespace openstack
   }
 }
 
+#include <ostream>
+#include <xsd/cxx/tree/error-handler.hxx>
+#include <xsd/cxx/xml/dom/serialization-source.hxx>
+
+#include <xsd/cxx/tree/type-serializer-map.hxx>
+
+namespace _xsd
+{
+  static
+  const ::xsd::cxx::tree::type_serializer_plate< 0, char >
+  type_serializer_plate_init;
+}
+
+namespace openstack
+{
+  namespace xml
+  {
+    void
+    backupSchedule (::std::ostream& o,
+                    const ::openstack::xml::BackupSchedule& s,
+                    const ::xml_schema::NamespaceInfomap& m,
+                    const ::std::string& e,
+                    ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::backupSchedule (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    backupSchedule (::std::ostream& o,
+                    const ::openstack::xml::BackupSchedule& s,
+                    ::xml_schema::ErrorHandler& h,
+                    const ::xml_schema::NamespaceInfomap& m,
+                    const ::std::string& e,
+                    ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::backupSchedule (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    backupSchedule (::std::ostream& o,
+                    const ::openstack::xml::BackupSchedule& s,
+                    ::xercesc::DOMErrorHandler& h,
+                    const ::xml_schema::NamespaceInfomap& m,
+                    const ::std::string& e,
+                    ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::backupSchedule (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    backupSchedule (::xercesc::XMLFormatTarget& t,
+                    const ::openstack::xml::BackupSchedule& s,
+                    const ::xml_schema::NamespaceInfomap& m,
+                    const ::std::string& e,
+                    ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::backupSchedule (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    backupSchedule (::xercesc::XMLFormatTarget& t,
+                    const ::openstack::xml::BackupSchedule& s,
+                    ::xml_schema::ErrorHandler& h,
+                    const ::xml_schema::NamespaceInfomap& m,
+                    const ::std::string& e,
+                    ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::backupSchedule (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    backupSchedule (::xercesc::XMLFormatTarget& t,
+                    const ::openstack::xml::BackupSchedule& s,
+                    ::xercesc::DOMErrorHandler& h,
+                    const ::xml_schema::NamespaceInfomap& m,
+                    const ::std::string& e,
+                    ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::backupSchedule (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    backupSchedule (::xercesc::DOMDocument& d,
+                    const ::openstack::xml::BackupSchedule& s,
+                    ::xml_schema::Flags)
+    {
+      ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (typeid (::openstack::xml::BackupSchedule) == typeid (s))
+      {
+        if (n.name () == "backupSchedule" &&
+            n.namespace_ () == "http://docs.rackspacecloud.com/servers/api/v1.0")
+        {
+          e << s;
+        }
+        else
+        {
+          throw ::xsd::cxx::tree::unexpected_element < char > (
+            n.name (),
+            n.namespace_ (),
+            "backupSchedule",
+            "http://docs.rackspacecloud.com/servers/api/v1.0");
+        }
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        tsm.serialize (
+          "backupSchedule",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          e, n, s);
+      }
+    }
+
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    backupSchedule (const ::openstack::xml::BackupSchedule& s,
+                    const ::xml_schema::NamespaceInfomap& m,
+                    ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d;
+
+      if (typeid (::openstack::xml::BackupSchedule) == typeid (s))
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          ::xsd::cxx::xml::dom::serialize< char > (
+            "backupSchedule",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, f));
+        d = r;
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          tsm.serialize (
+            "backupSchedule",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, s, f));
+        d = r;
+      }
+
+      ::openstack::xml::backupSchedule (*d, s, f);
+      return d;
+    }
+
+    void
+    operator<< (::xercesc::DOMElement& e, const BackupSchedule& i)
+    {
+      e << static_cast< const ::xml_schema::Type& > (i);
+
+      // enabled
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "enabled",
+            e));
+
+        a << i.enabled ();
+      }
+
+      // weekly
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "weekly",
+            e));
+
+        a << i.weekly ();
+      }
+
+      // daily
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "daily",
+            e));
+
+        a << i.daily ();
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, BackupSchedule >
+    _xsd_BackupSchedule_type_serializer_init (
+      "BackupSchedule",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const DailyBackup& i)
+    {
+      e << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    void
+    operator<< (::xercesc::DOMAttr& a, const DailyBackup& i)
+    {
+      a << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    void
+    operator<< (::xml_schema::ListStream& l,
+                const DailyBackup& i)
+    {
+      l << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, DailyBackup >
+    _xsd_DailyBackup_type_serializer_init (
+      "DailyBackup",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const WeeklyBackup& i)
+    {
+      e << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    void
+    operator<< (::xercesc::DOMAttr& a, const WeeklyBackup& i)
+    {
+      a << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    void
+    operator<< (::xml_schema::ListStream& l,
+                const WeeklyBackup& i)
+    {
+      l << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, WeeklyBackup >
+    _xsd_WeeklyBackup_type_serializer_init (
+      "WeeklyBackup",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+  }
+}
+
 #include <xsd/cxx/post.hxx>
 
 // Begin epilogue.

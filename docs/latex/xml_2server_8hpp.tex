@@ -1,0 +1,557 @@
+\hypertarget{xml_2server_8hpp}{
+\section{xml/server.hpp File Reference}
+\label{xml_2server_8hpp}\index{xml/server.hpp@{xml/server.hpp}}
+}
+
+
+Generated from server.xsd.  
+
+
+{\ttfamily \#include $<$xsd/cxx/config.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/pre.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/xml/char-\/utf8.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/exceptions.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/elements.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/types.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/xml/error-\/handler.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/xml/dom/auto-\/ptr.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/byte.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/unsigned-\/byte.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/short.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/unsigned-\/short.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/int.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/unsigned-\/int.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/long.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/unsigned-\/long.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/boolean.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/float.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/double.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/parsing/decimal.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/xml/dom/serialization-\/header.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/byte.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/byte.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/short.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/short.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/int.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/int.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/long.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/long.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/boolean.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/float.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/double.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/decimal.hxx$>$}\par
+{\ttfamily \#include $<$memory$>$}\par
+{\ttfamily \#include $<$limits$>$}\par
+{\ttfamily \#include $<$algorithm$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/containers.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/list.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/xml/dom/parsing-\/header.hxx$>$}\par
+{\ttfamily \#include \char`\"{}common.hpp\char`\"{}}\par
+{\ttfamily \#include \char`\"{}common.ipp\char`\"{}}\par
+{\ttfamily \#include $<$iosfwd$>$}\par
+{\ttfamily \#include $<$xercesc/sax/InputSource.hpp$>$}\par
+{\ttfamily \#include $<$xercesc/dom/DOMDocument.hpp$>$}\par
+{\ttfamily \#include $<$xercesc/dom/DOMErrorHandler.hpp$>$}\par
+{\ttfamily \#include $<$xercesc/framework/XMLFormatter.hpp$>$}\par
+{\ttfamily \#include \char`\"{}server.ipp\char`\"{}}\par
+{\ttfamily \#include $<$xsd/cxx/post.hxx$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the Server schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the Servers schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1Metadata}{openstack::xml::Metadata}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the Metadata schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1MetadataValue}{openstack::xml::MetadataValue}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the MetadataValue schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1MetadataItem}{openstack::xml::MetadataItem}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the MetadataItem schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1Personality}{openstack::xml::Personality}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the Personality schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1FileContent}{openstack::xml::FileContent}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the FileContent schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1File}{openstack::xml::File}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the File schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the Addresses schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the AddressList schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1Address}{openstack::xml::Address}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the Address schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the ShareIp schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1ServerStatus}{openstack::xml::ServerStatus}
+\begin{DoxyCompactList}\small\item\em Enumeration class corresponding to the ServerStatus schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1FileName}{openstack::xml::FileName}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the FileName schema type. \item\end{DoxyCompactList}\item 
+class \hyperlink{classopenstack_1_1xml_1_1MetadataKey}{openstack::xml::MetadataKey}
+\begin{DoxyCompactList}\small\item\em Class corresponding to the MetadataKey schema type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacexml__schema}{xml\_\-schema}
+
+
+\begin{DoxyCompactList}\small\item\em C++ namespace for the http://www.w3.org/2001/XMLSchema schema namespace. \item\end{DoxyCompactList}
+
+\item 
+namespace \hyperlink{namespacexml__schema_1_1dom}{xml\_\-schema::dom}
+
+
+\begin{DoxyCompactList}\small\item\em DOM interaction. \item\end{DoxyCompactList}
+
+\item 
+namespace \hyperlink{namespaceopenstack_1_1xml}{openstack::xml}
+
+
+\begin{DoxyCompactList}\small\item\em C++ namespace for the http://docs.rackspacecloud.com/servers/api/v1.0 schema namespace. \item\end{DoxyCompactList}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespaceopenstack_1_1xml_ae7745b9ea02b426c67f720677ef0f1b2}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const Server \&i)}
+\label{namespaceopenstack_1_1xml_ae7745b9ea02b426c67f720677ef0f1b2}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_aa225de172919f63ec395270595c3b6c4}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const Servers \&i)}
+\label{namespaceopenstack_1_1xml_aa225de172919f63ec395270595c3b6c4}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_ac0372b0c0dc96a11cee7acea43bc23a0}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const Metadata \&i)}
+\label{namespaceopenstack_1_1xml_ac0372b0c0dc96a11cee7acea43bc23a0}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a3b1ad6613898a68b6351e67a44eb6a8d}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const MetadataValue \&i)}
+\label{namespaceopenstack_1_1xml_a3b1ad6613898a68b6351e67a44eb6a8d}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a253ed799cafadc26b192ced176907357}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMAttr \&a, const MetadataValue \&i)}
+\label{namespaceopenstack_1_1xml_a253ed799cafadc26b192ced176907357}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a3409020fa9a0856414d3b324b16ce84b}{
+void {\bfseries openstack::xml::operator$<$$<$} (::\hyperlink{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}{xml\_\-schema::ListStream} \&l, const MetadataValue \&i)}
+\label{namespaceopenstack_1_1xml_a3409020fa9a0856414d3b324b16ce84b}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a57d8a312e6445e31bce47bc103f48732}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const MetadataItem \&i)}
+\label{namespaceopenstack_1_1xml_a57d8a312e6445e31bce47bc103f48732}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_ae57c48099870652231819e32cae208e3}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const Personality \&i)}
+\label{namespaceopenstack_1_1xml_ae57c48099870652231819e32cae208e3}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a053e05626d873c4905bf880eb100d766}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const FileContent \&i)}
+\label{namespaceopenstack_1_1xml_a053e05626d873c4905bf880eb100d766}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a05912e08543d19d741ce400bd48478ab}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMAttr \&a, const FileContent \&i)}
+\label{namespaceopenstack_1_1xml_a05912e08543d19d741ce400bd48478ab}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_abae22ed2666fd01a1d8d8d4f6006d8a2}{
+void {\bfseries openstack::xml::operator$<$$<$} (::\hyperlink{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}{xml\_\-schema::ListStream} \&l, const FileContent \&i)}
+\label{namespaceopenstack_1_1xml_abae22ed2666fd01a1d8d8d4f6006d8a2}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_aaf1a729b69705084b8391df563a1e57c}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const File \&i)}
+\label{namespaceopenstack_1_1xml_aaf1a729b69705084b8391df563a1e57c}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a38eb380fbfd5489ef203cfe68cff13a6}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const Addresses \&i)}
+\label{namespaceopenstack_1_1xml_a38eb380fbfd5489ef203cfe68cff13a6}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_ac5d40576d64f8cb264a449e479906a5a}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const AddressList \&i)}
+\label{namespaceopenstack_1_1xml_ac5d40576d64f8cb264a449e479906a5a}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_ae3d208bf8f3ef88873a2827dd7de578e}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const Address \&i)}
+\label{namespaceopenstack_1_1xml_ae3d208bf8f3ef88873a2827dd7de578e}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_afcbeee32338b212d29afef1c5ce7ac93}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const ShareIp \&i)}
+\label{namespaceopenstack_1_1xml_afcbeee32338b212d29afef1c5ce7ac93}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_ac9d0f8d040ba9f85fac59715de9a149f}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const ServerStatus \&i)}
+\label{namespaceopenstack_1_1xml_ac9d0f8d040ba9f85fac59715de9a149f}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a548d9ae2443fc61bb1ea65ba01ee6f70}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMAttr \&a, const ServerStatus \&i)}
+\label{namespaceopenstack_1_1xml_a548d9ae2443fc61bb1ea65ba01ee6f70}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_af0e86453ab4e8453ed0591f12ea36266}{
+void {\bfseries openstack::xml::operator$<$$<$} (::\hyperlink{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}{xml\_\-schema::ListStream} \&l, const ServerStatus \&i)}
+\label{namespaceopenstack_1_1xml_af0e86453ab4e8453ed0591f12ea36266}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_ac6edaf6ae224931490a25588dab764bc}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const FileName \&i)}
+\label{namespaceopenstack_1_1xml_ac6edaf6ae224931490a25588dab764bc}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_acf24a43555dfccf93223b007c9dadda8}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMAttr \&a, const FileName \&i)}
+\label{namespaceopenstack_1_1xml_acf24a43555dfccf93223b007c9dadda8}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a568d5802927df5870b9b16570cf32b22}{
+void {\bfseries openstack::xml::operator$<$$<$} (::\hyperlink{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}{xml\_\-schema::ListStream} \&l, const FileName \&i)}
+\label{namespaceopenstack_1_1xml_a568d5802927df5870b9b16570cf32b22}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_aea466ca6a485dbbcd1406e2167d7ccc7}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const MetadataKey \&i)}
+\label{namespaceopenstack_1_1xml_aea466ca6a485dbbcd1406e2167d7ccc7}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_aa7bf9eb105888cfc3be9f2f70cfa0636}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMAttr \&a, const MetadataKey \&i)}
+\label{namespaceopenstack_1_1xml_aa7bf9eb105888cfc3be9f2f70cfa0636}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a2fa1af34d78434691f84d2e203f18f76}{
+void {\bfseries openstack::xml::operator$<$$<$} (::\hyperlink{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}{xml\_\-schema::ListStream} \&l, const MetadataKey \&i)}
+\label{namespaceopenstack_1_1xml_a2fa1af34d78434691f84d2e203f18f76}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Parsing functions for the server document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} $>$ \hyperlink{namespaceopenstack_1_1xml_abc242fc9a6326e2b4aaaafa83f4209b2}{openstack::xml::server} (const ::std::string \&uri,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} $>$ \hyperlink{namespaceopenstack_1_1xml_a779174260ee9ff5aacc893fb732ee976}{openstack::xml::server} (const ::std::string \&uri,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} $>$ \hyperlink{namespaceopenstack_1_1xml_ac15885628dee063098bede1c068a82e0}{openstack::xml::server} (const ::std::string \&uri,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} $>$ \hyperlink{namespaceopenstack_1_1xml_a1cd0b074cb2a13f16cf5a85ef32511a2}{openstack::xml::server} (::std::istream \&is,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} $>$ \hyperlink{namespaceopenstack_1_1xml_a08047bc21e1094dad7e0eb6f036374e6}{openstack::xml::server} (::std::istream \&is,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} $>$ \hyperlink{namespaceopenstack_1_1xml_aa8b110d0fa3ccf862d523089271c6475}{openstack::xml::server} (::std::istream \&is,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} $>$ \hyperlink{namespaceopenstack_1_1xml_a3d866591774069bc2c1df1d4bf5b5123}{openstack::xml::server} (::std::istream \&is, const ::std::string \&id,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} $>$ \hyperlink{namespaceopenstack_1_1xml_a73f1da9668c3c96ebf65925d423b0e06}{openstack::xml::server} (::std::istream \&is, const ::std::string \&id,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id and an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} $>$ \hyperlink{namespaceopenstack_1_1xml_abbe186b0fd34c4aebb5d89116d7b9c8d}{openstack::xml::server} (::std::istream \&is, const ::std::string \&id,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id and a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} $>$ \hyperlink{namespaceopenstack_1_1xml_ac9175ed4bf48fe4c8bae7860f2d34e4a}{openstack::xml::server} (::xercesc::InputSource \&is,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} $>$ \hyperlink{namespaceopenstack_1_1xml_abf14bd6e797a537162dd2034bcdc981f}{openstack::xml::server} (::xercesc::InputSource \&is,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} $>$ \hyperlink{namespaceopenstack_1_1xml_affc10980a198447f8d4f36334c8ecf4e}{openstack::xml::server} (::xercesc::InputSource \&is,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} $>$ \hyperlink{namespaceopenstack_1_1xml_abbc105655f7fe85bca8860da83cd6ebc}{openstack::xml::server} (const ::xercesc::DOMDocument \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} $>$ \hyperlink{namespaceopenstack_1_1xml_aa3ba9d8ac66f4079036ba0971afecbca}{openstack::xml::server} (::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Parsing functions for the servers document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} $>$ \hyperlink{namespaceopenstack_1_1xml_a3b7d778d803861163a44ef0798ed51da}{openstack::xml::servers} (const ::std::string \&uri,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} $>$ \hyperlink{namespaceopenstack_1_1xml_a918159ab505afbd1451375107dbd83f5}{openstack::xml::servers} (const ::std::string \&uri,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} $>$ \hyperlink{namespaceopenstack_1_1xml_a73651a91ace0bc1d08d8d90aaaa6eba7}{openstack::xml::servers} (const ::std::string \&uri,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} $>$ \hyperlink{namespaceopenstack_1_1xml_a6d1e34c966f6d42594d5732656431f3d}{openstack::xml::servers} (::std::istream \&is,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} $>$ \hyperlink{namespaceopenstack_1_1xml_a5594b1653f605b91917b6d5200348996}{openstack::xml::servers} (::std::istream \&is,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} $>$ \hyperlink{namespaceopenstack_1_1xml_aa88c43d2f8e673c85d087f9b23b6c153}{openstack::xml::servers} (::std::istream \&is,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} $>$ \hyperlink{namespaceopenstack_1_1xml_a0da83b51b0ff0a1bd33a636d2528d978}{openstack::xml::servers} (::std::istream \&is, const ::std::string \&id,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} $>$ \hyperlink{namespaceopenstack_1_1xml_a823b920d4401aa91dafe494e736b6f9b}{openstack::xml::servers} (::std::istream \&is, const ::std::string \&id,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id and an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} $>$ \hyperlink{namespaceopenstack_1_1xml_a53671bb73cbb0a435cfe9bbf777557a6}{openstack::xml::servers} (::std::istream \&is, const ::std::string \&id,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id and a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} $>$ \hyperlink{namespaceopenstack_1_1xml_a64ccd373015a10f35734c5a9785be90a}{openstack::xml::servers} (::xercesc::InputSource \&is,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} $>$ \hyperlink{namespaceopenstack_1_1xml_a41d9af5afebe801569c6fe380f405d08}{openstack::xml::servers} (::xercesc::InputSource \&is,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} $>$ \hyperlink{namespaceopenstack_1_1xml_af60a754a87c424854f5469ca19259a70}{openstack::xml::servers} (::xercesc::InputSource \&is,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} $>$ \hyperlink{namespaceopenstack_1_1xml_a4ee3753f1380b2d4bd5a19224c9d9f37}{openstack::xml::servers} (const ::xercesc::DOMDocument \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} $>$ \hyperlink{namespaceopenstack_1_1xml_a79b3ff8d71d3b030aa8d5b1a11655c3b}{openstack::xml::servers} (::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Parsing functions for the addresses document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} $>$ \hyperlink{namespaceopenstack_1_1xml_a4eadfe9af8c5dcb726bbe53d5a7d5109}{openstack::xml::addresses} (const ::std::string \&uri,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} $>$ \hyperlink{namespaceopenstack_1_1xml_a8745dbf92df7113a5eb95522d0a55a43}{openstack::xml::addresses} (const ::std::string \&uri,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} $>$ \hyperlink{namespaceopenstack_1_1xml_a7423b9fbb6d47852cfa81d701dfd8f92}{openstack::xml::addresses} (const ::std::string \&uri,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} $>$ \hyperlink{namespaceopenstack_1_1xml_a6a3b8ed6228e64cbbb3b6946f52b0fef}{openstack::xml::addresses} (::std::istream \&is,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} $>$ \hyperlink{namespaceopenstack_1_1xml_ab48665276ab5ca039bc02384e82a4f9d}{openstack::xml::addresses} (::std::istream \&is,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} $>$ \hyperlink{namespaceopenstack_1_1xml_a1592fd96763ad59629d51d06752c9cfb}{openstack::xml::addresses} (::std::istream \&is,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} $>$ \hyperlink{namespaceopenstack_1_1xml_ac1e6774952e715f35775911cbd37ebbb}{openstack::xml::addresses} (::std::istream \&is, const ::std::string \&id,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} $>$ \hyperlink{namespaceopenstack_1_1xml_a24d31f92087eb96bb50e7ded90d0edd9}{openstack::xml::addresses} (::std::istream \&is, const ::std::string \&id,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id and an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} $>$ \hyperlink{namespaceopenstack_1_1xml_ae53132d1c86c7e84e44c28ab8eb95830}{openstack::xml::addresses} (::std::istream \&is, const ::std::string \&id,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id and a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} $>$ \hyperlink{namespaceopenstack_1_1xml_abeda057f80dd9303b4f63e0a72a5a461}{openstack::xml::addresses} (::xercesc::InputSource \&is,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} $>$ \hyperlink{namespaceopenstack_1_1xml_a9eabb5ec190197f0a06507c76379c6cc}{openstack::xml::addresses} (::xercesc::InputSource \&is,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} $>$ \hyperlink{namespaceopenstack_1_1xml_a51396eb916f73c9b612c5ca70f9fff3e}{openstack::xml::addresses} (::xercesc::InputSource \&is,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} $>$ \hyperlink{namespaceopenstack_1_1xml_a2475e1930c1de4053636e75b9b7f4102}{openstack::xml::addresses} (const ::xercesc::DOMDocument \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} $>$ \hyperlink{namespaceopenstack_1_1xml_a5c526e2055dc94503c9ec5e9998d83d5}{openstack::xml::addresses} (::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Parsing functions for the public document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_aa3f3be2cf3e9350604d3aa9e7f28a220}{openstack::xml::public\_\-} (const ::std::string \&uri,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_aceba17eea3cdd0b4f2f8cbeb907ae04f}{openstack::xml::public\_\-} (const ::std::string \&uri,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a06ad36719a7301d016425c774bf5f1da}{openstack::xml::public\_\-} (const ::std::string \&uri,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a5044ea99468b52cfa59be8f9ee2f9c3b}{openstack::xml::public\_\-} (::std::istream \&is,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a9fca6b451aa61191bfb3e13b119574c6}{openstack::xml::public\_\-} (::std::istream \&is,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_ae99b71a00855e1aa6906ec1e281e9ca6}{openstack::xml::public\_\-} (::std::istream \&is,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a5f5f90c747b109551db5e21079bbeb9f}{openstack::xml::public\_\-} (::std::istream \&is, const ::std::string \&id,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a76a2c86ea3f752da352cbcc69473b606}{openstack::xml::public\_\-} (::std::istream \&is, const ::std::string \&id,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id and an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a1854337d91f5e73ede57bb76c33f7f76}{openstack::xml::public\_\-} (::std::istream \&is, const ::std::string \&id,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id and a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a523cb0e2c2b510081d39dfb9915a04ea}{openstack::xml::public\_\-} (::xercesc::InputSource \&is,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_af7589ffb5318b23868543e540e1c6f86}{openstack::xml::public\_\-} (::xercesc::InputSource \&is,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a75c7bca0ef982957a00399adbc0b8270}{openstack::xml::public\_\-} (::xercesc::InputSource \&is,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a0148c3d230d30434ceac70b67bfb94c1}{openstack::xml::public\_\-} (const ::xercesc::DOMDocument \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a1a40c308f384c211cfca6ee28bcd9b0d}{openstack::xml::public\_\-} (::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Parsing functions for the private document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a5b8acea9fd6c8d2afe7668207ef58fa3}{openstack::xml::private\_\-} (const ::std::string \&uri,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a45cf027d0ea54cc4bb114c5f6faec5e9}{openstack::xml::private\_\-} (const ::std::string \&uri,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a0a6b97db83d38425a51e1e049ac9c2cb}{openstack::xml::private\_\-} (const ::std::string \&uri,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_aad784c462cfee28f5422a90626964764}{openstack::xml::private\_\-} (::std::istream \&is,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a8af8116113142dae2584f86a2ab8f5dc}{openstack::xml::private\_\-} (::std::istream \&is,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a7c0c663fbc898bd87fa9cd826310ea8e}{openstack::xml::private\_\-} (::std::istream \&is,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a8ab362fa648bbf2ce1b9ac6b47ff9483}{openstack::xml::private\_\-} (::std::istream \&is, const ::std::string \&id,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a85b9d818207383587ff0f5cf850a98d6}{openstack::xml::private\_\-} (::std::istream \&is, const ::std::string \&id,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id and an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a9e81ae1c0fca2de181652678edd12629}{openstack::xml::private\_\-} (::std::istream \&is, const ::std::string \&id,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id and a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_ac872e048a626963fb3dfc3cd9072668c}{openstack::xml::private\_\-} (::xercesc::InputSource \&is,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a58e1819f27d1cac9a8c770c2dd5440ac}{openstack::xml::private\_\-} (::xercesc::InputSource \&is,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a4a92aaad231d0d409881448c6a99909a}{openstack::xml::private\_\-} (::xercesc::InputSource \&is,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_ad465c459924ed8f3e7e825b9bb279df0}{openstack::xml::private\_\-} (const ::xercesc::DOMDocument \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} $>$ \hyperlink{namespaceopenstack_1_1xml_a0ded454d6c5d196870b7a01f7d6baa47}{openstack::xml::private\_\-} (::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Parsing functions for the shareIp document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} $>$ \hyperlink{namespaceopenstack_1_1xml_a84e0679c0e7a452ac854f2847393b1cc}{openstack::xml::shareIp} (const ::std::string \&uri,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} $>$ \hyperlink{namespaceopenstack_1_1xml_a0e5c111a794bf514599538774ad343b7}{openstack::xml::shareIp} (const ::std::string \&uri,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} $>$ \hyperlink{namespaceopenstack_1_1xml_aedc4e9f806f9b8d7386242ed811b7b56}{openstack::xml::shareIp} (const ::std::string \&uri,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a URI or a local file with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} $>$ \hyperlink{namespaceopenstack_1_1xml_ab351bcfab7ad570e504dbef631789dac}{openstack::xml::shareIp} (::std::istream \&is,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} $>$ \hyperlink{namespaceopenstack_1_1xml_aaf7161f362b00e1a253cdd65d84d3246}{openstack::xml::shareIp} (::std::istream \&is,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} $>$ \hyperlink{namespaceopenstack_1_1xml_a5eb6699a7856642b2e5ed1dbf590c063}{openstack::xml::shareIp} (::std::istream \&is,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} $>$ \hyperlink{namespaceopenstack_1_1xml_a1f5ae6e57f6caa206e1461e3cb677722}{openstack::xml::shareIp} (::std::istream \&is, const ::std::string \&id,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} $>$ \hyperlink{namespaceopenstack_1_1xml_ac312485df46f12e3399ef05ac4b81853}{openstack::xml::shareIp} (::std::istream \&is, const ::std::string \&id,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id and an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} $>$ \hyperlink{namespaceopenstack_1_1xml_a2414ab5eb2c30d7db46b10e1b6c76a06}{openstack::xml::shareIp} (::std::istream \&is, const ::std::string \&id,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a standard input stream with a resource id and a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} $>$ \hyperlink{namespaceopenstack_1_1xml_a957ab85fa8489f60ac264031a35a331e}{openstack::xml::shareIp} (::xercesc::InputSource \&is,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} $>$ \hyperlink{namespaceopenstack_1_1xml_a813a20547065bf84a965b02273354786}{openstack::xml::shareIp} (::xercesc::InputSource \&is,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source with an error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} $>$ \hyperlink{namespaceopenstack_1_1xml_aaad5549b14fb0a3343639e6e43acdbf8}{openstack::xml::shareIp} (::xercesc::InputSource \&is,::xercesc::DOMErrorHandler \&eh,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ input source with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} $>$ \hyperlink{namespaceopenstack_1_1xml_aaee8882bcaa568b8ae62df3419b6551a}{openstack::xml::shareIp} (const ::xercesc::DOMDocument \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} $>$ \hyperlink{namespaceopenstack_1_1xml_ab3260b10951232f15ffc1ac7d2df7710}{openstack::xml::shareIp} (::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
+\begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the server document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_a7f771ad40d66d633a01043753e07621c}{openstack::xml::server} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a5594f6d64e1bdb6b0c9657c1f2251dbb}{openstack::xml::server} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a2d52c25c1433d2256d86fd3c6ddfd12f}{openstack::xml::server} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_adeed39f0032dbb54a3e1a0f5d48facbb}{openstack::xml::server} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a4470aaa353e3a18ab81e3d50c18e82f4}{openstack::xml::server} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a72119d8fc7fd9fcb969c827e66256a97}{openstack::xml::server} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_aff75539c99066a0d866736a1801bb192}{openstack::xml::server} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_ad7481f5f2c05ea7e721494a73324fd8b}{openstack::xml::server} (const ::\hyperlink{classopenstack_1_1xml_1_1Server}{openstack::xml::Server} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the servers document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_ac6661ea1ccf0287c30231bb427ec6098}{openstack::xml::servers} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_acff3717a891dcf8bfe06bccc20fb7a2d}{openstack::xml::servers} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a167605ae32a37f5f3457be1ce67627c0}{openstack::xml::servers} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_ae65e817198434ed40ccc52352dd67784}{openstack::xml::servers} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_acf6906afd5e03dd95f946c472172652e}{openstack::xml::servers} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_abe3bc36acdd8fb640fb23782f0d11b5b}{openstack::xml::servers} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a91e8e4460d8f57eca09fc2d9551ee567}{openstack::xml::servers} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_afd96f01d8ee839ef3d93594774e90117}{openstack::xml::servers} (const ::\hyperlink{classopenstack_1_1xml_1_1Servers}{openstack::xml::Servers} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the addresses document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_a9bee2bdecb79e7fa77a0f6e9310dc2ca}{openstack::xml::addresses} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_ad6067d747fefe7b2d845b289db3c2964}{openstack::xml::addresses} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a92ce740279a9918fd0172ca52f8aed08}{openstack::xml::addresses} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_aa50c1a86ddb2c5e5eb91d27c5a1e4ec8}{openstack::xml::addresses} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a2bfa87957b06f964a8b853c8ba0302c0}{openstack::xml::addresses} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_ac26d09341a64bee63dac3d5334caf526}{openstack::xml::addresses} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a6acfd92fcbbcd499ea96c8e60f218dd0}{openstack::xml::addresses} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_a589ac939e5c31f2043e1f2825c4f9e41}{openstack::xml::addresses} (const ::\hyperlink{classopenstack_1_1xml_1_1Addresses}{openstack::xml::Addresses} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the public document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_abc3b28c4b601887c904bb7a09a4e22d4}{openstack::xml::public\_\-} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_ab9d249d0fb809b7e3a46d4f1c5f5f02c}{openstack::xml::public\_\-} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_aa8ac8784dc3a267fd8c24f70d8083136}{openstack::xml::public\_\-} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_afcd689e82f5b6a525f57007f37010a3c}{openstack::xml::public\_\-} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a8c32836570e11585bbd7c13be692ae3e}{openstack::xml::public\_\-} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a364fee617f56082d97f44e67b847607e}{openstack::xml::public\_\-} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a600ac9743e5d46ad6ed743a8ce20201c}{openstack::xml::public\_\-} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_a8604602bdcfdb535660dd47a55be6fff}{openstack::xml::public\_\-} (const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the private document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_a24d0dacfda6cc9ee2b4e1c2baa3c87bf}{openstack::xml::private\_\-} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a7f1ba5aa16b81c6a2372baf95c63d003}{openstack::xml::private\_\-} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a981da77e46d0f6049ac226d093d0e3da}{openstack::xml::private\_\-} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a25755c6a26b2a1747fd46c4c65e384da}{openstack::xml::private\_\-} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a9ade8dca439d465d77bbbec4d80d2743}{openstack::xml::private\_\-} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a1cc371e13a721a5fe46371f3c756cc71}{openstack::xml::private\_\-} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_ab59757c7603d2901191e7c3fd7ac2b83}{openstack::xml::private\_\-} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_afeddce07085c0e4f3b8152aeba05d6a5}{openstack::xml::private\_\-} (const ::\hyperlink{classopenstack_1_1xml_1_1AddressList}{openstack::xml::AddressList} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the shareIp document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_af9a6bbb1ecaf4edb0d5887bfe2b89d4a}{openstack::xml::shareIp} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a0204ec82099fe7117e4a025a8ff90f2e}{openstack::xml::shareIp} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_ab258b3443058a51150be6f14edfe962f}{openstack::xml::shareIp} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a24fb2f7daee77ab18d42c4b50af47f70}{openstack::xml::shareIp} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a2010bd3d4b281faba8489c949a37d0c9}{openstack::xml::shareIp} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a1da718f6bd40b089ce9decefec66bef3}{openstack::xml::shareIp} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a9656fa8b68c1e5b39cd45a92f472303d}{openstack::xml::shareIp} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_a7fce517848d85c8755a7f28c689f94a6}{openstack::xml::shareIp} (const ::\hyperlink{classopenstack_1_1xml_1_1ShareIp}{openstack::xml::ShareIp} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Generated from server.xsd. 

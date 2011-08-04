@@ -1,6 +1,6 @@
 \hypertarget{backup_8hpp}{
-\section{xsd/backup.hpp File Reference}
-\label{backup_8hpp}\index{xsd/backup.hpp@{xsd/backup.hpp}}
+\section{xml/backup.hpp File Reference}
+\label{backup_8hpp}\index{xml/backup.hpp@{xml/backup.hpp}}
 }
 
 
@@ -28,6 +28,20 @@ Generated from backup.xsd.
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/float.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/double.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/decimal.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/xml/dom/serialization-\/header.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/byte.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/byte.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/short.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/short.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/int.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/int.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/long.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/long.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/boolean.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/float.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/double.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/decimal.hxx$>$}\par
 {\ttfamily \#include $<$memory$>$}\par
 {\ttfamily \#include $<$limits$>$}\par
 {\ttfamily \#include $<$algorithm$>$}\par
@@ -38,6 +52,7 @@ Generated from backup.xsd.
 {\ttfamily \#include $<$xercesc/sax/InputSource.hpp$>$}\par
 {\ttfamily \#include $<$xercesc/dom/DOMDocument.hpp$>$}\par
 {\ttfamily \#include $<$xercesc/dom/DOMErrorHandler.hpp$>$}\par
+{\ttfamily \#include $<$xercesc/framework/XMLFormatter.hpp$>$}\par
 {\ttfamily \#include \char`\"{}backup.ipp\char`\"{}}\par
 {\ttfamily \#include $<$xsd/cxx/post.hxx$>$}\par
 \subsection*{Classes}
@@ -71,6 +86,43 @@ namespace \hyperlink{namespaceopenstack_1_1xml}{openstack::xml}
 
 \end{DoxyCompactItemize}
 \subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespaceopenstack_1_1xml_abb6ca768787580ac4aa2751f39131740}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const BackupSchedule \&i)}
+\label{namespaceopenstack_1_1xml_abb6ca768787580ac4aa2751f39131740}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a72ee31098051b45c65ba0c4a570c3af0}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const DailyBackup \&i)}
+\label{namespaceopenstack_1_1xml_a72ee31098051b45c65ba0c4a570c3af0}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a820a24da2109243e8d4f782705968330}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMAttr \&a, const DailyBackup \&i)}
+\label{namespaceopenstack_1_1xml_a820a24da2109243e8d4f782705968330}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_aa27ed1c661eff36762f0f939e716fe2f}{
+void {\bfseries openstack::xml::operator$<$$<$} (::\hyperlink{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}{xml\_\-schema::ListStream} \&l, const DailyBackup \&i)}
+\label{namespaceopenstack_1_1xml_aa27ed1c661eff36762f0f939e716fe2f}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a77df5feea3ec2394daeefb1001fc8a7b}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const WeeklyBackup \&i)}
+\label{namespaceopenstack_1_1xml_a77df5feea3ec2394daeefb1001fc8a7b}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_ae4816b651f8850baca4e149b11ca90fc}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMAttr \&a, const WeeklyBackup \&i)}
+\label{namespaceopenstack_1_1xml_ae4816b651f8850baca4e149b11ca90fc}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a7cce2ae7b594cc10b0cc7e94401934df}{
+void {\bfseries openstack::xml::operator$<$$<$} (::\hyperlink{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}{xml\_\-schema::ListStream} \&l, const WeeklyBackup \&i)}
+\label{namespaceopenstack_1_1xml_a7cce2ae7b594cc10b0cc7e94401934df}
+
+\end{DoxyCompactItemize}
 \begin{Indent}{\bf Parsing functions for the backupSchedule document root.}\par
 \begin{DoxyCompactItemize}
 \item 
@@ -102,6 +154,26 @@ namespace \hyperlink{namespaceopenstack_1_1xml}{openstack::xml}
 \begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
 ::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1BackupSchedule}{openstack::xml::BackupSchedule} $>$ \hyperlink{namespaceopenstack_1_1xml_a4a1970cf4ec8d917e3c781430ad8ebad}{openstack::xml::backupSchedule} (::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
 \begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the backupSchedule document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_ad55a9e061125e6ef347f475267fe5c16}{openstack::xml::backupSchedule} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1BackupSchedule}{openstack::xml::BackupSchedule} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_affb17d370ba46e2b2b756a7d3a233d2a}{openstack::xml::backupSchedule} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1BackupSchedule}{openstack::xml::BackupSchedule} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a61afbe38824e1f9b2947bb17de2ab5d1}{openstack::xml::backupSchedule} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1BackupSchedule}{openstack::xml::BackupSchedule} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_adfcc0678ce0787d07308a306401e1a70}{openstack::xml::backupSchedule} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1BackupSchedule}{openstack::xml::BackupSchedule} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_aaadb788e5d8e76f169d46ed284edc3f9}{openstack::xml::backupSchedule} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1BackupSchedule}{openstack::xml::BackupSchedule} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_aaecfd72447a9e53c63071d0f80bf752c}{openstack::xml::backupSchedule} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1BackupSchedule}{openstack::xml::BackupSchedule} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a4899acc205b6a685c1f78f8a38e23443}{openstack::xml::backupSchedule} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1BackupSchedule}{openstack::xml::BackupSchedule} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_a84a2a0fbbab60ff8a854048d05781c06}{openstack::xml::backupSchedule} (const ::\hyperlink{classopenstack_1_1xml_1_1BackupSchedule}{openstack::xml::BackupSchedule} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 
 

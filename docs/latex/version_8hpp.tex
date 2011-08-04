@@ -1,6 +1,6 @@
 \hypertarget{version_8hpp}{
-\section{xsd/version.hpp File Reference}
-\label{version_8hpp}\index{xsd/version.hpp@{xsd/version.hpp}}
+\section{xml/version.hpp File Reference}
+\label{version_8hpp}\index{xml/version.hpp@{xml/version.hpp}}
 }
 
 
@@ -28,6 +28,20 @@ Generated from version.xsd.
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/float.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/double.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/decimal.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/xml/dom/serialization-\/header.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/byte.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/byte.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/short.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/short.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/int.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/int.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/long.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/long.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/boolean.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/float.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/double.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/decimal.hxx$>$}\par
 {\ttfamily \#include $<$memory$>$}\par
 {\ttfamily \#include $<$limits$>$}\par
 {\ttfamily \#include $<$algorithm$>$}\par
@@ -38,6 +52,7 @@ Generated from version.xsd.
 {\ttfamily \#include $<$xercesc/sax/InputSource.hpp$>$}\par
 {\ttfamily \#include $<$xercesc/dom/DOMDocument.hpp$>$}\par
 {\ttfamily \#include $<$xercesc/dom/DOMErrorHandler.hpp$>$}\par
+{\ttfamily \#include $<$xercesc/framework/XMLFormatter.hpp$>$}\par
 {\ttfamily \#include \char`\"{}version.ipp\char`\"{}}\par
 {\ttfamily \#include $<$xsd/cxx/post.hxx$>$}\par
 \subsection*{Classes}
@@ -69,6 +84,28 @@ namespace \hyperlink{namespaceopenstack_1_1xml}{openstack::xml}
 
 \end{DoxyCompactItemize}
 \subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespaceopenstack_1_1xml_ae0ac0862321dad273f7ad96225d2d063}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const Version \&i)}
+\label{namespaceopenstack_1_1xml_ae0ac0862321dad273f7ad96225d2d063}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a38bb2600ab1a68cb96247e0025b1b9ff}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const VersionStatus \&i)}
+\label{namespaceopenstack_1_1xml_a38bb2600ab1a68cb96247e0025b1b9ff}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a5fe8ebd5cc27be14c222af784ec25d90}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMAttr \&a, const VersionStatus \&i)}
+\label{namespaceopenstack_1_1xml_a5fe8ebd5cc27be14c222af784ec25d90}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_af7799b47326a9be5a6b340ae59e83dd4}{
+void {\bfseries openstack::xml::operator$<$$<$} (::\hyperlink{namespacexml__schema_aa893a219e389ee6716fe6545a6bffe7e}{xml\_\-schema::ListStream} \&l, const VersionStatus \&i)}
+\label{namespaceopenstack_1_1xml_af7799b47326a9be5a6b340ae59e83dd4}
+
+\end{DoxyCompactItemize}
 \begin{Indent}{\bf Parsing functions for the version document root.}\par
 \begin{DoxyCompactItemize}
 \item 
@@ -100,6 +137,26 @@ namespace \hyperlink{namespaceopenstack_1_1xml}{openstack::xml}
 \begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
 ::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} $>$ \hyperlink{namespaceopenstack_1_1xml_a4ecc9f7ab2a9107da9f5af99989d1a1b}{openstack::xml::version} (::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
 \begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the version document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_a9d46789c6c1a997fbfc6a92fd06adca1}{openstack::xml::version} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a4aa46ca733a009a87638b45e2a825df7}{openstack::xml::version} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_aaa0a58e0cabd0fe5b2d37b5db90f9b9d}{openstack::xml::version} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a2d9c3e3fb19eff5e1705aeef781b7378}{openstack::xml::version} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_abc49dc76c7608df89bcc5ed63a414064}{openstack::xml::version} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a56d1ca7a9a77f633e076049a9d2e9805}{openstack::xml::version} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a5624a801d3e7d6f01f0462bba60e0b83}{openstack::xml::version} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_a40af4080478f63df6abadb48f7d0bbef}{openstack::xml::version} (const ::\hyperlink{classopenstack_1_1xml_1_1Version}{openstack::xml::Version} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 
 

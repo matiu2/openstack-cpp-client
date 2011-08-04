@@ -1007,6 +1007,545 @@ namespace openstack
   }
 }
 
+#include <ostream>
+#include <xsd/cxx/tree/error-handler.hxx>
+#include <xsd/cxx/xml/dom/serialization-source.hxx>
+
+#include <xsd/cxx/tree/type-serializer-map.hxx>
+
+namespace _xsd
+{
+  static
+  const ::xsd::cxx::tree::type_serializer_plate< 0, char >
+  type_serializer_plate_init;
+}
+
+namespace openstack
+{
+  namespace xml
+  {
+    void
+    image (::std::ostream& o,
+           const ::openstack::xml::Image& s,
+           const ::xml_schema::NamespaceInfomap& m,
+           const ::std::string& e,
+           ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::image (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    image (::std::ostream& o,
+           const ::openstack::xml::Image& s,
+           ::xml_schema::ErrorHandler& h,
+           const ::xml_schema::NamespaceInfomap& m,
+           const ::std::string& e,
+           ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::image (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    image (::std::ostream& o,
+           const ::openstack::xml::Image& s,
+           ::xercesc::DOMErrorHandler& h,
+           const ::xml_schema::NamespaceInfomap& m,
+           const ::std::string& e,
+           ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::image (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    image (::xercesc::XMLFormatTarget& t,
+           const ::openstack::xml::Image& s,
+           const ::xml_schema::NamespaceInfomap& m,
+           const ::std::string& e,
+           ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::image (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    image (::xercesc::XMLFormatTarget& t,
+           const ::openstack::xml::Image& s,
+           ::xml_schema::ErrorHandler& h,
+           const ::xml_schema::NamespaceInfomap& m,
+           const ::std::string& e,
+           ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::image (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    image (::xercesc::XMLFormatTarget& t,
+           const ::openstack::xml::Image& s,
+           ::xercesc::DOMErrorHandler& h,
+           const ::xml_schema::NamespaceInfomap& m,
+           const ::std::string& e,
+           ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::image (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    image (::xercesc::DOMDocument& d,
+           const ::openstack::xml::Image& s,
+           ::xml_schema::Flags)
+    {
+      ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (typeid (::openstack::xml::Image) == typeid (s))
+      {
+        if (n.name () == "image" &&
+            n.namespace_ () == "http://docs.rackspacecloud.com/servers/api/v1.0")
+        {
+          e << s;
+        }
+        else
+        {
+          throw ::xsd::cxx::tree::unexpected_element < char > (
+            n.name (),
+            n.namespace_ (),
+            "image",
+            "http://docs.rackspacecloud.com/servers/api/v1.0");
+        }
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        tsm.serialize (
+          "image",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          e, n, s);
+      }
+    }
+
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    image (const ::openstack::xml::Image& s,
+           const ::xml_schema::NamespaceInfomap& m,
+           ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d;
+
+      if (typeid (::openstack::xml::Image) == typeid (s))
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          ::xsd::cxx::xml::dom::serialize< char > (
+            "image",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, f));
+        d = r;
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          tsm.serialize (
+            "image",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, s, f));
+        d = r;
+      }
+
+      ::openstack::xml::image (*d, s, f);
+      return d;
+    }
+
+    void
+    images (::std::ostream& o,
+            const ::openstack::xml::Images& s,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::images (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    images (::std::ostream& o,
+            const ::openstack::xml::Images& s,
+            ::xml_schema::ErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::images (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    images (::std::ostream& o,
+            const ::openstack::xml::Images& s,
+            ::xercesc::DOMErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::images (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    images (::xercesc::XMLFormatTarget& t,
+            const ::openstack::xml::Images& s,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::images (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    images (::xercesc::XMLFormatTarget& t,
+            const ::openstack::xml::Images& s,
+            ::xml_schema::ErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::images (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    images (::xercesc::XMLFormatTarget& t,
+            const ::openstack::xml::Images& s,
+            ::xercesc::DOMErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::images (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    images (::xercesc::DOMDocument& d,
+            const ::openstack::xml::Images& s,
+            ::xml_schema::Flags)
+    {
+      ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (typeid (::openstack::xml::Images) == typeid (s))
+      {
+        if (n.name () == "images" &&
+            n.namespace_ () == "http://docs.rackspacecloud.com/servers/api/v1.0")
+        {
+          e << s;
+        }
+        else
+        {
+          throw ::xsd::cxx::tree::unexpected_element < char > (
+            n.name (),
+            n.namespace_ (),
+            "images",
+            "http://docs.rackspacecloud.com/servers/api/v1.0");
+        }
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        tsm.serialize (
+          "images",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          e, n, s);
+      }
+    }
+
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    images (const ::openstack::xml::Images& s,
+            const ::xml_schema::NamespaceInfomap& m,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d;
+
+      if (typeid (::openstack::xml::Images) == typeid (s))
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          ::xsd::cxx::xml::dom::serialize< char > (
+            "images",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, f));
+        d = r;
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          tsm.serialize (
+            "images",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, s, f));
+        d = r;
+      }
+
+      ::openstack::xml::images (*d, s, f);
+      return d;
+    }
+
+    void
+    operator<< (::xercesc::DOMElement& e, const Image& i)
+    {
+      e << static_cast< const ::xml_schema::Type& > (i);
+
+      // id
+      //
+      if (i.id ())
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "id",
+            e));
+
+        a << *i.id ();
+      }
+
+      // name
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "name",
+            e));
+
+        a << i.name ();
+      }
+
+      // serverId
+      //
+      if (i.serverId ())
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "serverId",
+            e));
+
+        a << *i.serverId ();
+      }
+
+      // updated
+      //
+      if (i.updated ())
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "updated",
+            e));
+
+        a << *i.updated ();
+      }
+
+      // created
+      //
+      if (i.created ())
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "created",
+            e));
+
+        a << *i.created ();
+      }
+
+      // progress
+      //
+      if (i.progress ())
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "progress",
+            e));
+
+        a << *i.progress ();
+      }
+
+      // status
+      //
+      if (i.status ())
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "status",
+            e));
+
+        a << *i.status ();
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, Image >
+    _xsd_Image_type_serializer_init (
+      "Image",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const Images& i)
+    {
+      e << static_cast< const ::xml_schema::Type& > (i);
+
+      // image
+      //
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        for (Images::ImageConstIterator
+             b (i.image ().begin ()), n (i.image ().end ());
+             b != n; ++b)
+        {
+          if (typeid (Images::ImageType) == typeid (*b))
+          {
+            ::xercesc::DOMElement& s (
+              ::xsd::cxx::xml::dom::create_element (
+                "image",
+                "http://docs.rackspacecloud.com/servers/api/v1.0",
+                e));
+
+            s << *b;
+          }
+          else
+            tsm.serialize (
+              "image",
+              "http://docs.rackspacecloud.com/servers/api/v1.0",
+              false, true, e, *b);
+        }
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, Images >
+    _xsd_Images_type_serializer_init (
+      "Images",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const ImageStatus& i)
+    {
+      e << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    void
+    operator<< (::xercesc::DOMAttr& a, const ImageStatus& i)
+    {
+      a << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    void
+    operator<< (::xml_schema::ListStream& l,
+                const ImageStatus& i)
+    {
+      l << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, ImageStatus >
+    _xsd_ImageStatus_type_serializer_init (
+      "ImageStatus",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+  }
+}
+
 #include <xsd/cxx/post.hxx>
 
 // Begin epilogue.

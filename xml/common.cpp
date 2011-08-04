@@ -128,6 +128,50 @@ namespace openstack
   }
 }
 
+#include <ostream>
+#include <xsd/cxx/tree/error-handler.hxx>
+#include <xsd/cxx/xml/dom/serialization-source.hxx>
+
+#include <xsd/cxx/tree/type-serializer-map.hxx>
+
+namespace _xsd
+{
+  static
+  const ::xsd::cxx::tree::type_serializer_plate< 0, char >
+  type_serializer_plate_init;
+}
+
+namespace openstack
+{
+  namespace xml
+  {
+    void
+    operator<< (::xercesc::DOMElement& e, const Progress& i)
+    {
+      e << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::Int, char, ::xml_schema::SimpleType >& > (i);
+    }
+
+    void
+    operator<< (::xercesc::DOMAttr& a, const Progress& i)
+    {
+      a << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::Int, char, ::xml_schema::SimpleType >& > (i);
+    }
+
+    void
+    operator<< (::xml_schema::ListStream& l,
+                const Progress& i)
+    {
+      l << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::Int, char, ::xml_schema::SimpleType >& > (i);
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, Progress >
+    _xsd_Progress_type_serializer_init (
+      "Progress",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+  }
+}
+
 #include <xsd/cxx/post.hxx>
 
 // Begin epilogue.

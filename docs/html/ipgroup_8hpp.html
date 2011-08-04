@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>OpenstackAPI: xsd/ipgroup.hpp File Reference</title>
+<title>OpenstackAPI: xml/ipgroup.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="dir_009e0c517fce22cb692eb0aff2452b14.html">xsd</a>      </li>
+      <li class="navelem"><a class="el" href="dir_f833a10f84840ffd1d489f9c1b04339a.html">xml</a>      </li>
     </ul>
   </div>
 </div>
@@ -65,7 +65,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Defines</a>  </div>
+<a href="#define-members">Defines</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <h1>ipgroup.hpp File Reference</h1>  </div>
 </div>
@@ -94,6 +95,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;xsd/cxx/tree/parsing/float.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/double.hxx&gt;</code><br/>
 <code>#include &lt;xsd/cxx/tree/parsing/decimal.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/xml/dom/serialization-header.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/byte.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/unsigned-byte.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/short.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/unsigned-short.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/int.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/unsigned-int.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/long.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/unsigned-long.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/boolean.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/float.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/double.hxx&gt;</code><br/>
+<code>#include &lt;xsd/cxx/tree/serialization/decimal.hxx&gt;</code><br/>
 <code>#include &lt;memory&gt;</code><br/>
 <code>#include &lt;limits&gt;</code><br/>
 <code>#include &lt;algorithm&gt;</code><br/>
@@ -104,6 +119,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;xercesc/sax/InputSource.hpp&gt;</code><br/>
 <code>#include &lt;xercesc/dom/DOMDocument.hpp&gt;</code><br/>
 <code>#include &lt;xercesc/dom/DOMErrorHandler.hpp&gt;</code><br/>
+<code>#include &lt;xercesc/framework/XMLFormatter.hpp&gt;</code><br/>
 <code>#include &quot;ipgroup.ipp&quot;</code><br/>
 <code>#include &lt;xsd/cxx/post.hxx&gt;</code><br/>
 </div>
@@ -138,6 +154,14 @@ Namespaces</h2></td></tr>
 </p>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3837dd00b21b061fa87d90e89444d0e"></a><!-- doxytag: member="ipgroup.hpp::operator&lt;&lt;" ref="ae3837dd00b21b061fa87d90e89444d0e" args="(::xercesc::DOMElement &amp;e, const SharedIpGroup &amp;i)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>openstack::xml::operator&lt;&lt;</b> (::xercesc::DOMElement &amp;e, const SharedIpGroup &amp;i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe257bc9750b5f59448aec5fdc2b6701"></a><!-- doxytag: member="ipgroup.hpp::operator&lt;&lt;" ref="afe257bc9750b5f59448aec5fdc2b6701" args="(::xercesc::DOMElement &amp;e, const SharedIpGroups &amp;i)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>openstack::xml::operator&lt;&lt;</b> (::xercesc::DOMElement &amp;e, const SharedIpGroups &amp;i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0dedef2b1ddd49979bfdd70aa463001a"></a><!-- doxytag: member="ipgroup.hpp::operator&lt;&lt;" ref="a0dedef2b1ddd49979bfdd70aa463001a" args="(::xercesc::DOMElement &amp;e, const ServerIDList &amp;i)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>openstack::xml::operator&lt;&lt;</b> (::xercesc::DOMElement &amp;e, const ServerIDList &amp;i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfc580552f16ddc5cebbdf7029889cfa"></a><!-- doxytag: member="ipgroup.hpp::operator&lt;&lt;" ref="adfc580552f16ddc5cebbdf7029889cfa" args="(::xercesc::DOMElement &amp;e, const ServerID &amp;i)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>openstack::xml::operator&lt;&lt;</b> (::xercesc::DOMElement &amp;e, const ServerID &amp;i)</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Parsing functions for the sharedIpGroup document root.</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
 &lt; ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroup.html">openstack::xml::SharedIpGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a0f7ce7a63f241cfe9a9103b30bc627d3">openstack::xml::sharedIpGroup</a> (const ::std::string &amp;uri,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
@@ -224,6 +248,42 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">::std::auto_ptr<br class="typebreak"/>
 &lt; ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroups.html">openstack::xml::SharedIpGroups</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#aa179774e193c6e1b3d2dd201de024e27">openstack::xml::sharedIpGroups</a> (::xml_schema::dom::auto_ptr&lt; ::xercesc::DOMDocument &gt; &amp;d,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0, const ::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a> &amp;p=::<a class="el" href="namespacexml__schema.html#ad27ce19a7ee1d3b1064092648898f64c">xml_schema::Properties</a>())</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Xerces-C++ DOM document.  <a href="#aa179774e193c6e1b3d2dd201de024e27"></a><br/></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Serialization functions for the sharedIpGroup document root.</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#ad46919b1ea3d154ba13087846b4288a2">openstack::xml::sharedIpGroup</a> (::std::ostream &amp;os, const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroup.html">openstack::xml::SharedIpGroup</a> &amp;x, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a standard output stream.  <a href="#ad46919b1ea3d154ba13087846b4288a2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a166eef24f71ec78d7e44bdbda3366cde">openstack::xml::sharedIpGroup</a> (::std::ostream &amp;os, const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroup.html">openstack::xml::SharedIpGroup</a> &amp;x,::<a class="el" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc">xml_schema::ErrorHandler</a> &amp;eh, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a standard output stream with an error handler.  <a href="#a166eef24f71ec78d7e44bdbda3366cde"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#ae8f1e767cd5e87942738c53541b15d91">openstack::xml::sharedIpGroup</a> (::std::ostream &amp;os, const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroup.html">openstack::xml::SharedIpGroup</a> &amp;x,::xercesc::DOMErrorHandler &amp;eh, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a standard output stream with a Xerces-C++ DOM error handler.  <a href="#ae8f1e767cd5e87942738c53541b15d91"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a2311662e1d80555895b1d08c8e3bfca2">openstack::xml::sharedIpGroup</a> (::xercesc::XMLFormatTarget &amp;ft, const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroup.html">openstack::xml::SharedIpGroup</a> &amp;x, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a Xerces-C++ XML format target.  <a href="#a2311662e1d80555895b1d08c8e3bfca2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#aabc8e34a31987ecc9a58dceade5f247e">openstack::xml::sharedIpGroup</a> (::xercesc::XMLFormatTarget &amp;ft, const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroup.html">openstack::xml::SharedIpGroup</a> &amp;x,::<a class="el" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc">xml_schema::ErrorHandler</a> &amp;eh, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a Xerces-C++ XML format target with an error handler.  <a href="#aabc8e34a31987ecc9a58dceade5f247e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a0548ac3c6fd41e1d585f4b13565cfbb6">openstack::xml::sharedIpGroup</a> (::xercesc::XMLFormatTarget &amp;ft, const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroup.html">openstack::xml::SharedIpGroup</a> &amp;x,::xercesc::DOMErrorHandler &amp;eh, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a Xerces-C++ XML format target with a Xerces-C++ DOM error handler.  <a href="#a0548ac3c6fd41e1d585f4b13565cfbb6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a00f2a77357efbf9e2a7eb14c4969a614">openstack::xml::sharedIpGroup</a> (::xercesc::DOMDocument &amp;d, const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroup.html">openstack::xml::SharedIpGroup</a> &amp;x,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to an existing Xerces-C++ DOM document.  <a href="#a00f2a77357efbf9e2a7eb14c4969a614"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::xml_schema::dom::auto_ptr<br class="typebreak"/>
+&lt; ::xercesc::DOMDocument &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a137167443d5f0c5f1e4747e83d3948bc">openstack::xml::sharedIpGroup</a> (const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroup.html">openstack::xml::SharedIpGroup</a> &amp;x, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(),::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a new Xerces-C++ DOM document.  <a href="#a137167443d5f0c5f1e4747e83d3948bc"></a><br/></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Serialization functions for the sharedIpGroups document root.</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a572cd24f5af77f2fb617e214675a5d5e">openstack::xml::sharedIpGroups</a> (::std::ostream &amp;os, const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroups.html">openstack::xml::SharedIpGroups</a> &amp;x, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a standard output stream.  <a href="#a572cd24f5af77f2fb617e214675a5d5e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a8e7a323f38b2cca3fa2a71960451e394">openstack::xml::sharedIpGroups</a> (::std::ostream &amp;os, const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroups.html">openstack::xml::SharedIpGroups</a> &amp;x,::<a class="el" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc">xml_schema::ErrorHandler</a> &amp;eh, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a standard output stream with an error handler.  <a href="#a8e7a323f38b2cca3fa2a71960451e394"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#ae12841e626ec36dd1c1674d1d6991c58">openstack::xml::sharedIpGroups</a> (::std::ostream &amp;os, const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroups.html">openstack::xml::SharedIpGroups</a> &amp;x,::xercesc::DOMErrorHandler &amp;eh, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a standard output stream with a Xerces-C++ DOM error handler.  <a href="#ae12841e626ec36dd1c1674d1d6991c58"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a461bb811e6330f679dfef8f261019c6f">openstack::xml::sharedIpGroups</a> (::xercesc::XMLFormatTarget &amp;ft, const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroups.html">openstack::xml::SharedIpGroups</a> &amp;x, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a Xerces-C++ XML format target.  <a href="#a461bb811e6330f679dfef8f261019c6f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a6221e0b5ee55465d0af79a02f53dfa23">openstack::xml::sharedIpGroups</a> (::xercesc::XMLFormatTarget &amp;ft, const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroups.html">openstack::xml::SharedIpGroups</a> &amp;x,::<a class="el" href="namespacexml__schema.html#ab1c9361bfd3b404eaabf0c31eded79dc">xml_schema::ErrorHandler</a> &amp;eh, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a Xerces-C++ XML format target with an error handler.  <a href="#a6221e0b5ee55465d0af79a02f53dfa23"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#a4c7938da49e464058be6a72a25af8d3f">openstack::xml::sharedIpGroups</a> (::xercesc::XMLFormatTarget &amp;ft, const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroups.html">openstack::xml::SharedIpGroups</a> &amp;x,::xercesc::DOMErrorHandler &amp;eh, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(), const ::std::string &amp;e=&quot;UTF-8&quot;,::xml_schema::Flags f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a Xerces-C++ XML format target with a Xerces-C++ DOM error handler.  <a href="#a4c7938da49e464058be6a72a25af8d3f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#afb71fbd1e6304ae299dda42c5686ea11">openstack::xml::sharedIpGroups</a> (::xercesc::DOMDocument &amp;d, const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroups.html">openstack::xml::SharedIpGroups</a> &amp;x,::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to an existing Xerces-C++ DOM document.  <a href="#afb71fbd1e6304ae299dda42c5686ea11"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">::xml_schema::dom::auto_ptr<br class="typebreak"/>
+&lt; ::xercesc::DOMDocument &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenstack_1_1xml.html#ad3acea59ccd8625f2dc51846ef38c949">openstack::xml::sharedIpGroups</a> (const ::<a class="el" href="classopenstack_1_1xml_1_1SharedIpGroups.html">openstack::xml::SharedIpGroups</a> &amp;x, const ::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a> &amp;m=::<a class="el" href="namespacexml__schema.html#a4581dcaae6f82c9ed74ba650a45c0952">xml_schema::NamespaceInfomap</a>(),::<a class="el" href="namespacexml__schema.html#affb4c227cbd9aa7453dd1dc5a1401943">xml_schema::Flags</a> f=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a new Xerces-C++ DOM document.  <a href="#ad3acea59ccd8625f2dc51846ef38c949"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Generated from ipgroup.xsd. </p>
@@ -242,7 +302,7 @@ Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Aug 1 2011 17:49:21 for OpenstackAPI by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Aug 3 2011 07:52:12 for OpenstackAPI by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

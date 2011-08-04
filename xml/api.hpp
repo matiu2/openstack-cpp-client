@@ -84,6 +84,21 @@
 #include <xsd/cxx/tree/parsing/double.hxx>
 #include <xsd/cxx/tree/parsing/decimal.hxx>
 
+#include <xsd/cxx/xml/dom/serialization-header.hxx>
+#include <xsd/cxx/tree/serialization.hxx>
+#include <xsd/cxx/tree/serialization/byte.hxx>
+#include <xsd/cxx/tree/serialization/unsigned-byte.hxx>
+#include <xsd/cxx/tree/serialization/short.hxx>
+#include <xsd/cxx/tree/serialization/unsigned-short.hxx>
+#include <xsd/cxx/tree/serialization/int.hxx>
+#include <xsd/cxx/tree/serialization/unsigned-int.hxx>
+#include <xsd/cxx/tree/serialization/long.hxx>
+#include <xsd/cxx/tree/serialization/unsigned-long.hxx>
+#include <xsd/cxx/tree/serialization/boolean.hxx>
+#include <xsd/cxx/tree/serialization/float.hxx>
+#include <xsd/cxx/tree/serialization/double.hxx>
+#include <xsd/cxx/tree/serialization/decimal.hxx>
+
 /**
  * @brief C++ namespace for the %http://www.w3.org/2001/XMLSchema
  * schema namespace.
@@ -435,6 +450,39 @@ namespace xml_schema
   typedef ::xsd::cxx::tree::entities< char, SimpleType, Entity > Entities;
 
 
+  // Namespace information and list stream. Used in
+  // serialization functions.
+  //
+  /**
+   * @brief Namespace serialization information.
+   */
+  typedef ::xsd::cxx::xml::dom::namespace_info< char > NamespaceInfo;
+
+  /**
+   * @brief Namespace serialization information map.
+   */
+  typedef ::xsd::cxx::xml::dom::namespace_infomap< char > NamespaceInfomap;
+
+  /**
+   * @brief List serialization stream.
+   */
+  typedef ::xsd::cxx::tree::list_stream< char > ListStream;
+
+  /**
+   * @brief Serialization wrapper for the %double type.
+   */
+  typedef ::xsd::cxx::tree::as_double< Double > AsDouble;
+
+  /**
+   * @brief Serialization wrapper for the %decimal type.
+   */
+  typedef ::xsd::cxx::tree::as_decimal< Decimal > AsDecimal;
+
+  /**
+   * @brief Simple type facet.
+   */
+  typedef ::xsd::cxx::tree::facet Facet;
+
   // Flags and properties.
   //
 
@@ -538,6 +586,11 @@ namespace xml_schema
    * related by inheritance.
    */
   typedef ::xsd::cxx::tree::not_derived< char > NotDerived;
+
+  /**
+   * @brief Exception indicating a serialization failure.
+   */
+  typedef ::xsd::cxx::tree::serialization< char > Serialization;
 
   /**
    * @brief Error handler callback interface.
@@ -669,6 +722,21 @@ namespace openstack
 #include <xercesc/sax/InputSource.hpp>
 #include <xercesc/dom/DOMDocument.hpp>
 #include <xercesc/dom/DOMErrorHandler.hpp>
+
+namespace openstack
+{
+  namespace xml
+  {
+  }
+}
+
+#include <iosfwd>
+
+#include <xercesc/dom/DOMDocument.hpp>
+#include <xercesc/dom/DOMErrorHandler.hpp>
+#include <xercesc/framework/XMLFormatter.hpp>
+
+#include <xsd/cxx/xml/dom/auto-ptr.hxx>
 
 namespace openstack
 {

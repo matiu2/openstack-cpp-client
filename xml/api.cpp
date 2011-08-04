@@ -55,6 +55,19 @@ namespace _xsd
 #include <xsd/cxx/xml/sax/std-input-source.hxx>
 #include <xsd/cxx/tree/error-handler.hxx>
 
+#include <ostream>
+#include <xsd/cxx/tree/error-handler.hxx>
+#include <xsd/cxx/xml/dom/serialization-source.hxx>
+
+#include <xsd/cxx/tree/type-serializer-map.hxx>
+
+namespace _xsd
+{
+  static
+  const ::xsd::cxx::tree::type_serializer_plate< 0, char >
+  type_serializer_plate_init;
+}
+
 #include <xsd/cxx/post.hxx>
 
 // Begin epilogue.

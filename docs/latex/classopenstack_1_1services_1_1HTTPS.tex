@@ -1,0 +1,50 @@
+\hypertarget{classopenstack_1_1services_1_1HTTPS}{
+\section{openstack::services::HTTPS Class Reference}
+\label{classopenstack_1_1services_1_1HTTPS}\index{openstack::services::HTTPS@{openstack::services::HTTPS}}
+}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1services_1_1HTTPS_a86e9de849e0b747de165fc7cf485c8de}{
+typedef std::map$<$ string, string $>$ {\bfseries Headers}}
+\label{classopenstack_1_1services_1_1HTTPS_a86e9de849e0b747de165fc7cf485c8de}
+
+\item 
+\hypertarget{classopenstack_1_1services_1_1HTTPS_a3fe02268eadcc1ddfbf18de029e5b4d6}{
+typedef std::pair$<$ string, string $>$ {\bfseries Header}}
+\label{classopenstack_1_1services_1_1HTTPS_a3fe02268eadcc1ddfbf18de029e5b4d6}
+
+\item 
+\hypertarget{classopenstack_1_1services_1_1HTTPS_a1de260bd99a79d6cc71c0fedf5a9e128}{
+typedef std::map$<$ string, string $>$::const\_\-iterator {\bfseries cpHeader}}
+\label{classopenstack_1_1services_1_1HTTPS_a1de260bd99a79d6cc71c0fedf5a9e128}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classopenstack_1_1services_1_1HTTPS_ab7f4cfb8dcf2ebef160efa423ddd6759}{
+{\bfseries HTTPS} (const string \&hostname)}
+\label{classopenstack_1_1services_1_1HTTPS_ab7f4cfb8dcf2ebef160efa423ddd6759}
+
+\item 
+\hypertarget{classopenstack_1_1services_1_1HTTPS_acdf390b8d3ce0be2a0e4feb75aa2eb09}{
+void {\bfseries connect} ()}
+\label{classopenstack_1_1services_1_1HTTPS_acdf390b8d3ce0be2a0e4feb75aa2eb09}
+
+\item 
+\hypertarget{classopenstack_1_1services_1_1HTTPS_ab819840b881c014fac17739be2f2169a}{
+bool {\bfseries isConnected} () const }
+\label{classopenstack_1_1services_1_1HTTPS_ab819840b881c014fac17739be2f2169a}
+
+\item 
+\hypertarget{classopenstack_1_1services_1_1HTTPS_a98208f49bd5c7f6d8510b19a2fdbb7b9}{
+unsigned short {\bfseries request} (const string \&path, Headers \&requestHeaders, Headers \&responseHeaders, stringstream \&body)}
+\label{classopenstack_1_1services_1_1HTTPS_a98208f49bd5c7f6d8510b19a2fdbb7b9}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+services/https.hpp\end{DoxyCompactItemize}

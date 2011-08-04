@@ -2099,6 +2099,1093 @@ namespace openstack
   }
 }
 
+#include <ostream>
+#include <xsd/cxx/tree/error-handler.hxx>
+#include <xsd/cxx/xml/dom/serialization-source.hxx>
+
+#include <xsd/cxx/tree/type-serializer-map.hxx>
+
+namespace _xsd
+{
+  static
+  const ::xsd::cxx::tree::type_serializer_plate< 0, char >
+  type_serializer_plate_init;
+}
+
+namespace openstack
+{
+  namespace xml
+  {
+    void
+    reboot (::std::ostream& o,
+            const ::openstack::xml::Reboot& s,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::reboot (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    reboot (::std::ostream& o,
+            const ::openstack::xml::Reboot& s,
+            ::xml_schema::ErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::reboot (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    reboot (::std::ostream& o,
+            const ::openstack::xml::Reboot& s,
+            ::xercesc::DOMErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::reboot (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    reboot (::xercesc::XMLFormatTarget& t,
+            const ::openstack::xml::Reboot& s,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::reboot (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    reboot (::xercesc::XMLFormatTarget& t,
+            const ::openstack::xml::Reboot& s,
+            ::xml_schema::ErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::reboot (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    reboot (::xercesc::XMLFormatTarget& t,
+            const ::openstack::xml::Reboot& s,
+            ::xercesc::DOMErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::reboot (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    reboot (::xercesc::DOMDocument& d,
+            const ::openstack::xml::Reboot& s,
+            ::xml_schema::Flags)
+    {
+      ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (typeid (::openstack::xml::Reboot) == typeid (s))
+      {
+        if (n.name () == "reboot" &&
+            n.namespace_ () == "http://docs.rackspacecloud.com/servers/api/v1.0")
+        {
+          e << s;
+        }
+        else
+        {
+          throw ::xsd::cxx::tree::unexpected_element < char > (
+            n.name (),
+            n.namespace_ (),
+            "reboot",
+            "http://docs.rackspacecloud.com/servers/api/v1.0");
+        }
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        tsm.serialize (
+          "reboot",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          e, n, s);
+      }
+    }
+
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    reboot (const ::openstack::xml::Reboot& s,
+            const ::xml_schema::NamespaceInfomap& m,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d;
+
+      if (typeid (::openstack::xml::Reboot) == typeid (s))
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          ::xsd::cxx::xml::dom::serialize< char > (
+            "reboot",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, f));
+        d = r;
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          tsm.serialize (
+            "reboot",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, s, f));
+        d = r;
+      }
+
+      ::openstack::xml::reboot (*d, s, f);
+      return d;
+    }
+
+    void
+    rebuild (::std::ostream& o,
+             const ::openstack::xml::Rebuild& s,
+             const ::xml_schema::NamespaceInfomap& m,
+             const ::std::string& e,
+             ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::rebuild (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    rebuild (::std::ostream& o,
+             const ::openstack::xml::Rebuild& s,
+             ::xml_schema::ErrorHandler& h,
+             const ::xml_schema::NamespaceInfomap& m,
+             const ::std::string& e,
+             ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::rebuild (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    rebuild (::std::ostream& o,
+             const ::openstack::xml::Rebuild& s,
+             ::xercesc::DOMErrorHandler& h,
+             const ::xml_schema::NamespaceInfomap& m,
+             const ::std::string& e,
+             ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::rebuild (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    rebuild (::xercesc::XMLFormatTarget& t,
+             const ::openstack::xml::Rebuild& s,
+             const ::xml_schema::NamespaceInfomap& m,
+             const ::std::string& e,
+             ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::rebuild (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    rebuild (::xercesc::XMLFormatTarget& t,
+             const ::openstack::xml::Rebuild& s,
+             ::xml_schema::ErrorHandler& h,
+             const ::xml_schema::NamespaceInfomap& m,
+             const ::std::string& e,
+             ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::rebuild (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    rebuild (::xercesc::XMLFormatTarget& t,
+             const ::openstack::xml::Rebuild& s,
+             ::xercesc::DOMErrorHandler& h,
+             const ::xml_schema::NamespaceInfomap& m,
+             const ::std::string& e,
+             ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::rebuild (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    rebuild (::xercesc::DOMDocument& d,
+             const ::openstack::xml::Rebuild& s,
+             ::xml_schema::Flags)
+    {
+      ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (typeid (::openstack::xml::Rebuild) == typeid (s))
+      {
+        if (n.name () == "rebuild" &&
+            n.namespace_ () == "http://docs.rackspacecloud.com/servers/api/v1.0")
+        {
+          e << s;
+        }
+        else
+        {
+          throw ::xsd::cxx::tree::unexpected_element < char > (
+            n.name (),
+            n.namespace_ (),
+            "rebuild",
+            "http://docs.rackspacecloud.com/servers/api/v1.0");
+        }
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        tsm.serialize (
+          "rebuild",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          e, n, s);
+      }
+    }
+
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    rebuild (const ::openstack::xml::Rebuild& s,
+             const ::xml_schema::NamespaceInfomap& m,
+             ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d;
+
+      if (typeid (::openstack::xml::Rebuild) == typeid (s))
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          ::xsd::cxx::xml::dom::serialize< char > (
+            "rebuild",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, f));
+        d = r;
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          tsm.serialize (
+            "rebuild",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, s, f));
+        d = r;
+      }
+
+      ::openstack::xml::rebuild (*d, s, f);
+      return d;
+    }
+
+    void
+    resize (::std::ostream& o,
+            const ::openstack::xml::Resize& s,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::resize (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    resize (::std::ostream& o,
+            const ::openstack::xml::Resize& s,
+            ::xml_schema::ErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::resize (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    resize (::std::ostream& o,
+            const ::openstack::xml::Resize& s,
+            ::xercesc::DOMErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::resize (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    resize (::xercesc::XMLFormatTarget& t,
+            const ::openstack::xml::Resize& s,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::resize (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    resize (::xercesc::XMLFormatTarget& t,
+            const ::openstack::xml::Resize& s,
+            ::xml_schema::ErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::resize (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    resize (::xercesc::XMLFormatTarget& t,
+            const ::openstack::xml::Resize& s,
+            ::xercesc::DOMErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::resize (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    resize (::xercesc::DOMDocument& d,
+            const ::openstack::xml::Resize& s,
+            ::xml_schema::Flags)
+    {
+      ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (typeid (::openstack::xml::Resize) == typeid (s))
+      {
+        if (n.name () == "resize" &&
+            n.namespace_ () == "http://docs.rackspacecloud.com/servers/api/v1.0")
+        {
+          e << s;
+        }
+        else
+        {
+          throw ::xsd::cxx::tree::unexpected_element < char > (
+            n.name (),
+            n.namespace_ (),
+            "resize",
+            "http://docs.rackspacecloud.com/servers/api/v1.0");
+        }
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        tsm.serialize (
+          "resize",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          e, n, s);
+      }
+    }
+
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    resize (const ::openstack::xml::Resize& s,
+            const ::xml_schema::NamespaceInfomap& m,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d;
+
+      if (typeid (::openstack::xml::Resize) == typeid (s))
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          ::xsd::cxx::xml::dom::serialize< char > (
+            "resize",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, f));
+        d = r;
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          tsm.serialize (
+            "resize",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, s, f));
+        d = r;
+      }
+
+      ::openstack::xml::resize (*d, s, f);
+      return d;
+    }
+
+    void
+    confirmResize (::std::ostream& o,
+                   const ::openstack::xml::ConfirmResize& s,
+                   const ::xml_schema::NamespaceInfomap& m,
+                   const ::std::string& e,
+                   ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::confirmResize (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    confirmResize (::std::ostream& o,
+                   const ::openstack::xml::ConfirmResize& s,
+                   ::xml_schema::ErrorHandler& h,
+                   const ::xml_schema::NamespaceInfomap& m,
+                   const ::std::string& e,
+                   ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::confirmResize (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    confirmResize (::std::ostream& o,
+                   const ::openstack::xml::ConfirmResize& s,
+                   ::xercesc::DOMErrorHandler& h,
+                   const ::xml_schema::NamespaceInfomap& m,
+                   const ::std::string& e,
+                   ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::confirmResize (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    confirmResize (::xercesc::XMLFormatTarget& t,
+                   const ::openstack::xml::ConfirmResize& s,
+                   const ::xml_schema::NamespaceInfomap& m,
+                   const ::std::string& e,
+                   ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::confirmResize (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    confirmResize (::xercesc::XMLFormatTarget& t,
+                   const ::openstack::xml::ConfirmResize& s,
+                   ::xml_schema::ErrorHandler& h,
+                   const ::xml_schema::NamespaceInfomap& m,
+                   const ::std::string& e,
+                   ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::confirmResize (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    confirmResize (::xercesc::XMLFormatTarget& t,
+                   const ::openstack::xml::ConfirmResize& s,
+                   ::xercesc::DOMErrorHandler& h,
+                   const ::xml_schema::NamespaceInfomap& m,
+                   const ::std::string& e,
+                   ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::confirmResize (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    confirmResize (::xercesc::DOMDocument& d,
+                   const ::openstack::xml::ConfirmResize& s,
+                   ::xml_schema::Flags)
+    {
+      ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (typeid (::openstack::xml::ConfirmResize) == typeid (s))
+      {
+        if (n.name () == "confirmResize" &&
+            n.namespace_ () == "http://docs.rackspacecloud.com/servers/api/v1.0")
+        {
+          e << s;
+        }
+        else
+        {
+          throw ::xsd::cxx::tree::unexpected_element < char > (
+            n.name (),
+            n.namespace_ (),
+            "confirmResize",
+            "http://docs.rackspacecloud.com/servers/api/v1.0");
+        }
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        tsm.serialize (
+          "confirmResize",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          e, n, s);
+      }
+    }
+
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    confirmResize (const ::openstack::xml::ConfirmResize& s,
+                   const ::xml_schema::NamespaceInfomap& m,
+                   ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d;
+
+      if (typeid (::openstack::xml::ConfirmResize) == typeid (s))
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          ::xsd::cxx::xml::dom::serialize< char > (
+            "confirmResize",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, f));
+        d = r;
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          tsm.serialize (
+            "confirmResize",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, s, f));
+        d = r;
+      }
+
+      ::openstack::xml::confirmResize (*d, s, f);
+      return d;
+    }
+
+    void
+    revertResize (::std::ostream& o,
+                  const ::openstack::xml::RevertResize& s,
+                  const ::xml_schema::NamespaceInfomap& m,
+                  const ::std::string& e,
+                  ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::revertResize (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    revertResize (::std::ostream& o,
+                  const ::openstack::xml::RevertResize& s,
+                  ::xml_schema::ErrorHandler& h,
+                  const ::xml_schema::NamespaceInfomap& m,
+                  const ::std::string& e,
+                  ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::revertResize (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    revertResize (::std::ostream& o,
+                  const ::openstack::xml::RevertResize& s,
+                  ::xercesc::DOMErrorHandler& h,
+                  const ::xml_schema::NamespaceInfomap& m,
+                  const ::std::string& e,
+                  ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::revertResize (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    revertResize (::xercesc::XMLFormatTarget& t,
+                  const ::openstack::xml::RevertResize& s,
+                  const ::xml_schema::NamespaceInfomap& m,
+                  const ::std::string& e,
+                  ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::revertResize (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    revertResize (::xercesc::XMLFormatTarget& t,
+                  const ::openstack::xml::RevertResize& s,
+                  ::xml_schema::ErrorHandler& h,
+                  const ::xml_schema::NamespaceInfomap& m,
+                  const ::std::string& e,
+                  ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::revertResize (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    revertResize (::xercesc::XMLFormatTarget& t,
+                  const ::openstack::xml::RevertResize& s,
+                  ::xercesc::DOMErrorHandler& h,
+                  const ::xml_schema::NamespaceInfomap& m,
+                  const ::std::string& e,
+                  ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::revertResize (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    revertResize (::xercesc::DOMDocument& d,
+                  const ::openstack::xml::RevertResize& s,
+                  ::xml_schema::Flags)
+    {
+      ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (typeid (::openstack::xml::RevertResize) == typeid (s))
+      {
+        if (n.name () == "revertResize" &&
+            n.namespace_ () == "http://docs.rackspacecloud.com/servers/api/v1.0")
+        {
+          e << s;
+        }
+        else
+        {
+          throw ::xsd::cxx::tree::unexpected_element < char > (
+            n.name (),
+            n.namespace_ (),
+            "revertResize",
+            "http://docs.rackspacecloud.com/servers/api/v1.0");
+        }
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        tsm.serialize (
+          "revertResize",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          e, n, s);
+      }
+    }
+
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    revertResize (const ::openstack::xml::RevertResize& s,
+                  const ::xml_schema::NamespaceInfomap& m,
+                  ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d;
+
+      if (typeid (::openstack::xml::RevertResize) == typeid (s))
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          ::xsd::cxx::xml::dom::serialize< char > (
+            "revertResize",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, f));
+        d = r;
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          tsm.serialize (
+            "revertResize",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, s, f));
+        d = r;
+      }
+
+      ::openstack::xml::revertResize (*d, s, f);
+      return d;
+    }
+
+    void
+    operator<< (::xercesc::DOMElement& e, const Action& i)
+    {
+      e << static_cast< const ::xml_schema::Type& > (i);
+    }
+
+    void
+    operator<< (::xercesc::DOMAttr&, const Action&)
+    {
+    }
+
+    void
+    operator<< (::xml_schema::ListStream&,
+                const Action&)
+    {
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, Action >
+    _xsd_Action_type_serializer_init (
+      "Action",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const Reboot& i)
+    {
+      e << static_cast< const ::openstack::xml::Action& > (i);
+
+      // type
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "type",
+            e));
+
+        a << i.type ();
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, Reboot >
+    _xsd_Reboot_type_serializer_init (
+      "Reboot",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const Rebuild& i)
+    {
+      e << static_cast< const ::openstack::xml::Action& > (i);
+
+      // imageId
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "imageId",
+            e));
+
+        a << i.imageId ();
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, Rebuild >
+    _xsd_Rebuild_type_serializer_init (
+      "Rebuild",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const Resize& i)
+    {
+      e << static_cast< const ::openstack::xml::Action& > (i);
+
+      // flavorId
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "flavorId",
+            e));
+
+        a << i.flavorId ();
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, Resize >
+    _xsd_Resize_type_serializer_init (
+      "Resize",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const ConfirmResize& i)
+    {
+      e << static_cast< const ::openstack::xml::Action& > (i);
+    }
+
+    void
+    operator<< (::xercesc::DOMAttr& a, const ConfirmResize& i)
+    {
+      a << static_cast< const ::openstack::xml::Action& > (i);
+    }
+
+    void
+    operator<< (::xml_schema::ListStream& l,
+                const ConfirmResize& i)
+    {
+      l << static_cast< const ::openstack::xml::Action& > (i);
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, ConfirmResize >
+    _xsd_ConfirmResize_type_serializer_init (
+      "ConfirmResize",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const RevertResize& i)
+    {
+      e << static_cast< const ::openstack::xml::Action& > (i);
+    }
+
+    void
+    operator<< (::xercesc::DOMAttr& a, const RevertResize& i)
+    {
+      a << static_cast< const ::openstack::xml::Action& > (i);
+    }
+
+    void
+    operator<< (::xml_schema::ListStream& l,
+                const RevertResize& i)
+    {
+      l << static_cast< const ::openstack::xml::Action& > (i);
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, RevertResize >
+    _xsd_RevertResize_type_serializer_init (
+      "RevertResize",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const RebootType& i)
+    {
+      e << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    void
+    operator<< (::xercesc::DOMAttr& a, const RebootType& i)
+    {
+      a << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    void
+    operator<< (::xml_schema::ListStream& l,
+                const RebootType& i)
+    {
+      l << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, RebootType >
+    _xsd_RebootType_type_serializer_init (
+      "RebootType",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+  }
+}
+
 #include <xsd/cxx/post.hxx>
 
 // Begin epilogue.

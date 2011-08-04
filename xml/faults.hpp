@@ -84,6 +84,21 @@
 #include <xsd/cxx/tree/parsing/double.hxx>
 #include <xsd/cxx/tree/parsing/decimal.hxx>
 
+#include <xsd/cxx/xml/dom/serialization-header.hxx>
+#include <xsd/cxx/tree/serialization.hxx>
+#include <xsd/cxx/tree/serialization/byte.hxx>
+#include <xsd/cxx/tree/serialization/unsigned-byte.hxx>
+#include <xsd/cxx/tree/serialization/short.hxx>
+#include <xsd/cxx/tree/serialization/unsigned-short.hxx>
+#include <xsd/cxx/tree/serialization/int.hxx>
+#include <xsd/cxx/tree/serialization/unsigned-int.hxx>
+#include <xsd/cxx/tree/serialization/long.hxx>
+#include <xsd/cxx/tree/serialization/unsigned-long.hxx>
+#include <xsd/cxx/tree/serialization/boolean.hxx>
+#include <xsd/cxx/tree/serialization/float.hxx>
+#include <xsd/cxx/tree/serialization/double.hxx>
+#include <xsd/cxx/tree/serialization/decimal.hxx>
+
 /**
  * @brief C++ namespace for the %http://www.w3.org/2001/XMLSchema
  * schema namespace.
@@ -435,6 +450,39 @@ namespace xml_schema
   typedef ::xsd::cxx::tree::entities< char, SimpleType, Entity > Entities;
 
 
+  // Namespace information and list stream. Used in
+  // serialization functions.
+  //
+  /**
+   * @brief Namespace serialization information.
+   */
+  typedef ::xsd::cxx::xml::dom::namespace_info< char > NamespaceInfo;
+
+  /**
+   * @brief Namespace serialization information map.
+   */
+  typedef ::xsd::cxx::xml::dom::namespace_infomap< char > NamespaceInfomap;
+
+  /**
+   * @brief List serialization stream.
+   */
+  typedef ::xsd::cxx::tree::list_stream< char > ListStream;
+
+  /**
+   * @brief Serialization wrapper for the %double type.
+   */
+  typedef ::xsd::cxx::tree::as_double< Double > AsDouble;
+
+  /**
+   * @brief Serialization wrapper for the %decimal type.
+   */
+  typedef ::xsd::cxx::tree::as_decimal< Decimal > AsDecimal;
+
+  /**
+   * @brief Simple type facet.
+   */
+  typedef ::xsd::cxx::tree::facet Facet;
+
   // Flags and properties.
   //
 
@@ -538,6 +586,11 @@ namespace xml_schema
    * related by inheritance.
    */
   typedef ::xsd::cxx::tree::not_derived< char > NotDerived;
+
+  /**
+   * @brief Exception indicating a serialization failure.
+   */
+  typedef ::xsd::cxx::tree::serialization< char > Serialization;
 
   /**
    * @brief Error handler callback interface.
@@ -5249,6 +5302,2126 @@ namespace openstack
                     const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
     //@}
+  }
+}
+
+#include <iosfwd>
+
+#include <xercesc/dom/DOMDocument.hpp>
+#include <xercesc/dom/DOMErrorHandler.hpp>
+#include <xercesc/framework/XMLFormatter.hpp>
+
+#include <xsd/cxx/xml/dom/auto-ptr.hxx>
+
+namespace openstack
+{
+  namespace xml
+  {
+    /**
+     * @name Serialization functions for the %cloudServersFault document root.
+     */
+    //@{
+
+    /**
+     * @brief Serialize to a standard output stream.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    cloudServersFault (::std::ostream& os,
+                       const ::openstack::xml::CloudServersAPIFault& x, 
+                       const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                       const ::std::string& e = "UTF-8",
+                       ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with an error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    cloudServersFault (::std::ostream& os,
+                       const ::openstack::xml::CloudServersAPIFault& x, 
+                       ::xml_schema::ErrorHandler& eh,
+                       const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                       const ::std::string& e = "UTF-8",
+                       ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    cloudServersFault (::std::ostream& os,
+                       const ::openstack::xml::CloudServersAPIFault& x, 
+                       ::xercesc::DOMErrorHandler& eh,
+                       const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                       const ::std::string& e = "UTF-8",
+                       ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    cloudServersFault (::xercesc::XMLFormatTarget& ft,
+                       const ::openstack::xml::CloudServersAPIFault& x, 
+                       const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                       const ::std::string& e = "UTF-8",
+                       ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with an error
+     * handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    cloudServersFault (::xercesc::XMLFormatTarget& ft,
+                       const ::openstack::xml::CloudServersAPIFault& x, 
+                       ::xml_schema::ErrorHandler& eh,
+                       const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                       const ::std::string& e = "UTF-8",
+                       ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    cloudServersFault (::xercesc::XMLFormatTarget& ft,
+                       const ::openstack::xml::CloudServersAPIFault& x, 
+                       ::xercesc::DOMErrorHandler& eh,
+                       const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                       const ::std::string& e = "UTF-8",
+                       ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to an existing Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param x An object model to serialize.
+     * @param f Serialization flags.
+     *
+     * Note that it is your responsibility to create the DOM document
+     * with the correct root element as well as set the necessary
+     * namespace mapping attributes.
+     */
+    void
+    cloudServersFault (::xercesc::DOMDocument& d,
+                       const ::openstack::xml::CloudServersAPIFault& x,
+                       ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a new Xerces-C++ DOM document.
+     *
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param f Serialization flags.
+     * @return A pointer to the new Xerces-C++ DOM document.
+     */
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    cloudServersFault (const ::openstack::xml::CloudServersAPIFault& x, 
+                       const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                       ::xml_schema::Flags f = 0);
+
+    //@}
+
+    /**
+     * @name Serialization functions for the %itemNotFound document root.
+     */
+    //@{
+
+    /**
+     * @brief Serialize to a standard output stream.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    itemNotFound (::std::ostream& os,
+                  const ::openstack::xml::ItemNotFoundAPIFault& x, 
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with an error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    itemNotFound (::std::ostream& os,
+                  const ::openstack::xml::ItemNotFoundAPIFault& x, 
+                  ::xml_schema::ErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    itemNotFound (::std::ostream& os,
+                  const ::openstack::xml::ItemNotFoundAPIFault& x, 
+                  ::xercesc::DOMErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    itemNotFound (::xercesc::XMLFormatTarget& ft,
+                  const ::openstack::xml::ItemNotFoundAPIFault& x, 
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with an error
+     * handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    itemNotFound (::xercesc::XMLFormatTarget& ft,
+                  const ::openstack::xml::ItemNotFoundAPIFault& x, 
+                  ::xml_schema::ErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    itemNotFound (::xercesc::XMLFormatTarget& ft,
+                  const ::openstack::xml::ItemNotFoundAPIFault& x, 
+                  ::xercesc::DOMErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to an existing Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param x An object model to serialize.
+     * @param f Serialization flags.
+     *
+     * Note that it is your responsibility to create the DOM document
+     * with the correct root element as well as set the necessary
+     * namespace mapping attributes.
+     */
+    void
+    itemNotFound (::xercesc::DOMDocument& d,
+                  const ::openstack::xml::ItemNotFoundAPIFault& x,
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a new Xerces-C++ DOM document.
+     *
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param f Serialization flags.
+     * @return A pointer to the new Xerces-C++ DOM document.
+     */
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    itemNotFound (const ::openstack::xml::ItemNotFoundAPIFault& x, 
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  ::xml_schema::Flags f = 0);
+
+    //@}
+
+    /**
+     * @name Serialization functions for the %buildInProgress document root.
+     */
+    //@{
+
+    /**
+     * @brief Serialize to a standard output stream.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    buildInProgress (::std::ostream& os,
+                     const ::openstack::xml::BuildInProgressAPIFault& x, 
+                     const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                     const ::std::string& e = "UTF-8",
+                     ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with an error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    buildInProgress (::std::ostream& os,
+                     const ::openstack::xml::BuildInProgressAPIFault& x, 
+                     ::xml_schema::ErrorHandler& eh,
+                     const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                     const ::std::string& e = "UTF-8",
+                     ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    buildInProgress (::std::ostream& os,
+                     const ::openstack::xml::BuildInProgressAPIFault& x, 
+                     ::xercesc::DOMErrorHandler& eh,
+                     const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                     const ::std::string& e = "UTF-8",
+                     ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    buildInProgress (::xercesc::XMLFormatTarget& ft,
+                     const ::openstack::xml::BuildInProgressAPIFault& x, 
+                     const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                     const ::std::string& e = "UTF-8",
+                     ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with an error
+     * handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    buildInProgress (::xercesc::XMLFormatTarget& ft,
+                     const ::openstack::xml::BuildInProgressAPIFault& x, 
+                     ::xml_schema::ErrorHandler& eh,
+                     const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                     const ::std::string& e = "UTF-8",
+                     ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    buildInProgress (::xercesc::XMLFormatTarget& ft,
+                     const ::openstack::xml::BuildInProgressAPIFault& x, 
+                     ::xercesc::DOMErrorHandler& eh,
+                     const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                     const ::std::string& e = "UTF-8",
+                     ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to an existing Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param x An object model to serialize.
+     * @param f Serialization flags.
+     *
+     * Note that it is your responsibility to create the DOM document
+     * with the correct root element as well as set the necessary
+     * namespace mapping attributes.
+     */
+    void
+    buildInProgress (::xercesc::DOMDocument& d,
+                     const ::openstack::xml::BuildInProgressAPIFault& x,
+                     ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a new Xerces-C++ DOM document.
+     *
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param f Serialization flags.
+     * @return A pointer to the new Xerces-C++ DOM document.
+     */
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    buildInProgress (const ::openstack::xml::BuildInProgressAPIFault& x, 
+                     const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                     ::xml_schema::Flags f = 0);
+
+    //@}
+
+    /**
+     * @name Serialization functions for the %serverCapacityUnavailable document root.
+     */
+    //@{
+
+    /**
+     * @brief Serialize to a standard output stream.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    serverCapacityUnavailable (::std::ostream& os,
+                               const ::openstack::xml::ServerCapacityUnavailableAPIFault& x, 
+                               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                               const ::std::string& e = "UTF-8",
+                               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with an error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    serverCapacityUnavailable (::std::ostream& os,
+                               const ::openstack::xml::ServerCapacityUnavailableAPIFault& x, 
+                               ::xml_schema::ErrorHandler& eh,
+                               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                               const ::std::string& e = "UTF-8",
+                               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    serverCapacityUnavailable (::std::ostream& os,
+                               const ::openstack::xml::ServerCapacityUnavailableAPIFault& x, 
+                               ::xercesc::DOMErrorHandler& eh,
+                               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                               const ::std::string& e = "UTF-8",
+                               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    serverCapacityUnavailable (::xercesc::XMLFormatTarget& ft,
+                               const ::openstack::xml::ServerCapacityUnavailableAPIFault& x, 
+                               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                               const ::std::string& e = "UTF-8",
+                               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with an error
+     * handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    serverCapacityUnavailable (::xercesc::XMLFormatTarget& ft,
+                               const ::openstack::xml::ServerCapacityUnavailableAPIFault& x, 
+                               ::xml_schema::ErrorHandler& eh,
+                               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                               const ::std::string& e = "UTF-8",
+                               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    serverCapacityUnavailable (::xercesc::XMLFormatTarget& ft,
+                               const ::openstack::xml::ServerCapacityUnavailableAPIFault& x, 
+                               ::xercesc::DOMErrorHandler& eh,
+                               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                               const ::std::string& e = "UTF-8",
+                               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to an existing Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param x An object model to serialize.
+     * @param f Serialization flags.
+     *
+     * Note that it is your responsibility to create the DOM document
+     * with the correct root element as well as set the necessary
+     * namespace mapping attributes.
+     */
+    void
+    serverCapacityUnavailable (::xercesc::DOMDocument& d,
+                               const ::openstack::xml::ServerCapacityUnavailableAPIFault& x,
+                               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a new Xerces-C++ DOM document.
+     *
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param f Serialization flags.
+     * @return A pointer to the new Xerces-C++ DOM document.
+     */
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    serverCapacityUnavailable (const ::openstack::xml::ServerCapacityUnavailableAPIFault& x, 
+                               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                               ::xml_schema::Flags f = 0);
+
+    //@}
+
+    /**
+     * @name Serialization functions for the %backupOrResizeInProgress document root.
+     */
+    //@{
+
+    /**
+     * @brief Serialize to a standard output stream.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    backupOrResizeInProgress (::std::ostream& os,
+                              const ::openstack::xml::BackupOrResizeInProgressAPIFault& x, 
+                              const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                              const ::std::string& e = "UTF-8",
+                              ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with an error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    backupOrResizeInProgress (::std::ostream& os,
+                              const ::openstack::xml::BackupOrResizeInProgressAPIFault& x, 
+                              ::xml_schema::ErrorHandler& eh,
+                              const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                              const ::std::string& e = "UTF-8",
+                              ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    backupOrResizeInProgress (::std::ostream& os,
+                              const ::openstack::xml::BackupOrResizeInProgressAPIFault& x, 
+                              ::xercesc::DOMErrorHandler& eh,
+                              const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                              const ::std::string& e = "UTF-8",
+                              ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    backupOrResizeInProgress (::xercesc::XMLFormatTarget& ft,
+                              const ::openstack::xml::BackupOrResizeInProgressAPIFault& x, 
+                              const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                              const ::std::string& e = "UTF-8",
+                              ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with an error
+     * handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    backupOrResizeInProgress (::xercesc::XMLFormatTarget& ft,
+                              const ::openstack::xml::BackupOrResizeInProgressAPIFault& x, 
+                              ::xml_schema::ErrorHandler& eh,
+                              const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                              const ::std::string& e = "UTF-8",
+                              ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    backupOrResizeInProgress (::xercesc::XMLFormatTarget& ft,
+                              const ::openstack::xml::BackupOrResizeInProgressAPIFault& x, 
+                              ::xercesc::DOMErrorHandler& eh,
+                              const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                              const ::std::string& e = "UTF-8",
+                              ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to an existing Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param x An object model to serialize.
+     * @param f Serialization flags.
+     *
+     * Note that it is your responsibility to create the DOM document
+     * with the correct root element as well as set the necessary
+     * namespace mapping attributes.
+     */
+    void
+    backupOrResizeInProgress (::xercesc::DOMDocument& d,
+                              const ::openstack::xml::BackupOrResizeInProgressAPIFault& x,
+                              ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a new Xerces-C++ DOM document.
+     *
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param f Serialization flags.
+     * @return A pointer to the new Xerces-C++ DOM document.
+     */
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    backupOrResizeInProgress (const ::openstack::xml::BackupOrResizeInProgressAPIFault& x, 
+                              const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                              ::xml_schema::Flags f = 0);
+
+    //@}
+
+    /**
+     * @name Serialization functions for the %resizeNotAllowed document root.
+     */
+    //@{
+
+    /**
+     * @brief Serialize to a standard output stream.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    resizeNotAllowed (::std::ostream& os,
+                      const ::openstack::xml::ResizeNotAllowedAPIFault& x, 
+                      const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                      const ::std::string& e = "UTF-8",
+                      ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with an error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    resizeNotAllowed (::std::ostream& os,
+                      const ::openstack::xml::ResizeNotAllowedAPIFault& x, 
+                      ::xml_schema::ErrorHandler& eh,
+                      const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                      const ::std::string& e = "UTF-8",
+                      ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    resizeNotAllowed (::std::ostream& os,
+                      const ::openstack::xml::ResizeNotAllowedAPIFault& x, 
+                      ::xercesc::DOMErrorHandler& eh,
+                      const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                      const ::std::string& e = "UTF-8",
+                      ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    resizeNotAllowed (::xercesc::XMLFormatTarget& ft,
+                      const ::openstack::xml::ResizeNotAllowedAPIFault& x, 
+                      const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                      const ::std::string& e = "UTF-8",
+                      ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with an error
+     * handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    resizeNotAllowed (::xercesc::XMLFormatTarget& ft,
+                      const ::openstack::xml::ResizeNotAllowedAPIFault& x, 
+                      ::xml_schema::ErrorHandler& eh,
+                      const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                      const ::std::string& e = "UTF-8",
+                      ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    resizeNotAllowed (::xercesc::XMLFormatTarget& ft,
+                      const ::openstack::xml::ResizeNotAllowedAPIFault& x, 
+                      ::xercesc::DOMErrorHandler& eh,
+                      const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                      const ::std::string& e = "UTF-8",
+                      ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to an existing Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param x An object model to serialize.
+     * @param f Serialization flags.
+     *
+     * Note that it is your responsibility to create the DOM document
+     * with the correct root element as well as set the necessary
+     * namespace mapping attributes.
+     */
+    void
+    resizeNotAllowed (::xercesc::DOMDocument& d,
+                      const ::openstack::xml::ResizeNotAllowedAPIFault& x,
+                      ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a new Xerces-C++ DOM document.
+     *
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param f Serialization flags.
+     * @return A pointer to the new Xerces-C++ DOM document.
+     */
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    resizeNotAllowed (const ::openstack::xml::ResizeNotAllowedAPIFault& x, 
+                      const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                      ::xml_schema::Flags f = 0);
+
+    //@}
+
+    /**
+     * @name Serialization functions for the %serviceUnavailable document root.
+     */
+    //@{
+
+    /**
+     * @brief Serialize to a standard output stream.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    serviceUnavailable (::std::ostream& os,
+                        const ::openstack::xml::ServiceUnavailableAPIFault& x, 
+                        const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                        const ::std::string& e = "UTF-8",
+                        ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with an error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    serviceUnavailable (::std::ostream& os,
+                        const ::openstack::xml::ServiceUnavailableAPIFault& x, 
+                        ::xml_schema::ErrorHandler& eh,
+                        const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                        const ::std::string& e = "UTF-8",
+                        ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    serviceUnavailable (::std::ostream& os,
+                        const ::openstack::xml::ServiceUnavailableAPIFault& x, 
+                        ::xercesc::DOMErrorHandler& eh,
+                        const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                        const ::std::string& e = "UTF-8",
+                        ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    serviceUnavailable (::xercesc::XMLFormatTarget& ft,
+                        const ::openstack::xml::ServiceUnavailableAPIFault& x, 
+                        const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                        const ::std::string& e = "UTF-8",
+                        ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with an error
+     * handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    serviceUnavailable (::xercesc::XMLFormatTarget& ft,
+                        const ::openstack::xml::ServiceUnavailableAPIFault& x, 
+                        ::xml_schema::ErrorHandler& eh,
+                        const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                        const ::std::string& e = "UTF-8",
+                        ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    serviceUnavailable (::xercesc::XMLFormatTarget& ft,
+                        const ::openstack::xml::ServiceUnavailableAPIFault& x, 
+                        ::xercesc::DOMErrorHandler& eh,
+                        const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                        const ::std::string& e = "UTF-8",
+                        ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to an existing Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param x An object model to serialize.
+     * @param f Serialization flags.
+     *
+     * Note that it is your responsibility to create the DOM document
+     * with the correct root element as well as set the necessary
+     * namespace mapping attributes.
+     */
+    void
+    serviceUnavailable (::xercesc::DOMDocument& d,
+                        const ::openstack::xml::ServiceUnavailableAPIFault& x,
+                        ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a new Xerces-C++ DOM document.
+     *
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param f Serialization flags.
+     * @return A pointer to the new Xerces-C++ DOM document.
+     */
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    serviceUnavailable (const ::openstack::xml::ServiceUnavailableAPIFault& x, 
+                        const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                        ::xml_schema::Flags f = 0);
+
+    //@}
+
+    /**
+     * @name Serialization functions for the %unauthorized document root.
+     */
+    //@{
+
+    /**
+     * @brief Serialize to a standard output stream.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    unauthorized (::std::ostream& os,
+                  const ::openstack::xml::UnauthorizedAPIFault& x, 
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with an error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    unauthorized (::std::ostream& os,
+                  const ::openstack::xml::UnauthorizedAPIFault& x, 
+                  ::xml_schema::ErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    unauthorized (::std::ostream& os,
+                  const ::openstack::xml::UnauthorizedAPIFault& x, 
+                  ::xercesc::DOMErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    unauthorized (::xercesc::XMLFormatTarget& ft,
+                  const ::openstack::xml::UnauthorizedAPIFault& x, 
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with an error
+     * handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    unauthorized (::xercesc::XMLFormatTarget& ft,
+                  const ::openstack::xml::UnauthorizedAPIFault& x, 
+                  ::xml_schema::ErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    unauthorized (::xercesc::XMLFormatTarget& ft,
+                  const ::openstack::xml::UnauthorizedAPIFault& x, 
+                  ::xercesc::DOMErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to an existing Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param x An object model to serialize.
+     * @param f Serialization flags.
+     *
+     * Note that it is your responsibility to create the DOM document
+     * with the correct root element as well as set the necessary
+     * namespace mapping attributes.
+     */
+    void
+    unauthorized (::xercesc::DOMDocument& d,
+                  const ::openstack::xml::UnauthorizedAPIFault& x,
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a new Xerces-C++ DOM document.
+     *
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param f Serialization flags.
+     * @return A pointer to the new Xerces-C++ DOM document.
+     */
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    unauthorized (const ::openstack::xml::UnauthorizedAPIFault& x, 
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  ::xml_schema::Flags f = 0);
+
+    //@}
+
+    /**
+     * @name Serialization functions for the %overLimit document root.
+     */
+    //@{
+
+    /**
+     * @brief Serialize to a standard output stream.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    overLimit (::std::ostream& os,
+               const ::openstack::xml::OverLimitAPIFault& x, 
+               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+               const ::std::string& e = "UTF-8",
+               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with an error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    overLimit (::std::ostream& os,
+               const ::openstack::xml::OverLimitAPIFault& x, 
+               ::xml_schema::ErrorHandler& eh,
+               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+               const ::std::string& e = "UTF-8",
+               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    overLimit (::std::ostream& os,
+               const ::openstack::xml::OverLimitAPIFault& x, 
+               ::xercesc::DOMErrorHandler& eh,
+               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+               const ::std::string& e = "UTF-8",
+               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    overLimit (::xercesc::XMLFormatTarget& ft,
+               const ::openstack::xml::OverLimitAPIFault& x, 
+               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+               const ::std::string& e = "UTF-8",
+               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with an error
+     * handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    overLimit (::xercesc::XMLFormatTarget& ft,
+               const ::openstack::xml::OverLimitAPIFault& x, 
+               ::xml_schema::ErrorHandler& eh,
+               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+               const ::std::string& e = "UTF-8",
+               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    overLimit (::xercesc::XMLFormatTarget& ft,
+               const ::openstack::xml::OverLimitAPIFault& x, 
+               ::xercesc::DOMErrorHandler& eh,
+               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+               const ::std::string& e = "UTF-8",
+               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to an existing Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param x An object model to serialize.
+     * @param f Serialization flags.
+     *
+     * Note that it is your responsibility to create the DOM document
+     * with the correct root element as well as set the necessary
+     * namespace mapping attributes.
+     */
+    void
+    overLimit (::xercesc::DOMDocument& d,
+               const ::openstack::xml::OverLimitAPIFault& x,
+               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a new Xerces-C++ DOM document.
+     *
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param f Serialization flags.
+     * @return A pointer to the new Xerces-C++ DOM document.
+     */
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    overLimit (const ::openstack::xml::OverLimitAPIFault& x, 
+               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+               ::xml_schema::Flags f = 0);
+
+    //@}
+
+    /**
+     * @name Serialization functions for the %badRequest document root.
+     */
+    //@{
+
+    /**
+     * @brief Serialize to a standard output stream.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    badRequest (::std::ostream& os,
+                const ::openstack::xml::BadRequestAPIFault& x, 
+                const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                const ::std::string& e = "UTF-8",
+                ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with an error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    badRequest (::std::ostream& os,
+                const ::openstack::xml::BadRequestAPIFault& x, 
+                ::xml_schema::ErrorHandler& eh,
+                const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                const ::std::string& e = "UTF-8",
+                ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    badRequest (::std::ostream& os,
+                const ::openstack::xml::BadRequestAPIFault& x, 
+                ::xercesc::DOMErrorHandler& eh,
+                const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                const ::std::string& e = "UTF-8",
+                ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    badRequest (::xercesc::XMLFormatTarget& ft,
+                const ::openstack::xml::BadRequestAPIFault& x, 
+                const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                const ::std::string& e = "UTF-8",
+                ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with an error
+     * handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    badRequest (::xercesc::XMLFormatTarget& ft,
+                const ::openstack::xml::BadRequestAPIFault& x, 
+                ::xml_schema::ErrorHandler& eh,
+                const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                const ::std::string& e = "UTF-8",
+                ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    badRequest (::xercesc::XMLFormatTarget& ft,
+                const ::openstack::xml::BadRequestAPIFault& x, 
+                ::xercesc::DOMErrorHandler& eh,
+                const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                const ::std::string& e = "UTF-8",
+                ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to an existing Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param x An object model to serialize.
+     * @param f Serialization flags.
+     *
+     * Note that it is your responsibility to create the DOM document
+     * with the correct root element as well as set the necessary
+     * namespace mapping attributes.
+     */
+    void
+    badRequest (::xercesc::DOMDocument& d,
+                const ::openstack::xml::BadRequestAPIFault& x,
+                ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a new Xerces-C++ DOM document.
+     *
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param f Serialization flags.
+     * @return A pointer to the new Xerces-C++ DOM document.
+     */
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    badRequest (const ::openstack::xml::BadRequestAPIFault& x, 
+                const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                ::xml_schema::Flags f = 0);
+
+    //@}
+
+    /**
+     * @name Serialization functions for the %badMediaType document root.
+     */
+    //@{
+
+    /**
+     * @brief Serialize to a standard output stream.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    badMediaType (::std::ostream& os,
+                  const ::openstack::xml::BadMediaTypeAPIFault& x, 
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with an error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    badMediaType (::std::ostream& os,
+                  const ::openstack::xml::BadMediaTypeAPIFault& x, 
+                  ::xml_schema::ErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    badMediaType (::std::ostream& os,
+                  const ::openstack::xml::BadMediaTypeAPIFault& x, 
+                  ::xercesc::DOMErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    badMediaType (::xercesc::XMLFormatTarget& ft,
+                  const ::openstack::xml::BadMediaTypeAPIFault& x, 
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with an error
+     * handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    badMediaType (::xercesc::XMLFormatTarget& ft,
+                  const ::openstack::xml::BadMediaTypeAPIFault& x, 
+                  ::xml_schema::ErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    badMediaType (::xercesc::XMLFormatTarget& ft,
+                  const ::openstack::xml::BadMediaTypeAPIFault& x, 
+                  ::xercesc::DOMErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to an existing Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param x An object model to serialize.
+     * @param f Serialization flags.
+     *
+     * Note that it is your responsibility to create the DOM document
+     * with the correct root element as well as set the necessary
+     * namespace mapping attributes.
+     */
+    void
+    badMediaType (::xercesc::DOMDocument& d,
+                  const ::openstack::xml::BadMediaTypeAPIFault& x,
+                  ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a new Xerces-C++ DOM document.
+     *
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param f Serialization flags.
+     * @return A pointer to the new Xerces-C++ DOM document.
+     */
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    badMediaType (const ::openstack::xml::BadMediaTypeAPIFault& x, 
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  ::xml_schema::Flags f = 0);
+
+    //@}
+
+    /**
+     * @name Serialization functions for the %badMethod document root.
+     */
+    //@{
+
+    /**
+     * @brief Serialize to a standard output stream.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    badMethod (::std::ostream& os,
+               const ::openstack::xml::BadMethodAPIFault& x, 
+               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+               const ::std::string& e = "UTF-8",
+               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with an error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    badMethod (::std::ostream& os,
+               const ::openstack::xml::BadMethodAPIFault& x, 
+               ::xml_schema::ErrorHandler& eh,
+               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+               const ::std::string& e = "UTF-8",
+               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    badMethod (::std::ostream& os,
+               const ::openstack::xml::BadMethodAPIFault& x, 
+               ::xercesc::DOMErrorHandler& eh,
+               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+               const ::std::string& e = "UTF-8",
+               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    badMethod (::xercesc::XMLFormatTarget& ft,
+               const ::openstack::xml::BadMethodAPIFault& x, 
+               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+               const ::std::string& e = "UTF-8",
+               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with an error
+     * handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    badMethod (::xercesc::XMLFormatTarget& ft,
+               const ::openstack::xml::BadMethodAPIFault& x, 
+               ::xml_schema::ErrorHandler& eh,
+               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+               const ::std::string& e = "UTF-8",
+               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    badMethod (::xercesc::XMLFormatTarget& ft,
+               const ::openstack::xml::BadMethodAPIFault& x, 
+               ::xercesc::DOMErrorHandler& eh,
+               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+               const ::std::string& e = "UTF-8",
+               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to an existing Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param x An object model to serialize.
+     * @param f Serialization flags.
+     *
+     * Note that it is your responsibility to create the DOM document
+     * with the correct root element as well as set the necessary
+     * namespace mapping attributes.
+     */
+    void
+    badMethod (::xercesc::DOMDocument& d,
+               const ::openstack::xml::BadMethodAPIFault& x,
+               ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a new Xerces-C++ DOM document.
+     *
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param f Serialization flags.
+     * @return A pointer to the new Xerces-C++ DOM document.
+     */
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    badMethod (const ::openstack::xml::BadMethodAPIFault& x, 
+               const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+               ::xml_schema::Flags f = 0);
+
+    //@}
+
+    /**
+     * @name Serialization functions for the %notImplemented document root.
+     */
+    //@{
+
+    /**
+     * @brief Serialize to a standard output stream.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    notImplemented (::std::ostream& os,
+                    const ::openstack::xml::NotImplementedAPIFault& x, 
+                    const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                    const ::std::string& e = "UTF-8",
+                    ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with an error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    notImplemented (::std::ostream& os,
+                    const ::openstack::xml::NotImplementedAPIFault& x, 
+                    ::xml_schema::ErrorHandler& eh,
+                    const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                    const ::std::string& e = "UTF-8",
+                    ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a standard output stream with a Xerces-C++ DOM
+     * error handler.
+     *
+     * @param os A standrad output stream.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    notImplemented (::std::ostream& os,
+                    const ::openstack::xml::NotImplementedAPIFault& x, 
+                    ::xercesc::DOMErrorHandler& eh,
+                    const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                    const ::std::string& e = "UTF-8",
+                    ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function uses exceptions to report serialization errors.
+     */
+    void
+    notImplemented (::xercesc::XMLFormatTarget& ft,
+                    const ::openstack::xml::NotImplementedAPIFault& x, 
+                    const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                    const ::std::string& e = "UTF-8",
+                    ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with an error
+     * handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh An error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    notImplemented (::xercesc::XMLFormatTarget& ft,
+                    const ::openstack::xml::NotImplementedAPIFault& x, 
+                    ::xml_schema::ErrorHandler& eh,
+                    const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                    const ::std::string& e = "UTF-8",
+                    ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a Xerces-C++ XML format target with a
+     * Xerces-C++ DOM error handler.
+     *
+     * @param ft A Xerces-C++ XML format target.
+     * @param x An object model to serialize.
+     * @param eh A Xerces-C++ DOM error handler.
+     * @param m A namespace information map.
+     * @param e A character encoding to produce XML in.
+     * @param f Serialization flags.
+     *
+     * This function reports serialization errors by calling the error
+     * handler.
+     */
+    void
+    notImplemented (::xercesc::XMLFormatTarget& ft,
+                    const ::openstack::xml::NotImplementedAPIFault& x, 
+                    ::xercesc::DOMErrorHandler& eh,
+                    const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                    const ::std::string& e = "UTF-8",
+                    ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to an existing Xerces-C++ DOM document.
+     *
+     * @param d A Xerces-C++ DOM document.
+     * @param x An object model to serialize.
+     * @param f Serialization flags.
+     *
+     * Note that it is your responsibility to create the DOM document
+     * with the correct root element as well as set the necessary
+     * namespace mapping attributes.
+     */
+    void
+    notImplemented (::xercesc::DOMDocument& d,
+                    const ::openstack::xml::NotImplementedAPIFault& x,
+                    ::xml_schema::Flags f = 0);
+
+    /**
+     * @brief Serialize to a new Xerces-C++ DOM document.
+     *
+     * @param x An object model to serialize.
+     * @param m A namespace information map.
+     * @param f Serialization flags.
+     * @return A pointer to the new Xerces-C++ DOM document.
+     */
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    notImplemented (const ::openstack::xml::NotImplementedAPIFault& x, 
+                    const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                    ::xml_schema::Flags f = 0);
+
+    //@}
+
+    void
+    operator<< (::xercesc::DOMElement&, const CloudServersAPIFault&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const ItemNotFoundAPIFault&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const BuildInProgressAPIFault&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const ServerCapacityUnavailableAPIFault&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const BackupOrResizeInProgressAPIFault&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const ResizeNotAllowedAPIFault&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const ServiceUnavailableAPIFault&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const UnauthorizedAPIFault&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const OverLimitAPIFault&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const BadRequestAPIFault&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const BadMediaTypeAPIFault&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const BadMethodAPIFault&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const NotImplementedAPIFault&);
   }
 }
 

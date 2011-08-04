@@ -1,6 +1,6 @@
 \hypertarget{ipgroup_8hpp}{
-\section{xsd/ipgroup.hpp File Reference}
-\label{ipgroup_8hpp}\index{xsd/ipgroup.hpp@{xsd/ipgroup.hpp}}
+\section{xml/ipgroup.hpp File Reference}
+\label{ipgroup_8hpp}\index{xml/ipgroup.hpp@{xml/ipgroup.hpp}}
 }
 
 
@@ -28,6 +28,20 @@ Generated from ipgroup.xsd.
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/float.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/double.hxx$>$}\par
 {\ttfamily \#include $<$xsd/cxx/tree/parsing/decimal.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/xml/dom/serialization-\/header.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/byte.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/byte.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/short.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/short.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/int.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/int.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/long.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/unsigned-\/long.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/boolean.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/float.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/double.hxx$>$}\par
+{\ttfamily \#include $<$xsd/cxx/tree/serialization/decimal.hxx$>$}\par
 {\ttfamily \#include $<$memory$>$}\par
 {\ttfamily \#include $<$limits$>$}\par
 {\ttfamily \#include $<$algorithm$>$}\par
@@ -38,6 +52,7 @@ Generated from ipgroup.xsd.
 {\ttfamily \#include $<$xercesc/sax/InputSource.hpp$>$}\par
 {\ttfamily \#include $<$xercesc/dom/DOMDocument.hpp$>$}\par
 {\ttfamily \#include $<$xercesc/dom/DOMErrorHandler.hpp$>$}\par
+{\ttfamily \#include $<$xercesc/framework/XMLFormatter.hpp$>$}\par
 {\ttfamily \#include \char`\"{}ipgroup.ipp\char`\"{}}\par
 {\ttfamily \#include $<$xsd/cxx/post.hxx$>$}\par
 \subsection*{Classes}
@@ -73,6 +88,28 @@ namespace \hyperlink{namespaceopenstack_1_1xml}{openstack::xml}
 
 \end{DoxyCompactItemize}
 \subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespaceopenstack_1_1xml_ae3837dd00b21b061fa87d90e89444d0e}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const SharedIpGroup \&i)}
+\label{namespaceopenstack_1_1xml_ae3837dd00b21b061fa87d90e89444d0e}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_afe257bc9750b5f59448aec5fdc2b6701}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const SharedIpGroups \&i)}
+\label{namespaceopenstack_1_1xml_afe257bc9750b5f59448aec5fdc2b6701}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_a0dedef2b1ddd49979bfdd70aa463001a}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const ServerIDList \&i)}
+\label{namespaceopenstack_1_1xml_a0dedef2b1ddd49979bfdd70aa463001a}
+
+\item 
+\hypertarget{namespaceopenstack_1_1xml_adfc580552f16ddc5cebbdf7029889cfa}{
+void {\bfseries openstack::xml::operator$<$$<$} (::xercesc::DOMElement \&e, const ServerID \&i)}
+\label{namespaceopenstack_1_1xml_adfc580552f16ddc5cebbdf7029889cfa}
+
+\end{DoxyCompactItemize}
 \begin{Indent}{\bf Parsing functions for the sharedIpGroup document root.}\par
 \begin{DoxyCompactItemize}
 \item 
@@ -136,6 +173,46 @@ namespace \hyperlink{namespaceopenstack_1_1xml}{openstack::xml}
 \begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
 ::std::auto\_\-ptr$<$ ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroups}{openstack::xml::SharedIpGroups} $>$ \hyperlink{namespaceopenstack_1_1xml_aa179774e193c6e1b3d2dd201de024e27}{openstack::xml::sharedIpGroups} (::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \&d,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0, const ::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties} \&p=::\hyperlink{namespacexml__schema_ad27ce19a7ee1d3b1064092648898f64c}{xml\_\-schema::Properties}())
 \begin{DoxyCompactList}\small\item\em Parse a Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the sharedIpGroup document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_ad46919b1ea3d154ba13087846b4288a2}{openstack::xml::sharedIpGroup} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroup}{openstack::xml::SharedIpGroup} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a166eef24f71ec78d7e44bdbda3366cde}{openstack::xml::sharedIpGroup} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroup}{openstack::xml::SharedIpGroup} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_ae8f1e767cd5e87942738c53541b15d91}{openstack::xml::sharedIpGroup} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroup}{openstack::xml::SharedIpGroup} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a2311662e1d80555895b1d08c8e3bfca2}{openstack::xml::sharedIpGroup} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroup}{openstack::xml::SharedIpGroup} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_aabc8e34a31987ecc9a58dceade5f247e}{openstack::xml::sharedIpGroup} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroup}{openstack::xml::SharedIpGroup} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a0548ac3c6fd41e1d585f4b13565cfbb6}{openstack::xml::sharedIpGroup} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroup}{openstack::xml::SharedIpGroup} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a00f2a77357efbf9e2a7eb14c4969a614}{openstack::xml::sharedIpGroup} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroup}{openstack::xml::SharedIpGroup} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_a137167443d5f0c5f1e4747e83d3948bc}{openstack::xml::sharedIpGroup} (const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroup}{openstack::xml::SharedIpGroup} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Serialization functions for the sharedIpGroups document root.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceopenstack_1_1xml_a572cd24f5af77f2fb617e214675a5d5e}{openstack::xml::sharedIpGroups} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroups}{openstack::xml::SharedIpGroups} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a8e7a323f38b2cca3fa2a71960451e394}{openstack::xml::sharedIpGroups} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroups}{openstack::xml::SharedIpGroups} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_ae12841e626ec36dd1c1674d1d6991c58}{openstack::xml::sharedIpGroups} (::std::ostream \&os, const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroups}{openstack::xml::SharedIpGroups} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a standard output stream with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a461bb811e6330f679dfef8f261019c6f}{openstack::xml::sharedIpGroups} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroups}{openstack::xml::SharedIpGroups} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a6221e0b5ee55465d0af79a02f53dfa23}{openstack::xml::sharedIpGroups} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroups}{openstack::xml::SharedIpGroups} \&x,::\hyperlink{namespacexml__schema_ab1c9361bfd3b404eaabf0c31eded79dc}{xml\_\-schema::ErrorHandler} \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with an error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_a4c7938da49e464058be6a72a25af8d3f}{openstack::xml::sharedIpGroups} (::xercesc::XMLFormatTarget \&ft, const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroups}{openstack::xml::SharedIpGroups} \&x,::xercesc::DOMErrorHandler \&eh, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(), const ::std::string \&e=\char`\"{}UTF-\/8\char`\"{},::xml\_\-schema::Flags f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a Xerces-\/C++ XML format target with a Xerces-\/C++ DOM error handler. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceopenstack_1_1xml_afb71fbd1e6304ae299dda42c5686ea11}{openstack::xml::sharedIpGroups} (::xercesc::DOMDocument \&d, const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroups}{openstack::xml::SharedIpGroups} \&x,::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to an existing Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\item 
+::xml\_\-schema::dom::auto\_\-ptr$<$ ::xercesc::DOMDocument $>$ \hyperlink{namespaceopenstack_1_1xml_ad3acea59ccd8625f2dc51846ef38c949}{openstack::xml::sharedIpGroups} (const ::\hyperlink{classopenstack_1_1xml_1_1SharedIpGroups}{openstack::xml::SharedIpGroups} \&x, const ::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap} \&m=::\hyperlink{namespacexml__schema_a4581dcaae6f82c9ed74ba650a45c0952}{xml\_\-schema::NamespaceInfomap}(),::\hyperlink{namespacexml__schema_affb4c227cbd9aa7453dd1dc5a1401943}{xml\_\-schema::Flags} f=0)
+\begin{DoxyCompactList}\small\item\em Serialize to a new Xerces-\/C++ DOM document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 
 

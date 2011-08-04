@@ -1112,6 +1112,578 @@ namespace openstack
   }
 }
 
+#include <ostream>
+#include <xsd/cxx/tree/error-handler.hxx>
+#include <xsd/cxx/xml/dom/serialization-source.hxx>
+
+#include <xsd/cxx/tree/type-serializer-map.hxx>
+
+namespace _xsd
+{
+  static
+  const ::xsd::cxx::tree::type_serializer_plate< 0, char >
+  type_serializer_plate_init;
+}
+
+namespace openstack
+{
+  namespace xml
+  {
+    void
+    sharedIpGroup (::std::ostream& o,
+                   const ::openstack::xml::SharedIpGroup& s,
+                   const ::xml_schema::NamespaceInfomap& m,
+                   const ::std::string& e,
+                   ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::sharedIpGroup (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    sharedIpGroup (::std::ostream& o,
+                   const ::openstack::xml::SharedIpGroup& s,
+                   ::xml_schema::ErrorHandler& h,
+                   const ::xml_schema::NamespaceInfomap& m,
+                   const ::std::string& e,
+                   ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::sharedIpGroup (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    sharedIpGroup (::std::ostream& o,
+                   const ::openstack::xml::SharedIpGroup& s,
+                   ::xercesc::DOMErrorHandler& h,
+                   const ::xml_schema::NamespaceInfomap& m,
+                   const ::std::string& e,
+                   ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::sharedIpGroup (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    sharedIpGroup (::xercesc::XMLFormatTarget& t,
+                   const ::openstack::xml::SharedIpGroup& s,
+                   const ::xml_schema::NamespaceInfomap& m,
+                   const ::std::string& e,
+                   ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::sharedIpGroup (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    sharedIpGroup (::xercesc::XMLFormatTarget& t,
+                   const ::openstack::xml::SharedIpGroup& s,
+                   ::xml_schema::ErrorHandler& h,
+                   const ::xml_schema::NamespaceInfomap& m,
+                   const ::std::string& e,
+                   ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::sharedIpGroup (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    sharedIpGroup (::xercesc::XMLFormatTarget& t,
+                   const ::openstack::xml::SharedIpGroup& s,
+                   ::xercesc::DOMErrorHandler& h,
+                   const ::xml_schema::NamespaceInfomap& m,
+                   const ::std::string& e,
+                   ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::sharedIpGroup (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    sharedIpGroup (::xercesc::DOMDocument& d,
+                   const ::openstack::xml::SharedIpGroup& s,
+                   ::xml_schema::Flags)
+    {
+      ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (typeid (::openstack::xml::SharedIpGroup) == typeid (s))
+      {
+        if (n.name () == "sharedIpGroup" &&
+            n.namespace_ () == "http://docs.rackspacecloud.com/servers/api/v1.0")
+        {
+          e << s;
+        }
+        else
+        {
+          throw ::xsd::cxx::tree::unexpected_element < char > (
+            n.name (),
+            n.namespace_ (),
+            "sharedIpGroup",
+            "http://docs.rackspacecloud.com/servers/api/v1.0");
+        }
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        tsm.serialize (
+          "sharedIpGroup",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          e, n, s);
+      }
+    }
+
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    sharedIpGroup (const ::openstack::xml::SharedIpGroup& s,
+                   const ::xml_schema::NamespaceInfomap& m,
+                   ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d;
+
+      if (typeid (::openstack::xml::SharedIpGroup) == typeid (s))
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          ::xsd::cxx::xml::dom::serialize< char > (
+            "sharedIpGroup",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, f));
+        d = r;
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          tsm.serialize (
+            "sharedIpGroup",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, s, f));
+        d = r;
+      }
+
+      ::openstack::xml::sharedIpGroup (*d, s, f);
+      return d;
+    }
+
+    void
+    sharedIpGroups (::std::ostream& o,
+                    const ::openstack::xml::SharedIpGroups& s,
+                    const ::xml_schema::NamespaceInfomap& m,
+                    const ::std::string& e,
+                    ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::sharedIpGroups (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    sharedIpGroups (::std::ostream& o,
+                    const ::openstack::xml::SharedIpGroups& s,
+                    ::xml_schema::ErrorHandler& h,
+                    const ::xml_schema::NamespaceInfomap& m,
+                    const ::std::string& e,
+                    ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::sharedIpGroups (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    sharedIpGroups (::std::ostream& o,
+                    const ::openstack::xml::SharedIpGroups& s,
+                    ::xercesc::DOMErrorHandler& h,
+                    const ::xml_schema::NamespaceInfomap& m,
+                    const ::std::string& e,
+                    ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::sharedIpGroups (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    sharedIpGroups (::xercesc::XMLFormatTarget& t,
+                    const ::openstack::xml::SharedIpGroups& s,
+                    const ::xml_schema::NamespaceInfomap& m,
+                    const ::std::string& e,
+                    ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::sharedIpGroups (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    sharedIpGroups (::xercesc::XMLFormatTarget& t,
+                    const ::openstack::xml::SharedIpGroups& s,
+                    ::xml_schema::ErrorHandler& h,
+                    const ::xml_schema::NamespaceInfomap& m,
+                    const ::std::string& e,
+                    ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::sharedIpGroups (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    sharedIpGroups (::xercesc::XMLFormatTarget& t,
+                    const ::openstack::xml::SharedIpGroups& s,
+                    ::xercesc::DOMErrorHandler& h,
+                    const ::xml_schema::NamespaceInfomap& m,
+                    const ::std::string& e,
+                    ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::sharedIpGroups (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    sharedIpGroups (::xercesc::DOMDocument& d,
+                    const ::openstack::xml::SharedIpGroups& s,
+                    ::xml_schema::Flags)
+    {
+      ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (typeid (::openstack::xml::SharedIpGroups) == typeid (s))
+      {
+        if (n.name () == "sharedIpGroups" &&
+            n.namespace_ () == "http://docs.rackspacecloud.com/servers/api/v1.0")
+        {
+          e << s;
+        }
+        else
+        {
+          throw ::xsd::cxx::tree::unexpected_element < char > (
+            n.name (),
+            n.namespace_ (),
+            "sharedIpGroups",
+            "http://docs.rackspacecloud.com/servers/api/v1.0");
+        }
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        tsm.serialize (
+          "sharedIpGroups",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          e, n, s);
+      }
+    }
+
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    sharedIpGroups (const ::openstack::xml::SharedIpGroups& s,
+                    const ::xml_schema::NamespaceInfomap& m,
+                    ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d;
+
+      if (typeid (::openstack::xml::SharedIpGroups) == typeid (s))
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          ::xsd::cxx::xml::dom::serialize< char > (
+            "sharedIpGroups",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, f));
+        d = r;
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          tsm.serialize (
+            "sharedIpGroups",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, s, f));
+        d = r;
+      }
+
+      ::openstack::xml::sharedIpGroups (*d, s, f);
+      return d;
+    }
+
+    void
+    operator<< (::xercesc::DOMElement& e, const SharedIpGroup& i)
+    {
+      e << static_cast< const ::xml_schema::Type& > (i);
+
+      // server
+      //
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        if (i.server ())
+        {
+          const SharedIpGroup::ServerType& x (*i.server ());
+          if (typeid (SharedIpGroup::ServerType) == typeid (x))
+          {
+            ::xercesc::DOMElement& s (
+              ::xsd::cxx::xml::dom::create_element (
+                "server",
+                "http://docs.rackspacecloud.com/servers/api/v1.0",
+                e));
+
+            s << x;
+          }
+          else
+            tsm.serialize (
+              "server",
+              "http://docs.rackspacecloud.com/servers/api/v1.0",
+              false, true, e, x);
+        }
+      }
+
+      // servers
+      //
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        if (i.servers ())
+        {
+          const SharedIpGroup::ServersType& x (*i.servers ());
+          if (typeid (SharedIpGroup::ServersType) == typeid (x))
+          {
+            ::xercesc::DOMElement& s (
+              ::xsd::cxx::xml::dom::create_element (
+                "servers",
+                "http://docs.rackspacecloud.com/servers/api/v1.0",
+                e));
+
+            s << x;
+          }
+          else
+            tsm.serialize (
+              "servers",
+              "http://docs.rackspacecloud.com/servers/api/v1.0",
+              false, true, e, x);
+        }
+      }
+
+      // id
+      //
+      if (i.id ())
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "id",
+            e));
+
+        a << *i.id ();
+      }
+
+      // name
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "name",
+            e));
+
+        a << i.name ();
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, SharedIpGroup >
+    _xsd_SharedIpGroup_type_serializer_init (
+      "SharedIpGroup",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const SharedIpGroups& i)
+    {
+      e << static_cast< const ::xml_schema::Type& > (i);
+
+      // sharedIpGroup
+      //
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        for (SharedIpGroups::SharedIpGroupConstIterator
+             b (i.sharedIpGroup ().begin ()), n (i.sharedIpGroup ().end ());
+             b != n; ++b)
+        {
+          if (typeid (SharedIpGroups::SharedIpGroupType) == typeid (*b))
+          {
+            ::xercesc::DOMElement& s (
+              ::xsd::cxx::xml::dom::create_element (
+                "sharedIpGroup",
+                "http://docs.rackspacecloud.com/servers/api/v1.0",
+                e));
+
+            s << *b;
+          }
+          else
+            tsm.serialize (
+              "sharedIpGroup",
+              "http://docs.rackspacecloud.com/servers/api/v1.0",
+              false, true, e, *b);
+        }
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, SharedIpGroups >
+    _xsd_SharedIpGroups_type_serializer_init (
+      "SharedIpGroups",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const ServerIDList& i)
+    {
+      e << static_cast< const ::xml_schema::Type& > (i);
+
+      // server
+      //
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        for (ServerIDList::ServerConstIterator
+             b (i.server ().begin ()), n (i.server ().end ());
+             b != n; ++b)
+        {
+          if (typeid (ServerIDList::ServerType) == typeid (*b))
+          {
+            ::xercesc::DOMElement& s (
+              ::xsd::cxx::xml::dom::create_element (
+                "server",
+                "http://docs.rackspacecloud.com/servers/api/v1.0",
+                e));
+
+            s << *b;
+          }
+          else
+            tsm.serialize (
+              "server",
+              "http://docs.rackspacecloud.com/servers/api/v1.0",
+              false, true, e, *b);
+        }
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, ServerIDList >
+    _xsd_ServerIDList_type_serializer_init (
+      "ServerIDList",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const ServerID& i)
+    {
+      e << static_cast< const ::xml_schema::Type& > (i);
+
+      // id
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "id",
+            e));
+
+        a << i.id ();
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, ServerID >
+    _xsd_ServerID_type_serializer_init (
+      "ServerID",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+  }
+}
+
 #include <xsd/cxx/post.hxx>
 
 // Begin epilogue.

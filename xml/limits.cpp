@@ -1162,6 +1162,523 @@ namespace openstack
   }
 }
 
+#include <ostream>
+#include <xsd/cxx/tree/error-handler.hxx>
+#include <xsd/cxx/xml/dom/serialization-source.hxx>
+
+#include <xsd/cxx/tree/type-serializer-map.hxx>
+
+namespace _xsd
+{
+  static
+  const ::xsd::cxx::tree::type_serializer_plate< 0, char >
+  type_serializer_plate_init;
+}
+
+namespace openstack
+{
+  namespace xml
+  {
+    void
+    limits (::std::ostream& o,
+            const ::openstack::xml::Limits& s,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::limits (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    limits (::std::ostream& o,
+            const ::openstack::xml::Limits& s,
+            ::xml_schema::ErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xsd::cxx::xml::auto_initializer i (
+        (f & ::xml_schema::Flags::dont_initialize) == 0);
+
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::limits (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    limits (::std::ostream& o,
+            const ::openstack::xml::Limits& s,
+            ::xercesc::DOMErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::limits (s, m, f));
+      ::xsd::cxx::xml::dom::ostream_format_target t (o);
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    limits (::xercesc::XMLFormatTarget& t,
+            const ::openstack::xml::Limits& s,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::limits (s, m, f));
+
+      ::xsd::cxx::tree::error_handler< char > h;
+
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      }
+    }
+
+    void
+    limits (::xercesc::XMLFormatTarget& t,
+            const ::openstack::xml::Limits& s,
+            ::xml_schema::ErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::limits (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    limits (::xercesc::XMLFormatTarget& t,
+            const ::openstack::xml::Limits& s,
+            ::xercesc::DOMErrorHandler& h,
+            const ::xml_schema::NamespaceInfomap& m,
+            const ::std::string& e,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
+        ::openstack::xml::limits (s, m, f));
+      if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
+      {
+        throw ::xsd::cxx::tree::serialization< char > ();
+      }
+    }
+
+    void
+    limits (::xercesc::DOMDocument& d,
+            const ::openstack::xml::Limits& s,
+            ::xml_schema::Flags)
+    {
+      ::xercesc::DOMElement& e (*d.getDocumentElement ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (e));
+
+      if (typeid (::openstack::xml::Limits) == typeid (s))
+      {
+        if (n.name () == "limits" &&
+            n.namespace_ () == "http://docs.rackspacecloud.com/servers/api/v1.0")
+        {
+          e << s;
+        }
+        else
+        {
+          throw ::xsd::cxx::tree::unexpected_element < char > (
+            n.name (),
+            n.namespace_ (),
+            "limits",
+            "http://docs.rackspacecloud.com/servers/api/v1.0");
+        }
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        tsm.serialize (
+          "limits",
+          "http://docs.rackspacecloud.com/servers/api/v1.0",
+          e, n, s);
+      }
+    }
+
+    ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
+    limits (const ::openstack::xml::Limits& s,
+            const ::xml_schema::NamespaceInfomap& m,
+            ::xml_schema::Flags f)
+    {
+      ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d;
+
+      if (typeid (::openstack::xml::Limits) == typeid (s))
+      {
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          ::xsd::cxx::xml::dom::serialize< char > (
+            "limits",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, f));
+        d = r;
+      }
+      else
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > r (
+          tsm.serialize (
+            "limits",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            m, s, f));
+        d = r;
+      }
+
+      ::openstack::xml::limits (*d, s, f);
+      return d;
+    }
+
+    void
+    operator<< (::xercesc::DOMElement& e, const Limits& i)
+    {
+      e << static_cast< const ::xml_schema::Type& > (i);
+
+      // rate
+      //
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        const Limits::RateType& x (i.rate ());
+        if (typeid (Limits::RateType) == typeid (x))
+        {
+          ::xercesc::DOMElement& s (
+            ::xsd::cxx::xml::dom::create_element (
+              "rate",
+              "http://docs.rackspacecloud.com/servers/api/v1.0",
+              e));
+
+          s << x;
+        }
+        else
+          tsm.serialize (
+            "rate",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            false, true, e, x);
+      }
+
+      // absolute
+      //
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        const Limits::AbsoluteType& x (i.absolute ());
+        if (typeid (Limits::AbsoluteType) == typeid (x))
+        {
+          ::xercesc::DOMElement& s (
+            ::xsd::cxx::xml::dom::create_element (
+              "absolute",
+              "http://docs.rackspacecloud.com/servers/api/v1.0",
+              e));
+
+          s << x;
+        }
+        else
+          tsm.serialize (
+            "absolute",
+            "http://docs.rackspacecloud.com/servers/api/v1.0",
+            false, true, e, x);
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, Limits >
+    _xsd_Limits_type_serializer_init (
+      "Limits",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const RateLimits& i)
+    {
+      e << static_cast< const ::xml_schema::Type& > (i);
+
+      // limit
+      //
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        for (RateLimits::LimitConstIterator
+             b (i.limit ().begin ()), n (i.limit ().end ());
+             b != n; ++b)
+        {
+          if (typeid (RateLimits::LimitType) == typeid (*b))
+          {
+            ::xercesc::DOMElement& s (
+              ::xsd::cxx::xml::dom::create_element (
+                "limit",
+                "http://docs.rackspacecloud.com/servers/api/v1.0",
+                e));
+
+            s << *b;
+          }
+          else
+            tsm.serialize (
+              "limit",
+              "http://docs.rackspacecloud.com/servers/api/v1.0",
+              false, true, e, *b);
+        }
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, RateLimits >
+    _xsd_RateLimits_type_serializer_init (
+      "RateLimits",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const AbsoluteLimits& i)
+    {
+      e << static_cast< const ::xml_schema::Type& > (i);
+
+      // limit
+      //
+      {
+        ::xsd::cxx::tree::type_serializer_map< char >& tsm (
+          ::xsd::cxx::tree::type_serializer_map_instance< 0, char > ());
+
+        for (AbsoluteLimits::LimitConstIterator
+             b (i.limit ().begin ()), n (i.limit ().end ());
+             b != n; ++b)
+        {
+          if (typeid (AbsoluteLimits::LimitType) == typeid (*b))
+          {
+            ::xercesc::DOMElement& s (
+              ::xsd::cxx::xml::dom::create_element (
+                "limit",
+                "http://docs.rackspacecloud.com/servers/api/v1.0",
+                e));
+
+            s << *b;
+          }
+          else
+            tsm.serialize (
+              "limit",
+              "http://docs.rackspacecloud.com/servers/api/v1.0",
+              false, true, e, *b);
+        }
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, AbsoluteLimits >
+    _xsd_AbsoluteLimits_type_serializer_init (
+      "AbsoluteLimits",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const RateLimit& i)
+    {
+      e << static_cast< const ::xml_schema::Type& > (i);
+
+      // verb
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "verb",
+            e));
+
+        a << i.verb ();
+      }
+
+      // URI
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "URI",
+            e));
+
+        a << i.uRI ();
+      }
+
+      // regex
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "regex",
+            e));
+
+        a << i.regex ();
+      }
+
+      // unit
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "unit",
+            e));
+
+        a << i.unit ();
+      }
+
+      // value
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "value",
+            e));
+
+        a << i.value ();
+      }
+
+      // remaining
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "remaining",
+            e));
+
+        a << i.remaining ();
+      }
+
+      // resetTime
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "resetTime",
+            e));
+
+        a << i.resetTime ();
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, RateLimit >
+    _xsd_RateLimit_type_serializer_init (
+      "RateLimit",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const AbsoluteLimit& i)
+    {
+      e << static_cast< const ::xml_schema::Type& > (i);
+
+      // name
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "name",
+            e));
+
+        a << i.name ();
+      }
+
+      // value
+      //
+      {
+        ::xercesc::DOMAttr& a (
+          ::xsd::cxx::xml::dom::create_attribute (
+            "value",
+            e));
+
+        a << i.value ();
+      }
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, AbsoluteLimit >
+    _xsd_AbsoluteLimit_type_serializer_init (
+      "AbsoluteLimit",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const HTTPVerb& i)
+    {
+      e << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    void
+    operator<< (::xercesc::DOMAttr& a, const HTTPVerb& i)
+    {
+      a << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    void
+    operator<< (::xml_schema::ListStream& l,
+                const HTTPVerb& i)
+    {
+      l << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, HTTPVerb >
+    _xsd_HTTPVerb_type_serializer_init (
+      "HTTPVerb",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+
+
+    void
+    operator<< (::xercesc::DOMElement& e, const RateLimitUnit& i)
+    {
+      e << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    void
+    operator<< (::xercesc::DOMAttr& a, const RateLimitUnit& i)
+    {
+      a << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    void
+    operator<< (::xml_schema::ListStream& l,
+                const RateLimitUnit& i)
+    {
+      l << static_cast< const ::xml_schema::String& > (i);
+    }
+
+    static
+    const ::xsd::cxx::tree::type_serializer_initializer< 0, char, RateLimitUnit >
+    _xsd_RateLimitUnit_type_serializer_init (
+      "RateLimitUnit",
+      "http://docs.rackspacecloud.com/servers/api/v1.0");
+  }
+}
+
 #include <xsd/cxx/post.hxx>
 
 // Begin epilogue.
