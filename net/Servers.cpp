@@ -16,7 +16,7 @@ string Servers::list(bool details) {
     HTTPS::Headers requestHeaders, responseHeaders;
     std::stringstream body;
     requestHeaders.insert(HTTPS::Header("X-Auth-Token", _authToken));
-    requestHeaders.insert(HTTPS::Header("Accept", "application/json"));
+    requestHeaders.insert(HTTPS::Header("Accept", _contentType));
     if (details)
         connection().request(_pathBase + "/servers/detail", requestHeaders, responseHeaders, body);
     else

@@ -22,7 +22,7 @@
 #include "services/https.hpp"
 #include "net/Servers.hpp"
 #include <boost/shared_ptr.hpp>
-#include "lib/url.hpp"
+#include "util/url.hpp"
 
 using boost::shared_ptr;
 
