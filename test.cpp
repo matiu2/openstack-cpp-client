@@ -17,7 +17,6 @@
  */
 
 #include "openstack.hpp"
-#include "xml/server.hpp"
 #include <iostream>
 #include <string>
 
@@ -25,12 +24,11 @@ using std::cout;
 using std::endl;
 using std::string;
 using openstack::Openstack;
-using openstack::xml::Servers;
-using openstack::xml::Server;
-using openstack::xml::Metadata;
-using openstack::xml::Addresses;
-using openstack::xml::AddressList;
-
+using openstack::model::Servers;
+using openstack::model::Server;
+using openstack::model::Metadata;
+using openstack::model::Addresses;
+using openstack::model::AddressList;
 
 void printServers(const Servers::ServerSequence& servers) {
     std::cout << "Found Servers:" << std::endl;

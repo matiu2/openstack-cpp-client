@@ -16,9 +16,9 @@ OPTION(UseXSDStaticLibrary "If true, will compile XSD code to a static library a
 
 # Boost
 MESSAGE(STATUS "Checking for Boost System. So that it works the same on all systems.")
-find_package(Boost 1.41.0 REQUIRED COMPONENTS system)
+find_package(Boost 1.41.0 REQUIRED COMPONENTS system thread)
 if (NOT ${Boost_FOUND})
-  MESSAGE(FATAL_ERROR "Couldn't find Boost libraries. On ubuntu: sudo apt-get install libboost-system-dev")
+  MESSAGE(FATAL_ERROR "Couldn't find Boost libraries. On ubuntu: sudo apt-get install libboost-system-dev libboost-thread-dev")
 endif()
 include_directories(BEFORE ${Boost_INCLUDE_DIRS})
 
@@ -37,26 +37,8 @@ if (NOT ${OPENSSL_FOUND})
 endif()
 include_directories(BEFORE ${OPENSSL_INCLUDE_DIR})
 
-# Xerces-c XML Parser
-MESSAGE(STATUS "Checking for Xerces-c XML Parser")
-find_library(xerces xerces-c) # Xerces for the XML parsing and generating
-if ("${xerces}" STREQUAL "xerces_NOT_FOUND")
-  MESSAGE(FATAL_ERROR "Couldn't find xserces-c library. On ubuntu: sudo apt-get install xbxerces-c-dev")
-endif()
+# Threads (for asio)
+find_package(Threads REQUIRED)
 
-# XSD CXX
-MESSAGE(STATUS "Checking for xsdcxx so we can parse and generate xml with the proper schemas")
-find_file(XSD_INCLUDE "xsd/cxx/config.hxx")
-if ("${XSD_INCLUDE}" STREQUAL "XSD_INCLUDE-NOTFOUND")
-  MESSAGE(FATAL_ERROR "Couldn't find xsdcxx header files. On ubuntu: sudo apt-get install xsdcxx")
-endif()
-
-ADD_SUBDIRECTORY(xml)
-
-if (${UseXSDStaticLibrary})
-    ADD_EXECUTABLE(test test.cpp)
-    TARGET_LINK_LIBRARIES(test ${Boost_SYSTEM_LIBRARY} ${OPENSSL_SSL_LIBRARIES} xsd)
-else()
-    ADD_EXECUTABLE(test test.cpp "xml/server.cpp" "xml/common.cpp" )
-    TARGET_LINK_LIBRARIES(test ${Boost_SYSTEM_LIBRARY} ${OPENSSL_SSL_LIBRARIES} ${xerces})
-endif()
+ADD_EXECUTABLE(main main.cpp openstack.cpp lib/url.cpp net/Servers.cpp)
+TARGET_LINK_LIBRARIES(main ${Boost_SYSTEM_LIBRARY} ${OPENSSL_SSL_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${Boost_THREAD_LIBRARY})

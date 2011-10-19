@@ -22,6 +22,8 @@
 #include <sstream>
 #include <string>
 
+using std::string;
+
 namespace openstack {
 
 /**
@@ -32,18 +34,9 @@ namespace openstack {
 *
 * @return the hostname, and the path part of the url
 */
-std::pair<string, string> getHostAndPath(const string& url) {
-    stringstream urlS(url);
-    string schema, host, path;
-    char slash;
-    getline(urlS, schema, ':');
-    urlS >> slash >> slash;
-    getline(urlS, host, '/');
-    getline(urlS, path, '?');
-    return std::pair<string, string>(host, "/" + path);
-}
+std::pair<string, string> getHostAndPath(const string& url);
 
-} // namespace openstack {
+} // namespace openstack
 
 #endif // URL_HPP
 

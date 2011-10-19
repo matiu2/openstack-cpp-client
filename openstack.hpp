@@ -20,7 +20,7 @@
 #define OPENSTACK_HPP
 
 #include "services/https.hpp"
-#include "services/servers.hpp"
+#include "net/Servers.hpp"
 #include <boost/shared_ptr.hpp>
 #include "lib/url.hpp"
 
@@ -34,55 +34,25 @@ class Openstack {
 private:
     string _user;
     string _apikey;
-    string _hostname;
+    string _authUrl;
+    std::pair<string,string> _authUrlParts; /// hostname, path
     string _authToken;
     string _cdnUrl;
     string _serverUrl;
     string _storageUrl;
     string _storageToken;
 
-    services::HTTPS _connection;
-    shared_ptr<services::Servers> _servers;
+    HTTPS _connection;
+    shared_ptr<net::Servers> _servers;
 
-    string readHeader(const HTTPS::Headers& headers, const string& headerName) {
-        HTTPS::cpHeader contentLengthHeader = headers.find(headerName);
-        if (contentLengthHeader != headers.end()) {
-            return (*contentLengthHeader).second;
-        } else {
-            return "";
-        }
-    }
-    void auth() {
-        HTTPS::Headers requestHeaders, responseHeaders;
-        requestHeaders.insert(HTTPS::Header("X-Auth-User", _user));
-        requestHeaders.insert(HTTPS::Header("X-Auth-Key", _apikey));
-        std::stringstream body;
-        connection().request("/v1.0", requestHeaders, responseHeaders, body);
-        // Read in what we care about
-        _authToken = readHeader(responseHeaders, "x-auth-token");
-        _cdnUrl = readHeader(responseHeaders, "x-cdn-management-url");
-        _serverUrl = readHeader(responseHeaders, "x-server-management-url");
-        _storageUrl = readHeader(responseHeaders, "x-storage-url");
-        _storageToken = readHeader(responseHeaders, "x-storage-token");
-    }
-    HTTPS& connection() {
-        if (!_connection.isConnected()) {
-            _connection.connect();
-            auth();
-        }
-        return _connection;
-    }
+    string readHeader(const HTTPS::Headers& headers, const string& headerName);
+    void auth();
+    HTTPS& connection();
 public:
-    Openstack(const string& user, const string& apikey, const string& hostname) 
-        : _user(user), _apikey(apikey), _hostname(hostname), _connection(hostname) {}
-    shared_ptr<services::Servers> servers() {
-        if (_servers.get() == 0) {
-            if (_serverUrl.empty()) { connection(); } // Get the serverurl if we haven't already
-            std::pair<string, string> hostAndPath = getHostAndPath(_serverUrl);
-            _servers.reset(new services::Servers(hostAndPath.first, hostAndPath.second, _authToken));
-        }
-        return _servers;
-    }
+    Openstack(const string& user, const string& apikey, const string& authUrl)
+        : _user(user), _apikey(apikey), _authUrl(authUrl),
+          _authUrlParts(getHostAndPath(authUrl)), _connection(_authUrlParts.first) {}
+    shared_ptr<net::Servers> servers();
 };
 
 } // namespace openstack
