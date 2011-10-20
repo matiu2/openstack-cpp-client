@@ -18,7 +18,7 @@
 
 #include "openstack.hpp"
 
-namespace openstack {
+namespace openstack  {
 
 string Openstack::readHeader(const HTTPS::Headers& headers, const string& headerName) {
     HTTPS::cpHeader contentLengthHeader = headers.find(headerName);
@@ -51,13 +51,13 @@ HTTPS& Openstack::connection() {
     return _connection;
 }
 
-shared_ptr<net::Servers> Openstack::servers() {
+Servers& Openstack::servers() {
     if (_servers.get() == 0) {
         if (_serverUrl.empty()) { connection(); } // Get the serverurl if we haven't already
         std::pair<string, string> hostAndPath = getHostAndPath(_serverUrl);
-        _servers.reset(new net::Servers(hostAndPath.first, hostAndPath.second, _authToken, "application/json"));
+        _servers.reset(new Servers(hostAndPath.first, hostAndPath.second, _authToken));
     }
-    return _servers;
+    return *_servers;
 }
 
 } // namespace openstack

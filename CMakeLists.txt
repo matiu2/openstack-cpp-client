@@ -2,7 +2,7 @@ CMAKE_MINIMUM_REQUIRED( VERSION 2.8 )
 
 PROJECT (openstack_cpp_client)
 
-ADD_DEFINITIONS(-Wall -Wextra -std=c++0x ) # Sorry only support g++ at the moment
+ADD_DEFINITIONS(-Wall -Wextra -std=c++0x -fpic) # Sorry only support g++ at the moment
 
 ################################################################################
 ## Handle Options
@@ -62,7 +62,7 @@ find_package(Threads REQUIRED)
 # Library for basic json parsing
 add_subdirectory(json_spirit) # This will give us a shared json_spirit library
 
-ADD_LIBRARY(openstackServer util/url.cpp net/Servers.cpp json/Servers.cpp)
+ADD_LIBRARY(openstackServer SHARED Servers.cpp util/url.cpp net/Servers.cpp json/Servers.cpp)
 TARGET_LINK_LIBRARIES(openstackServer ${Boost_SYSTEM_LIBRARY} ${OPENSSL_SSL_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${Boost_THREAD_LIBRARY} json_spirit)
 
 add_subdirectory(tests)

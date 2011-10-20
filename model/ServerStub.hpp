@@ -22,8 +22,8 @@ public:
     void setName(const string& newName) { _name = newName; }
 };
 
-typedef std::map< int, std::shared_ptr<ServerStub> > ServerStubMap;
-typedef std::pair< int, std::shared_ptr<ServerStub> > ServerStubPair;
+typedef std::map< int, ServerStub > ServerStubMap;
+typedef std::pair< int, ServerStub > ServerStubPair;
 
 } // namespace model
 } // namespace openstack

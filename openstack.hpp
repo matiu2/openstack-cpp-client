@@ -20,11 +20,9 @@
 #define OPENSTACK_HPP
 
 #include "services/https.hpp"
-#include "net/Servers.hpp"
-#include <boost/shared_ptr.hpp>
+#include "Servers.hpp"
+#include <memory>
 #include "util/url.hpp"
-
-using boost::shared_ptr;
 
 using openstack::services::HTTPS;
 
@@ -43,7 +41,7 @@ private:
     string _storageToken;
 
     HTTPS _connection;
-    shared_ptr<net::Servers> _servers;
+    std::unique_ptr<Servers> _servers;
 
     string readHeader(const HTTPS::Headers& headers, const string& headerName);
     void auth();
@@ -52,9 +50,9 @@ public:
     Openstack(const string& user, const string& apikey, const string& authUrl)
         : _user(user), _apikey(apikey), _authUrl(authUrl),
           _authUrlParts(getHostAndPath(authUrl)), _connection(_authUrlParts.first) {}
-    shared_ptr<net::Servers> servers();
+    Servers& servers();
 };
 
-} // namespace openstack
+}// namespace openstack
 
 #endif // OPENSTACK_HPP
