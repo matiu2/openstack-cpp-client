@@ -46,7 +46,7 @@ endif()
 
 # OpenSSL 
 MESSAGE(STATUS "Checking for OpenSSL, so we can make https:// connections")
-find_package(OpenSSL REQUIRED) 
+find_package(OpenSSL 0.9.8 REQUIRED) 
 if (NOT ${OPENSSL_FOUND})
   MESSAGE(FATAL_ERROR "Couldn't find OpenSSL. On ubuntu: sudo apt-get install openssl-dev")
 endif()
@@ -63,9 +63,9 @@ find_package(Threads REQUIRED)
 add_subdirectory(json_spirit) # This will give us a shared json_spirit library
 
 ADD_LIBRARY(openstackServer SHARED Servers.cpp util/url.cpp net/Servers.cpp json/Servers.cpp)
-TARGET_LINK_LIBRARIES(openstackServer ${Boost_SYSTEM_LIBRARY} ${OPENSSL_SSL_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${Boost_THREAD_LIBRARY} json_spirit)
+TARGET_LINK_LIBRARIES(openstackServer ${CMAKE_THREAD_LIBS_INIT} ${OPENSSL_CRYPTO_LIBRARY} ${OPENSSL_SSL_LIBRARY} ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} json_spirit)
 
 add_subdirectory(tests)
 
 ADD_EXECUTABLE(main main.cpp openstack.cpp)
-TARGET_LINK_LIBRARIES(main ${Boost_SYSTEM_LIBRARY} ${OPENSSL_SSL_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${Boost_THREAD_LIBRARY} openstackServer)
+TARGET_LINK_LIBRARIES(main ${CMAKE_THREAD_LIBS_INIT} ${OPENSSL_CRYPTO_LIBRARY} ${OPENSSL_SSL_LIBRARY} ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} openstackServer)
