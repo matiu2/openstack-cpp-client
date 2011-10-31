@@ -17,6 +17,7 @@
  */
 
 #include "url.hpp"
+#include <sstream>
 
 namespace openstack {
 

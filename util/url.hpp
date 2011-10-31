@@ -19,7 +19,6 @@
 #ifndef URL_HPP
 #define URL_HPP
 
-#include <sstream>
 #include <string>
 
 using std::string;
